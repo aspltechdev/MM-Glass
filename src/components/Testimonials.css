@@ -1,0 +1,184 @@
+/* SECTION */
+.testimonial-section {
+  width: 100%;
+  padding: 40px 4% 30px;
+  box-sizing: border-box;
+  background: #f4f4f4;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* BADGE */
+.testimonial-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 24px;
+  border-radius: 50px;
+
+  background: white;
+
+  border: 1px solid rgba(255,255,255,0.5);
+
+  margin-bottom: 40px;
+}
+
+/* DOT */
+.dot {
+  width: 11px;
+  height: 11px;
+
+  background: red;
+  border-radius: 50%;
+}
+
+/* BADGE TEXT */
+.testimonial-badge p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+}
+
+/* GRID */
+.testimonial-grid {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 26px;
+}
+
+/* CARD */
+.testimonial-card {
+  background: white;
+
+  border-radius: 18px;
+
+  padding: 18px;
+
+  transition: 0.35s ease;
+
+  box-shadow:
+    0 6px 18px rgba(0,0,0,0.05);
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+/* GLOW EFFECT */
+.testimonial-card::before {
+  content: "";
+
+  position: absolute;
+  top: -100%;
+  left: -100%;
+
+  width: 220%;
+  height: 220%;
+
+  background:
+    linear-gradient(
+      120deg,
+      transparent,
+      rgba(255,255,255,0.5),
+      transparent
+    );
+
+  transform: rotate(25deg);
+
+  transition: 0.7s;
+}
+
+/* HOVER */
+.testimonial-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 12px 25px rgba(0,0,0,0.08);
+}
+
+.testimonial-card:hover::before {
+  top: 100%;
+  left: 100%;
+}
+
+/* TOP */
+.testimonial-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-bottom: 16px;
+}
+
+/* IMAGE */
+.testimonial-top img {
+  width: 52px;
+  height: 52px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+}
+
+/* NAME */
+.testimonial-top h3 {
+  font-size: 18px;
+  color: #111;
+
+  margin-bottom: 4px;
+}
+
+/* STARS */
+.stars {
+  color: #ffcc00;
+
+  font-size: 18px;
+
+  letter-spacing: 2px;
+}
+
+/* REVIEW */
+.review {
+  font-size: 14px;
+  line-height: 1.6;
+
+  color: #333;
+
+  margin: 0;
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-card {
+    padding: 16px;
+  }
+
+  .testimonial-top h3 {
+    font-size: 16px;
+  }
+
+  .review {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,54 @@
+.trusted {
+  background: #f5f5f5;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+/* Title */
+.trusted-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 0% 30px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #ff2d2d;
+  border-radius: 50%;
+}
+
+/* Grid */
+.trusted-grid {
+    padding: 40px;
+  display: grid;
+  /* height: 40px;
+  width: 1000px ; */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* Logo Boxes */
+.logo-box {
+  height: 120px; /* increased from ~80px */
+  border-radius: 20px;
+
+  background: #ddd;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

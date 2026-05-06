@@ -1,0 +1,46 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 150px;  
+  height: 50px;
+  object-fit: contain;
+}
+
+.logo h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.logo p {
+  margin: 0;
+  font-size: 10px;
+  color: gray;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  font-size: 18px; 
+  font-weight: 500; 
+}
+
+.nav-links li {
+  cursor: pointer;
+}
+
+.nav-links .active {
+  color: red;
+}

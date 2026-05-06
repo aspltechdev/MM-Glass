@@ -1,0 +1,180 @@
+/* FOOTER */
+.footer {
+  width: 100%;
+
+  padding: 70px 6% 10px;
+
+  background: #d4d3d3;
+
+  box-sizing: border-box;
+}
+
+/* CONTAINER */
+.footer-container {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+
+  gap: 70px;
+}
+
+/* LEFT */
+.footer-left h2 {
+  font-size: 35px;
+  line-height: 1.2;
+
+  color: #111;
+
+  margin-bottom: 34px;
+}
+
+/* SOCIALS */
+.footer-socials {
+  display: flex;
+  gap: 18px;
+
+  margin-bottom: 30px;
+}
+
+/* SOCIAL ICON */
+.footer-socials a {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 10px;
+
+  border: 2px solid #111;
+
+  color: #111;
+
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 24px;
+  font-weight: 700;
+
+  transition: 0.3s ease;
+}
+
+.footer-socials a:hover {
+  background: red;
+  color: white;
+  border-color: red;
+}
+
+/* BUTTON */
+.brochure-btn {
+  padding: 14px 26px;
+
+  border: 2px solid #111;
+  border-radius: 14px;
+
+  background: transparent;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+  margin-bottom: 55px;
+}
+
+.brochure-btn:hover {
+  background: #111;
+  color: white;
+}
+
+/* LOGO */
+.footer-logo img {
+  width: 240px;
+}
+
+/* COLUMN TITLE */
+.footer-column h3 {
+  font-size: 22px;
+  color: #111;
+
+  margin-bottom: 28px;
+}
+
+/* LIST */
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* LIST ITEM */
+.footer-column ul li {
+  font-size: 17px;
+  color: #222;
+
+  margin-bottom: 22px;
+}
+
+/* CONTACT */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-bottom: 28px;
+}
+
+/* ICON */
+.contact-item span {
+  font-size: 22px;
+}
+
+/* TEXT */
+.contact-item p {
+  font-size: 17px;
+  color: #222;
+
+  margin: 0;
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 50px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+  .footer {
+    padding: 50px 5%;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-left h2 {
+    font-size: 32px;
+  }
+
+  .footer-logo img {
+    width: 200px;
+  }
+
+  .footer-column h3 {
+    font-size: 20px;
+  }
+
+  .footer-column ul li,
+  .contact-item p {
+    font-size: 15px;
+  }
+}
