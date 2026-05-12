@@ -1,101 +1,99 @@
 import "./CoreFeatures.css";
 
-import bgImage from "../assets/why3.jpeg";
+
 
 function CoreFeatures() {
 
-  const features = [
-    {
-      percent: "90%",
-      title: "QUALITY ASSURANCE",
-      text: "Every glass unit undergoes strict quality checks to ensure strength, clarity and long-term reliability.",
-    },
-
-    {
-      percent: "95%",
-      title: "SKILLED CRAFTSMANSHIP",
-      text: "Our experienced team ensures precision in every cut, finish, and installation-ready product.",
-    },
-
-    {
-      percent: "92%",
-      title: "PRECISION PROCESSING",
-      text: "Advanced machinery enables accurate cutting, tempering, and finishing for flawless results.",
-    },
-
-    {
-      percent: "98%",
-      title: "INDUSTRY EXPERTISE",
-      text: "Years of experience delivering trusted glass solutions across architectural and industrial sectors.",
-    },
-  ];
 
   return (
-    <section className="core-section">
+   <>
+   <section className="core-feature-section">
 
-      {/* Top Badge */}
-      <div className="core-badge">
-        <span className="dot"></span>
-        <p>Core Features</p>
+  {/* Heading */}
+
+  {/* <div className="products-heading">
+    <button>
+      <span className="dot"></span>
+      Core Features
+    </button>
+  </div> */}
+
+  {/* Content */}
+
+  <div className="core-feature-container">
+
+    {/* Left Content */}
+
+    <div className="core-feature-left">
+
+      <h2>
+        Innovative glass solutions built for modern spaces
+      </h2>
+
+      <p>
+        We continuously invest in advanced glass processing
+        technologies, research, and innovation to stay ahead of
+        evolving architectural and industrial needs.
+      </p>
+
+      <button>LEARN MORE →</button>
+
+    </div>
+
+    {/* Right Features */}
+
+    <div className="core-feature-right">
+
+      <div className="feature-progress">
+        <div className="circle">90%</div>
+
+        <h3>QUALITY ASSURANCE</h3>
+
+        <p>
+          Every glass unit undergoes strict quality checks to
+          ensure strength and long-term reliability.
+        </p>
       </div>
 
-      {/* Main Banner */}
-      <div
-        className="core-banner"
-        style={{
-          backgroundImage: `url(${bgImage})`,
-        }}
-      >
+      <div className="feature-progress">
+        <div className="circle">95%</div>
 
-        {/* Black Glossy Overlay */}
-        <div className="core-overlay">
+        <h3>SKILLED CRAFTSMANSHIP</h3>
 
-          {/* Left Content */}
-          <div className="core-left">
-
-            <h2>
-              Innovative glass solutions
-              built for modern spaces
-            </h2>
-
-            <p>
-              We continuously invest in advanced glass processing
-              technologies, research, and innovation to stay ahead
-              of evolving architectural and industrial needs.
-            </p>
-
-            <button>
-              LEARN MORE
-              <span>➜</span>
-            </button>
-
-          </div>
-
-          {/* Right Features */}
-          <div className="core-right">
-
-            {features.map((item, index) => (
-              <div className="feature-box" key={index}>
-
-                {/* Circle */}
-                <div className="percent-circle">
-                  {item.percent}
-                </div>
-
-                <h3>{item.title}</h3>
-
-                <p>{item.text}</p>
-
-              </div>
-            ))}
-
-          </div>
-
-        </div>
-
+        <p>
+          Our experienced team ensures precision in every cut,
+          finish, and installation-ready product.
+        </p>
       </div>
 
-    </section>
+      <div className="feature-progress">
+        <div className="circle">92%</div>
+
+        <h3>PRECISION PROCESSING</h3>
+
+        <p>
+          Advanced machinery enables accurate cutting and
+          finishing for flawless results.
+        </p>
+      </div>
+
+      <div className="feature-progress">
+        <div className="circle">98%</div>
+
+        <h3>INDUSTRY EXPERTISE</h3>
+
+        <p>
+          Years of experience delivering trusted glass solutions
+          across architectural and industrial sectors.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+   </>
   );
 }
 

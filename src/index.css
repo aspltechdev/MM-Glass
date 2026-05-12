@@ -1,4 +1,55 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* =============================================
+   GLOBAL RESET & RESPONSIVE BASE
+   Add this to your src/index.css
+============================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;          /* Prevent horizontal scroll on mobile */
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in iOS */
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, #fffdf9 0%, #f4f4f4 45%, #ffffff 100%);
+  color: #1b1b1b;
+}
+
+img {
+  max-width: 100%;             /* Images never overflow container */
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
 }

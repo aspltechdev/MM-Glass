@@ -1,0 +1,401 @@
+:root {
+  --app-font: "Poppins", sans-serif;
+  --app-body-size: 16px;
+  --app-subheading-size: 20px;
+  --app-heading-size: 24px;
+  --app-text-color: #262626;
+  --app-heading-color: #111111;
+  --app-surface: rgba(255, 255, 255, 0.82);
+  --app-surface-strong: #ffffff;
+  --app-border: rgba(17, 17, 17, 0.08);
+  --app-shadow: 0 18px 45px rgba(17, 17, 17, 0.08);
+  --app-shadow-soft: 0 12px 30px rgba(17, 17, 17, 0.06);
+  --app-accent: #d95c16;
+  --app-radius: 24px;
+  --app-max-width: 1280px;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.hero,
+.trusted,
+.strength-section,
+.whychoose-section,
+.certification-section,
+.achievement-section,
+.products-section,
+.specialized-products-section,
+.suntuitive-section,
+.core-features-section,
+.testimonial-section,
+.contact-section,
+.branches-section,
+.about-section,
+.core-values-section,
+.gallery-section,
+.faq-section {
+  position: relative;
+}
+
+.trusted,
+.strength-section,
+.whychoose-section,
+.certification-section,
+.achievement-section,
+.products-section,
+.specialized-products-section,
+.suntuitive-section,
+.core-features-section,
+.testimonial-section,
+.contact-section,
+.branches-section,
+.faq-section,
+.about-content,
+.core-values-section,
+.gallery-section,
+.footer-content {
+  width: min(100%, var(--app-max-width));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.trusted,
+.strength-section,
+.whychoose-section,
+.certification-section,
+.achievement-section,
+.products-section,
+.specialized-products-section,
+.suntuitive-section,
+.core-features-section,
+.testimonial-section,
+.contact-section,
+.branches-section,
+.faq-section,
+.core-values-section,
+.gallery-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.hero *,
+.navbar *,
+.footer *,
+[class*="section"] *,
+[class*="content"] *,
+[class*="card"] *,
+[class*="banner"] *,
+[class*="overlay"] *,
+[class*="badge"] *,
+[class*="title"] *,
+[class*="heading"] *,
+[class*="feature"] *,
+[class*="product"] * {
+  font-family: var(--app-font);
+}
+
+.glass-card h1,
+.about-content h2,
+.core-values-header h2,
+.faq-title h2,
+.contact-left h2,
+.expertise-left h2,
+.suntuitive-left h2,
+.core-feature-left h2,
+.branches-copy h2,
+.footer-left h2 {
+  font-size: var(--app-heading-size) !important;
+  line-height: 1.35;
+  font-weight: 700;
+  color: var(--app-heading-color);
+  letter-spacing: -0.02em;
+}
+
+.glass-card h1 {
+  color: #ffffff;
+}
+
+.about-overlay button,
+.story-overlay button,
+.gallery-overlay button,
+.contact-overlay button {
+  font-size: var(--app-heading-size) !important;
+  letter-spacing: 0.08em;
+}
+
+.section-badge h2,
+.trusted-title,
+.whychoose-badge p,
+.products-badge p,
+.testimonial-badge p,
+.certification-badge p,
+.achievement-badge p,
+.contact-badge p,
+.expertise-badge p,
+.products-heading button,
+.faq-top-heading button,
+.testimonial-heading button {
+  font-size: var(--app-subheading-size) !important;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--app-heading-color);
+}
+
+.why-card h3,
+.product-content h3,
+.product-overlay h3,
+.value-title h3,
+.faq-info-card h3,
+.faq-contact h3,
+.faq-question h3,
+.contact-box h4,
+.footer-column h3,
+.testimonial-top h3,
+.real-card h3,
+.feature-progress h3,
+.achievement-card h2 {
+  font-size: var(--app-subheading-size) !important;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--app-heading-color);
+}
+
+.glass-card p,
+.about-content p,
+.core-values-header p,
+.value-card p,
+.testimonial-card p,
+.review,
+.faq-title p,
+.faq-info-card p,
+.faq-contact p,
+.faq-answer p,
+.contact-text,
+.contact-box span,
+.contact-item p,
+.contact-item a,
+.contact-item span,
+.expertise-left p,
+.strength-content p,
+.why-card p,
+.product-content p,
+.product-overlay p,
+.suntuitive-left p,
+.feature-box p,
+.core-feature-left p,
+.feature-progress p,
+.branches-copy p,
+.branch-address-card p,
+.footer-column a,
+.footer-column p,
+.products-heading p {
+  font-size: var(--app-body-size) !important;
+  line-height: 1.75;
+  color: var(--app-text-color);
+}
+
+.glass-card,
+.strength-content,
+.why-card,
+.product-card,
+.testimonial-card,
+.faq-info-card,
+.contact-right,
+.branch-map-card,
+.branch-address-card,
+.value-card,
+.contact-box,
+.logo-box {
+  border-radius: var(--app-radius);
+  box-shadow: var(--app-shadow-soft);
+}
+
+.strength-content,
+.why-card,
+.testimonial-card,
+.faq-info-card,
+.contact-right,
+.branch-address-card,
+.value-card,
+.contact-box,
+.logo-box,
+.product-content,
+.glass-card {
+  border: 1px solid var(--app-border);
+}
+
+.why-card,
+.product-card,
+.testimonial-card,
+.value-card,
+.contact-box,
+.branch-address-card,
+.logo-box,
+.strength-image,
+.product-image,
+.gallery-grid img {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    filter 0.35s ease;
+}
+
+.why-card:hover,
+.product-card:hover,
+.testimonial-card:hover,
+.value-card:hover,
+.contact-box:hover,
+.branch-address-card:hover,
+.logo-box:hover,
+.strength-image:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--app-shadow);
+}
+
+.nav-links li a,
+.btn,
+.show-btn,
+.show-more button,
+.core-feature-left button,
+.faq-question button,
+.arrow-btn,
+.contact-overlay button,
+.story-overlay button,
+.gallery-overlay button,
+.about-overlay button {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.btn:hover,
+.show-btn:hover,
+.show-more button:hover,
+.core-feature-left button:hover,
+.contact-overlay button:hover,
+.story-overlay button:hover,
+.gallery-overlay button:hover,
+.about-overlay button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(17, 17, 17, 0.14);
+}
+
+.hero,
+.trusted,
+.strength-section,
+.whychoose-section,
+.certification-section,
+.achievement-section,
+.products-section,
+.specialized-products-section,
+.suntuitive-section,
+.core-features-section,
+.testimonial-section,
+.contact-section,
+.branches-section,
+.about-section,
+.core-values-section,
+.gallery-section,
+.faq-section,
+.footer {
+  animation: fadeUp 0.8s ease both;
+}
+
+.hero::before,
+.strength-section::before,
+.whychoose-section::before,
+.products-section::before,
+.testimonial-section::before,
+.contact-section::before,
+.faq-section::before,
+.gallery-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at top right, rgba(217, 92, 22, 0.08), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(229, 138, 31, 0.08), transparent 24%);
+}
+
+.navbar {
+  width: min(calc(100% - 32px), var(--app-max-width));
+  margin: 18px auto 0;
+}
+
+.nav-links {
+  font-size: var(--app-body-size);
+}
+
+.btn,
+.show-btn,
+.show-more button,
+.core-feature-left button {
+  font-size: var(--app-body-size) !important;
+  font-weight: 600;
+  border-radius: 999px;
+}
+
+.footer {
+  background: linear-gradient(180deg, #1d1d1d 0%, #101010 100%);
+}
+
+.footer-left h2,
+.footer-column h3,
+.footer-column a,
+.footer-column p,
+.contact-item p,
+.contact-item span {
+  color: #f7f7f7;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .trusted,
+  .strength-section,
+  .whychoose-section,
+  .certification-section,
+  .achievement-section,
+  .products-section,
+  .specialized-products-section,
+  .suntuitive-section,
+  .core-features-section,
+  .testimonial-section,
+  .contact-section,
+  .branches-section,
+  .faq-section,
+  .core-values-section,
+  .gallery-section {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .navbar {
+    width: min(calc(100% - 20px), var(--app-max-width));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

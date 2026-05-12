@@ -178,3 +178,8 @@
     font-size: 15px;
   }
 }
+.logo-img {
+  width: 200px;  
+  height: 100px;
+  object-fit: contain;
+}

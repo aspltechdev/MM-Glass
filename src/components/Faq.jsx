@@ -1,165 +1,192 @@
 import "./Faq.css";
-import { useState } from "react";
+import {
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+  FaPlus,
+  FaMinus,
+} from "react-icons/fa";
 
 function Faq() {
-
-  const [active, setActive] = useState(0);
-
-  const faqs = [
-    {
-      question: "01. What glass solutions do you offer?",
-      answer:
-        "We offer a wide range of glass products including toughened, laminated, insulated (DGU), reflective, and decorative glass for architectural, residential, and industrial applications.",
-    },
-
-    {
-      question: "02. Do you provide customized glass solutions?",
-      answer:
-        "Yes, we provide customized glass solutions based on project requirements, dimensions, performance standards, and design preferences.",
-    },
-
-    {
-      question: "03. What industries do you serve?",
-      answer:
-        "We serve architectural, residential, commercial, automotive, and industrial sectors with premium glass processing solutions.",
-    },
-
-    {
-      question: "04. How do you ensure product quality?",
-      answer:
-        "Every product undergoes strict quality testing and precision inspections to ensure durability, safety, and performance standards.",
-    },
-  ];
-
   return (
-    <section className="faq-section">
+ <section className="faq-section">
 
-      {/* Badge */}
-      <div className="faq-badge">
-        <span className="dot"></span>
-        <p>Frequently Asked Questions</p>
-      </div>
+        {/* Heading */}
 
-      {/* Heading */}
-      <h2 className="faq-title">
-        Your questions answered here
-      </h2>
+        <div className="faq-top-heading">
+          <button>
+            <span className="dot"></span>
+            Frequently Asked Questions
+          </button>
+        </div>
 
-      <p className="faq-description">
-        Find answers to common questions about our glass products,
-        manufacturing processes, customization options, and quality
-        standards. Our FAQ section helps you understand how we
-        deliver reliable and high-performance glass solutions.
-      </p>
+        {/* Title */}
 
-      {/* Main Layout */}
-      <div className="faq-container">
+        <div className="faq-title">
+          <h2>Your questions answered here</h2>
 
-        {/* Left Card */}
-        <div className="faq-left">
+          <p>
+            Find answers to common questions about our glass
+            products, manufacturing processes, customization
+            options, and quality standards. Our FAQ section helps
+            you understand how we deliver reliable and
+            high-performance glass solutions.
+          </p>
+        </div>
 
-          <div className="answer-box">
-            <h3>Get Answers</h3>
+        {/* Content */}
 
-            <p>
-              Our FAQ section provides clear insights into our glass
-              processing methods, product range, customization
-              capabilities, and quality assurance practices.
-            </p>
-          </div>
+        <div className="faq-container">
 
-          <div className="contact-box">
+          {/* Left Side */}
 
-            <h3>Contact Information</h3>
+          <div className="faq-left">
 
-            <p>
-              Have questions about our glass solutions or need a
-              custom requirement? Our team is here to help you with
-              the right guidance and support.
-            </p>
+            {/* Card */}
 
-            <div className="divider"></div>
+            <div className="faq-info-card">
 
-            {/* Contact Items */}
-            <div className="contact-items">
+              <h3>Get Answers</h3>
 
-              <div className="contact-item">
-
-                <div className="icon">
-                  📞
-                </div>
-
-                <div>
-                  <h4>Phone Number</h4>
-                  <span>+91 96068 59044</span>
-                </div>
-
-              </div>
-
-              <div className="contact-item">
-
-                <div className="icon">
-                  📍
-                </div>
-
-                <div>
-                  <h4>Location</h4>
-                  <span>
-                    BDS Nagar, Kothanur,
-                    Bengaluru, Karnataka 560077
-                  </span>
-                </div>
-
-              </div>
+              <p>
+                Our FAQ section provides clear insights into our
+                glass processing methods, product range,
+                customization capabilities, and quality assurance
+                practices.
+              </p>
 
             </div>
 
+            {/* Contact Info */}
+
+            <div className="faq-contact">
+
+              <h3>Contact Information</h3>
+
+              <p>
+                Have questions about our glass solutions or need a
+                custom requirement? Our team is here to help you
+                with the right guidance and support.
+              </p>
+
+              <hr />
+
+              <div className="faq-contact-details">
+
+                {/* Phone */}
+
+                <div className="contact-box">
+
+                  <div className="contact-icon">
+                    <FaPhoneAlt />
+                  </div>
+
+                  <div>
+                    <h4>Phone Number</h4>
+                    <span>+91 9876543210</span>
+                  </div>
+
+                </div>
+
+                {/* Location */}
+
+                <div className="contact-box">
+
+                  <div className="contact-icon">
+                    <FaMapMarkerAlt />
+                  </div>
+
+                  <div>
+                    <h4>Location</h4>
+                    <span>Bangalore</span>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
           </div>
 
-        </div>
+          {/* Right Side */}
 
-        {/* Right FAQ */}
-        <div className="faq-right">
+          <div className="faq-right">
 
-          {faqs.map((faq, index) => (
-            <div
-              className={`faq-item ${
-                active === index ? "active" : ""
-              }`}
-              key={index}
-            >
+            {/* FAQ 1 */}
 
-              {/* Question */}
-              <div
-                className="faq-question"
-                onClick={() => setActive(
-                  active === index ? null : index
-                )}
-              >
+            <div className="faq-item active">
 
-                <h3>{faq.question}</h3>
+              <div className="faq-question">
+                <h3>
+                  01. What glass solutions do you offer?
+                </h3>
 
                 <button>
-                  {active === index ? "−" : "+"}
+                  <FaMinus />
                 </button>
-
               </div>
 
-              {/* Answer */}
-              {active === index && (
-                <div className="faq-answer">
-                  <p>{faq.answer}</p>
-                </div>
-              )}
+              <div className="faq-answer">
+                <p>
+                  We offer a wide range of glass products including
+                  toughened, laminated, insulated (DGU),
+                  reflective, and decorative glass for
+                  architectural, residential, and industrial
+                  applications.
+                </p>
+              </div>
 
             </div>
-          ))}
 
+            {/* FAQ 2 */}
+
+            <div className="faq-item">
+
+              <div className="faq-question">
+                <h3>
+                  02. Do you provide customized glass solutions?
+                </h3>
+
+                <button>
+                  <FaPlus />
+                </button>
+              </div>
+
+            </div>
+
+            {/* FAQ 3 */}
+
+            <div className="faq-item">
+
+              <div className="faq-question">
+                <h3>
+                  03. What industries do you serve?
+                </h3>
+
+                <button>
+                  <FaPlus />
+                </button>
+              </div>
+
+            </div>
+
+            {/* FAQ 4 */}
+
+            <div className="faq-item">
+
+              <div className="faq-question">
+                <h3>
+                  04. How do you ensure product quality?
+                </h3>
+
+                <button>
+                  <FaPlus />
+                </button>
+              </div>
+
+            </div>
+
+          </div>
         </div>
-
-      </div>
-
-    </section>
+      </section>
   );
 }
 
