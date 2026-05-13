@@ -1,7 +1,7 @@
 import "./Trusted.css";
 
 // Import logo images
-import logo1 from "../assets/brands/AGp.png";
+import logo1 from "../assets/brands/AGP.png";
 import logo2 from "../assets/brands/AIS.png";
 import logo3 from "../assets/brands/CrystalEdgeGlass.png";
 import logo4 from "../assets/brands/MirrorEdgeGlass.png";
