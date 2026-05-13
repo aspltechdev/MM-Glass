@@ -15,6 +15,7 @@
   margin: 0;
 }
 
+/* ===== LOGO ===== */
 .logo {
   display: flex;
   align-items: center;
@@ -40,6 +41,7 @@
   padding: 0;
 }
 
+/* ===== LINKS ===== */
 .nav-links li a {
   position: relative;
   text-decoration: none;
@@ -48,6 +50,7 @@
   transition: color 0.3s ease;
 }
 
+/* Hover underline */
 .nav-links li a::after {
   content: "";
   position: absolute;
@@ -69,6 +72,7 @@
   transform: scaleX(1);
 }
 
+/* Active link */
 .nav-links li a.active {
   color: #e58a1f;
 }
@@ -77,7 +81,7 @@
   transform: scaleX(1);
 }
 
-/* ===== HAMBURGER BUTTON ===== */
+/* ===== HAMBURGER ===== */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -100,23 +104,24 @@
   transition: all 0.3s ease;
 }
 
-/* Hamburger → X animation */
+/* ===== HAMBURGER TO X ===== */
 .hamburger.open span:nth-child(1) {
   transform: translateY(9.5px) rotate(45deg);
 }
+
 .hamburger.open span:nth-child(2) {
   opacity: 0;
 }
+
 .hamburger.open span:nth-child(3) {
   transform: translateY(-9.5px) rotate(-45deg);
 }
 
 /* ===== OVERLAY ===== */
 .nav-overlay {
-  display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.45);
   z-index: 900;
 }
 
@@ -144,14 +149,12 @@
     border-radius: 16px;
   }
 
+  /* Show hamburger */
   .hamburger {
     display: flex;
   }
 
-  .nav-overlay {
-    display: block;
-  }
-
+  /* Mobile menu */
   .nav-links {
     position: fixed;
     top: 0;
@@ -159,7 +162,7 @@
     width: 75%;
     max-width: 300px;
     height: 100vh;
-    background: white;
+    background: #fff;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
@@ -167,10 +170,11 @@
     gap: 28px;
     font-size: 18px;
     box-shadow: -4px 0 20px rgba(0, 0, 0, 0.12);
-    z-index: 1000;
     transition: right 0.35s ease;
+    z-index: 1000;
   }
 
+  /* Open menu */
   .nav-links.active {
     right: 0;
   }
@@ -190,5 +194,10 @@
   .logo-img {
     width: 102px;
     height: 40px;
+  }
+
+  .nav-links {
+    width: 82%;
+    padding: 85px 24px 30px;
   }
 }

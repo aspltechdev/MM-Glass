@@ -74,9 +74,9 @@ function Products() {
       
 
       {/* Button */}
-      <button className="show-btn">
+      {/* <button className="show-btn">
         Show More Products
-      </button>
+      </button> */}
 
     </section>
   );

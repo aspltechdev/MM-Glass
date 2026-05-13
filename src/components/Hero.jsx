@@ -1,31 +1,13 @@
-import { useEffect, useRef } from "react";
-import "./Hero.css";
+// Hero.jsx
 
-import bgVideo1 from "../assets/bg1.MOV";
-// import bgVideo2 from "../assets/bg2.MOV";
-// import bgVideo3 from "../assets/bg3.MOV";
+import "./Hero.css";
+import bgVideo1 from "../assets/herovideo.mp4";
 
 function Hero() {
-  const videoRef = useRef(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    video.currentTime = 0;
-    const playPromise = video.play();
-
-    return () => {
-      if (playPromise?.catch) {
-        playPromise.catch(() => {});
-      }
-    };
-  }, []);
-
   return (
     <section className="hero">
+      {/* Background Video */}
       <video
-        ref={videoRef}
         className="hero-video"
         autoPlay
         muted
@@ -33,21 +15,25 @@ function Hero() {
         playsInline
         preload="auto"
       >
-        <source src={bgVideo1} />
+        <source src={bgVideo1} type="video/mp4" />
+        Your browser does not support the video tag.
       </video>
 
+      {/* Glass Content */}
       <div className="glass-card">
         <h1>
           Crystal Clear Vision.
           <br />
           Uncompromised Safety.
         </h1>
+
         <p>
           Our advanced glass solutions combine cutting-edge technology with
           refined aesthetics to create safer, smarter environments. Designed
           for versatility, our products serve residential, commercial, and
           industrial needs with unmatched reliability.
         </p>
+
         <div className="buttons">
           <button className="btn primary">ABOUT US →</button>
           <button className="btn secondary">CONTACT US →</button>

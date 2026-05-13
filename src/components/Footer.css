@@ -183,3 +183,47 @@
   height: 100px;
   object-fit: contain;
 }
+
+.footer-column ul li a,
+.contact-item a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+}
+
+.footer-column ul li a:hover,
+.contact-item a:hover {
+  color: #0f766e;
+}
+
+.footer-socials a {
+  text-decoration: none;
+}
+
+.footer-column ul li a,
+.contact-item a,
+.footer-socials a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+}
+
+/* Remove underline on hover */
+.footer-column ul li a:hover,
+.contact-item a:hover,
+.footer-socials a:hover {
+  text-decoration: none;
+  color: #0f766e;
+}
+
+/* Remove default focus underline */
+.footer-column ul li a:focus,
+.contact-item a:focus,
+.footer-socials a:focus {
+  text-decoration: none;
+}
+
+/* Optional */
+.contact-item a {
+  cursor: pointer;
+}
