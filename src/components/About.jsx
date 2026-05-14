@@ -6,6 +6,7 @@ import WhyChoose from "./WhyChoose";
 import Achievements from "./Achievements";
 import Corevalues from "../assets/corevalue.png";
 import Abouthero from "../assets/abouthero.png"; 
+import ServicesSection from "./ServicesSection";
 
 
 function About() {
@@ -54,7 +55,8 @@ function About() {
       
       <Strength />
       <Certification />
-      <WhyChoose />
+      {/* <WhyChoose /> */}
+      <ServicesSection/>
       <Achievements />
 
 

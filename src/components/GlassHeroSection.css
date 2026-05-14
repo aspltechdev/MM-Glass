@@ -1,0 +1,390 @@
+/* ========================================= */
+/* EXACT PIXEL PERFECT VERSION */
+/* GlassHeroSection.css */
+/* ========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.glass-hero-section {
+  width: 100%;
+  background: #ededed;
+
+  padding: 30px 55px;
+
+  display: flex;
+  justify-content: center;
+
+  font-family: "Inter", sans-serif;
+}
+
+.glass-hero-card {
+  position: relative;
+
+  width: 100%;
+  max-width: 1720px;
+  height: 640px;
+
+  border-radius: 26px;
+  overflow: hidden;
+}
+
+/* IMAGE */
+
+.glass-hero-bg {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* OVERLAY */
+
+.glass-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 18, 35, 0.58) 0%,
+      rgba(8, 18, 35, 0.42) 42%,
+      rgba(8, 18, 35, 0.15) 100%
+    );
+
+  z-index: 1;
+}
+
+/* MAIN CONTENT */
+
+.glass-content {
+  position: relative;
+  z-index: 5;
+
+  height: 100%;
+  width: 100%;
+
+  padding: 72px 68px 62px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ========================================= */
+/* LEFT SIDE */
+/* ========================================= */
+
+.glass-left {
+  width: 60%;
+  padding-top: 6px;
+}
+
+/* TITLE */
+
+.glass-left h1 {
+  color: #ffffff;
+
+  font-size: 66px;
+  font-weight: 700;
+
+  line-height: 1.08;
+  letter-spacing: -2.8px;
+
+  max-width: 720px;
+
+  margin-bottom: 30px;
+}
+
+/* DESCRIPTION */
+
+.glass-left p {
+  color: rgba(255, 255, 255, 0.88);
+
+  font-size: 18px;
+  font-weight: 400;
+
+  line-height: 1.45;
+
+  max-width: 720px;
+
+  margin-bottom: 42px;
+}
+
+/* BUTTONS */
+
+.glass-buttons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* COMMON BUTTON */
+
+.glass-buttons button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  font-family: inherit;
+  font-weight: 600;
+
+  transition: all 0.35s ease;
+}
+
+/* RED BUTTON */
+
+.explore-btn {
+  background: #ff0d0d;
+  color: white;
+
+  height: 66px;
+
+  padding: 0 34px;
+
+  border-radius: 60px;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  letter-spacing: -0.2px;
+
+  box-shadow:
+    0 10px 25px rgba(255, 0, 0, 0.24);
+}
+
+.explore-btn:hover {
+  transform: translateY(-3px);
+
+  background: #ff1f1f;
+}
+
+/* WHITE BUTTON */
+
+.contact-btn {
+  background: rgba(255, 255, 255, 0.95);
+
+  color: #111111;
+
+  height: 66px;
+
+  padding: 0 34px;
+
+  border-radius: 60px;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  letter-spacing: -0.2px;
+
+  box-shadow:
+    0 10px 25px rgba(255, 255, 255, 0.18);
+}
+
+.contact-btn:hover {
+  transform: translateY(-3px);
+
+  background: #ffffff;
+}
+
+/* ========================================= */
+/* RIGHT FLOATING CARDS */
+/* ========================================= */
+
+.glass-right {
+  position: relative;
+
+  width: 40%;
+  height: 100%;
+}
+
+/* GLASS CARD */
+
+.glass-floating-card {
+  position: absolute;
+
+  width: 300px;
+
+  padding: 24px 22px 24px 22px;
+
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.16);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.12),
+    0 10px 35px rgba(0, 0, 0, 0.18);
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease;
+}
+
+/* CARD HOVER */
+
+.glass-floating-card:hover {
+  transform: translateY(-6px);
+
+  background: rgba(255, 255, 255, 0.19);
+}
+
+/* CARD TITLE */
+
+.glass-floating-card h3 {
+  color: #ffffff;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  margin-bottom: 14px;
+}
+
+/* CARD TEXT */
+
+.glass-floating-card p {
+  color: rgba(255, 255, 255, 0.92);
+
+  font-size: 16px;
+  font-weight: 400;
+
+  line-height: 1.42;
+}
+
+/* POSITIONING */
+
+.top-card {
+  top: 34px;
+  right: 84px;
+}
+
+.bottom-card {
+  bottom: 96px;
+  right: -10px;
+}
+
+/* ========================================= */
+/* RESPONSIVE */
+/* ========================================= */
+
+@media (max-width: 1200px) {
+  .glass-left h1 {
+    font-size: 54px;
+  }
+
+  .glass-left p {
+    font-size: 16px;
+  }
+
+  .glass-floating-card {
+    width: 270px;
+  }
+}
+
+@media (max-width: 992px) {
+  .glass-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .glass-left,
+  .glass-right {
+    width: 100%;
+  }
+
+  .glass-right {
+    height: 320px;
+  }
+
+  .top-card {
+    left: 0;
+    right: auto;
+  }
+
+  .bottom-card {
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .glass-hero-section {
+    padding: 20px;
+  }
+
+  .glass-hero-card {
+    height: auto;
+  }
+
+  .glass-content {
+    padding: 45px 24px;
+  }
+
+  .glass-left h1 {
+    font-size: 38px;
+    line-height: 1.12;
+  }
+
+  .glass-left p {
+    font-size: 15px;
+    margin-bottom: 28px;
+  }
+
+  .glass-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .glass-buttons button {
+    width: 100%;
+    height: 58px;
+    font-size: 15px;
+  }
+
+  .glass-right {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    height: auto;
+  }
+
+  .glass-floating-card {
+    position: relative;
+    width: 100%;
+
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .glass-left h1 {
+    font-size: 31px;
+  }
+
+  .glass-left p {
+    font-size: 14px;
+  }
+
+  .glass-floating-card h3 {
+    font-size: 19px;
+  }
+
+  .glass-floating-card p {
+    font-size: 14px;
+  }
+}

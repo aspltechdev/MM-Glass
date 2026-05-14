@@ -1,81 +1,124 @@
 /* ourstory.css */
 
-.story-banner-section {
-  width: 100%;
-  overflow: hidden;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-/* Banner */
-
-.story-banner {
-  position: relative;
-  width: 100%;
-  height: 260px;
+.story-banner-section{
+  width:100%;
+  overflow:hidden;
 }
 
-.story-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: blur(1px);
+/* MAIN BANNER */
+
+.story-banner{
+  position:relative;
+  width:100%;
+  height:380px;
+  overflow:hidden;
 }
 
-/* Overlay */
+/* IMAGE */
 
-.story-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.story-banner-image{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+
+  filter:blur(1px);
+  transform:scale(1.03);
 }
 
-.story-overlay button {
-  padding: 14px 34px;
-  border-radius: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(6px);
-  color: #ffffff;
-  font-size: 34px;
-  font-weight: 700;
-  cursor: pointer;
-  letter-spacing: 1px;
-  transition: 0.3s ease;
+/* DARK OVERLAY */
+
+.story-overlay{
+  position:absolute;
+  inset:0;
+
+  background:rgba(0,0,0,0.12);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
-.story-overlay button:hover {
-  background: rgba(255, 255, 255, 0.25);
+/* BUTTON */
+
+.story-btn{
+  border:none;
+  outline:none;
+
+  padding:22px 42px;
+
+  border-radius:80px;
+
+  background:rgba(255,255,255,0.12);
+
+  backdrop-filter:blur(12px);
+
+  border:1px solid rgba(255,255,255,0.28);
+
+  color:#fff;
+
+  font-size:22px;
+  font-weight:700;
+  letter-spacing:0.5px;
+
+  box-shadow:
+    inset 0 1px 1px rgba(255,255,255,0.2),
+    0 8px 30px rgba(0,0,0,0.12);
+
+  transition:0.3s ease;
+}
+
+.story-btn:hover{
+  transform:translateY(-3px) scale(1.02);
+
+  background:rgba(255,255,255,0.18);
 }
 
 /* =========================
-   TABLET
+   RESPONSIVE
 ========================= */
 
-@media (max-width: 768px) {
+@media(max-width:992px){
 
-  .story-banner {
-    height: 220px;
+  .story-banner{
+    height:320px;
   }
 
-  .story-overlay button {
-    font-size: 26px;
-    padding: 12px 28px;
+  .story-btn{
+    font-size:20px;
+    padding:20px 38px;
   }
+
 }
 
-/* =========================
-   MOBILE
-========================= */
+@media(max-width:768px){
 
-@media (max-width: 480px) {
-
-  .story-banner {
-    height: 180px;
+  .story-banner{
+    height:250px;
   }
 
-  .story-overlay button {
-    font-size: 20px;
-    padding: 10px 22px;
+  .story-btn{
+    font-size:18px;
+    padding:18px 34px;
   }
+
+}
+
+@media(max-width:480px){
+
+  .story-banner{
+    height:190px;
+  }
+
+  .story-btn{
+    font-size:15px;
+    padding:15px 28px;
+    border-radius:60px;
+  }
+
 }
