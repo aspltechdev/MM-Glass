@@ -1,0 +1,628 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+.ag-section{
+
+  position:relative;
+
+  overflow:hidden;
+
+  padding:120px 0;
+
+  background:#050505;
+
+  isolation:isolate;
+}
+
+/* =========================================================
+   BACKGROUND
+   ========================================================= */
+
+.ag-overlay{
+
+  position:absolute;
+  inset:0;
+
+  z-index:2;
+
+  background:
+  linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.08),
+    rgba(0,0,0,0.22),
+    rgba(0,0,0,0.72)
+  );
+}
+
+.ag-bg-gradient{
+
+  position:absolute;
+  inset:0;
+
+  z-index:1;
+
+  background:
+
+  radial-gradient(
+    circle at top right,
+    rgba(120,180,255,0.12),
+    transparent 40%
+  ),
+
+  linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.1),
+    rgba(0,0,0,0.42),
+    rgba(0,0,0,0.82)
+  );
+}
+
+@keyframes agZoom{
+
+  from{
+
+    transform:
+    scale(1.05);
+  }
+
+  to{
+
+    transform:
+    scale(1.12);
+  }
+}
+
+/* LIGHT */
+
+.ag-light{
+
+  position:absolute;
+
+  top:-20%;
+  left:-10%;
+
+  width:700px;
+  height:700px;
+
+  border-radius:50%;
+
+  background:
+  rgba(120,180,255,0.12);
+
+  filter:blur(120px);
+
+  animation:
+  agFloat 8s ease infinite alternate;
+}
+
+/* =========================================================
+   TOP
+   ========================================================= */
+
+.ag-top{
+
+  position:relative;
+
+  z-index:5;
+
+  text-align:center;
+
+  margin-bottom:70px;
+
+  padding:0 5%;
+}
+
+.ag-top span{
+
+  display:inline-block;
+
+  margin-bottom:20px;
+
+  font-size:0.72rem;
+
+  letter-spacing:4px;
+
+  color:
+  rgba(255,255,255,0.58);
+}
+
+.ag-top h2{
+
+  font-size:
+  clamp(2.5rem,5vw,5rem);
+
+  line-height:0.95;
+
+  letter-spacing:-4px;
+
+  color:white;
+}
+
+/* =========================================================
+   ROWS
+   ========================================================= */
+
+.ag-row{
+
+  position:relative;
+
+  width:100%;
+
+  overflow:hidden;
+
+  margin-bottom:28px;
+}
+
+/* TRACK */
+
+.ag-track{
+
+  display:flex;
+
+  gap:24px;
+
+  width:max-content;
+}
+
+/* RIGHT */
+
+.row-right .ag-track{
+
+  animation:
+  scrollRight 30s linear infinite;
+}
+
+/* LEFT */
+
+.row-left .ag-track{
+
+  animation:
+  scrollLeft 30s linear infinite;
+}
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.ag-card{
+
+  position:relative;
+
+  width:320px;
+  height:220px;
+
+  overflow:hidden;
+
+  border-radius:30px;
+
+  flex-shrink:0;
+
+  transform:
+  perspective(1000px)
+  rotateY(-6deg);
+
+  transition:0.8s ease;
+
+  background:
+  rgba(255,255,255,0.05);
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(20px);
+}
+
+.ag-card.large{
+
+  width:420px;
+  height:260px;
+}
+
+/* HOVER */
+
+.ag-card:hover{
+
+  transform:
+  perspective(1000px)
+  rotateY(0deg)
+  translateY(-10px)
+  scale(1.03);
+}
+
+/* IMAGE */
+
+.ag-card img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transition:1.5s ease;
+
+  filter:
+  brightness(0.82)
+  contrast(1.05);
+}
+
+/* HOVER */
+
+.ag-card:hover img{
+
+  transform:
+  scale(1.08);
+}
+
+/* OVERLAY */
+
+.ag-card-overlay{
+
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    to top,
+    rgba(0,0,0,0.45),
+    transparent 60%
+  );
+}
+
+/* =========================================================
+   FLOATING PANEL
+   ========================================================= */
+
+.ag-floating-panel{
+
+  position:absolute;
+
+  right:7%;
+  bottom:90px;
+
+  z-index:10;
+
+  width:340px;
+
+  padding:28px;
+
+  border-radius:28px;
+
+  background:
+  rgba(255,255,255,0.06);
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(24px);
+
+  box-shadow:
+  0 30px 80px rgba(0,0,0,0.3);
+}
+
+/* LABEL */
+
+.ag-floating-panel span{
+
+  display:inline-block;
+
+  margin-bottom:18px;
+
+  font-size:0.68rem;
+
+  letter-spacing:4px;
+
+  color:
+  rgba(255,255,255,0.58);
+}
+
+/* TITLE */
+
+.ag-floating-panel h3{
+
+  font-size:1.5rem;
+
+  line-height:1.4;
+
+  color:white;
+
+  font-weight:500;
+}
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes scrollRight{
+
+  from{
+
+    transform:
+    translateX(0);
+  }
+
+  to{
+
+    transform:
+    translateX(-50%);
+  }
+}
+
+@keyframes scrollLeft{
+
+  from{
+
+    transform:
+    translateX(-50%);
+  }
+
+  to{
+
+    transform:
+    translateX(0);
+  }
+}
+
+@keyframes agFloat{
+
+  from{
+
+    transform:
+    translateY(0px);
+  }
+
+  to{
+
+    transform:
+    translateY(40px);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media(max-width:992px){
+
+  .ag-floating-panel{
+
+    position:relative;
+
+    right:auto;
+    bottom:auto;
+
+    margin:60px auto 0;
+
+    width:90%;
+  }
+}
+
+@media(max-width:768px){
+
+  .ag-section{
+
+    padding:100px 0;
+  }
+
+  .ag-top{
+
+    margin-bottom:50px;
+  }
+
+  .ag-top h2{
+
+    font-size:3rem;
+  }
+
+  .ag-card{
+
+    width:260px;
+    height:180px;
+  }
+
+  .ag-card.large{
+
+    width:320px;
+    height:220px;
+  }
+}
+
+@media(max-width:480px){
+
+  .ag-top h2{
+
+    font-size:2.2rem;
+
+    letter-spacing:-2px;
+  }
+
+  .ag-card{
+
+    width:220px;
+    height:160px;
+
+    border-radius:22px;
+  }
+
+  .ag-card.large{
+
+    width:260px;
+    height:180px;
+  }
+
+  .ag-track{
+
+    gap:16px;
+  }
+
+  .ag-floating-panel{
+
+    width:calc(100% - 40px);
+
+    padding:22px;
+
+    border-radius:22px;
+  }
+
+  .ag-floating-panel h3{
+
+    font-size:1.2rem;
+  }
+}
+
+/* =========================================================
+   REAL BG IMAGE
+   ========================================================= */
+
+.ag-bg-image{
+
+  position:absolute;
+  inset:0;
+
+  z-index:0;
+
+  overflow:hidden;
+}
+
+.ag-bg-image img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transform:scale(1.05);
+
+  animation:
+  agZoom 18s ease-in-out infinite alternate;
+
+  filter:
+  brightness(0.32)
+  contrast(1.05)
+  saturate(1.08);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ag-gradient-overlay{
+
+  position:absolute;
+  inset:0;
+
+  z-index:1;
+
+  background:
+
+  radial-gradient(
+    circle at top right,
+    rgba(120,180,255,0.14),
+    transparent 40%
+  ),
+
+  linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.08),
+    rgba(0,0,0,0.3),
+    rgba(0,0,0,0.82)
+  );
+}
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.ag-grid{
+
+  position:absolute;
+  inset:0;
+
+  z-index:2;
+
+  background-image:
+  linear-gradient(
+    rgba(255,255,255,0.02) 1px,
+    transparent 1px
+  ),
+
+  linear-gradient(
+    90deg,
+    rgba(255,255,255,0.02) 1px,
+    transparent 1px
+  );
+
+  background-size:70px 70px;
+}
+
+/* =========================================================
+   NOISE
+   ========================================================= */
+
+.ag-noise{
+
+  position:absolute;
+  inset:0;
+
+  z-index:2;
+
+  opacity:0.04;
+
+  mix-blend-mode:overlay;
+}
+
+/* =========================================================
+   LIGHT
+   ========================================================= */
+
+.ag-light{
+
+  position:absolute;
+
+  top:-20%;
+  left:-10%;
+
+  width:700px;
+  height:700px;
+
+  border-radius:50%;
+
+  z-index:1;
+
+  background:
+  rgba(120,180,255,0.14);
+
+  filter:blur(120px);
+
+  animation:
+  pxFloat 8s ease infinite alternate;
+}
+
+/* =========================================================
+   VIGNETTE
+   ========================================================= */
+
+.ag-vignette{
+
+  position:absolute;
+  inset:0;
+
+  z-index:2;
+
+  background:
+  radial-gradient(
+    circle,
+    transparent 50%,
+    rgba(0,0,0,0.52) 100%
+  );
+}

@@ -1,233 +1,925 @@
-/* SECTION */
-.products-section {
-  width: 100%;
-  padding: 50px 4% 30px;
-  background: #f4f4f4;
-  box-sizing: border-box;
+/* =========================================================
+   PRODUCTS — CINEMATIC UI
+   ========================================================= */
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-/* BADGE */
-.products-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
+.px-section{
 
-  padding: 14px 28px;
-  border-radius: 50px;
+  position:relative;
 
-  background: white;
+  overflow:hidden;
 
-  border: 1px solid rgba(255,255,255,0.5);
+  background:#050505;
+
+  padding:140px 7%;
+
+  color:white;
+}
+
+/* =========================================================
+   BACKGROUND
+   ========================================================= */
+
+/* .px-gradient{
+
+  position:absolute;
+  inset:0;
+
+  background:
+  radial-gradient(
+    circle at top right,
+    rgba(120,180,255,0.12),
+    transparent 30%
+  ),
+
+  radial-gradient(
+    circle at bottom left,
+    rgba(255,255,255,0.04),
+    transparent 35%
+  );
+
+  filter:blur(120px);
+
+  z-index:1;
+} */
+
+
+
+/* =========================================================
+   REAL BG IMAGE
+   ========================================================= */
+
+.px-bg-image{
+
+  position:absolute;
+  inset:0;
+
+  z-index:0;
+
+  overflow:hidden;
+}
+
+.px-bg-image img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transform:scale(1.05);
+
+  animation:
+  pxZoom 18s ease-in-out infinite alternate;
+
+  filter:
+  brightness(0.72)
+  contrast(1.05)
+  saturate(1.08);
+}
+
+/* =========================================================
+   OVERLAY
+   ========================================================= */
+
+.px-gradient-overlay{
+
+  position:absolute;
+  inset:0;
+
+  z-index:1;
+
+  background:
+
+  radial-gradient(
+    circle at top right,
+    rgba(120,180,255,0.14),
+    transparent 40%
+  ),
+
+  linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.08),
+    rgba(0,0,0,0.3),
+    rgba(0,0,0,0.82)
+  );
+}
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.px-grid{
+
+  position:absolute;
+  inset:0;
+
+  z-index:2;
+
+  background-image:
+  linear-gradient(
+    rgba(255,255,255,0.02) 1px,
+    transparent 1px
+  ),
+
+  linear-gradient(
+    90deg,
+    rgba(255,255,255,0.02) 1px,
+    transparent 1px
+  );
+
+  background-size:70px 70px;
+}
+
+/* =========================================================
+   NOISE
+   ========================================================= */
+
+.px-noise{
+
+  position:absolute;
+  inset:0;
+
+  z-index:2;
+
+  opacity:0.04;
+
+  mix-blend-mode:overlay;
+}
+
+/* =========================================================
+   LIGHT
+   ========================================================= */
+
+.px-light{
+
+  position:absolute;
+
+  top:-20%;
+  left:-10%;
+
+  width:700px;
+  height:700px;
+
+  border-radius:50%;
+
+  z-index:1;
+
+  background:
+  rgba(120,180,255,0.14);
+
+  filter:blur(120px);
+
+  animation:
+  pxFloat 8s ease infinite alternate;
+}
+
+/* =========================================================
+   VIGNETTE
+   ========================================================= */
+
+.px-vignette{
+
+  position:absolute;
+  inset:0;
+
+  z-index:2;
+
+  background:
+  radial-gradient(
+    circle,
+    transparent 50%,
+    rgba(0,0,0,0.52) 100%
+  );
+}
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.px-grid{
+
+  position:absolute;
+  inset:0;
+
+  background-image:
+  linear-gradient(
+    rgba(255,255,255,0.02) 1px,
+    transparent 1px
+  ),
+
+  linear-gradient(
+    90deg,
+    rgba(255,255,255,0.02) 1px,
+    transparent 1px
+  );
+
+  background-size:70px 70px;
+
+  z-index:2;
+
+  mask-image:
+  radial-gradient(
+    circle,
+    rgba(0,0,0,1),
+    transparent 85%
+  );
+}
+
+/* =========================================================
+   NOISE
+   ========================================================= */
+
+.px-noise{
+
+  position:absolute;
+  inset:0;
+
+  background-image:
+  url("https://grainy-gradients.vercel.app/noise.svg");
+
+  opacity:0.05;
+
+  z-index:3;
+}
+
+/* =========================================================
+   LIGHTS
+   ========================================================= */
+
+.px-light{
+
+  position:absolute;
+
+  width:700px;
+  height:700px;
+
+  border-radius:50%;
+
+  filter:blur(120px);
+
+  z-index:1;
+
+  animation:
+  pxFloat 10s ease infinite alternate;
+}
+
+.px-light1{
+
+  top:-10%;
+  right:-10%;
+
+  background:
+  rgba(120,180,255,0.12);
+}
+
+.px-light2{
+
+  bottom:-10%;
+  left:-10%;
+
+  background:
+  rgba(255,255,255,0.04);
+}
+
+/* =========================================================
+   TOP
+   ========================================================= */
+
+.px-top{
+
+  position:relative;
+
+  z-index:10;
+
+  max-width:760px;
+
+  margin-bottom:90px;
+}
+
+/* =========================================================
+   BADGE
+   ========================================================= */
+
+.px-badge{
+
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+
+  margin-bottom:28px;
+
+  font-size:0.72rem;
+
+  letter-spacing:4px;
+
+  text-transform:uppercase;
+
+  color:
+  rgba(255,255,255,0.6);
+}
+
+.px-badge span{
+
+  width:35px;
+  height:1px;
+
+  background:
+  rgba(255,255,255,0.4);
+}
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.px-top h2{
+
+  font-size:
+  clamp(2.8rem,5vw,5.5rem);
+
+  line-height:0.92;
+
+  letter-spacing:-4px;
+
+  text-transform:uppercase;
+
+  font-weight:650;
+
+  margin-bottom:24px;
+}
+
+/* HIGHLIGHT */
+
+.px-top h2 span{
+
+  color:
+  rgba(180,220,255,1);
+
+  text-shadow:
+  0 0 40px rgba(120,180,255,0.25);
+}
+
+/* =========================================================
+   PARAGRAPH
+   ========================================================= */
+
+.px-top p{
+
+  max-width:620px;
+
+  line-height:1.9;
+
+  color:
+  rgba(255,255,255,0.68);
+
+  font-size:1rem;
+}
+
+/* =========================================================
+   LAYOUT
+   ========================================================= */
+
+.px-layout{
+
+  position:relative;
+
+  z-index:10;
+
+  display:grid;
+  grid-template-columns:
+  repeat(2,1fr);
+
+  gap:30px;
+}
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.px-card{
+
+  position:relative;
+
+  overflow:hidden;
+
+  min-height:560px;
+
+  border-radius:32px;
+
+  background:
+  rgba(255,255,255,0.04);
+
+  border:
+  1px solid rgba(255,255,255,0.06);
+
+  backdrop-filter:blur(24px);
+
+  transition:
+  transform 0.8s ease,
+  border 0.8s ease;
 
   box-shadow:
-    0 4px 12px rgba(0,0,0,0.04),
-    inset 0 1px 0 rgba(255,255,255,0.5);
-
-  margin-bottom: 50px;
-}
-
-/* DOT */
-.dot {
-  width: 14px;
-  height: 14px;
-  background: red;
-  border-radius: 50%;
-}
-
-/* TEXT */
-.products-badge p {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 700;
-  color: #111;
-}
-
-/* GRID */
-.products-grid {
-  width: 90%;
-
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-
-  gap: 22px;
-}
-
-/* CARD */
-.product-card {
-  position: relative;
-
-  height: 300px;
-
-  border-radius: 18px;
-
-  overflow: hidden;
-
-  transition: 0.4s ease;
-}
-
-/* IMAGE */
-.product-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  0 30px 100px rgba(0,0,0,0.35);
 }
 
 /* HOVER */
-.product-card:hover {
-  transform: translateY(-6px);
+
+.px-card:hover{
+
+  transform:
+  translateY(-14px)
+  scale(1.01);
+
+  border:
+  1px solid rgba(255,255,255,0.12);
 }
 
-/* GLASS CONTENT */
-.product-content {
-  position: absolute;
+/* =========================================================
+   IMAGE
+   ========================================================= */
 
-  left: 14px;
-  bottom: 14px;
+.px-image{
 
-  width: 58%;
+  position:absolute;
+  inset:0;
 
-  padding: 16px;
-
-  border-radius: 16px;
-
-  background: rgba(255,255,255,0.28);
-
-  backdrop-filter: blur(12px);
-
-  border: 1px solid rgba(255,255,255,0.35);
+  overflow:hidden;
 }
 
-/* TITLE */
-.product-content h3 {
-  font-size: 16px;
-  font-weight: 700;
+/* IMAGE */
 
-  color: red;
+.px-image img{
 
-  margin-bottom: 12px;
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transition:
+  transform 2s ease,
+  filter 1s ease;
+
+  filter:
+  brightness(0.6)
+  contrast(1.08)
+  saturate(1.1);
 }
 
-/* DESCRIPTION */
-.product-content p {
-  font-size: 11px;
-  line-height: 1.45;
+/* HOVER */
 
-  color: #111;
+.px-card:hover img{
 
-  margin: 0;
+  transform:
+  scale(1.08);
 }
 
-/* BOTTOM CONTROLS */
-.products-bottom {
-  width: 100%;
+/* =========================================================
+   OVERLAY
+   ========================================================= */
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.px-image-overlay{
 
-  margin-top: 26px;
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    to top,
+    rgba(0,0,0,0.88),
+    rgba(0,0,0,0.15),
+    transparent
+  );
 }
 
-/* ARROWS */
-.arrow-btn {
-  width: 34px;
-  height: 34px;
+/* =========================================================
+   CONTENT
+   ========================================================= */
 
-  border: none;
-  border-radius: 50%;
+.px-content{
 
-  background: rgba(255,255,255,0.5);
+  position:absolute;
 
-  font-size: 20px;
-  color: red;
+  left:0;
+  bottom:0;
 
-  cursor: pointer;
+  z-index:5;
 
-  transition: 0.3s ease;
+  width:100%;
+
+  padding:40px;
 }
 
-.arrow-btn:hover {
-  transform: scale(1.08);
+/* NUMBER */
+
+.px-content span{
+
+  display:inline-block;
+
+  margin-bottom:18px;
+
+  font-size:0.75rem;
+
+  letter-spacing:4px;
+
+  text-transform:uppercase;
+
+  color:
+  rgba(255,255,255,0.55);
 }
 
-/* DOTS */
-.slider-dots {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.px-content h3{
+
+  font-size:2rem;
+
+  margin-bottom:18px;
+
+  line-height:1.1;
 }
 
-.slider-dots span {
-  width: 9px;
-  height: 9px;
+/* =========================================================
+   TEXT
+   ========================================================= */
 
-  background: #bfbfbf;
+.px-content p{
 
-  border-radius: 50%;
+  max-width:480px;
+
+  line-height:1.8;
+
+  color:
+  rgba(255,255,255,0.72);
+
+  font-size:0.96rem;
+
+  margin-bottom:28px;
 }
 
-.slider-dots .active-dot {
-  background: red;
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.px-content button{
+
+  padding:16px 28px;
+
+  border:none;
+
+  border-radius:999px;
+
+  cursor:pointer;
+
+  background:
+  rgba(255,255,255,0.08);
+
+  border:
+  1px solid rgba(255,255,255,0.1);
+
+  color:white;
+
+  backdrop-filter:blur(20px);
+
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+
+  font-size:0.72rem;
+
+  transition:0.5s ease;
+}
+
+/* HOVER */
+
+.px-content button:hover{
+
+  background:white;
+
+  color:black;
+
+  transform:
+  translateY(-4px);
+}
+
+/* =========================================================
+   HUGE TEXT
+   ========================================================= */
+
+.px-bg-text{
+
+  position:absolute;
+
+  bottom:-20px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  font-size:14vw;
+
+  font-weight:700;
+
+  letter-spacing:-10px;
+
+  color:
+  rgba(255,255,255,0.018);
+
+  z-index:1;
+}
+
+/* =========================================================
+   ANIMATION
+   ========================================================= */
+
+@keyframes pxFloat{
+
+  from{
+
+    transform:
+    translateY(0px);
+  }
+
+  to{
+
+    transform:
+    translateY(40px);
+  }
+}
+
+/* =========================================================
+   LAPTOP
+   ========================================================= */
+
+@media(max-width:1200px){
+
+  .px-layout{
+
+    grid-template-columns:1fr;
+  }
+
+  .px-card{
+
+    min-height:500px;
+  }
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media(max-width:768px){
+
+  .px-section{
+
+    padding:110px 5%;
+  }
+
+  .px-top{
+
+    margin-bottom:70px;
+  }
+
+  .px-top h2{
+
+    font-size:3rem;
+
+    letter-spacing:-3px;
+  }
+
+  .px-card{
+
+    min-height:440px;
+
+    border-radius:26px;
+  }
+
+  .px-content{
+
+    padding:30px;
+  }
+
+  .px-content h3{
+
+    font-size:1.6rem;
+  }
+
+  .px-content p{
+
+    font-size:0.92rem;
+  }
+
+  .px-card:hover{
+
+    transform:
+    translateY(-8px);
+  }
+
+  .px-bg-text{
+
+    font-size:22vw;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width:480px){
+
+  .px-section{
+
+    padding:90px 20px;
+  }
+
+  .px-badge{
+
+    font-size:0.62rem;
+
+    letter-spacing:2px;
+  }
+
+  .px-top h2{
+
+    font-size:2.3rem;
+
+    letter-spacing:-2px;
+  }
+
+  .px-top p{
+
+    font-size:0.92rem;
+
+    line-height:1.7;
+  }
+
+  .px-card{
+
+    min-height:360px;
+
+    border-radius:22px;
+  }
+
+  .px-content{
+
+    padding:22px;
+  }
+
+  .px-content h3{
+
+    font-size:1.3rem;
+  }
+
+  .px-content p{
+
+    font-size:0.88rem;
+
+    margin-bottom:20px;
+  }
+
+  .px-content button{
+
+    width:100%;
+  }
+
+  .px-bg-text{
+
+    font-size:24vw;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   BOTTOM BUTTON
+   ========================================================= */
+
+.px-bottom{
+
+  position:relative;
+
+  z-index:10;
+
+  margin-top:70px;
+
+  display:flex;
+  justify-content:center;
 }
 
 /* BUTTON */
-.show-btn {
-  margin-top: 30px;
 
-  border: none;
+.px-explore-btn{
 
-  padding: 16px 34px;
+  position:relative;
 
-  border-radius: 50px;
+  overflow:hidden;
 
-  background: red;
+  padding:18px 34px;
 
-  color: white;
+  border-radius:999px;
 
-  font-size: 16px;
-  font-weight: 500;
+  border:
+  1px solid rgba(255,255,255,0.1);
 
-  cursor: pointer;
+  background:
+  rgba(255,255,255,0.05);
 
-  transition: 0.3s ease;
+  color:white;
+
+  backdrop-filter:blur(20px);
+
+  cursor:pointer;
+
+  font-size:0.74rem;
+
+  letter-spacing:3px;
+
+  text-transform:uppercase;
+
+  transition:
+  transform 0.5s ease,
+  border 0.5s ease,
+  background 0.5s ease;
+
+  box-shadow:
+  0 20px 60px rgba(0,0,0,0.3);
 }
 
-.show-btn:hover {
-  transform: translateY(-3px);
+/* GLOW */
+
+.px-explore-btn span{
+
+  position:absolute;
+
+  inset:-40%;
+
+  background:
+  radial-gradient(
+    circle,
+    rgba(120,180,255,0.15),
+    transparent 70%
+  );
+
+  opacity:0;
+
+  transition:0.6s ease;
 }
 
-/* TABLET */
-@media (max-width: 900px) {
-  .products-grid {
-    grid-template-columns: 1fr;
-  }
+/* HOVER */
 
-  .product-content {
-    width: 70%;
-  }
+.px-explore-btn:hover{
+
+  transform:
+  translateY(-6px)
+  scale(1.02);
+
+  border:
+  1px solid rgba(255,255,255,0.18);
+
+  background:
+  rgba(255,255,255,0.08);
 }
 
-/* MOBILE */
-@media (max-width: 500px) {
-  .product-card {
-    height: 280px;
-  }
+.px-explore-btn:hover span{
 
-  .product-content {
-    width: 82%;
-  }
-
-  .product-content h3 {
-    font-size: 14px;
-  }
-
-  .product-content p {
-    font-size: 10px;
-  }
+  opacity:1;
 }
 
+/* ACTIVE */
 
+.px-explore-btn:active{
+
+  transform:
+  scale(0.98);
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width:768px){
+
+  .px-bottom{
+
+    margin-top:50px;
+  }
+
+  .px-explore-btn{
+
+    width:100%;
+
+    justify-content:center;
+
+    padding:16px 24px;
+  }
+}

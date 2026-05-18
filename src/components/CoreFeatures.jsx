@@ -1,99 +1,187 @@
+// CoreFeatures.jsx
+
 import "./CoreFeatures.css";
-
-
 
 function CoreFeatures() {
 
-
   return (
-   <>
-   <section className="core-feature-section">
 
-  {/* Heading */}
+    <section className="nx-core">
 
-  {/* <div className="products-heading">
-    <button>
-      <span className="dot"></span>
-      Core Features
-    </button>
-  </div> */}
+      {/* BACKGROUND VIDEO */}
 
-  {/* Content */}
+      {/* <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="nx-video"
+      >
 
-  <div className="core-feature-container">
+        <source
+          src="https://www.pexels.com/download/video/36103205/"
+          type="video/mp4"
+        />
 
-    {/* Left Content */}
+      </video>
 
-    <div className="core-feature-left">
+  
+      <div className="nx-overlay"></div>
+      <div className="nx-gradient"></div>
+      <div className="nx-noise"></div> */}
 
-      <h2>
-        Innovative glass solutions built for modern spaces
-      </h2>
 
-      <p>
-        We continuously invest in advanced glass processing
-        technologies, research, and innovation to stay ahead of
-        evolving architectural and industrial needs.
-      </p>
+      {/* BACKGROUND IMAGE */}
 
-      <button>LEARN MORE →</button>
+<div className="nx-bg">
 
-    </div>
+  <img
+    src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2200&auto=format&fit=crop"
+    alt=""
+  />
 
-    {/* Right Features */}
+</div>
 
-    <div className="core-feature-right">
+{/* CINEMATIC LAYERS */}
 
-      <div className="feature-progress">
-        <div className="circle">90%</div>
+<div className="nx-overlay"></div>
 
-        <h3>QUALITY ASSURANCE</h3>
+<div className="nx-light"></div>
 
-        <p>
-          Every glass unit undergoes strict quality checks to
-          ensure strength and long-term reliability.
-        </p>
+<div className="nx-vignette"></div>
+
+      {/* HUGE BACKGROUND TEXT */}
+
+      <div className="nx-bg-text">
+
+        PRECISION
+
       </div>
 
-      <div className="feature-progress">
-        <div className="circle">95%</div>
+      {/* FLOATING LIGHT */}
 
-        <h3>SKILLED CRAFTSMANSHIP</h3>
+      <div className="nx-light nx-light1"></div>
+      <div className="nx-light nx-light2"></div>
 
-        <p>
-          Our experienced team ensures precision in every cut,
-          finish, and installation-ready product.
-        </p>
+      {/* TOP */}
+
+      <div className="nx-top">
+
+        <div className="nx-badge">
+
+          <span></span>
+
+          FUTURE ARCHITECTURAL SYSTEMS
+
+        </div>
+
+        <h2>
+
+          ENGINEERED <br />
+
+          FOR MODERN <br />
+
+          <span>SPATIAL EXPERIENCES</span>
+
+        </h2>
+
       </div>
 
-      <div className="feature-progress">
-        <div className="circle">92%</div>
+      {/* TIMELINE */}
 
-        <h3>PRECISION PROCESSING</h3>
+      <div className="nx-timeline">
 
-        <p>
-          Advanced machinery enables accurate cutting and
-          finishing for flawless results.
-        </p>
+        {/* LINE */}
+
+        <div className="nx-line"></div>
+
+        {/* ITEM 1 */}
+
+        <div className="nx-item left">
+
+          <div className="nx-content">
+
+            <span>AI PRECISION</span>
+
+            <h3>Intelligent Processing Systems</h3>
+
+            <p>
+              AI-enhanced fabrication systems engineered for
+              architectural perfection and premium execution.
+            </p>
+
+          </div>
+
+          <div className="nx-visual">
+
+            <img
+              src="https://images.pexels.com/photos/11961012/pexels-photo-11961012.png"
+              alt=""
+            />
+
+          </div>
+
+        </div>
+
+        {/* ITEM 2 */}
+
+        <div className="nx-item right">
+
+          <div className="nx-visual">
+
+            <img
+              src="https://images.pexels.com/photos/33321753/pexels-photo-33321753.jpeg"
+              alt=""
+            />
+
+          </div>
+
+          <div className="nx-content">
+
+            <span> SMART FABRICATION</span>
+
+            <h3>Future Manufacturing Ecosystems</h3>
+
+            <p>
+              Advanced glass engineering technologies designed
+              for futuristic luxury architecture.
+            </p>
+
+          </div>
+
+        </div>
+
+        {/* ITEM 3 */}
+
+        <div className="nx-item left">
+
+          <div className="nx-content">
+
+            <span> SPATIAL DESIGN</span>
+
+            <h3>Cinematic Architectural Experiences</h3>
+
+            <p>
+              Transforming modern environments through
+              immersive premium glass ecosystems.
+            </p>
+
+          </div>
+
+          <div className="nx-visual">
+
+            <img
+              src="https://images.pexels.com/photos/2606383/pexels-photo-2606383.jpeg"
+              alt=""
+            />
+
+          </div>
+
+        </div>
+
       </div>
 
-      <div className="feature-progress">
-        <div className="circle">98%</div>
-
-        <h3>INDUSTRY EXPERTISE</h3>
-
-        <p>
-          Years of experience delivering trusted glass solutions
-          across architectural and industrial sectors.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-   </>
+    </section>
   );
 }
 

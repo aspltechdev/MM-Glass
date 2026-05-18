@@ -18,10 +18,13 @@ import Branches from "./components/Branches";
 import Footer from "./components/Footer";
 
 // Example About component
-import About from "./components/About";
+
 import OurStory from "./components/ourstory";
 import Product from "./components/product"
 import Gallery from "./components/gallery";
+import Aboutus from "./components/Aboutus";
+import CTA from "./components/CTA";
+import About from "./components/Aboutpage";
 
 
 
@@ -30,19 +33,24 @@ function HomePage() {
   return (
     <>
       <Hero />
-      <Trusted />
-      <Strength />
+      
+   <Aboutus/>
+     <WhyChoose />
+   <Trusted />
+      {/* <Strength /> */}
       <Certification />
-      <WhyChoose />
+     
+       <Products />
       <Achievements />
       <CoreFeatures />
-      <Expertise />
-      <Faq />
+      {/* <Expertise /> */}
+    
       <Testimonials />
-      <Contact />
-      <Branches />
+   
+    
       {/* <OurStory /> */}
-      <Products />
+    
+      <CTA/>
     </>
   );
 }
@@ -54,7 +62,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<About/>} />
         <Route path="/ourstory" element={<OurStory />} />
         <Route path="/product" element={<Product />} />
         <Route path="/gallery" element={<Gallery />} />

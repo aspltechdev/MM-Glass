@@ -1,179 +1,640 @@
-/* SECTION */
-.expertise-section {
-  width: 100%;
-  padding: 50px 6% 30px;
-  box-sizing: border-box;
-  background: #f4f4f4;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* =========================================================
+   EXPERTISE SECTION
+   ========================================================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-/* BADGE */
-.expertise-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
+.ex-section{
 
-  padding: 14px 28px;
-  border-radius: 50px;
+  position:relative;
 
-  background:white;
+  overflow:hidden;
 
-  border: 1px solid rgba(255,255,255,0.5);
+  isolation:isolate;
 
-  box-shadow:
-    0 4px 12px rgba(0,0,0,0.04),
-    inset 0 1px 0 rgba(255,255,255,0.5);
+  background:#050505;
 
-  margin-bottom: 45px;
+  padding:140px 7%;
+
+  color:white;
 }
 
-/* DOT */
-.dot {
-  width: 14px;
-  height: 14px;
+/* =========================================================
+   CINEMATIC BACKGROUND
+   ========================================================= */
 
-  background: red;
-  border-radius: 50%;
-}
+.ex-bg{
 
-/* TEXT */
-.expertise-badge p {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 700;
-  color: #111;
-}
+  position:absolute;
+  inset:0;
 
-/* CONTAINER */
-.expertise-container {
-  width: 100%;
+  overflow:hidden;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  gap: 70px;
-}
-
-/* LEFT */
-.expertise-left {
-  width: 48%;
-}
-
-/* TITLE */
-.expertise-left h2 {
-  font-size: 52px;
-  line-height: 1.1;
-  font-weight: 700;
-
-  color: #111;
-
-  margin-bottom: 24px;
-}
-
-/* TEXT */
-.expertise-left p {
-  font-size: 15px;
-  line-height: 1.7;
-
-  color: #444;
-
-  margin-bottom: 40px;
-
-  max-width: 520px;
-}
-
-/* PROGRESS */
-.progress-box {
-  margin-bottom: 26px;
-}
-
-/* HEAD */
-.progress-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  margin-bottom: 10px;
-}
-
-/* LABELS */
-.progress-head span {
-  font-size: 16px;
-  font-weight: 500;
-  color: #111;
-}
-
-/* BAR */
-.progress-bar {
-  width: 100%;
-  height: 5px;
-
-  background: #e0e0e0;
-
-  border-radius: 50px;
-
-  overflow: hidden;
-}
-
-/* FILL */
-.progress-fill {
-  height: 100%;
-
-  background: red;
-
-  border-radius: 50px;
-}
-
-/* RIGHT */
-.expertise-right {
-  width: 44%;
+  z-index:0;
 }
 
 /* IMAGE */
-.expertise-right img {
-  width: 100%;
-  height: 420px;
 
-  object-fit: cover;
+.ex-bg img{
 
-  border-radius: 18px;
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transform:scale(1.05);
+
+  animation:
+  exZoom 18s ease-in-out infinite alternate;
+
+  filter:
+  brightness(0.7)
+  contrast(1.08)
+  saturate(1.08);
+}
+
+/* =========================================================
+   OVERLAY
+   ========================================================= */
+
+.ex-overlay{
+
+  position:absolute;
+  inset:0;
+
+  z-index:1;
+
+  background:
+  linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.12),
+    rgba(0,0,0,0.28),
+    rgba(0,0,0,0.72)
+  );
+}
+
+/* =========================================================
+   LIGHT
+   ========================================================= */
+
+.ex-light{
+
+  position:absolute;
+
+  top:-15%;
+  right:-10%;
+
+  width:700px;
+  height:700px;
+
+  border-radius:50%;
+
+  z-index:1;
+
+  background:
+  rgba(120,180,255,0.14);
+
+  filter:blur(120px);
+
+  animation:
+  exFloat 8s ease infinite alternate;
+}
+
+/* =========================================================
+   VIGNETTE
+   ========================================================= */
+
+.ex-vignette{
+
+  position:absolute;
+  inset:0;
+
+  z-index:1;
+
+  background:
+  radial-gradient(
+    circle,
+    transparent 50%,
+    rgba(0,0,0,0.42) 100%
+  );
+}
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.ex-grid{
+
+  position:absolute;
+  inset:0;
+
+  z-index:1;
+
+  background-image:
+  linear-gradient(
+    rgba(255,255,255,0.02) 1px,
+    transparent 1px
+  ),
+
+  linear-gradient(
+    90deg,
+    rgba(255,255,255,0.02) 1px,
+    transparent 1px
+  );
+
+  background-size:70px 70px;
+
+  mask-image:
+  radial-gradient(
+    circle,
+    rgba(0,0,0,1),
+    transparent 90%
+  );
+}
+
+/* =========================================================
+   TOP
+   ========================================================= */
+
+.ex-top{
+
+  position:relative;
+
+  z-index:5;
+
+  max-width:760px;
+
+  margin-bottom:80px;
+}
+
+/* LABEL */
+
+.ex-top span{
+
+  display:inline-block;
+
+  margin-bottom:24px;
+
+  font-size:0.72rem;
+
+  letter-spacing:4px;
+
+  color:
+  rgba(255,255,255,0.58);
+}
+
+/* TITLE */
+
+.ex-top h2{
+
+  font-size:
+  clamp(3rem,6vw,6rem);
+
+  line-height:0.9;
+
+  letter-spacing:-5px;
+
+  text-transform:uppercase;
+}
+
+/* HIGHLIGHT */
+
+.ex-top h2 span{
+
+  color:
+  rgba(180,220,255,1);
+
+  text-shadow:
+  0 0 30px rgba(120,180,255,0.18);
+}
+
+/* =========================================================
+   LAYOUT
+   ========================================================= */
+
+.ex-layout{
+
+  position:relative;
+
+  z-index:5;
+
+  display:grid;
+  grid-template-columns:
+  1.1fr 0.9fr;
+
+  gap:30px;
+}
+
+/* =========================================================
+   MAIN CARD
+   ========================================================= */
+
+.ex-main-card{
+
+  position:relative;
+
+  overflow:hidden;
+
+  border-radius:36px;
+
+  height:720px;
 
   box-shadow:
-    0 8px 20px rgba(0,0,0,0.08);
+  0 40px 120px rgba(0,0,0,0.45);
 }
 
-/* TABLET */
-@media (max-width: 992px) {
+/* IMAGE */
 
-  .expertise-container {
-    flex-direction: column;
+.ex-main-card img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transition:2s ease;
+
+  filter:
+  brightness(0.8)
+  contrast(1.05);
+}
+
+/* HOVER */
+
+.ex-main-card:hover img{
+
+  transform:
+  scale(1.08);
+}
+
+/* OVERLAY */
+
+.ex-card-overlay{
+
+  position:absolute;
+  inset:0;
+
+  z-index:2;
+
+  background:
+  linear-gradient(
+    to top,
+    rgba(0,0,0,0.82),
+    transparent 55%
+  );
+}
+
+/* CONTENT */
+
+.ex-main-content{
+
+  position:absolute;
+
+  left:40px;
+  bottom:40px;
+
+  z-index:5;
+}
+
+/* LABEL */
+
+.ex-main-content span{
+
+  display:inline-block;
+
+  margin-bottom:20px;
+
+  font-size:0.68rem;
+
+  letter-spacing:4px;
+
+  color:
+  rgba(255,255,255,0.6);
+}
+
+/* TITLE */
+
+.ex-main-content h3{
+
+  max-width:520px;
+
+  font-size:2.2rem;
+
+  line-height:1.25;
+
+  font-weight:500;
+}
+
+/* =========================================================
+   RIGHT SIDE
+   ========================================================= */
+
+.ex-right{
+
+  display:flex;
+  flex-direction:column;
+
+  gap:24px;
+}
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.ex-card{
+
+  display:flex;
+
+  gap:20px;
+
+  padding:22px;
+
+  border-radius:26px;
+
+  background:
+  rgba(255,255,255,0.05);
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(24px);
+
+  transition:0.6s ease;
+
+  box-shadow:
+  0 20px 60px rgba(0,0,0,0.25);
+}
+
+/* HOVER */
+
+.ex-card:hover{
+
+  transform:
+  translateY(-8px);
+
+  background:
+  rgba(255,255,255,0.07);
+}
+
+/* =========================================================
+   CARD IMAGE
+   ========================================================= */
+
+.ex-card-image{
+
+  width:130px;
+  height:130px;
+
+  overflow:hidden;
+
+  border-radius:18px;
+
+  flex-shrink:0;
+}
+
+/* IMAGE */
+
+.ex-card-image img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transition:1.2s ease;
+}
+
+/* HOVER */
+
+.ex-card:hover .ex-card-image img{
+
+  transform:
+  scale(1.08);
+}
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.ex-card-content{
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+/* NUMBER */
+
+.ex-card-content h4{
+
+  font-size:2.2rem;
+
+  margin-bottom:10px;
+
+  color:
+  rgba(180,220,255,1);
+}
+
+/* TITLE */
+
+.ex-card-content h5{
+
+  font-size:1rem;
+
+  margin-bottom:10px;
+
+  font-weight:500;
+}
+
+/* TEXT */
+
+.ex-card-content p{
+
+  line-height:1.8;
+
+  font-size:0.92rem;
+
+  color:
+  rgba(255,255,255,0.7);
+}
+
+/* =========================================================
+   HUGE TYPO
+   ========================================================= */
+
+.ex-bg-text{
+
+  position:absolute;
+
+  bottom:-20px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  font-size:14vw;
+
+  font-weight:700;
+
+  letter-spacing:-10px;
+
+  color:
+  rgba(255,255,255,0.02);
+
+  z-index:1;
+}
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes exZoom{
+
+  from{
+
+    transform:
+    scale(1.05);
   }
 
-  .expertise-left,
-  .expertise-right {
-    width: 100%;
-  }
+  to{
 
-  .expertise-left h2 {
-    font-size: 42px;
+    transform:
+    scale(1.12);
   }
 }
 
-/* MOBILE */
-@media (max-width: 600px) {
+@keyframes exFloat{
 
-  .expertise-left h2 {
-    font-size: 32px;
+  from{
+
+    transform:
+    translateY(0px);
   }
 
-  .expertise-right img {
-    height: 320px;
+  to{
+
+    transform:
+    translateY(40px);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media(max-width:1100px){
+
+  .ex-layout{
+
+    grid-template-columns:1fr;
   }
 
-  .progress-head span {
-    font-size: 14px;
+  .ex-main-card{
+
+    height:620px;
+  }
+}
+
+@media(max-width:768px){
+
+  .ex-section{
+
+    padding:110px 5%;
+  }
+
+  .ex-top h2{
+
+    font-size:3rem;
+  }
+
+  .ex-main-card{
+
+    height:500px;
+
+    border-radius:28px;
+  }
+
+  .ex-main-content{
+
+    left:28px;
+    bottom:28px;
+  }
+
+  .ex-main-content h3{
+
+    font-size:1.7rem;
+  }
+
+  .ex-card{
+
+    flex-direction:column;
+  }
+
+  .ex-card-image{
+
+    width:100%;
+    height:220px;
+  }
+
+  .ex-bg-text{
+
+    font-size:22vw;
+  }
+}
+
+@media(max-width:480px){
+
+  .ex-section{
+
+    padding:90px 20px;
+  }
+
+  .ex-top h2{
+
+    font-size:2.4rem;
+
+    letter-spacing:-2px;
+  }
+
+  .ex-main-card{
+
+    height:420px;
+
+    border-radius:22px;
+  }
+
+  .ex-main-content h3{
+
+    font-size:1.3rem;
+  }
+
+  .ex-card{
+
+    padding:18px;
+
+    border-radius:20px;
+  }
+
+  .ex-card-image{
+
+    height:180px;
+  }
+
+  .ex-card-content h4{
+
+    font-size:2rem;
+  }
+
+  .ex-card-content p{
+
+    font-size:0.88rem;
+  }
+
+  .ex-bg-text{
+
+    font-size:24vw;
   }
 }

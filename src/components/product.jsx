@@ -1,234 +1,88 @@
-// Product.jsx
 
 import { useEffect, useState } from "react";
 import "./product.css";
-import Temperedgalss from "../assets/architecturalglass/Ag1.png"
-import Heatsoakedglass from "../assets/architecturalglass/Ag2.png"
-import Heatstrengthenedglass from "../assets/architecturalglass/Ag3.png"
-import Laminatedglass from "../assets/architecturalglass/Ag4.png";
-import Reflectiveglass from "../assets/architecturalglass/Ag5.jpg"
-import Insulatedglass from "../assets/architecturalglass/Ag6.jpg";
-import Decorativeglass from "../assets/architecturalglass/Ag7.jpg";
-import Frostedglass from "../assets/architecturalglass/Ag8.jpg";
-import Magicglass from "../assets/specialityglass/sg1.jpg";
-import Curvedglass from  "../assets/specialityglass/sg2.jpg";
-import Georgianbarglass from "../assets/specialityglass/sg3.jpg"
-import Oleoglass from "../assets/specialityglass/sg4.jpg";
-import Fireresistantglass from "../assets/specialityglass/sg5.jpg";
-import Bulletresistantglass from "../assets/specialityglass/sg6.jpg";
-import Acousticglass from "../assets/specialityglass/sg7.jpg";
-import Solarglass from "../assets/specialityglass/sg8.jpg";
-import Busglass from "../assets/automotiveglass/busglass.jpg";
-import Carwindshield from "../assets/automotiveglass/CarWindshield.jpg";
-import Truckglass from "../assets/automotiveglass/Truckglass.jpg";
-import Transportglass from "../assets/automotiveglass/Transportglass.jpg";
-import Sunroofglass from "../assets/automotiveglass/Sunroofglass.jpg";
-import Rearsafetyglass from "../assets/automotiveglass/Rearsafetyglass.jpg";
-import Sidewindowglass from "../assets/automotiveglass/Sidewindowglass.jpg";
-import Mirrorglass from "../assets/automotiveglass/Mirrorglass.jpg";
-import productshero from "../assets/heroimages/producthero.png";
-
 
 function Product() {
-
-  // =========================
-  // DATA
-  // =========================
 
   const sections = [
     {
       heading: "Architectural Glass",
-
       products: [
         {
           title: "Tempered Glass",
-          image: Temperedgalss,
+          image:
+            "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2000&auto=format&fit=crop",
           desc:
-            "Processed safety glass with high durability and strength.",
-        },
-
-        {
-          title: "Heat Soaked Glass",
-          image:Heatsoakedglass,
-          desc:
-            "Improves safety against spontaneous glass breakage.",
-        },
-
-        {
-          title: "Heat Strengthened Glass",
-          image: Heatstrengthenedglass,
-          desc:
-            "Twice as strong as annealed glass with clarity.",
+            "Processed safety glass engineered for superior strength and durability.",
         },
 
         {
           title: "Laminated Glass",
-          image: Laminatedglass,
+          image:
+            "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=2000&auto=format&fit=crop",
           desc:
-            "Ideal for UV protection and solar control.",
+            "Advanced laminated systems designed for security and UV protection.",
         },
 
         {
           title: "Reflective Glass",
-          image: Reflectiveglass,
+          image:
+            "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2000&auto=format&fit=crop",
           desc:
-            "Modern architectural reflective safety glass.",
+            "Luxury reflective architectural glass with premium aesthetics.",
         },
 
         {
           title: "Insulated Glass",
-          image: Insulatedglass,
+          image:
+            "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2000&auto=format&fit=crop",
           desc:
-            "Provides thermal and acoustic insulation.",
-        },
-
-        {
-          title: "Decorative Glass",
-          image: Decorativeglass,
-          desc:
-            "Elegant decorative glass for interiors.",
-        },
-
-        {
-          title: "Frosted Glass",
-          image: Frostedglass,
-          desc:
-            "Adds privacy while maintaining natural light.",
+            "Thermal and acoustic insulation for modern spaces.",
         },
       ],
     },
 
     {
       heading: "Speciality Glass",
-
       products: [
         {
           title: "Magic Glass",
-          image: Magicglass,
+          image:
+            "https://images.unsplash.com/photo-1519643381401-22c77e60520e?q=80&w=2000&auto=format&fit=crop",
           desc:
-            "Switchable privacy glass technology.",
+            "Switchable privacy glass powered by smart technology.",
         },
+
         {
           title: "Curved Glass",
-          image: Curvedglass,
+          image:
+            "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2000&auto=format&fit=crop",
           desc:
-            "Curved laminated and tempered glass solutions.",
-        },
-
-        {
-          title: "Georgian Bar Glass",
-          image: Georgianbarglass,
-          desc:
-            "Classic decorative glazing design.",
-        },
-
-        {
-          title: "Oleo Glass",
-          image: Oleoglass,
-          desc:
-            "Remote controlled modern glass solution.",
+            "Architectural curved glass for futuristic structures.",
         },
 
         {
           title: "Fire Resistant Glass",
-          image: Fireresistantglass,
+          image:
+            "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2000&auto=format&fit=crop",
           desc:
-            "Designed for fire safety applications.",
-        },
-
-        {
-          title: "Bullet Resistant Glass",
-          image: Bulletresistantglass,
-          desc:
-            "Advanced security and protection glass.",
+            "High-performance fire safety glass systems.",
         },
 
         {
           title: "Acoustic Glass",
-          image: Acousticglass,
+          image:
+            "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=2000&auto=format&fit=crop",
           desc:
-            "Reduces outside noise significantly.",
-        },
-
-        {
-          title: "Solar Glass",
-          image: Solarglass,
-          desc:
-            "Energy efficient solar control glass.",
-        },
-      ],
-    },
-
-    {
-      heading: "Automotive Glass",
-
-      products: [
-        {
-          title: "Bus Glass",
-          image: Busglass,
-          desc:
-            "Strong safety glass for buses and transport.",
-        },
-
-        {
-          title: "Car Windshield",
-          image: Carwindshield,
-          desc:
-            "High visibility laminated windshield glass.",
-        },
-
-        {
-          title: "Truck Glass",
-          image: Truckglass,
-          desc:
-            "Heavy duty truck glass for durability.",
-        },
-
-        {
-          title: "Transport Glass",
-          image: Transportglass,
-          desc:
-            "Reliable glass for city transportation.",
-        },
-
-        {
-          title: "Sunroof Glass",
-          image: Sunroofglass,
-          desc:
-            "Premium glass for modern vehicles.",
-        },
-
-        {
-          title: "Rear Safety Glass",
-          image: Rearsafetyglass,
-          desc:
-            "Enhanced rear passenger protection.",
-        },
-
-        {
-          title: "Side Window Glass",
-          image: Sidewindowglass,
-          desc:
-            "Durable side protection glass.",
-        },
-
-        {
-          title: "Mirror Glass",
-          image: Mirrorglass,
-          desc:
-            "Clear visibility mirror glass solutions.",
+            "Premium acoustic glazing engineered for silence.",
         },
       ],
     },
   ];
 
-  // =========================
-  // SLIDER
-  // =========================
-
   const itemsPerSlide = 4;
 
-  const [slides, setSlides] = useState([0, 0, 0]);
+  const [slides, setSlides] = useState([0, 0]);
 
   useEffect(() => {
 
@@ -245,234 +99,164 @@ function Product() {
           return slide === totalSlides - 1
             ? 0
             : slide + 1;
-
         })
       );
 
-    }, 3000);
+    }, 4500);
 
     return () => clearInterval(interval);
 
   }, []);
 
-  const nextSlide = (sectionIndex) => {
-
-    const totalSlides = Math.ceil(
-      sections[sectionIndex].products.length /
-        itemsPerSlide
-    );
-
-    setSlides((prev) =>
-      prev.map((slide, index) =>
-        index === sectionIndex
-          ? slide === totalSlides - 1
-            ? 0
-            : slide + 1
-          : slide
-      )
-    );
-  };
-
-  const prevSlide = (sectionIndex) => {
-
-    const totalSlides = Math.ceil(
-      sections[sectionIndex].products.length /
-        itemsPerSlide
-    );
-
-    setSlides((prev) =>
-      prev.map((slide, index) =>
-        index === sectionIndex
-          ? slide === 0
-            ? totalSlides - 1
-            : slide - 1
-          : slide
-      )
-    );
-  };
-
   return (
-    <>
 
-      {/* =========================
-          BANNER
-      ========================= */}
+    <div className="cp-page">
 
-      <section className="story-banner-section">
+      {/* HERO */}
 
-        <div className="story-banner">
+      <section className="cp-hero">
+
+        <div className="cp-bg">
 
           <img
-            src= {productshero}
-            alt="Products"
+            src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2400&auto=format&fit=crop"
+            alt=""
           />
 
-          <div className="story-overlay">
-            <button>PRODUCTS</button>
-          </div>
+        </div>
+
+        <div className="cp-overlay"></div>
+        <div className="cp-light"></div>
+        <div className="cp-grid"></div>
+
+        <div className="cp-hero-content">
+
+          <span>
+            FUTURE • GLASS • ARCHITECTURE
+          </span>
+
+          <h1>
+            ENGINEERED <br />
+            GLASS <span>SYSTEMS</span>
+          </h1>
+
+          <p>
+            Premium architectural and specialty glass
+            solutions crafted with cinematic precision,
+            futuristic aesthetics, and modern engineering.
+          </p>
+
+          <button>
+            Explore Collection
+          </button>
 
         </div>
 
       </section>
 
-      {/* =========================
-          ALL SECTIONS
-      ========================= */}
+      {/* SECTIONS */}
 
-      {sections.map((section, sectionIndex) => {
+      {sections.map((section, sectionIndex) => (
 
-        const totalSlides = Math.ceil(
-          section.products.length / itemsPerSlide
-        );
+        <section
+          className="cp-section"
+          key={sectionIndex}
+        >
 
-        return (
+          <div className="cp-section-top">
 
-          <section
-            className="products-section"
-            key={sectionIndex}
-          >
+            <span>
+              PREMIUM COLLECTION
+            </span>
 
-            {/* Heading */}
 
-            <div className="products-heading">
+            {/* CINEMATIC BACKGROUND */}
 
-              <button>
-                <span className="dot"></span>
-                {section.heading}
-              </button>
+<div className="pr-products-bg">
 
-            </div>
+  <img
+    src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2400&auto=format&fit=crop"
+    alt=""
+  />
 
-            {/* Slider */}
+</div>
 
-            <div className="slider-wrapper">
+{/* LAYERS */}
+
+<div className="pr-products-overlay"></div>
+
+<div className="pr-products-light"></div>
+
+<div className="pr-products-grid-bg"></div>
+
+<div className="pr-products-vignette"></div>
+
+            <h2>
+              {section.heading}
+            </h2>
+
+          </div>
+
+          <div className="cp-products-grid">
+
+            {section.products.map((item, index) => (
 
               <div
-                className="products-grid-slider"
-                style={{
-                  transform: `translateX(-${
-                    slides[sectionIndex] * 100
-                  }%)`,
-                }}
+                className="cp-card"
+                key={index}
               >
 
-                {Array.from({
-                  length: totalSlides,
-                }).map((_, slideIndex) => (
+                {/* IMAGE */}
 
-                  <div
-                    className="products-grid"
-                    key={slideIndex}
-                  >
+                <div className="cp-card-image">
 
-                    {section.products
-                      .slice(
-                        slideIndex * itemsPerSlide,
-                        slideIndex * itemsPerSlide +
-                          itemsPerSlide
-                      )
-                      .map((item, index) => (
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                  />
 
-                        <div
-                          className="product-card"
-                          key={index}
-                        >
+                  <div className="cp-card-overlay"></div>
 
-                          <img
-                            src={item.image}
-                            alt={item.title}
-                          />
+                </div>
 
-                          <div className="product-overlay">
+                {/* CONTENT */}
 
-                            <h3>{item.title}</h3>
+                <div className="cp-card-content">
 
-                            <p>{item.desc}</p>
+                  <span>
+                    PREMIUM GLASS
+                  </span>
 
-                          </div>
+                  <h3>
+                    {item.title}
+                  </h3>
 
-                        </div>
+                  <p>
+                    {item.desc}
+                  </p>
 
-                      ))}
+                  <button>
+                    Explore Product →
+                  </button>
 
-                  </div>
-
-                ))}
+                </div>
 
               </div>
 
-            </div>
+            ))}
 
-            {/* Controls */}
+          </div>
 
-            <div className="slider-controls">
+        </section>
 
-              <button
-                className="arrow"
-                onClick={() =>
-                  prevSlide(sectionIndex)
-                }
-              >
-                ‹
-              </button>
+      ))}
 
-              <div className="dots">
-
-                {Array.from({
-                  length: totalSlides,
-                }).map((_, index) => (
-
-                  <span
-                    key={index}
-                    className={
-                      slides[sectionIndex] === index
-                        ? "active"
-                        : ""
-                    }
-                    onClick={() => {
-
-                      setSlides((prev) =>
-                        prev.map((slide, i) =>
-                          i === sectionIndex
-                            ? index
-                            : slide
-                        )
-                      );
-
-                    }}
-                  ></span>
-
-                ))}
-
-              </div>
-
-              <button
-                className="arrow"
-                onClick={() =>
-                  nextSlide(sectionIndex)
-                }
-              >
-                ›
-              </button>
-
-            </div>
-
-            {/* Button */}
-
-            <div className="show-more">
-
-              <button>
-                Show More Products
-              </button>
-
-            </div>
-
-          </section>
-
-        );
-      })}
-    </>
+    </div>
   );
 }
 
 export default Product;
+
+
+
+

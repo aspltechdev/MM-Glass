@@ -1,382 +1,767 @@
-/* =========================
-   CONTACT BANNER
-========================= */
+/* =========================================================
+   CONTACT PAGE
+   ========================================================= */
 
-.contact-banner-section {
-  width: 100%;
-  overflow: hidden;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-/* Banner */
+.cx-contact-page{
 
-.contact-banner {
-  position: relative;
-  width: 100%;
-  height: 260px;
+  position:relative;
+
+  overflow:hidden;
+
+  background:#fbf8f82c;
+
+  color:white;
 }
 
-.contact-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: blur(3px);
-  transform: scale(1.03);
+/* =========================================================
+   BACKGROUND
+   ========================================================= */
+
+.cx-gradient{
+
+  position:absolute;
+  inset:0;
+
+  background:
+  radial-gradient(
+    circle at top right,
+    rgba(120,180,255,0.12),
+    transparent 30%
+  );
+
+  filter:blur(120px);
 }
 
-/* Overlay */
+.cx-grid{
 
-.contact-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position:absolute;
+  inset:0;
+
+  background-image:
+  /* linear-gradient(
+    rgba(255,255,255,0.02) 1px,
+    transparent 1px
+  ), */
+  linear-gradient(
+    90deg,
+    rgba(255,255,255,0.02) 1px,
+    transparent 1px
+  );
+
+  background-size:70px 70px;
 }
 
-/* Button */
+.cx-noise{
 
-.contact-overlay button {
-  padding: 14px 34px;
-  border-radius: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(6px);
-  color: #ffffff;
-  font-size: 34px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: 0.3s ease;
+  position:absolute;
+  inset:0;
+
+  background-image:
+  url("https://grainy-gradients.vercel.app/noise.svg");
+
+  opacity:0.05;
 }
 
-.contact-overlay button:hover {
-  background: rgba(255, 255, 255, 0.2);
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.cx-hero{
+
+  position:relative;
+
+  height:85vh;
+
+  display:flex;
+  align-items:center;
+
+  padding:0 7%;
 }
 
-/* =========================
-   TABLET
-========================= */
 
-@media (max-width: 992px) {
 
-  .contact-banner {
-    height: 220px;
+/* =========================================================
+   HERO BACKGROUND
+   ========================================================= */
+
+.cx-hero-bg{
+
+  position:absolute;
+  inset:0;
+
+  overflow:hidden;
+}
+
+/* IMAGE */
+
+.cx-hero-bg img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transform:scale(1.05);
+
+  animation:
+  heroZoom 18s ease-in-out infinite alternate;
+
+  filter:
+  brightness(0.72)
+  contrast(1.05)
+  saturate(1.05);
+}
+
+/* =========================================================
+   OVERLAY
+   ========================================================= */
+
+.cx-overlay{
+
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.35),
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.82)
+  );
+}
+
+/* =========================================================
+   LIGHT
+   ========================================================= */
+
+.cx-light{
+
+  position:absolute;
+
+  top:-20%;
+  right:-10%;
+
+  width:700px;
+  height:700px;
+
+  border-radius:50%;
+
+  background:
+  rgba(120,180,255,0.16);
+
+  filter:blur(120px);
+
+  animation:
+  floatLight 8s ease infinite alternate;
+}
+
+/* =========================================================
+   VIGNETTE
+   ========================================================= */
+
+.cx-vignette{
+
+  position:absolute;
+  inset:0;
+
+  background:
+  radial-gradient(
+    circle,
+    transparent 45%,
+    rgba(0,0,0,0.65) 100%
+  );
+}
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes heroZoom{
+
+  from{
+
+    transform:
+    scale(1.05);
   }
 
-  .contact-overlay button {
-    font-size: 26px;
-    padding: 12px 28px;
-  }
-}
+  to{
 
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 576px) {
-
-  .contact-banner {
-    height: 180px;
-  }
-
-  .contact-overlay button {
-    font-size: 20px;
-    padding: 10px 22px;
-  }
-}
-
-/* =========================
-   FAQ SECTION
-========================= */
-
-.faq-section {
-  width: 100%;
-  background: #f4f4f4;
-  padding: 80px 20px;
-}
-
-/* Top Heading */
-
-.faq-top-heading {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
-}
-
-.faq-top-heading button {
-  border: none;
-  background: #ffffff;
-  padding: 14px 28px;
-  border-radius: 40px;
-  font-size: 22px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  background: red;
-  border-radius: 50%;
-}
-
-/* Title */
-
-.faq-title {
-  max-width: 850px;
-  margin: auto;
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.faq-title h2 {
-  font-size: 54px;
-  color: #111;
-  margin-bottom: 20px;
-}
-
-.faq-title p {
-  font-size: 20px;
-  line-height: 1.8;
-  color: #555;
-}
-
-/* Layout */
-
-.faq-container {
-  max-width: 1250px;
-  margin: auto;
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-}
-
-/* Left */
-
-.faq-left {
-  flex: 1;
-}
-
-/* Info Card */
-
-.faq-info-card {
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 35px;
-  margin-bottom: 24px;
-}
-
-.faq-info-card h3 {
-  font-size: 34px;
-  margin-bottom: 20px;
-}
-
-.faq-info-card p {
-  font-size: 17px;
-  line-height: 1.8;
-  color: #555;
-}
-
-/* Contact */
-
-.faq-contact {
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 35px;
-}
-
-.faq-contact h3 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-.faq-contact p {
-  color: #555;
-  line-height: 1.8;
-  margin-bottom: 24px;
-}
-
-.faq-contact hr {
-  border: none;
-  border-top: 1px solid #dddddd;
-  margin-bottom: 28px;
-}
-
-/* Contact Details */
-
-.faq-contact-details {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.contact-box {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.contact-icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: red;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-}
-
-.contact-box h4 {
-  font-size: 20px;
-  margin-bottom: 6px;
-}
-
-.contact-box span {
-  color: #555;
-}
-
-/* Right */
-
-.faq-right {
-  flex: 1;
-}
-
-/* FAQ Item */
-
-.faq-item {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 24px;
-  margin-bottom: 20px;
-}
-
-.faq-question {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
-
-.faq-question h3 {
-  font-size: 28px;
-  color: #111;
-}
-
-.faq-question button {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: none;
-  background: red;
-  color: #ffffff;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.faq-item.active .faq-question button {
-  background: #111;
-}
-
-/* Answer */
-
-.faq-answer {
-  margin-top: 20px;
-  border-top: 1px solid #dddddd;
-  padding-top: 20px;
-}
-
-.faq-answer p {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.8;
-}
-
-/* =========================
-   TABLET
-========================= */
-
-@media (max-width: 992px) {
-
-  .faq-container {
-    flex-direction: column;
-  }
-
-  .faq-title h2 {
-    font-size: 42px;
-  }
-
-  .faq-title p {
-    font-size: 18px;
-  }
-
-  .faq-question h3 {
-    font-size: 22px;
+    transform:
+    scale(1.12);
   }
 }
 
-/* =========================
-   MOBILE
-========================= */
+@keyframes floatLight{
 
-@media (max-width: 576px) {
+  from{
 
-  .faq-section {
-    padding: 50px 16px;
+    transform:
+    translateY(0px);
   }
 
-  .faq-top-heading button {
-    font-size: 16px;
-    padding: 12px 20px;
+  to{
+
+    transform:
+    translateY(40px);
+  }
+}
+
+.cx-hero-content{
+
+  position:relative;
+
+  z-index:5;
+
+  max-width:760px;
+}
+
+.cx-hero-content span{
+
+  display:inline-block;
+
+  margin-bottom:22px;
+
+  font-size:0.68rem;
+
+  letter-spacing:4px;
+
+  color:
+  rgba(255,255,255,0.58);
+}
+
+.cx-hero-content h1{
+
+  font-size:
+  clamp(3rem,7vw,6.5rem);
+
+  line-height:0.9;
+
+  letter-spacing:-5px;
+
+  margin-bottom:24px;
+
+  text-transform:uppercase;
+}
+
+.cx-hero-content h1 span{
+
+  color:
+  rgba(180,220,255,1);
+}
+
+.cx-hero-content p{
+
+  max-width:620px;
+
+  line-height:1.8;
+
+  color:
+  rgba(255,255,255,0.7);
+
+  font-size:0.95rem;
+}
+
+/* =========================================================
+   CONTACT GRID
+   ========================================================= */
+
+.cx-contact-grid{
+
+  position:relative;
+
+  z-index:5;
+
+  display:grid;
+  grid-template-columns:
+  1fr 1fr;
+
+  gap:28px;
+
+  padding:110px 7%;
+}
+
+/* =========================================================
+   PANELS
+   ========================================================= */
+
+.cx-panel,
+.cx-form-card{
+
+  background:
+  rgba(255,255,255,0.05);
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(24px);
+
+  border-radius:28px;
+
+  padding:40px;
+
+  box-shadow:
+  0 30px 100px rgba(0,0,0,0.35);
+}
+
+/* MINI */
+
+.cx-mini{
+
+  display:inline-block;
+
+  margin-bottom:20px;
+
+  font-size:0.68rem;
+
+  letter-spacing:4px;
+
+  color:
+  rgba(255,255,255,0.5);
+}
+
+/* TITLES */
+
+.cx-panel h2,
+.cx-form-card h3{
+
+  font-size:2.5rem;
+
+  line-height:1;
+
+  margin-bottom:20px;
+}
+
+/* TEXT */
+
+.cx-panel p{
+
+  line-height:1.8;
+
+  color:
+  rgba(255,255,255,0.68);
+
+  margin-bottom:34px;
+
+  font-size:0.95rem;
+}
+
+/* =========================================================
+   CONTACT ITEMS
+   ========================================================= */
+
+.cx-contact-items{
+
+  display:flex;
+  flex-direction:column;
+
+  gap:22px;
+
+  margin-bottom:34px;
+}
+
+.cx-contact-box{
+
+  display:flex;
+  gap:16px;
+
+  align-items:flex-start;
+}
+
+.cx-contact-box svg{
+
+  margin-top:5px;
+
+  color:
+  rgba(180,220,255,1);
+
+  font-size:1rem;
+}
+
+.cx-contact-box span{
+
+  display:block;
+
+  margin-bottom:8px;
+
+  font-size:0.68rem;
+
+  letter-spacing:3px;
+
+  color:
+  rgba(255,255,255,0.45);
+}
+
+.cx-contact-box h4{
+
+  font-size:0.95rem;
+
+  line-height:1.7;
+
+  color:
+  rgba(255,255,255,0.78);
+
+  font-weight:500;
+}
+
+/* =========================================================
+   MAP
+   ========================================================= */
+
+.cx-map{
+
+  overflow:hidden;
+
+  border-radius:22px;
+
+  height:280px;
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+}
+
+.cx-map iframe{
+
+  width:100%;
+  height:100%;
+
+  border:none;
+
+  filter:
+  grayscale(1)
+  contrast(1.1)
+  brightness(0.8);
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+form{
+
+  display:flex;
+  flex-direction:column;
+
+  gap:16px;
+}
+
+input,
+textarea{
+
+  background:
+  rgba(255,255,255,0.04);
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  padding:16px 18px;
+
+  border-radius:16px;
+
+  color:white;
+
+  outline:none;
+
+  font-size:0.92rem;
+}
+
+textarea{
+
+  resize:none;
+}
+
+form button{
+
+  margin-top:8px;
+
+  height:56px;
+
+  border:none;
+
+  border-radius:999px;
+
+  background:white;
+
+  color:black;
+
+  cursor:pointer;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  gap:10px;
+
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+
+  font-size:0.72rem;
+
+  transition:0.5s ease;
+}
+
+form button:hover{
+
+  transform:
+  translateY(-6px);
+}
+
+/* =========================================================
+   FAQ
+   ========================================================= */
+
+.cx-faq-section{
+
+  position:relative;
+
+  z-index:5;
+
+  padding:0 7% 120px;
+}
+
+/* TOP */
+
+.cx-faq-top{
+
+  margin-bottom:60px;
+}
+
+.cx-faq-top span{
+
+  display:inline-block;
+
+  margin-bottom:22px;
+
+  font-size:0.68rem;
+
+  letter-spacing:4px;
+
+  color:
+  rgba(255,255,255,0.55);
+}
+
+.cx-faq-top h2{
+
+  font-size:
+  clamp(2.8rem,6vw,5rem);
+
+  line-height:0.92;
+
+  letter-spacing:-4px;
+}
+
+/* FAQ ITEM */
+
+.cx-faq-item{
+
+  border-bottom:
+  1px solid rgba(255,255,255,0.08);
+
+  padding:24px 0;
+}
+
+/* QUESTION */
+
+.cx-faq-question{
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  gap:20px;
+
+  cursor:pointer;
+}
+
+.cx-faq-question h3{
+
+  font-size:1rem;
+
+  color:white;
+
+  font-weight:500;
+}
+
+/* BUTTON */
+
+.cx-faq-question button{
+
+  width:44px;
+  height:44px;
+
+  border-radius:50%;
+
+  border:
+  1px solid rgba(255,255,255,0.1);
+
+  background:
+  rgba(255,255,255,0.04);
+
+  color:white;
+
+  cursor:pointer;
+
+  flex-shrink:0;
+}
+
+/* ANSWER */
+
+.cx-faq-answer{
+
+  max-height:0;
+
+  overflow:hidden;
+
+  transition:
+  max-height 0.5s ease,
+  opacity 0.5s ease;
+
+  opacity:0;
+}
+
+.cx-faq-item.active .cx-faq-answer{
+
+  max-height:200px;
+
+  opacity:1;
+}
+
+.cx-faq-answer p{
+
+  padding-top:18px;
+
+  max-width:760px;
+
+  line-height:1.8;
+
+  color:
+  rgba(255,255,255,0.68);
+
+  font-size:0.94rem;
+}
+
+/* HUGE TEXT */
+
+.cx-bg-text{
+
+  position:absolute;
+
+  bottom:-20px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  font-size:13vw;
+
+  font-weight:700;
+
+  letter-spacing:-10px;
+
+  color:
+  rgba(255,255,255,0.02);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media(max-width:992px){
+
+  .cx-contact-grid{
+
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:768px){
+
+  .cx-hero{
+
+    padding:0 5%;
   }
 
-  .faq-title {
-    margin-bottom: 40px;
+  .cx-contact-grid,
+  .cx-faq-section{
+
+    padding-left:5%;
+    padding-right:5%;
   }
 
-  .faq-title h2 {
-    font-size: 30px;
+  .cx-panel,
+  .cx-form-card{
+
+    padding:32px;
   }
 
-  .faq-title p {
-    font-size: 15px;
-    line-height: 1.7;
+  .cx-panel h2,
+  .cx-form-card h3{
+
+    font-size:2rem;
   }
 
-  .faq-info-card,
-  .faq-contact,
-  .faq-item {
-    padding: 20px;
+  .cx-map{
+
+    height:240px;
+  }
+}
+
+@media(max-width:480px){
+
+  .cx-hero{
+
+    height:75vh;
+
+    padding:0 20px;
   }
 
-  .faq-info-card h3,
-  .faq-contact h3 {
-    font-size: 24px;
+  .cx-hero-content h1{
+
+    font-size:2.5rem;
+
+    letter-spacing:-2px;
   }
 
-  .faq-question h3 {
-    font-size: 18px;
+  .cx-contact-grid,
+  .cx-faq-section{
+
+    padding-left:20px;
+    padding-right:20px;
   }
 
-  .faq-contact-details {
-    flex-direction: column;
+  .cx-panel,
+  .cx-form-card{
+
+    padding:22px;
+
+    border-radius:22px;
   }
 
-  .contact-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 18px;
+  .cx-panel h2,
+  .cx-form-card h3{
+
+    font-size:1.7rem;
   }
 
-  .contact-box h4 {
-    font-size: 17px;
+  .cx-faq-top h2{
+
+    font-size:2.2rem;
   }
 
-  .faq-answer p {
-    font-size: 14px;
+  .cx-map{
+
+    height:200px;
+
+    border-radius:18px;
+  }
+
+  .cx-bg-text{
+
+    font-size:24vw;
   }
 }

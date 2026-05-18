@@ -1,130 +1,762 @@
-/* SECTION */
-.whychoose-section {
-  width: 100%;
-  padding: 30px 5% 30px;
+/* WhyChoose.css */
+
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  background: #f4f4f4;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+
+.wc-section {
+
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 90px 8%;
+
+  background:
+    #050505;
+
+  color: white;
+
+  min-height: 100vh;
+
+  opacity: 0;
+  transform: translateY(120px);
+
+  transition:
+    opacity 1.4s ease,
+    transform 1.4s ease;
+}
+
+/* REVEAL */
+
+.wc-show {
+
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* VIDEO */
+
+/* .wc-video {
+
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: 0.08;
+
+  z-index: 1;
+} */
+
+/* OVERLAY */
+
+/* .wc-overlay {
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    rgba(0,0,0,0.75);
+
+  z-index: 2;
+} */
+
+/* GRADIENT */
+
+/* .wc-gradient {
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(120,180,255,0.14),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at bottom left,
+      rgba(255,255,255,0.04),
+      transparent 35%
+    );
+
+  filter: blur(120px);
+
+  z-index: 3;
+
+  animation:
+    wcGradientMove 10s ease infinite alternate;
+} */
+
+
+/* =========================================================
+   CINEMATIC BACKGROUND
+   ========================================================= */
+
+.wc-bg{
+
+  position:absolute;
+  inset:0;
+
+  overflow:hidden;
+}
+
+/* IMAGE */
+
+.wc-bg img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transform:scale(1.05);
+
+  animation:
+  wcZoom 18s ease-in-out infinite alternate;
+
+  filter:
+  brightness(0.74)
+  contrast(1.05)
+  saturate(1.05);
+}
+
+/* =========================================================
+   OVERLAY
+   ========================================================= */
+
+.wc-overlay{
+
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.25),
+    rgba(0,0,0,0.42),
+    rgba(0,0,0,0.82)
+  );
+}
+
+/* =========================================================
+   LIGHT
+   ========================================================= */
+
+.wc-light{
+
+  position:absolute;
+
+  top:-20%;
+  right:-10%;
+
+  width:700px;
+  height:700px;
+
+  border-radius:50%;
+
+  background:
+  rgba(120,180,255,0.15);
+
+  filter:blur(120px);
+
+  animation:
+  wcFloat 8s ease infinite alternate;
+}
+
+/* =========================================================
+   VIGNETTE
+   ========================================================= */
+
+.wc-vignette{
+
+  position:absolute;
+  inset:0;
+
+  background:
+  radial-gradient(
+    circle,
+    transparent 45%,
+    rgba(0,0,0,0.62) 100%
+  );
+}
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes wcZoom{
+
+  from{
+
+    transform:
+    scale(1.05);
+  }
+
+  to{
+
+    transform:
+    scale(1.12);
+  }
+}
+
+@keyframes wcFloat{
+
+  from{
+
+    transform:
+    translateY(0px);
+  }
+
+  to{
+
+    transform:
+    translateY(40px);
+  }
+}
+
+
+
+/* GRID */
+
+.wc-grid {
+
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,0.025) 1px,
+      transparent 1px
+    ),
+
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 70px 70px;
+
+  z-index: 3;
+
+  mask-image:
+    radial-gradient(
+      circle,
+      rgba(0,0,0,1),
+      transparent 85%
+    );
+}
+
+/* NOISE */
+
+.wc-noise {
+
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    url("https://grainy-gradients.vercel.app/noise.svg");
+
+  opacity: 0.05;
+
+  z-index: 4;
+}
+
+/* PARTICLES */
+
+.wc-particles {
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 4;
+}
+
+.wc-particle {
+
+  position: absolute;
+
+  width: 2px;
+  height: 2px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,255,255,0.7);
+
+  animation:
+    wcParticleFloat linear infinite;
+}
+
+/* HEADER */
+
+.wc-header {
+
+  position: relative;
+
+  z-index: 10;
+
+  text-align: center;
+
+  max-width: 1000px;
+
+  margin: auto auto 100px;
 }
 
 /* BADGE */
-.whychoose-badge {
+
+.wc-badge {
+
   display: inline-flex;
   align-items: center;
   gap: 12px;
 
-  padding: 14px 28px;
-  border-radius: 50px;
+  margin-bottom: 26px;
 
-  background: rgba(255, 255, 255, 0.35);
+  font-size: 0.75rem;
 
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  letter-spacing: 4px;
 
-  box-shadow:
-    0 4px 12px rgba(0, 0, 0, 0.04),
-    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
 
-  margin-bottom: 55px;
+  color:
+    rgba(255,255,255,0.65);
 }
 
-/* DOT */
-.dot {
-  width: 14px;
-  height: 14px;
-  background: #ff1a1a;
-  border-radius: 50%;
-}
+.wc-badge span {
 
-/* BADGE TEXT */
-.whychoose-badge p {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 700;
-  color: #111;
-}
+  width: 35px;
+  height: 1px;
 
-/* GRID */
-.whychoose-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 50px;
-}
-
-/* CARD */
-.why-card {
-  width: 195px;
-  height: 270px;
-
-  background: rgba(255, 255, 255, 0.45);
-
-  border-radius: 18px;
-
-  padding: 7px;
-
-  box-shadow:
-    0 4px 10px rgba(0, 0, 0, 0.04),
-    inset 0 1px 0 rgba(255, 255, 255, 0.4);
-
-  transition: 0.3s ease;
-}
-
-/* HOVER */
-.why-card:hover {
-  transform: translateY(-5px);
-}
-
-/* IMAGE */
-.why-image {
-  width: 100%;
-  height: 130px;
-
-  border-radius: 10px;
-  overflow: hidden;
-
-  margin-bottom: 14px;
-}
-
-.why-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  background:
+    rgba(255,255,255,0.5);
 }
 
 /* TITLE */
-.why-card h3 {
-  font-size: 15px;
-  font-weight: 700;
-  color: #111;
 
-  margin-bottom: 8px;
+.wc-header h2 {
+
+  font-size: clamp(4rem, 8vw, 4rem);
+
+  line-height: 0.9;
+
+  letter-spacing: -3px;
+
+  margin-bottom: 30px;
+
+  text-transform: uppercase;
+}
+
+.wc-header h2 span {
+
+  color:
+    rgba(180,220,255,1);
+}
+
+/* PARAGRAPH */
+
+.wc-header p {
+
+  max-width: 760px;
+
+  margin: auto;
+
+  font-size: 1.08rem;
+
+  line-height: 1.9;
+
+  color:
+    rgba(255,255,255,0.72);
+}
+
+/* DASHBOARD */
+
+.wc-dashboard {
+
+  position: relative;
+
+  z-index: 10;
+
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+
+  gap: 28px;
+}
+
+/* CARD */
+
+.wc-card {
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 34px;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(30px);
+
+  transition:
+    transform 0.8s ease,
+    border 0.8s ease,
+    background 0.8s ease;
+
+  transform-style: preserve-3d;
+
+  min-height: 500px;
+}
+
+/* GLOW */
+
+.wc-card-glow {
+
+  position: absolute;
+
+  inset: -30%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(120,180,255,0.15),
+      transparent 70%
+    );
+
+  opacity: 0;
+
+  transition: 0.8s ease;
+}
+
+/* HOVER */
+
+.wc-card:hover {
+
+  transform:
+    perspective(1800px)
+    rotateY(10deg)
+    rotateX(5deg)
+    translateY(-20px);
+
+  border:
+    1px solid rgba(255,255,255,0.16);
+
+  background:
+    rgba(255,255,255,0.08);
+}
+
+.wc-card:hover .wc-card-glow {
+
+  opacity: 1;
+}
+
+/* IMAGE */
+
+.wc-image-wrap {
+
+  position: relative;
+
+  width: 100%;
+  height: 280px;
+
+  overflow: hidden;
+}
+
+.wc-image-wrap img {
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: 1.5s ease;
+
+  transform: scale(1.05);
+
+  filter:
+    brightness(0.75)
+    contrast(1.05);
+}
+
+/* IMAGE HOVER */
+
+.wc-card:hover img {
+
+  transform: scale(1.15);
+}
+
+/* IMAGE OVERLAY */
+
+.wc-image-overlay {
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,0.7),
+      transparent
+    );
+}
+
+/* CONTENT */
+
+.wc-card-content {
+
+  position: relative;
+
+  z-index: 5;
+
+  padding: 30px;
+}
+
+/* TOP */
+
+.wc-card-top {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.wc-card-top span {
+
+  font-size: 0.68rem;
+
+  letter-spacing: 3px;
+
+  color:
+    rgba(255,255,255,0.6);
+
+  text-transform: uppercase;
+}
+
+/* DOT */
+
+.wc-dot {
+
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(180,220,255,1);
+
+  box-shadow:
+    0 0 20px rgba(120,180,255,0.8);
+}
+
+/* TITLE */
+
+.wc-card h3 {
+
+  font-size: 2rem;
+
+  margin-bottom: 18px;
 }
 
 /* TEXT */
-.why-card p {
-  font-size: 13px;
-  line-height: 1.23;
-  color: #333;
 
-  margin: 0;
+.wc-card p {
+
+  color:
+    rgba(255,255,255,0.72);
+
+  line-height: 1.9;
 }
 
-/* TABLET */
-@media (max-width: 900px) {
-  .whychoose-grid {
-    grid-template-columns: repeat(2, 1fr);
+/* FLOAT NUMBER */
+
+.wc-floating-number {
+
+  position: absolute;
+
+  bottom: 20px;
+  right: 20px;
+
+  font-size: 5rem;
+
+  font-weight: 700;
+
+  color:
+    rgba(255,255,255,0.04);
+
+  pointer-events: none;
+}
+
+/* HUGE TEXT */
+
+.wc-bg-text {
+
+  position: absolute;
+
+  bottom: -20px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  font-size: 16vw;
+
+  font-weight: 700;
+
+  letter-spacing: -12px;
+
+  color:
+    rgba(255,255,255,0.02);
+
+  z-index: 1;
+}
+
+/* ANIMATIONS */
+
+@keyframes wcParticleFloat {
+
+  from {
+
+    transform:
+      translateY(0px);
+
+    opacity: 0;
+  }
+
+  50% {
+
+    opacity: 1;
+  }
+
+  to {
+
+    transform:
+      translateY(-120px);
+
+    opacity: 0;
   }
 }
 
-/* MOBILE */
-@media (max-width: 480px) {
-  .whychoose-grid {
+@keyframes wcGradientMove {
+
+  from {
+
+    transform:
+      translateY(0px);
+  }
+
+  to {
+
+    transform:
+      translateY(40px);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media(max-width: 1200px) {
+
+  .wc-dashboard {
+
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media(max-width: 768px) {
+
+  .wc-section {
+
+    padding: 120px 5%;
+  }
+
+  .wc-header h2 {
+
+    font-size: 3.5rem;
+
+    letter-spacing: -3px;
+  }
+
+  .wc-header p {
+
+    font-size: 1rem;
+  }
+
+  .wc-dashboard {
+
     grid-template-columns: 1fr;
   }
 
-  .why-card {
-    width: 100%;
-    max-width: 260px;
+  .wc-card {
+
+    min-height: auto;
+  }
+
+  .wc-image-wrap {
+
+    height: 240px;
+  }
+
+  .wc-card:hover {
+
+    transform:
+      translateY(-12px);
+  }
+
+  .wc-bg-text {
+
+    font-size: 22vw;
+  }
+}
+
+@media(max-width: 480px) {
+
+  .wc-section {
+
+    padding: 100px 20px;
+  }
+
+  .wc-header h2 {
+
+    font-size: 2.5rem;
+
+    letter-spacing: -2px;
+  }
+
+  .wc-card-content {
+
+    padding: 24px;
+  }
+
+  .wc-card h3 {
+
+    font-size: 1.5rem;
+  }
+
+  .wc-card p {
+
+    font-size: 0.95rem;
+  }
+
+  .wc-floating-number {
+
+    font-size: 3.5rem;
+  }
+
+  .wc-image-wrap {
+
+    height: 200px;
   }
 }

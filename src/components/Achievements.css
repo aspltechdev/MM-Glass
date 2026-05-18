@@ -1,149 +1,770 @@
-/* SECTION */
-.achievement-section {
-  width: 100%;
-  padding: 50px 2%;
-  box-sizing: border-box;
-  background: #f4f4f4;
+/* =========================================================
+   CINEMATIC ACHIEVEMENTS
+   ========================================================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-/* MAIN CONTAINER */
-.achievement-wrapper {
-  width: 100%;
+.gl-achievements{
 
-  border-radius: 28px;
+  position:relative;
 
-  padding: 28px 40px 45px;
+  overflow:hidden;
 
-  background: linear-gradient(
-    90deg,
-    #d9b6e6 0%,
-    #efb3bc 100%
+  background:#050505;
+
+  padding:140px 7%;
+
+  color:white;
+}
+
+/* =========================================================
+   BACKGROUND
+   ========================================================= */
+
+.gl-gradient{
+
+  position:absolute;
+  inset:0;
+
+  background:
+  radial-gradient(
+    circle at top right,
+    rgba(120,180,255,0.12),
+    transparent 30%
+  ),
+
+  radial-gradient(
+    circle at bottom left,
+    rgba(255,255,255,0.04),
+    transparent 35%
   );
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  filter:blur(120px);
 }
 
-/* BADGE */
-.achievement-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
+.gl-grid{
 
-  padding: 14px 28px;
-  border-radius: 50px;
+  position:absolute;
+  inset:0;
 
-  background: white;
+  background-image:
+  linear-gradient(
+    rgba(255,255,255,0.02) 1px,
+    transparent 1px
+  ),
 
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  linear-gradient(
+    90deg,
+    rgba(255,255,255,0.02) 1px,
+    transparent 1px
+  );
 
-  backdrop-filter: blur(10px);
+  background-size:70px 70px;
 
-  margin-bottom: 45px;
+  mask-image:
+  radial-gradient(
+    circle,
+    rgba(0,0,0,1),
+    transparent 90%
+  );
 }
 
-/* DOT */
-.dot {
-  width: 14px;
-  height: 14px;
-  background: red;
-  border-radius: 50%;
+.gl-noise{
+
+  position:absolute;
+  inset:0;
+
+  background-image:
+  url("https://grainy-gradients.vercel.app/noise.svg");
+
+  opacity:0.05;
 }
 
-/* TEXT */
-.achievement-badge p {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 700;
-  color: #111;
+/* =========================================================
+   LIGHTS
+   ========================================================= */
+
+.gl-light{
+
+  position:absolute;
+
+  width:700px;
+  height:700px;
+
+  border-radius:50%;
+
+  filter:blur(120px);
+
+  animation:
+  floatLight 10s ease infinite alternate;
 }
 
-/* TOP + BOTTOM ROW */
-.achievement-top,
-.achievement-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 38px;
+.gl-light1{
 
-  width: 100%;
+  top:-10%;
+  right:-10%;
+
+  background:
+  rgba(120,180,255,0.12);
 }
 
-/* SPACING */
-.achievement-bottom {
-  margin-top: 40px;
+.gl-light2{
+
+  bottom:-10%;
+  left:-10%;
+
+  background:
+  rgba(255,255,255,0.04);
 }
 
-/* CARD */
-.achievement-card {
-  width: 200px;
-  height: 130px;
+/* =========================================================
+   TOP
+   ========================================================= */
 
-  border-radius: 16px;
+.gl-top{
 
-  background: rgba(255, 255, 255, 0.18);
+  position:relative;
 
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  z-index:5;
 
-  backdrop-filter: blur(10px);
+  max-width:760px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-bottom:80px;
+}
 
-  transition: 0.3s ease;
+.gl-label{
+
+  display:inline-block;
+
+  margin-bottom:24px;
+
+  font-size:0.72rem;
+
+  letter-spacing:4px;
+
+  color:
+  rgba(255,255,255,0.55);
+}
+
+.gl-top h2{
+
+  font-size:
+  clamp(3rem,6vw,6rem);
+
+  line-height:0.9;
+
+  letter-spacing:-5px;
+
+  text-transform:uppercase;
+}
+
+.gl-top h2 span{
+
+  color:
+  rgba(180,220,255,1);
+
+  text-shadow:
+  0 0 40px rgba(120,180,255,0.25);
+}
+
+/* =========================================================
+   LAYOUT
+   ========================================================= */
+
+.gl-layout{
+
+  position:relative;
+
+  z-index:5;
+
+  display:grid;
+  grid-template-columns:
+  1.2fr 0.8fr;
+
+  gap:28px;
+}
+
+/* =========================================================
+   MAIN CARD
+   ========================================================= */
+
+.gl-main-card{
+
+  position:relative;
+
+  height:620px;
+
+  border-radius:36px;
+
+  overflow:hidden;
+
+  transform:
+  perspective(1800px)
+  rotateY(-4deg);
+
+  transition:1s ease;
+
+  box-shadow:
+  0 40px 140px rgba(0,0,0,0.45);
+}
+
+.gl-main-card:hover{
+
+  transform:
+  perspective(1800px)
+  rotateY(0deg)
+  translateY(-12px);
+}
+
+/* IMAGE */
+
+.gl-main-card img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transition:2s ease;
+
+  filter:
+  brightness(0.6)
+  contrast(1.08);
 }
 
 /* HOVER */
-.achievement-card:hover {
-  transform: translateY(-4px);
+
+.gl-main-card:hover img{
+
+  transform:
+  scale(1.08);
 }
 
-/* NUMBER */
-.achievement-card h2 {
-  font-size: 28px;
-  font-weight: 700;
-  color: red;
+/* OVERLAY */
 
-  margin-bottom: 18px;
+.gl-overlay{
+
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    to top,
+    rgba(0,0,0,0.9),
+    transparent 55%
+  );
 }
 
-/* LABEL */
-.achievement-card p {
-  font-size: 14px;
-  color: #111;
-  margin: 0;
+/* SHINE */
+
+.gl-shine{
+
+  position:absolute;
+
+  top:-100%;
+  left:-50%;
+
+  width:40%;
+  height:300%;
+
+  background:
+  linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.15),
+    transparent
+  );
+
+  transform:
+  rotate(25deg);
+
+  animation:
+  shine 8s linear infinite;
 }
 
-/* RED LINE */
-.line {
-  width: 2px;
-  height: 96px;
-  background: red;
+/* CONTENT */
+
+.gl-main-content{
+
+  position:absolute;
+
+  left:50px;
+  bottom:50px;
+
+  z-index:5;
 }
 
-/* TABLET */
-@media (max-width: 900px) {
-  .achievement-top,
-  .achievement-bottom {
-    flex-wrap: wrap;
+.gl-main-content span{
+
+  font-size:0.72rem;
+
+  letter-spacing:4px;
+
+  color:
+  rgba(255,255,255,0.6);
+}
+
+.gl-main-content h3{
+
+  font-size:7rem;
+
+  margin:
+  20px 0;
+
+  letter-spacing:-6px;
+}
+
+.gl-main-content p{
+
+  max-width:420px;
+
+  line-height:1.8;
+
+  color:
+  rgba(255,255,255,0.72);
+}
+
+/* =========================================================
+   SIDE GRID
+   ========================================================= */
+
+.gl-side-grid{
+
+  display:grid;
+  grid-template-columns:
+  repeat(2,1fr);
+
+  gap:24px;
+}
+
+/* =========================================================
+   SMALL CARD
+   ========================================================= */
+
+.gl-small-card{
+
+  position:relative;
+
+  overflow:hidden;
+
+  border-radius:30px;
+
+  min-height:150px;
+
+  transition:0.8s ease;
+
+  box-shadow:
+  0 20px 60px rgba(0,0,0,0.35);
+}
+
+/* IMAGE */
+
+.gl-small-card img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transition:1.5s ease;
+
+  filter:
+  brightness(0.55)
+  contrast(1.08);
+}
+
+/* HOVER */
+
+.gl-small-card:hover{
+
+  transform:
+  translateY(-10px)
+  scale(1.03);
+}
+
+.gl-small-card:hover img{
+
+  transform:
+  scale(1.08);
+}
+
+/* OVERLAY */
+
+.gl-card-overlay{
+
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    to top,
+    rgba(0,0,0,0.88),
+    transparent 55%
+  );
+}
+
+/* CONTENT */
+
+.gl-card-content{
+
+  position:absolute;
+
+  left:26px;
+  bottom:24px;
+
+  z-index:5;
+}
+
+.gl-card-content h4{
+
+  font-size:3rem;
+
+  margin-bottom:10px;
+
+  letter-spacing:-3px;
+}
+
+.gl-card-content p{
+
+  color:
+  rgba(255,255,255,0.68);
+
+  line-height:1.6;
+}
+
+/* =========================================================
+   HUGE TYPO
+   ========================================================= */
+
+.gl-bg-text{
+
+  position:absolute;
+
+  bottom:-30px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  font-size:14vw;
+
+  font-weight:700;
+
+  letter-spacing:-10px;
+
+  color:
+  rgba(255,255,255,0.018);
+}
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes floatLight{
+
+  from{
+    transform:
+    translateY(0px);
   }
 
-  .line {
-    display: none;
+  to{
+    transform:
+    translateY(40px);
   }
 }
 
-/* MOBILE */
-@media (max-width: 500px) {
-  .achievement-wrapper {
-    padding: 28px 20px 40px;
+@keyframes shine{
+
+  from{
+    transform:
+    translateX(-200%)
+    rotate(25deg);
   }
 
-  .achievement-card {
-    width: 100%;
-    max-width: 240px;
+  to{
+    transform:
+    translateX(600%)
+    rotate(25deg);
   }
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media(max-width:1100px){
+
+  .gl-layout{
+
+    grid-template-columns:1fr;
+  }
+
+  .gl-main-card{
+
+    height:620px;
+  }
+}
+
+@media(max-width:768px){
+
+  .gl-achievements{
+
+    padding:110px 5%;
+  }
+
+  .gl-top h2{
+
+    font-size:3rem;
+  }
+
+  .gl-main-card{
+
+    height:500px;
+
+    border-radius:28px;
+  }
+
+  .gl-main-content{
+
+    left:30px;
+    bottom:30px;
+  }
+
+  .gl-main-content h3{
+
+    font-size:4rem;
+  }
+
+  .gl-side-grid{
+
+    grid-template-columns:1fr;
+  }
+
+  .gl-small-card{
+
+    min-height:220px;
+  }
+
+  .gl-bg-text{
+
+    font-size:22vw;
+  }
+}
+
+@media(max-width:480px){
+
+  .gl-achievements{
+
+    padding:90px 20px;
+  }
+
+  .gl-top h2{
+
+    font-size:2.3rem;
+
+    letter-spacing:-2px;
+  }
+
+  .gl-main-card{
+
+    height:420px;
+  }
+
+  .gl-main-content h3{
+
+    font-size:3rem;
+  }
+
+  .gl-main-content{
+
+    left:24px;
+    bottom:24px;
+  }
+
+  .gl-small-card{
+
+    border-radius:22px;
+
+    min-height:200px;
+  }
+
+  .gl-card-content{
+
+    left:20px;
+    bottom:20px;
+  }
+
+  .gl-card-content h4{
+
+    font-size:2.2rem;
+  }
+
+  .gl-bg-text{
+
+    font-size:24vw;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   REAL BG IMAGE
+   ========================================================= */
+
+.gl-bg-image{
+
+  position:absolute;
+  inset:0;
+
+  z-index:0;
+
+  overflow:hidden;
+}
+
+.gl-bg-image img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transform:scale(1.05);
+
+  animation:
+  pxZoom 18s ease-in-out infinite alternate;
+
+  filter:
+  brightness(0.72)
+  contrast(1.05)
+  saturate(1.08);
+}
+
+/* =========================================================
+   OVERLAY
+   ========================================================= */
+
+.gl-gradient-overlay{
+
+  position:absolute;
+  inset:0;
+
+  z-index:1;
+
+  background:
+
+  radial-gradient(
+    circle at top right,
+    rgba(120,180,255,0.14),
+    transparent 40%
+  ),
+
+  linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.08),
+    rgba(0,0,0,0.3),
+    rgba(0,0,0,0.82)
+  );
+}
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.gl-grid{
+
+  position:absolute;
+  inset:0;
+
+  z-index:2;
+
+  background-image:
+  linear-gradient(
+    rgba(255,255,255,0.02) 1px,
+    transparent 1px
+  ),
+
+  linear-gradient(
+    90deg,
+    rgba(255,255,255,0.02) 1px,
+    transparent 1px
+  );
+
+  background-size:70px 70px;
+}
+
+/* =========================================================
+   NOISE
+   ========================================================= */
+
+.gl-noise{
+
+  position:absolute;
+  inset:0;
+
+  z-index:2;
+
+  opacity:0.04;
+
+  mix-blend-mode:overlay;
+}
+
+/* =========================================================
+   LIGHT
+   ========================================================= */
+
+.gl-light{
+
+  position:absolute;
+
+  top:-20%;
+  left:-10%;
+
+  width:700px;
+  height:700px;
+
+  border-radius:50%;
+
+  z-index:1;
+
+  background:
+  rgba(120,180,255,0.14);
+
+  filter:blur(120px);
+
+  animation:
+  pxFloat 8s ease infinite alternate;
+}
+
+/* =========================================================
+   VIGNETTE
+   ========================================================= */
+
+.gl-vignette{
+
+  position:absolute;
+  inset:0;
+
+  z-index:2;
+
+  background:
+  radial-gradient(
+    circle,
+    transparent 50%,
+    rgba(0,0,0,0.52) 100%
+  );
 }

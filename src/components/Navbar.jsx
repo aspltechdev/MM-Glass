@@ -1,84 +1,99 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Navbar.css";
+
 import logo from "../assets/mm-logo.jpeg";
-import { Link, NavLink } from "react-router-dom";
+
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
+
+  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Toggle menu
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  useEffect(() => {
 
-  // Close menu
-  const closeMenu = () => {
-    setMenuOpen(false);
-  };
+    const handleScroll = () => {
+
+      if (window.scrollY > 40) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+
+  }, []);
 
   return (
+
     <>
-      <nav className="navbar">
-        {/* ===== LOGO ===== */}
-        <div className="logo">
-          <Link to="/" onClick={closeMenu}>
-            <img src={logo} alt="MM Glass Logo" className="logo-img" />
-          </Link>
+      <header className={`navbar ${scrolled ? "scrolled" : ""}`}>
+
+        {/* LEFT */}
+
+        <div className="nav-left">
+
+          <img
+            src={logo}
+            alt="MM Glass"
+            className="logo"
+          />
+
         </div>
 
-        {/* ===== NAV LINKS ===== */}
-        <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
-          <li>
-            <NavLink to="/" onClick={closeMenu}>
-              Home
-            </NavLink>
-          </li>
+        {/* CENTER */}
 
-          <li>
-            <NavLink to="/about" onClick={closeMenu}>
-              About
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/ourstory" onClick={closeMenu}>
-              Our Story
-            </NavLink>
-          </li>
+        <nav className={`nav-center ${menuOpen ? "active" : ""}`}>
 
-          <li>
-            <NavLink to="/product" onClick={closeMenu}>
-              Products
-            </NavLink>
-          </li>
+          <NavLink to="/">Home</NavLink>
 
-          <li>
-            <NavLink to="/gallery" onClick={closeMenu}>
-              Gallery
-            </NavLink>
-          </li>
+          <NavLink to="/about">About</NavLink>
 
-          <li>
-            <NavLink to="/contactus" onClick={closeMenu}>
-              Contact
-            </NavLink>
-          </li>
-        </ul>
+          <NavLink to="/product">Products</NavLink>
 
-        {/* ===== HAMBURGER ===== */}
-        <button
-          className={`hamburger ${menuOpen ? "open" : ""}`}
-          onClick={toggleMenu}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </nav>
+          <NavLink to="/gallery">Projects</NavLink>
 
-      {/* ===== OVERLAY ===== */}
-      {menuOpen && (
-        <div className="nav-overlay" onClick={closeMenu}></div>
-      )}
+          {/* <NavLink to="/ourstory">Story</NavLink> */}
+
+          <NavLink to="/contactus">Contact</NavLink>
+
+        </nav>
+
+        {/* RIGHT */}
+
+        <div className="nav-right">
+
+          <button className="quote-btn">
+            Request Quote
+          </button>
+
+          {/* MOBILE */}
+
+          <button
+            className={`menu-btn ${menuOpen ? "open" : ""}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+
+            <span></span>
+            <span></span>
+
+          </button>
+
+        </div>
+
+      </header>
+
+      {/* OVERLAY */}
+
+      <div
+        className={`mobile-overlay ${menuOpen ? "show" : ""}`}
+        onClick={() => setMenuOpen(false)}
+      ></div>
     </>
   );
 }

@@ -1,295 +1,695 @@
-/* product.css */
 
-/* =========================
-   BANNER
-========================= */
 
-.story-banner-section {
-  width: 100%;
-  overflow: hidden;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-.story-banner {
-  position: relative;
-  width: 100%;
-  height: 260px;
+body{
+  background:#050505;
+  font-family:Inter,sans-serif;
 }
 
-.story-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: blur(1px);
+.cp-page{
+  background:#050505;
+  color:white;
+  overflow:hidden;
 }
 
-.story-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.cp-hero{
+
+  position:relative;
+
+  min-height:100vh;
+
+  display:flex;
+  align-items:center;
+
+  padding:0 7%;
+
+  overflow:hidden;
 }
 
-.story-overlay button {
-  padding: 14px 34px;
-  border-radius: 50px;
-  border: 1px solid rgba(255,255,255,0.7);
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(6px);
-  color: white;
-  font-size: 34px;
-  font-weight: 700;
+/* BG */
+
+.cp-bg{
+
+  position:absolute;
+  inset:0;
 }
 
-/* =========================
-   PRODUCTS
-========================= */
+.cp-bg img{
 
-.products-section {
-  width: 100%;
-  background: #f4f4f4;
-  padding: 70px 20px;
-  overflow: hidden;
-  box-sizing: border-box;
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transform:scale(1.05);
+
+  animation:
+  heroZoom 18s ease-in-out infinite alternate;
+
+  filter:
+  brightness(0.72)
+  contrast(1.05)
+  saturate(1.08);
 }
 
-/* Heading */
+/* OVERLAY */
 
-.products-heading {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+.cp-overlay{
+
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.15),
+    rgba(0,0,0,0.35),
+    rgba(0,0,0,0.82)
+  );
 }
 
-.products-heading button {
-  border: none;
-  background: white;
-  padding: 14px 28px;
-  border-radius: 40px;
-  font-size: 22px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 12px;
+/* LIGHT */
+
+.cp-light{
+
+  position:absolute;
+
+  top:-15%;
+  right:-10%;
+
+  width:700px;
+  height:700px;
+
+  border-radius:50%;
+
+  background:
+  rgba(120,180,255,0.14);
+
+  filter:blur(120px);
+
+  animation:
+  floatLight 8s ease infinite alternate;
 }
 
-.dot {
-  width: 12px;
-  height: 12px;
-  background: red;
-  border-radius: 50%;
-}
+/* GRID */
 
-/* =========================
-   SLIDER
-========================= */
+.cp-grid{
 
-.slider-wrapper {
-  width: 100%;
-  overflow: hidden;
-}
+  position:absolute;
+  inset:0;
 
-.products-grid-slider {
-  display: flex;
-  transition: transform 0.7s ease;
-}
+  background-image:
+  linear-gradient(
+    rgba(255,255,255,0.02) 1px,
+    transparent 1px
+  ),
 
-/* 2 ROW GRID */
-
-.products-grid {
-  min-width: 100%;
-  max-width: 1200px;
-
-  margin: auto;
-
-  display: grid;
-
-  grid-template-columns: repeat(2, 1fr);
-
-  grid-template-rows: repeat(2, 320px);
-
-  gap: 28px;
-
-  padding: 0 10px;
-
-  box-sizing: border-box;
-}
-
-/* =========================
-   CARD
-========================= */
-
-.product-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 18px;
-  height: 100%;
-  cursor: pointer;
-}
-
-.product-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: 0.4s ease;
-}
-
-.product-card:hover img {
-  transform: scale(1.05);
-}
-
-/* Overlay */
-
-.product-overlay {
-  position: absolute;
-  inset: 0;
-
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.75) 0%,
-    rgba(0,0,0,0.1) 60%,
-    transparent 100%
+  linear-gradient(
+    90deg,
+    rgba(255,255,255,0.02) 1px,
+    transparent 1px
   );
 
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-
-  padding: 24px;
-
-  color: white;
-
-  opacity: 0;
-
-  transition: 0.4s ease;
+  background-size:70px 70px;
 }
 
-.product-card:hover .product-overlay {
-  opacity: 1;
+/* HERO CONTENT */
+
+.cp-hero-content{
+
+  position:relative;
+
+  z-index:5;
+
+  max-width:760px;
 }
 
-.product-overlay h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
+.cp-hero-content span{
+
+  display:inline-block;
+
+  margin-bottom:24px;
+
+  font-size:0.72rem;
+
+  letter-spacing:4px;
+
+  color:
+  rgba(255,255,255,0.58);
 }
 
-.product-overlay p {
-  font-size: 14px;
-  line-height: 1.6;
+.cp-hero-content h1{
+
+  font-size:
+  clamp(3rem,8vw,7rem);
+
+  line-height:0.9;
+
+  letter-spacing:-5px;
+
+  margin-bottom:24px;
 }
 
-/* =========================
-   CONTROLS
-========================= */
+.cp-hero-content h1 span{
 
-.slider-controls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 36px;
+  color:
+  rgba(180,220,255,1);
 }
 
-.arrow {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: none;
-  background: white;
-  color: red;
-  font-size: 28px;
-  cursor: pointer;
+.cp-hero-content p{
+
+  max-width:620px;
+
+  line-height:1.9;
+
+  color:
+  rgba(255,255,255,0.72);
+
+  margin-bottom:32px;
+
+  font-size:0.95rem;
 }
 
-.dots {
-  display: flex;
-  gap: 10px;
+.cp-hero-content button{
+
+  height:58px;
+
+  padding:0 28px;
+
+  border:none;
+
+  border-radius:999px;
+
+  background:white;
+
+  color:black;
+
+  cursor:pointer;
+
+  font-size:0.82rem;
+
+  letter-spacing:2px;
+
+  transition:0.5s ease;
 }
 
-.dots span {
-  width: 10px;
-  height: 10px;
-  background: #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: 0.3s;
+.cp-hero-content button:hover{
+
+  transform:
+  translateY(-4px);
 }
 
-.dots .active {
-  width: 28px;
-  border-radius: 30px;
-  background: red;
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.cp-section{
+
+  padding:120px 7%;
+
+  position:relative;
 }
 
-/* =========================
-   BUTTON
-========================= */
+.cp-section-top{
 
-.show-more {
-  display: flex;
-  justify-content: center;
-  margin-top: 36px;
+  margin-bottom:60px;
 }
 
-.show-more button {
-  padding: 14px 34px;
-  border-radius: 40px;
-  border: 2px solid #111;
-  background: transparent;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
+.cp-section-top span{
+
+  display:inline-block;
+
+  margin-bottom:20px;
+
+  font-size:0.72rem;
+
+  letter-spacing:4px;
+
+  color:
+  rgba(255,255,255,0.58);
 }
 
-/* =========================
-   TABLET
-========================= */
+.cp-section-top h2{
 
-@media (max-width: 992px) {
+  font-size:
+  clamp(2.8rem,6vw,5rem);
 
-  .products-grid {
+  line-height:0.95;
 
-    grid-template-columns: 1fr;
+  letter-spacing:-4px;
+}
 
-    grid-template-rows: repeat(4, 280px);
+/* =========================================================
+   PRODUCTS GRID
+   ========================================================= */
+
+.cp-products-grid{
+
+  display:grid;
+  grid-template-columns:
+  repeat(4,1fr);
+
+  gap:24px;
+}
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.cp-card{
+
+  position:relative;
+
+  overflow:hidden;
+
+  border-radius:28px;
+
+  background:
+  rgba(255,255,255,0.05);
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(20px);
+
+  transition:0.7s ease;
+
+  box-shadow:
+  0 30px 80px rgba(0,0,0,0.25);
+}
+
+.cp-card:hover{
+
+  transform:
+  translateY(-10px);
+}
+
+/* IMAGE */
+
+.cp-card-image{
+
+  position:relative;
+
+  height:300px;
+
+  overflow:hidden;
+}
+
+.cp-card-image img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transition:1.4s ease;
+}
+
+.cp-card:hover .cp-card-image img{
+
+  transform:
+  scale(1.08);
+}
+
+/* OVERLAY */
+
+.cp-card-overlay{
+
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    to top,
+    rgba(0,0,0,0.72),
+    transparent 50%
+  );
+}
+
+/* CONTENT */
+
+.cp-card-content{
+
+  padding:26px;
+}
+
+.cp-card-content span{
+
+  display:inline-block;
+
+  margin-bottom:14px;
+
+  font-size:0.68rem;
+
+  letter-spacing:4px;
+
+  color:
+  rgba(255,255,255,0.55);
+}
+
+.cp-card-content h3{
+
+  font-size:1.25rem;
+
+  margin-bottom:14px;
+
+  font-weight:500;
+}
+
+.cp-card-content p{
+
+  line-height:1.8;
+
+  color:
+  rgba(255,255,255,0.7);
+
+  font-size:0.92rem;
+
+  margin-bottom:24px;
+}
+
+.cp-card-content button{
+
+  border:none;
+
+  padding:14px 20px;
+
+  border-radius:999px;
+
+  background:white;
+
+  color:black;
+
+  cursor:pointer;
+
+  font-size:0.8rem;
+
+  transition:0.4s ease;
+}
+
+.cp-card-content button:hover{
+
+  transform:
+  translateY(-3px);
+}
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes heroZoom{
+
+  from{
+    transform:scale(1.05);
   }
 
-  .product-overlay {
-    opacity: 1;
+  to{
+    transform:scale(1.12);
   }
 }
 
-/* =========================
-   MOBILE
-========================= */
+@keyframes floatLight{
 
-@media (max-width: 576px) {
-
-  .products-section {
-    padding: 50px 16px;
+  from{
+    transform:translateY(0px);
   }
 
-  .products-heading button {
-    font-size: 15px;
-    padding: 10px 18px;
-  }
-
-  .products-grid {
-
-    grid-template-columns: 1fr;
-
-    grid-template-rows: repeat(4, 240px);
-  }
-
-  .show-more button {
-    width: 100%;
-  }
-
-  .story-banner {
-    height: 180px;
-  }
-
-  .story-overlay button {
-    font-size: 20px;
+  to{
+    transform:translateY(40px);
   }
 }
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media(max-width:1200px){
+
+  .cp-products-grid{
+
+    grid-template-columns:
+    repeat(2,1fr);
+  }
+}
+
+@media(max-width:768px){
+
+  .cp-hero,
+  .cp-section{
+
+    padding-left:5%;
+    padding-right:5%;
+  }
+
+  .cp-products-grid{
+
+    grid-template-columns:1fr;
+  }
+
+  .cp-hero-content h1{
+
+    font-size:3.5rem;
+  }
+
+  .cp-section-top h2{
+
+    font-size:3rem;
+  }
+}
+
+@media(max-width:480px){
+
+  .cp-hero,
+  .cp-section{
+
+    padding-left:20px;
+    padding-right:20px;
+  }
+
+  .cp-hero-content h1{
+
+    font-size:2.5rem;
+
+    letter-spacing:-2px;
+  }
+
+  .cp-section-top h2{
+
+    font-size:2.2rem;
+
+    letter-spacing:-2px;
+  }
+
+  .cp-card-image{
+
+    height:240px;
+  }
+
+  .cp-card-content{
+
+    padding:20px;
+  }
+
+  .cp-card-content h3{
+
+    font-size:1.1rem;
+  }
+
+  .cp-card-content p{
+
+    font-size:0.88rem;
+  }
+}
+
+
+
+
+
+
+/* =========================================================
+   PRODUCTS BACKGROUND
+   ========================================================= */
+
+.pr-products{
+
+  position:relative;
+
+  overflow:hidden;
+
+  isolation:isolate;
+}
+
+/* BG */
+
+.pr-products-bg{
+
+  position:absolute;
+  inset:0;
+
+  z-index:0;
+
+  overflow:hidden;
+}
+
+.pr-products-bg img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transform:scale(1.05);
+
+  animation:
+  productsZoom 18s ease-in-out infinite alternate;
+
+  filter:
+  brightness(0.72)
+  contrast(1.05)
+  saturate(1.08);
+}
+
+/* OVERLAY */
+
+.pr-products-overlay{
+
+  position:absolute;
+  inset:0;
+
+  z-index:1;
+
+  background:
+  linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.18),
+    rgba(0,0,0,0.4),
+    rgba(0,0,0,0.82)
+  );
+}
+
+/* LIGHT */
+
+.pr-products-light{
+
+  position:absolute;
+
+  top:-15%;
+  left:-10%;
+
+  width:700px;
+  height:700px;
+
+  border-radius:50%;
+
+  z-index:1;
+
+  background:
+  rgba(120,180,255,0.14);
+
+  filter:blur(120px);
+
+  animation:
+  productsFloat 8s ease infinite alternate;
+}
+
+/* GRID */
+
+.pr-products-grid-bg{
+
+  position:absolute;
+  inset:0;
+
+  z-index:1;
+
+  background-image:
+  linear-gradient(
+    rgba(255,255,255,0.02) 1px,
+    transparent 1px
+  ),
+
+  linear-gradient(
+    90deg,
+    rgba(255,255,255,0.02) 1px,
+    transparent 1px
+  );
+
+  background-size:70px 70px;
+
+  mask-image:
+  radial-gradient(
+    circle,
+    rgba(0,0,0,1),
+    transparent 90%
+  );
+}
+
+/* VIGNETTE */
+
+.pr-products-vignette{
+
+  position:absolute;
+  inset:0;
+
+  z-index:1;
+
+  background:
+  radial-gradient(
+    circle,
+    transparent 50%,
+    rgba(0,0,0,0.52) 100%
+  );
+}
+
+/* CONTENT ABOVE BG */
+
+.pr-heading,
+.pr-grid-layout{
+
+  position:relative;
+
+  z-index:5;
+}
+
+/* =========================================================
+   ANIMATION
+   ========================================================= */
+
+@keyframes productsZoom{
+
+  from{
+
+    transform:
+    scale(1.05);
+  }
+
+  to{
+
+    transform:
+    scale(1.12);
+  }
+}
+
+@keyframes productsFloat{
+
+  from{
+
+    transform:
+    translateY(0px);
+  }
+
+  to{
+
+    transform:
+    translateY(40px);
+  }
+}
+
