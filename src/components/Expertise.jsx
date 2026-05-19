@@ -1,76 +1,282 @@
-// import "./Expertise.css";
+// // import "./Expertise.css";
 
-// import expertImg from "../assets/emp1.jpeg";
+// // import expertImg from "../assets/emp1.jpeg";
+
+// // function Expertise() {
+
+// //   return (
+// //     <section className="expertise-section">
+
+// //       {/* Badge */}
+// //       <div className="expertise-badge">
+// //         <span className="dot"></span>
+// //         <p>Our Expertise</p>
+// //       </div>
+
+// //       {/* Main Content */}
+// //       <div className="expertise-container">
+
+// //         {/* Left Content */}
+// //         <div className="expertise-left">
+
+// //           <h2>
+// //             Excellence through advanced
+// //             glass processing expertise
+// //           </h2>
+
+// //           <p>
+// //             We achieve superior results by combining cutting-edge
+// //             glass processing technologies with deep industry knowledge.
+// //             Our expertise ensures precision, durability, and
+// //             high-performance outcomes across every project.
+// //           </p>
+
+// //           {/* Progress 1 */}
+// //           <div className="progress-box">
+
+// //             <div className="progress-head">
+// //               <span>Glass Processing Efficiency</span>
+// //               <span>92%</span>
+// //             </div>
+
+// //             <div className="progress-bar">
+// //               <div
+// //                 className="progress-fill"
+// //                 style={{ width: "92%" }}
+// //               ></div>
+// //             </div>
+
+// //           </div>
+
+// //           {/* Progress 2 */}
+// //           <div className="progress-box">
+
+// //             <div className="progress-head">
+// //               <span>Quality & Safety Standards</span>
+// //               <span>95%</span>
+// //             </div>
+
+// //             <div className="progress-bar">
+// //               <div
+// //                 className="progress-fill"
+// //                 style={{ width: "95%" }}
+// //               ></div>
+// //             </div>
+
+// //           </div>
+
+// //         </div>
+
+// //         {/* Right Image */}
+// //         <div className="expertise-right">
+// //           <img src={expertImg} alt="Expert Worker" />
+// //         </div>
+
+// //       </div>
+
+// //     </section>
+// //   );
+// // }
+
+// // export default Expertise;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Expertise.jsx
+
+// import "./Expertise.css";
 
 // function Expertise() {
 
-//   return (
-//     <section className="expertise-section">
+//   const expertiseData = [
 
-//       {/* Badge */}
-//       <div className="expertise-badge">
-//         <span className="dot"></span>
-//         <p>Our Expertise</p>
+//     {
+//       number: "92%",
+//       title: "Glass Processing Precision",
+//       text:
+//         "Advanced CNC cutting and edge-finishing systems engineered for architectural-grade perfection.",
+//     },
+
+//     {
+//       number: "95%",
+//       title: "Quality & Safety Standards",
+//       text:
+//         "Every panel undergoes multi-stage durability and stress testing before delivery.",
+//     },
+
+//     {
+//       number: "98%",
+//       title: "Architectural Accuracy",
+//       text:
+//         "Precision-engineered fabrication tailored for luxury residential and commercial projects.",
+//     },
+
+//   ];
+
+//   return (
+
+//     <section className="ex-section">
+
+//       {/* CINEMATIC BACKGROUND */}
+
+//       <div className="ex-bg">
+
+//         <img
+//           src="https://images.pexels.com/photos/2347764/pexels-photo-2347764.jpeg"
+//           alt=""
+//         />
+
 //       </div>
 
-//       {/* Main Content */}
-//       <div className="expertise-container">
+//       {/* LAYERS */}
 
-//         {/* Left Content */}
-//         <div className="expertise-left">
+//       <div className="ex-overlay"></div>
 
-//           <h2>
-//             Excellence through advanced
-//             glass processing expertise
-//           </h2>
+//       <div className="ex-light"></div>
 
-//           <p>
-//             We achieve superior results by combining cutting-edge
-//             glass processing technologies with deep industry knowledge.
-//             Our expertise ensures precision, durability, and
-//             high-performance outcomes across every project.
-//           </p>
+//       <div className="ex-vignette"></div>
 
-//           {/* Progress 1 */}
-//           <div className="progress-box">
+//       <div className="ex-grid"></div>
 
-//             <div className="progress-head">
-//               <span>Glass Processing Efficiency</span>
-//               <span>92%</span>
-//             </div>
+//       {/* TOP */}
 
-//             <div className="progress-bar">
-//               <div
-//                 className="progress-fill"
-//                 style={{ width: "92%" }}
-//               ></div>
-//             </div>
+//       <div className="ex-top">
 
-//           </div>
+//         <span>
 
-//           {/* Progress 2 */}
-//           <div className="progress-box">
+//           PRECISION • PERFORMANCE • EXPERTISE
 
-//             <div className="progress-head">
-//               <span>Quality & Safety Standards</span>
-//               <span>95%</span>
-//             </div>
+//         </span>
 
-//             <div className="progress-bar">
-//               <div
-//                 className="progress-fill"
-//                 style={{ width: "95%" }}
-//               ></div>
+//         <h2>
+
+//           ENGINEERED <br />
+
+//           FOR MODERN <span>ARCHITECTURE</span>
+
+//         </h2>
+
+//       </div>
+
+//       {/* MAIN LAYOUT */}
+
+//       <div className="ex-layout">
+
+//         {/* LEFT */}
+
+//         <div className="ex-left">
+
+//           <div className="ex-main-card">
+
+//             <div className="ex-card-overlay"></div>
+
+//             <img
+//               src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2400&auto=format&fit=crop"
+//               alt=""
+//             />
+
+//             <div className="ex-main-content">
+
+//               <span>
+
+//                 ADVANCED MANUFACTURING
+
+//               </span>
+
+//               <h3>
+
+//                 Architectural glass systems
+//                 crafted through innovation,
+//                 precision engineering,
+//                 and premium fabrication.
+
+//               </h3>
+
 //             </div>
 
 //           </div>
 
 //         </div>
 
-//         {/* Right Image */}
-//         <div className="expertise-right">
-//           <img src={expertImg} alt="Expert Worker" />
+//         {/* RIGHT */}
+
+//         <div className="ex-right">
+
+//           {expertiseData.map((item, index) => (
+
+//             <div
+//               className="ex-card"
+//               key={index}
+//             >
+
+//               {/* IMAGE */}
+
+//               <div className="ex-card-image">
+
+//                 <img
+//                   src={
+//                     index === 0
+//                       ? "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1600&auto=format&fit=crop"
+//                       : index === 1
+//                       ? "https://images.unsplash.com/photo-1519643381401-22c77e60520e?q=80&w=1600&auto=format&fit=crop"
+//                       : "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop"
+//                   }
+//                   alt=""
+//                 />
+
+//               </div>
+
+//               {/* CONTENT */}
+
+//               <div className="ex-card-content">
+
+//                 <h4>
+
+//                   {item.number}
+
+//                 </h4>
+
+//                 <h5>
+
+//                   {item.title}
+
+//                 </h5>
+
+//                 <p>
+
+//                   {item.text}
+
+//                 </p>
+
+//               </div>
+
+//             </div>
+
+//           ))}
+
 //         </div>
+
+//       </div>
+
+//       {/* HUGE TYPO */}
+
+//       <div className="ex-bg-text">
+
+//         EXPERTISE
 
 //       </div>
 
@@ -85,19 +291,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-// Expertise.jsx
-
 import "./Expertise.css";
 
 function Expertise() {
@@ -108,53 +301,67 @@ function Expertise() {
       number: "92%",
       title: "Glass Processing Precision",
       text:
-        "Advanced CNC cutting and edge-finishing systems engineered for architectural-grade perfection.",
+        "Advanced CNC fabrication systems engineered for flawless architectural finishing.",
+      image:
+        "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1600&auto=format&fit=crop",
     },
 
     {
       number: "95%",
-      title: "Quality & Safety Standards",
+      title: "Safety & Durability",
       text:
-        "Every panel undergoes multi-stage durability and stress testing before delivery.",
+        "Every glass panel undergoes intensive quality and structural testing procedures.",
+      image:
+        "https://images.unsplash.com/photo-1519643381401-22c77e60520e?q=80&w=1600&auto=format&fit=crop",
     },
 
     {
       number: "98%",
       title: "Architectural Accuracy",
       text:
-        "Precision-engineered fabrication tailored for luxury residential and commercial projects.",
+        "Precision-engineered glass systems tailored for luxury modern environments.",
+      image:
+        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop",
     },
 
   ];
 
   return (
 
-    <section className="ex-section">
+    <section className="exp-section">
 
-      {/* CINEMATIC BACKGROUND */}
+      {/* =====================================================
+          BACKGROUND
+      ====================================================== */}
 
-      <div className="ex-bg">
+      <div className="exp-bg">
 
         <img
-          src="https://images.pexels.com/photos/2347764/pexels-photo-2347764.jpeg"
+          src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2400&auto=format&fit=crop"
           alt=""
         />
 
       </div>
 
-      {/* LAYERS */}
+      <div className="exp-overlay"></div>
 
-      <div className="ex-overlay"></div>
+      <div className="exp-gradient"></div>
 
-      <div className="ex-light"></div>
+      <div className="exp-grid"></div>
 
-      <div className="ex-vignette"></div>
+      <div className="exp-noise"></div>
 
-      <div className="ex-grid"></div>
+      {/* LIGHTS */}
 
-      {/* TOP */}
+      <div className="exp-light exp-light1"></div>
 
-      <div className="ex-top">
+      <div className="exp-light exp-light2"></div>
+
+      {/* =====================================================
+          TOP
+      ====================================================== */}
+
+      <div className="exp-top">
 
         <span>
 
@@ -164,117 +371,105 @@ function Expertise() {
 
         <h2>
 
-          ENGINEERED <br />
+          MODERN GLASS <br />
 
-          FOR MODERN <span>ARCHITECTURE</span>
+          <span>ENGINEERING</span>
 
         </h2>
 
+        <p>
+
+          Combining advanced fabrication,
+          automated precision systems,
+          and architectural innovation
+          to redefine premium glass manufacturing.
+
+        </p>
+
       </div>
 
-      {/* MAIN LAYOUT */}
+      {/* =====================================================
+          MAIN SHOWCASE
+      ====================================================== */}
 
-      <div className="ex-layout">
+      <div className="exp-showcase">
 
-        {/* LEFT */}
+        {expertiseData.map((item, index) => (
 
-        <div className="ex-left">
+          <div
+            className={`exp-item exp-item-${index + 1}`}
+            key={index}
+          >
 
-          <div className="ex-main-card">
+            {/* IMAGE */}
 
-            <div className="ex-card-overlay"></div>
+            <div className="exp-image-wrap">
 
-            <img
-              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2400&auto=format&fit=crop"
-              alt=""
-            />
+              <img
+                src={item.image}
+                alt={item.title}
+              />
 
-            <div className="ex-main-content">
+              <div className="exp-image-overlay"></div>
 
-              <span>
+            </div>
 
-                ADVANCED MANUFACTURING
+            {/* CONTENT */}
 
-              </span>
+            <div className="exp-content">
+
+              <div className="exp-number">
+
+                {item.number}
+
+              </div>
 
               <h3>
 
-                Architectural glass systems
-                crafted through innovation,
-                precision engineering,
-                and premium fabrication.
+                {item.title}
 
               </h3>
+
+              <p>
+
+                {item.text}
+
+              </p>
 
             </div>
 
           </div>
 
-        </div>
+        ))}
 
-        {/* RIGHT */}
+      </div>
 
-        <div className="ex-right">
+      {/* BOTTOM PANEL */}
 
-          {expertiseData.map((item, index) => (
+      <div className="exp-bottom-panel">
 
-            <div
-              className="ex-card"
-              key={index}
-            >
+        <div className="exp-panel-line"></div>
 
-              {/* IMAGE */}
+        <h3>
 
-              <div className="ex-card-image">
+          FUTURE READY GLASS SYSTEMS
 
-                <img
-                  src={
-                    index === 0
-                      ? "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1600&auto=format&fit=crop"
-                      : index === 1
-                      ? "https://images.unsplash.com/photo-1519643381401-22c77e60520e?q=80&w=1600&auto=format&fit=crop"
-                      : "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop"
-                  }
-                  alt=""
-                />
+        </h3>
 
-              </div>
+        <p>
 
-              {/* CONTENT */}
+          Intelligent manufacturing
+          processes crafted for luxury
+          architecture, premium interiors,
+          and modern commercial environments.
 
-              <div className="ex-card-content">
-
-                <h4>
-
-                  {item.number}
-
-                </h4>
-
-                <h5>
-
-                  {item.title}
-
-                </h5>
-
-                <p>
-
-                  {item.text}
-
-                </p>
-
-              </div>
-
-            </div>
-
-          ))}
-
-        </div>
+        </p>
 
       </div>
 
       {/* HUGE TYPO */}
 
-      <div className="ex-bg-text">
+      <div className="exp-bg-text">
 
         EXPERTISE
 

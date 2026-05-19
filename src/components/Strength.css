@@ -1,5 +1,5 @@
 /* =========================================================
-   STRENGTH SECTION
+   RESET
    ========================================================= */
 
 *{
@@ -8,180 +8,195 @@
   box-sizing:border-box;
 }
 
-.st-section{
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.str-section{
 
   position:relative;
 
   overflow:hidden;
 
-  isolation:isolate;
+  padding:120px 7%;
 
   background:#050505;
-
-  padding:140px 7%;
 
   color:white;
 }
 
 /* =========================================================
-   CINEMATIC BACKGROUND
+   BACKGROUND
    ========================================================= */
 
-.st-bg{
+.str-bg{
 
   position:absolute;
   inset:0;
 
   overflow:hidden;
-
-  z-index:0;
 }
 
-/* IMAGE */
-
-.st-bg img{
+.str-bg img{
 
   width:100%;
   height:100%;
 
   object-fit:cover;
 
-  transform:scale(1.05);
+  filter:
+  brightness(0.08)
+  contrast(1.08);
 
   animation:
-  stZoom 18s ease-in-out infinite alternate;
-
-  filter:
-  brightness(0.7)
-  contrast(1.08)
-  saturate(1.08);
+  strZoom 18s ease infinite alternate;
 }
 
-/* =========================================================
-   OVERLAY
-   ========================================================= */
+/* OVERLAY */
 
-.st-overlay{
+.str-overlay{
 
   position:absolute;
   inset:0;
-
-  z-index:1;
 
   background:
   linear-gradient(
     to bottom,
-    rgba(0,0,0,0.12),
-    rgba(0,0,0,0.28),
-    rgba(0,0,0,0.72)
+    rgba(0,0,0,0.9),
+    rgba(0,0,0,0.96)
   );
+
+  z-index:2;
 }
 
-/* =========================================================
-   LIGHT
-   ========================================================= */
+/* GRADIENT */
 
-.st-light{
-
-  position:absolute;
-
-  top:-15%;
-  right:-10%;
-
-  width:700px;
-  height:700px;
-
-  border-radius:50%;
-
-  z-index:1;
-
-  background:
-  rgba(120,180,255,0.14);
-
-  filter:blur(120px);
-
-  animation:
-  stFloat 8s ease infinite alternate;
-}
-
-/* =========================================================
-   VIGNETTE
-   ========================================================= */
-
-.st-vignette{
+.str-gradient{
 
   position:absolute;
   inset:0;
 
-  z-index:1;
+  z-index:3;
 
   background:
   radial-gradient(
-    circle,
-    transparent 50%,
-    rgba(0,0,0,0.42) 100%
+    circle at top left,
+    rgba(120,180,255,0.14),
+    transparent 35%
+  ),
+
+  radial-gradient(
+    circle at bottom right,
+    rgba(255,255,255,0.04),
+    transparent 30%
   );
 }
 
-/* =========================================================
-   GRID
-   ========================================================= */
+/* GRID */
 
-.st-grid{
+.str-grid{
 
   position:absolute;
   inset:0;
 
-  z-index:1;
+  z-index:4;
 
   background-image:
   linear-gradient(
-    rgba(255,255,255,0.02) 1px,
+    rgba(255,255,255,0.03) 1px,
     transparent 1px
   ),
-
   linear-gradient(
     90deg,
-    rgba(255,255,255,0.02) 1px,
+    rgba(255,255,255,0.03) 1px,
     transparent 1px
   );
 
   background-size:70px 70px;
+}
 
-  mask-image:
-  radial-gradient(
-    circle,
-    rgba(0,0,0,1),
-    transparent 90%
-  );
+/* NOISE */
+
+.str-noise{
+
+  position:absolute;
+  inset:0;
+
+  z-index:5;
+
+  opacity:0.03;
+
+  background-image:
+  url("https://grainy-gradients.vercel.app/noise.svg");
+}
+
+/* =========================================================
+   LIGHTS
+   ========================================================= */
+
+.str-light{
+
+  position:absolute;
+
+  border-radius:50%;
+
+  filter:blur(120px);
+
+  z-index:5;
+}
+
+.str-light1{
+
+  width:420px;
+  height:420px;
+
+  background:
+  rgba(120,180,255,0.14);
+
+  top:-120px;
+  left:-120px;
+}
+
+.str-light2{
+
+  width:320px;
+  height:320px;
+
+  background:
+  rgba(255,255,255,0.04);
+
+  bottom:-100px;
+  right:-100px;
 }
 
 /* =========================================================
    TOP
    ========================================================= */
 
-.st-top{
+.str-top{
 
   position:relative;
 
-  z-index:5;
+  z-index:10;
 
-  max-width:760px;
+  text-align:center;
 
-  margin-bottom:80px;
+  margin-bottom:100px;
 }
 
-/* LABEL */
+/* TAG */
 
-.st-top span{
+.str-top span{
 
   display:inline-block;
 
   margin-bottom:24px;
 
-  font-size:0.72rem;
+  font-size:0.75rem;
 
   letter-spacing:4px;
+
+  text-transform:uppercase;
 
   color:
   rgba(255,255,255,0.58);
@@ -189,91 +204,80 @@
 
 /* TITLE */
 
-.st-top h2{
+.str-top h2{
 
   font-size:
-  clamp(3rem,6vw,6rem);
+  clamp(3rem,7vw,6rem);
 
-  line-height:0.9;
+  line-height:0.92;
 
-  letter-spacing:-5px;
-
-  text-transform:uppercase;
+  letter-spacing:-4px;
 }
 
-/* HIGHLIGHT */
-
-.st-top h2 span{
+.str-top h2 span{
 
   color:
   rgba(180,220,255,1);
-
-  text-shadow:
-  0 0 30px rgba(120,180,255,0.18);
 }
 
 /* =========================================================
    LAYOUT
    ========================================================= */
 
-.st-layout{
+.str-layout{
 
   position:relative;
 
-  z-index:5;
+  z-index:10;
 
   display:grid;
-  grid-template-columns:
-  1fr 1fr;
 
-  gap:32px;
+  grid-template-columns:
+  1.1fr 0.9fr;
+
+  gap:50px;
+
+  align-items:center;
 }
 
 /* =========================================================
-   MAIN IMAGE
+   LEFT
    ========================================================= */
 
-.st-main-image{
+.str-image-box{
 
   position:relative;
 
+  height:700px;
+
   overflow:hidden;
 
-  border-radius:34px;
-
-  height:720px;
-
-  box-shadow:
-  0 40px 120px rgba(0,0,0,0.45);
+  border-radius:40px;
 }
 
 /* IMAGE */
 
-.st-main-image img{
+.str-image-box img{
 
   width:100%;
   height:100%;
 
   object-fit:cover;
 
-  transition:2s ease;
-
-  filter:
-  brightness(0.8)
-  contrast(1.04);
-}
-
-/* HOVER */
-
-.st-main-image:hover img{
+  transition:
+  transform 1.5s ease,
+  filter 1.5s ease;
 
   transform:
-  scale(1.08);
+  scale(1.03);
+
+  filter:
+  brightness(0.72);
 }
 
 /* OVERLAY */
 
-.st-image-overlay{
+.str-image-overlay{
 
   position:absolute;
   inset:0;
@@ -281,63 +285,72 @@
   background:
   linear-gradient(
     to top,
-    rgba(0,0,0,0.82),
-    transparent 55%
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.08)
   );
 }
 
+/* HOVER */
+
+.str-image-box:hover img{
+
+  transform:
+  scale(1.1);
+
+  filter:
+  brightness(0.52);
+}
+
 /* =========================================================
-   FLOATING CARD
+   FLOATING PANEL
    ========================================================= */
 
-.st-floating-card{
+.str-floating-panel{
 
   position:absolute;
 
-  left:34px;
-  bottom:34px;
+  left:30px;
+  bottom:30px;
 
-  z-index:5;
+  max-width:420px;
 
-  max-width:480px;
-
-  padding:28px;
+  padding:30px;
 
   border-radius:28px;
 
   background:
-  rgba(255,255,255,0.06);
+  rgba(255,255,255,0.08);
 
   border:
-  1px solid rgba(255,255,255,0.08);
+  1px solid rgba(255,255,255,0.12);
 
-  backdrop-filter:blur(20px);
-
-  box-shadow:
-  0 20px 60px rgba(0,0,0,0.35);
+  backdrop-filter:
+  blur(18px);
 }
 
-/* LABEL */
+/* PANEL TAG */
 
-.st-floating-card span{
+.str-floating-panel span{
 
   display:inline-block;
 
-  margin-bottom:16px;
+  margin-bottom:18px;
 
-  font-size:0.68rem;
+  font-size:0.72rem;
 
-  letter-spacing:4px;
+  letter-spacing:3px;
+
+  text-transform:uppercase;
 
   color:
-  rgba(255,255,255,0.55);
+  rgba(255,255,255,0.62);
 }
 
-/* TITLE */
+/* PANEL TITLE */
 
-.st-floating-card h3{
+.str-floating-panel h3{
 
-  font-size:1.8rem;
+  font-size:1.7rem;
 
   line-height:1.3;
 
@@ -345,26 +358,29 @@
 }
 
 /* =========================================================
-   RIGHT SIDE
+   RIGHT
    ========================================================= */
 
-.st-right{
+.str-right{
 
   display:flex;
+
   flex-direction:column;
 
-  gap:26px;
+  gap:40px;
 }
 
 /* =========================================================
-   TEXT CARD
+   TEXT BOX
    ========================================================= */
 
-.st-text-card{
+.str-text-box{
 
-  padding:34px;
+  position:relative;
 
-  border-radius:28px;
+  padding:40px;
+
+  border-radius:32px;
 
   background:
   rgba(255,255,255,0.05);
@@ -372,144 +388,170 @@
   border:
   1px solid rgba(255,255,255,0.08);
 
-  backdrop-filter:blur(20px);
+  backdrop-filter:
+  blur(18px);
+}
 
-  box-shadow:
-  0 20px 60px rgba(0,0,0,0.25);
+/* LINE */
+
+.str-line{
+
+  width:80px;
+  height:2px;
+
+  background:
+  rgba(180,220,255,1);
+
+  margin-bottom:28px;
 }
 
 /* TEXT */
 
-.st-text-card p{
+.str-text-box p{
+
+  font-size:0.98rem;
 
   line-height:1.9;
 
   color:
-  rgba(255,255,255,0.74);
+  rgba(255,255,255,0.72);
 
   margin-bottom:22px;
-
-  font-size:0.96rem;
 }
 
 /* =========================================================
-   METRIC CARDS
+   CARDS
    ========================================================= */
 
-.st-cards{
+.str-cards{
 
-  display:grid;
-  grid-template-columns:
-  repeat(3,1fr);
+  display:flex;
 
-  gap:20px;
+  flex-direction:column;
+
+  gap:24px;
 }
 
 /* CARD */
 
-.st-card{
+.str-card{
 
-  overflow:hidden;
+  display:grid;
 
-  border-radius:24px;
+  grid-template-columns:
+  140px 1fr;
+
+  gap:22px;
+
+  align-items:center;
+
+  padding:18px;
+
+  border-radius:26px;
 
   background:
-  rgba(255,255,255,0.05);
+  rgba(255,255,255,0.04);
 
   border:
   1px solid rgba(255,255,255,0.08);
 
-  backdrop-filter:blur(20px);
+  backdrop-filter:
+  blur(18px);
 
   transition:0.6s ease;
-
-  box-shadow:
-  0 20px 60px rgba(0,0,0,0.22);
 }
 
 /* HOVER */
 
-.st-card:hover{
+.str-card:hover{
 
   transform:
-  translateY(-10px);
+  translateX(10px);
 
   background:
-  rgba(255,255,255,0.07);
+  rgba(255,255,255,0.06);
 }
 
 /* IMAGE */
 
-.st-card-image{
+.str-card-image{
 
-  height:180px;
+  position:relative;
+
+  height:130px;
 
   overflow:hidden;
+
+  border-radius:18px;
 }
 
-.st-card-image img{
+.str-card-image img{
 
   width:100%;
   height:100%;
 
   object-fit:cover;
 
-  transition:1.2s ease;
+  transition:1s ease;
+}
+
+/* OVERLAY */
+
+.str-card-overlay{
+
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    to top,
+    rgba(0,0,0,0.5),
+    transparent
+  );
 }
 
 /* HOVER */
 
-.st-card:hover .st-card-image img{
+.str-card:hover img{
 
   transform:
-  scale(1.08);
+  scale(1.1);
 }
 
 /* CONTENT */
 
-.st-card-content{
+.str-card-content h3{
 
-  padding:22px;
+  font-size:1.4rem;
+
+  margin-bottom:12px;
 }
 
-/* NUMBER */
+.str-card-content p{
 
-.st-card-content h3{
+  font-size:0.92rem;
 
-  font-size:2rem;
-
-  margin-bottom:10px;
+  line-height:1.8;
 
   color:
-  rgba(180,220,255,1);
-}
-
-/* LABEL */
-
-.st-card-content p{
-
-  color:
-  rgba(255,255,255,0.68);
-
-  line-height:1.7;
-
-  font-size:0.9rem;
+  rgba(255,255,255,0.7);
 }
 
 /* =========================================================
-   HUGE TYPO
+   TYPO
    ========================================================= */
 
-.st-bg-text{
+.str-bg-text{
 
   position:absolute;
 
   bottom:-20px;
   left:50%;
 
-  transform:translateX(-50%);
+  transform:
+  translateX(-50%);
 
-  font-size:14vw;
+  font-size:16vw;
 
   font-weight:700;
 
@@ -518,14 +560,14 @@
   color:
   rgba(255,255,255,0.02);
 
-  z-index:1;
+  pointer-events:none;
 }
 
 /* =========================================================
-   ANIMATIONS
+   ANIMATION
    ========================================================= */
 
-@keyframes stZoom{
+@keyframes strZoom{
 
   from{
 
@@ -536,22 +578,7 @@
   to{
 
     transform:
-    scale(1.12);
-  }
-}
-
-@keyframes stFloat{
-
-  from{
-
-    transform:
-    translateY(0px);
-  }
-
-  to{
-
-    transform:
-    translateY(40px);
+    scale(1.14);
   }
 }
 
@@ -561,120 +588,118 @@
 
 @media(max-width:1100px){
 
-  .st-layout{
+  .str-layout{
 
     grid-template-columns:1fr;
   }
 
-  .st-main-image{
+  .str-image-box{
 
-    height:620px;
+    height:520px;
   }
 }
 
 @media(max-width:768px){
 
-  .st-section{
+  .str-section{
 
-    padding:110px 5%;
+    padding:100px 5%;
   }
 
-  .st-top h2{
+  .str-top{
 
-    font-size:3rem;
+    margin-bottom:70px;
   }
 
-  .st-main-image{
+  .str-image-box{
 
-    height:500px;
+    height:420px;
 
     border-radius:28px;
   }
 
-  .st-floating-card{
+  .str-floating-panel{
 
-    left:24px;
-    bottom:24px;
+    left:20px;
+    right:20px;
+    bottom:20px;
 
-    padding:22px;
+    max-width:none;
+
+    padding:24px;
   }
 
-  .st-floating-card h3{
+  .str-text-box{
 
-    font-size:1.5rem;
+    padding:30px;
   }
 
-  .st-cards{
+  .str-card{
 
     grid-template-columns:1fr;
   }
 
-  .st-bg-text{
+  .str-card-image{
 
-    font-size:22vw;
+    height:220px;
+  }
+
+  .str-bg-text{
+
+    font-size:24vw;
   }
 }
 
 @media(max-width:480px){
 
-  .st-section{
+  .str-top h2{
 
-    padding:90px 20px;
-  }
-
-  .st-top h2{
-
-    font-size:2.4rem;
+    font-size:2.5rem;
 
     letter-spacing:-2px;
   }
 
-  .st-main-image{
+  .str-image-box{
 
-    height:420px;
+    height:320px;
+  }
+
+  .str-floating-panel h3{
+
+    font-size:1.25rem;
+  }
+
+  .str-text-box{
+
+    padding:24px;
+
+    border-radius:24px;
+  }
+
+  .str-text-box p{
+
+    font-size:0.92rem;
+  }
+
+  .str-card{
+
+    padding:14px;
 
     border-radius:22px;
   }
 
-  .st-floating-card{
+  .str-card-image{
 
-    left:18px;
-    bottom:18px;
-
-    padding:18px;
-
-    border-radius:18px;
+    height:180px;
   }
 
-  .st-floating-card h3{
+  .str-card-content h3{
 
     font-size:1.2rem;
   }
 
-  .st-text-card{
+  .str-card-content p{
 
-    padding:22px;
-
-    border-radius:22px;
-  }
-
-  .st-text-card p{
-
-    font-size:0.9rem;
-  }
-
-  .st-card-image{
-
-    height:200px;
-  }
-
-  .st-card-content{
-
-    padding:18px;
-  }
-
-  .st-bg-text{
-
-    font-size:24vw;
+    font-size:0.88rem;
   }
 }

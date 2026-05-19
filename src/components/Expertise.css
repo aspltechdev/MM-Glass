@@ -1,5 +1,6 @@
+/*  */
 /* =========================================================
-   EXPERTISE SECTION
+   RESET
    ========================================================= */
 
 *{
@@ -8,180 +9,195 @@
   box-sizing:border-box;
 }
 
-.ex-section{
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.exp-section{
 
   position:relative;
 
   overflow:hidden;
 
-  isolation:isolate;
+  padding:120px 7%;
 
   background:#050505;
-
-  padding:140px 7%;
 
   color:white;
 }
 
 /* =========================================================
-   CINEMATIC BACKGROUND
+   BACKGROUND
    ========================================================= */
 
-.ex-bg{
+.exp-bg{
 
   position:absolute;
   inset:0;
-
-  overflow:hidden;
-
-  z-index:0;
 }
 
-/* IMAGE */
-
-.ex-bg img{
+.exp-bg img{
 
   width:100%;
   height:100%;
 
   object-fit:cover;
 
-  transform:scale(1.05);
+  filter:
+  brightness(0.08)
+  contrast(1.05);
 
   animation:
-  exZoom 18s ease-in-out infinite alternate;
-
-  filter:
-  brightness(0.7)
-  contrast(1.08)
-  saturate(1.08);
+  expZoom 18s ease infinite alternate;
 }
 
-/* =========================================================
-   OVERLAY
-   ========================================================= */
+/* OVERLAY */
 
-.ex-overlay{
+.exp-overlay{
 
   position:absolute;
   inset:0;
-
-  z-index:1;
 
   background:
   linear-gradient(
     to bottom,
-    rgba(0,0,0,0.12),
-    rgba(0,0,0,0.28),
-    rgba(0,0,0,0.72)
+    rgba(0,0,0,0.88),
+    rgba(0,0,0,0.96)
   );
+
+  z-index:2;
 }
 
-/* =========================================================
-   LIGHT
-   ========================================================= */
+/* GRADIENT */
 
-.ex-light{
-
-  position:absolute;
-
-  top:-15%;
-  right:-10%;
-
-  width:700px;
-  height:700px;
-
-  border-radius:50%;
-
-  z-index:1;
-
-  background:
-  rgba(120,180,255,0.14);
-
-  filter:blur(120px);
-
-  animation:
-  exFloat 8s ease infinite alternate;
-}
-
-/* =========================================================
-   VIGNETTE
-   ========================================================= */
-
-.ex-vignette{
+.exp-gradient{
 
   position:absolute;
   inset:0;
 
-  z-index:1;
+  z-index:3;
 
   background:
   radial-gradient(
-    circle,
-    transparent 50%,
-    rgba(0,0,0,0.42) 100%
+    circle at top left,
+    rgba(120,180,255,0.12),
+    transparent 35%
+  ),
+
+  radial-gradient(
+    circle at bottom right,
+    rgba(255,255,255,0.04),
+    transparent 30%
   );
 }
 
-/* =========================================================
-   GRID
-   ========================================================= */
+/* GRID */
 
-.ex-grid{
+.exp-grid{
 
   position:absolute;
   inset:0;
 
-  z-index:1;
+  z-index:4;
 
   background-image:
   linear-gradient(
-    rgba(255,255,255,0.02) 1px,
+    rgba(255,255,255,0.03) 1px,
     transparent 1px
   ),
-
   linear-gradient(
     90deg,
-    rgba(255,255,255,0.02) 1px,
+    rgba(255,255,255,0.03) 1px,
     transparent 1px
   );
 
   background-size:70px 70px;
+}
 
-  mask-image:
-  radial-gradient(
-    circle,
-    rgba(0,0,0,1),
-    transparent 90%
-  );
+/* NOISE */
+
+.exp-noise{
+
+  position:absolute;
+  inset:0;
+
+  z-index:5;
+
+  opacity:0.03;
+
+  background-image:
+  url("https://grainy-gradients.vercel.app/noise.svg");
+}
+
+/* =========================================================
+   LIGHTS
+   ========================================================= */
+
+.exp-light{
+
+  position:absolute;
+
+  border-radius:50%;
+
+  filter:blur(120px);
+
+  z-index:5;
+}
+
+.exp-light1{
+
+  width:420px;
+  height:420px;
+
+  background:
+  rgba(120,180,255,0.14);
+
+  top:-120px;
+  left:-120px;
+}
+
+.exp-light2{
+
+  width:320px;
+  height:320px;
+
+  background:
+  rgba(255,255,255,0.04);
+
+  bottom:-100px;
+  right:-100px;
 }
 
 /* =========================================================
    TOP
    ========================================================= */
 
-.ex-top{
+.exp-top{
 
   position:relative;
 
-  z-index:5;
+  z-index:10;
 
-  max-width:760px;
+  text-align:center;
 
-  margin-bottom:80px;
+  max-width:850px;
+
+  margin:auto auto 90px;
 }
 
-/* LABEL */
+/* TAG */
 
-.ex-top span{
+.exp-top span{
 
   display:inline-block;
 
   margin-bottom:24px;
 
-  font-size:0.72rem;
+  font-size:0.75rem;
 
   letter-spacing:4px;
+
+  text-transform:uppercase;
 
   color:
   rgba(255,255,255,0.58);
@@ -189,171 +205,230 @@
 
 /* TITLE */
 
-.ex-top h2{
+.exp-top h2{
 
   font-size:
-  clamp(3rem,6vw,6rem);
+  clamp(3rem,7vw,6rem);
 
-  line-height:0.9;
+  line-height:0.92;
 
-  letter-spacing:-5px;
+  letter-spacing:-4px;
 
-  text-transform:uppercase;
+  margin-bottom:24px;
 }
 
-/* HIGHLIGHT */
-
-.ex-top h2 span{
+.exp-top h2 span{
 
   color:
   rgba(180,220,255,1);
+}
 
-  text-shadow:
-  0 0 30px rgba(120,180,255,0.18);
+/* TEXT */
+
+.exp-top p{
+
+  font-size:1rem;
+
+  line-height:1.9;
+
+  color:
+  rgba(255,255,255,0.72);
 }
 
 /* =========================================================
-   LAYOUT
+   SHOWCASE
    ========================================================= */
 
-.ex-layout{
+.exp-showcase{
 
   position:relative;
 
-  z-index:5;
+  z-index:10;
 
   display:grid;
-  grid-template-columns:
-  1.1fr 0.9fr;
 
-  gap:30px;
+  grid-template-columns:
+  repeat(3,1fr);
+
+  gap:28px;
 }
 
 /* =========================================================
-   MAIN CARD
+   ITEM
    ========================================================= */
 
-.ex-main-card{
+.exp-item{
 
   position:relative;
+
+  height:600px;
 
   overflow:hidden;
 
   border-radius:36px;
 
-  height:720px;
+  isolation:isolate;
 
-  box-shadow:
-  0 40px 120px rgba(0,0,0,0.45);
+  transition:
+  transform 0.8s ease;
 }
 
-/* IMAGE */
+/* DIFFERENT HEIGHTS */
 
-.ex-main-card img{
+.exp-item-2{
+
+  margin-top:80px;
+}
+
+.exp-item-3{
+
+  margin-top:40px;
+}
+
+/* HOVER */
+
+.exp-item:hover{
+
+  transform:
+  translateY(-14px);
+}
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.exp-image-wrap{
+
+  position:absolute;
+  inset:0;
+}
+
+.exp-image-wrap img{
 
   width:100%;
   height:100%;
 
   object-fit:cover;
 
-  transition:2s ease;
+  transition:
+  transform 1.5s ease,
+  filter 1.5s ease;
 
   filter:
-  brightness(0.8)
-  contrast(1.05);
-}
-
-/* HOVER */
-
-.ex-main-card:hover img{
+  brightness(0.72);
 
   transform:
-  scale(1.08);
+  scale(1.03);
 }
 
 /* OVERLAY */
 
-.ex-card-overlay{
+.exp-image-overlay{
 
   position:absolute;
   inset:0;
 
-  z-index:2;
-
   background:
   linear-gradient(
     to top,
-    rgba(0,0,0,0.82),
-    transparent 55%
+    rgba(0,0,0,0.92),
+    rgba(0,0,0,0.08)
   );
 }
 
-/* CONTENT */
+/* HOVER */
 
-.ex-main-content{
+.exp-item:hover img{
+
+  transform:
+  scale(1.12);
+
+  filter:
+  brightness(0.5);
+}
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.exp-content{
 
   position:absolute;
 
-  left:40px;
-  bottom:40px;
+  left:28px;
+  right:28px;
+  bottom:28px;
 
   z-index:5;
+
+  padding:30px;
+
+  border-radius:28px;
+
+  background:
+  rgba(255,255,255,0.06);
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:
+  blur(20px);
 }
 
-/* LABEL */
+/* NUMBER */
 
-.ex-main-content span{
+.exp-number{
 
-  display:inline-block;
+  font-size:3rem;
 
-  margin-bottom:20px;
+  font-weight:700;
 
-  font-size:0.68rem;
-
-  letter-spacing:4px;
+  margin-bottom:18px;
 
   color:
-  rgba(255,255,255,0.6);
+  rgba(180,220,255,1);
 }
 
 /* TITLE */
 
-.ex-main-content h3{
+.exp-content h3{
 
-  max-width:520px;
+  font-size:1.5rem;
 
-  font-size:2.2rem;
+  margin-bottom:16px;
+}
 
-  line-height:1.25;
+/* TEXT */
 
-  font-weight:500;
+.exp-content p{
+
+  font-size:0.95rem;
+
+  line-height:1.8;
+
+  color:
+  rgba(255,255,255,0.72);
 }
 
 /* =========================================================
-   RIGHT SIDE
+   BOTTOM PANEL
    ========================================================= */
 
-.ex-right{
+.exp-bottom-panel{
 
-  display:flex;
-  flex-direction:column;
+  position:relative;
 
-  gap:24px;
-}
+  z-index:10;
 
-/* =========================================================
-   CARD
-   ========================================================= */
+  max-width:900px;
 
-.ex-card{
+  margin:100px auto 0;
 
-  display:flex;
+  padding:50px;
 
-  gap:20px;
+  text-align:center;
 
-  padding:22px;
-
-  border-radius:26px;
+  border-radius:36px;
 
   background:
   rgba(255,255,255,0.05);
@@ -361,121 +436,63 @@
   border:
   1px solid rgba(255,255,255,0.08);
 
-  backdrop-filter:blur(24px);
-
-  transition:0.6s ease;
-
-  box-shadow:
-  0 20px 60px rgba(0,0,0,0.25);
+  backdrop-filter:
+  blur(20px);
 }
 
-/* HOVER */
+/* LINE */
 
-.ex-card:hover{
+.exp-panel-line{
 
-  transform:
-  translateY(-8px);
+  width:100px;
+  height:2px;
+
+  margin:auto auto 30px;
 
   background:
-  rgba(255,255,255,0.07);
-}
-
-/* =========================================================
-   CARD IMAGE
-   ========================================================= */
-
-.ex-card-image{
-
-  width:130px;
-  height:130px;
-
-  overflow:hidden;
-
-  border-radius:18px;
-
-  flex-shrink:0;
-}
-
-/* IMAGE */
-
-.ex-card-image img{
-
-  width:100%;
-  height:100%;
-
-  object-fit:cover;
-
-  transition:1.2s ease;
-}
-
-/* HOVER */
-
-.ex-card:hover .ex-card-image img{
-
-  transform:
-  scale(1.08);
-}
-
-/* =========================================================
-   CARD CONTENT
-   ========================================================= */
-
-.ex-card-content{
-
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
-
-/* NUMBER */
-
-.ex-card-content h4{
-
-  font-size:2.2rem;
-
-  margin-bottom:10px;
-
-  color:
   rgba(180,220,255,1);
 }
 
 /* TITLE */
 
-.ex-card-content h5{
+.exp-bottom-panel h3{
 
-  font-size:1rem;
+  font-size:2rem;
 
-  margin-bottom:10px;
-
-  font-weight:500;
+  margin-bottom:20px;
 }
 
 /* TEXT */
 
-.ex-card-content p{
+.exp-bottom-panel p{
 
-  line-height:1.8;
+  max-width:700px;
 
-  font-size:0.92rem;
+  margin:auto;
+
+  font-size:1rem;
+
+  line-height:1.9;
 
   color:
-  rgba(255,255,255,0.7);
+  rgba(255,255,255,0.72);
 }
 
 /* =========================================================
-   HUGE TYPO
+   TYPO
    ========================================================= */
 
-.ex-bg-text{
+.exp-bg-text{
 
   position:absolute;
 
-  bottom:-20px;
+  bottom:-30px;
   left:50%;
 
-  transform:translateX(-50%);
+  transform:
+  translateX(-50%);
 
-  font-size:14vw;
+  font-size:16vw;
 
   font-weight:700;
 
@@ -484,14 +501,14 @@
   color:
   rgba(255,255,255,0.02);
 
-  z-index:1;
+  pointer-events:none;
 }
 
 /* =========================================================
-   ANIMATIONS
+   ANIMATION
    ========================================================= */
 
-@keyframes exZoom{
+@keyframes expZoom{
 
   from{
 
@@ -502,22 +519,7 @@
   to{
 
     transform:
-    scale(1.12);
-  }
-}
-
-@keyframes exFloat{
-
-  from{
-
-    transform:
-    translateY(0px);
-  }
-
-  to{
-
-    transform:
-    translateY(40px);
+    scale(1.14);
   }
 }
 
@@ -527,114 +529,112 @@
 
 @media(max-width:1100px){
 
-  .ex-layout{
+  .exp-showcase{
 
     grid-template-columns:1fr;
   }
 
-  .ex-main-card{
+  .exp-item,
+  .exp-item-2,
+  .exp-item-3{
 
-    height:620px;
+    margin-top:0;
+
+    height:500px;
   }
 }
 
 @media(max-width:768px){
 
-  .ex-section{
+  .exp-section{
 
-    padding:110px 5%;
+    padding:100px 5%;
   }
 
-  .ex-top h2{
+  .exp-top{
 
-    font-size:3rem;
+    margin-bottom:70px;
   }
 
-  .ex-main-card{
+  .exp-item{
 
-    height:500px;
+    height:420px;
 
     border-radius:28px;
   }
 
-  .ex-main-content{
+  .exp-content{
 
-    left:28px;
-    bottom:28px;
+    left:20px;
+    right:20px;
+    bottom:20px;
+
+    padding:24px;
   }
 
-  .ex-main-content h3{
+  .exp-bottom-panel{
 
-    font-size:1.7rem;
+    margin-top:70px;
+
+    padding:36px;
+
+    border-radius:28px;
   }
 
-  .ex-card{
+  .exp-bg-text{
 
-    flex-direction:column;
-  }
-
-  .ex-card-image{
-
-    width:100%;
-    height:220px;
-  }
-
-  .ex-bg-text{
-
-    font-size:22vw;
+    font-size:24vw;
   }
 }
 
 @media(max-width:480px){
 
-  .ex-section{
+  .exp-top h2{
 
-    padding:90px 20px;
-  }
-
-  .ex-top h2{
-
-    font-size:2.4rem;
+    font-size:2.5rem;
 
     letter-spacing:-2px;
   }
 
-  .ex-main-card{
+  .exp-top p{
 
-    height:420px;
-
-    border-radius:22px;
+    font-size:0.92rem;
   }
 
-  .ex-main-content h3{
+  .exp-item{
 
-    font-size:1.3rem;
+    height:340px;
   }
 
-  .ex-card{
+  .exp-number{
 
-    padding:18px;
-
-    border-radius:20px;
+    font-size:2.2rem;
   }
 
-  .ex-card-image{
+  .exp-content h3{
 
-    height:180px;
+    font-size:1.2rem;
   }
 
-  .ex-card-content h4{
+  .exp-content p{
 
-    font-size:2rem;
+    font-size:0.85rem;
+
+    line-height:1.7;
   }
 
-  .ex-card-content p{
+  .exp-bottom-panel{
 
-    font-size:0.88rem;
+    padding:28px;
   }
 
-  .ex-bg-text{
+  .exp-bottom-panel h3{
 
-    font-size:24vw;
+    font-size:1.5rem;
+  }
+
+  .exp-bottom-panel p{
+
+    font-size:0.9rem;
   }
 }

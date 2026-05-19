@@ -1,5 +1,5 @@
 /* =========================================================
-   PRODUCTS — CINEMATIC UI
+   RESET
    ========================================================= */
 
 *{
@@ -8,15 +8,21 @@
   box-sizing:border-box;
 }
 
+/* =========================================================
+   SECTION
+   ========================================================= */
+
 .px-section{
 
   position:relative;
 
   overflow:hidden;
 
-  background:#050505;
+  min-height:100vh;
 
-  padding:140px 7%;
+  padding:120px 8%;
+
+  /* background:#38383863; */
 
   color:white;
 }
@@ -25,41 +31,10 @@
    BACKGROUND
    ========================================================= */
 
-/* .px-gradient{
-
-  position:absolute;
-  inset:0;
-
-  background:
-  radial-gradient(
-    circle at top right,
-    rgba(120,180,255,0.12),
-    transparent 30%
-  ),
-
-  radial-gradient(
-    circle at bottom left,
-    rgba(255,255,255,0.04),
-    transparent 35%
-  );
-
-  filter:blur(120px);
-
-  z-index:1;
-} */
-
-
-
-/* =========================================================
-   REAL BG IMAGE
-   ========================================================= */
-
 .px-bg-image{
 
   position:absolute;
   inset:0;
-
-  z-index:0;
 
   overflow:hidden;
 }
@@ -71,167 +46,56 @@
 
   object-fit:cover;
 
-  transform:scale(1.05);
-
-  animation:
-  pxZoom 18s ease-in-out infinite alternate;
-
   filter:
-  brightness(0.72)
-  contrast(1.05)
-  saturate(1.08);
-}
-
-/* =========================================================
-   OVERLAY
-   ========================================================= */
-
-.px-gradient-overlay{
-
-  position:absolute;
-  inset:0;
-
-  z-index:1;
-
-  background:
-
-  radial-gradient(
-    circle at top right,
-    rgba(120,180,255,0.14),
-    transparent 40%
-  ),
-
-  linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.08),
-    rgba(0,0,0,0.3),
-    rgba(0,0,0,0.82)
-  );
-}
-
-/* =========================================================
-   GRID
-   ========================================================= */
-
-.px-grid{
-
-  position:absolute;
-  inset:0;
-
-  z-index:2;
-
-  background-image:
-  linear-gradient(
-    rgba(255,255,255,0.02) 1px,
-    transparent 1px
-  ),
-
-  linear-gradient(
-    90deg,
-    rgba(255,255,255,0.02) 1px,
-    transparent 1px
-  );
-
-  background-size:70px 70px;
-}
-
-/* =========================================================
-   NOISE
-   ========================================================= */
-
-.px-noise{
-
-  position:absolute;
-  inset:0;
-
-  z-index:2;
-
-  opacity:0.04;
-
-  mix-blend-mode:overlay;
-}
-
-/* =========================================================
-   LIGHT
-   ========================================================= */
-
-.px-light{
-
-  position:absolute;
-
-  top:-20%;
-  left:-10%;
-
-  width:700px;
-  height:700px;
-
-  border-radius:50%;
-
-  z-index:1;
-
-  background:
-  rgba(120,180,255,0.14);
-
-  filter:blur(120px);
+  brightness(0.42)
+  contrast(1.08) 
+  saturate(1.24);
 
   animation:
-  pxFloat 8s ease infinite alternate;
+  pxZoom 18s ease infinite alternate;
 }
 
-/* =========================================================
-   VIGNETTE
-   ========================================================= */
+/* OVERLAY */
 
-.px-vignette{
+.px-overlay{
 
   position:absolute;
   inset:0;
 
+     background:
+  linear-gradient(
+    10deg,
+    rgba(99, 98, 98, 0.614),
+    rgba(89, 89, 89, 0.534),
+    rgba(78, 78, 78, 0.9)
+  );
   z-index:2;
+}
+
+/* GRADIENT */
+
+.px-gradient{
+
+  position:absolute;
+  inset:0;
+
+  z-index:3;
 
   background:
   radial-gradient(
-    circle,
-    transparent 50%,
-    rgba(0,0,0,0.52) 100%
-  );
-}
-/* =========================================================
-   GRID
-   ========================================================= */
-
-.px-grid{
-
-  position:absolute;
-  inset:0;
-
-  background-image:
-  linear-gradient(
-    rgba(255,255,255,0.02) 1px,
-    transparent 1px
+    circle at top left,
+    rgba(110, 110, 110, 0.447),
+    transparent 35%
   ),
 
-  linear-gradient(
-    90deg,
-    rgba(255,255,255,0.02) 1px,
-    transparent 1px
-  );
-
-  background-size:70px 70px;
-
-  z-index:2;
-
-  mask-image:
   radial-gradient(
-    circle,
-    rgba(0,0,0,1),
-    transparent 85%
+    circle at bottom right,
+    rgba(196, 196, 196, 0.04),
+    transparent 30%
   );
 }
 
-/* =========================================================
-   NOISE
-   ========================================================= */
+/* NOISE */
 
 .px-noise{
 
@@ -241,9 +105,9 @@
   background-image:
   url("https://grainy-gradients.vercel.app/noise.svg");
 
-  opacity:0.05;
+  opacity:0.04;
 
-  z-index:3;
+  z-index:4;
 }
 
 /* =========================================================
@@ -254,39 +118,73 @@
 
   position:absolute;
 
-  width:700px;
-  height:700px;
-
   border-radius:50%;
 
   filter:blur(120px);
 
-  z-index:1;
+  z-index:5;
+}
+
+.px-light1{
+
+  width:420px;
+  height:420px;
+
+  background:
+  rgba(120,180,255,0.15);
+
+  top:-120px;
+  left:-120px;
+
+  animation:
+  pxFloat 8s ease infinite alternate;
+}
+
+.px-light2{
+
+  width:320px;
+  height:320px;
+
+  background:
+  rgba(255,255,255,0.05);
+
+  bottom:-80px;
+  right:-80px;
 
   animation:
   pxFloat 10s ease infinite alternate;
 }
 
-.px-light1{
+/* =========================================================
+   PARTICLES
+   ========================================================= */
 
-  top:-10%;
-  right:-10%;
+.px-particles{
 
-  background:
-  rgba(120,180,255,0.12);
+  position:absolute;
+  inset:0;
+
+  z-index:5;
 }
 
-.px-light2{
+.px-particle{
 
-  bottom:-10%;
-  left:-10%;
+  position:absolute;
+
+  width:2px;
+  height:2px;
+
+  border-radius:50%;
 
   background:
-  rgba(255,255,255,0.04);
+  rgba(255,255,255,0.7);
+
+  animation:
+  pxParticle linear infinite;
 }
 
 /* =========================================================
-   TOP
+   HEADER
    ========================================================= */
 
 .px-top{
@@ -295,31 +193,33 @@
 
   z-index:10;
 
-  max-width:760px;
+  text-align:center;
 
-  margin-bottom:90px;
+  max-width:900px;
+
+  margin:auto auto 80px;
 }
 
-/* =========================================================
-   BADGE
-   ========================================================= */
+/* BADGE */
 
 .px-badge{
 
   display:inline-flex;
+
   align-items:center;
+
   gap:12px;
 
   margin-bottom:28px;
 
-  font-size:0.72rem;
+  font-size:0.75rem;
 
   letter-spacing:4px;
 
   text-transform:uppercase;
 
   color:
-  rgba(255,255,255,0.6);
+  rgba(255,255,255,0.65);
 }
 
 .px-badge span{
@@ -328,58 +228,49 @@
   height:1px;
 
   background:
-  rgba(255,255,255,0.4);
+  rgba(255,255,255,0.5);
 }
 
-/* =========================================================
-   TITLE
-   ========================================================= */
+/* TITLE */
 
 .px-top h2{
 
   font-size:
-  clamp(2.8rem,5vw,5.5rem);
+  clamp(3rem,7vw,6rem);
 
-  line-height:0.92;
+  line-height:0.9;
 
   letter-spacing:-4px;
 
+  margin-bottom:28px;
+
   text-transform:uppercase;
-
-  font-weight:650;
-
-  margin-bottom:24px;
 }
-
-/* HIGHLIGHT */
 
 .px-top h2 span{
 
   color:
   rgba(180,220,255,1);
-
-  text-shadow:
-  0 0 40px rgba(120,180,255,0.25);
 }
 
-/* =========================================================
-   PARAGRAPH
-   ========================================================= */
+/* TEXT */
 
 .px-top p{
 
-  max-width:620px;
+  max-width:720px;
+
+  margin:auto;
+
+  font-size:1.08rem;
 
   line-height:1.9;
 
   color:
-  rgba(255,255,255,0.68);
-
-  font-size:1rem;
+  rgba(255,255,255,0.72);
 }
 
 /* =========================================================
-   LAYOUT
+   GRID
    ========================================================= */
 
 .px-layout{
@@ -389,10 +280,11 @@
   z-index:10;
 
   display:grid;
+
   grid-template-columns:
   repeat(2,1fr);
 
-  gap:30px;
+  gap:24px;
 }
 
 /* =========================================================
@@ -403,38 +295,16 @@
 
   position:relative;
 
+  height:450px;
+
   overflow:hidden;
 
-  min-height:560px;
-
-  border-radius:32px;
-
-  background:
-  rgba(255,255,255,0.04);
-
-  border:
-  1px solid rgba(255,255,255,0.06);
-
-  backdrop-filter:blur(24px);
+  border-radius:34px;
 
   transition:
-  transform 0.8s ease,
-  border 0.8s ease;
+  transform 0.8s ease;
 
-  box-shadow:
-  0 30px 100px rgba(0,0,0,0.35);
-}
-
-/* HOVER */
-
-.px-card:hover{
-
-  transform:
-  translateY(-14px)
-  scale(1.01);
-
-  border:
-  1px solid rgba(255,255,255,0.12);
+  isolation:isolate;
 }
 
 /* =========================================================
@@ -449,8 +319,6 @@
   overflow:hidden;
 }
 
-/* IMAGE */
-
 .px-image img{
 
   width:100%;
@@ -458,29 +326,26 @@
 
   object-fit:cover;
 
+  transform:
+  scale(1.05);
+
   transition:
-  transform 2s ease,
-  filter 1s ease;
+  transform 1.6s ease,
+  filter 1.6s ease;
 
   filter:
-  brightness(0.6)
-  contrast(1.08)
-  saturate(1.1);
+  brightness(0.92)
+  contrast(1.35)
+  saturate(0.83)
+  blur(20);
+  
 }
 
-/* HOVER */
+/* DARK LAYER */
 
-.px-card:hover img{
+.px-image::after{
 
-  transform:
-  scale(1.08);
-}
-
-/* =========================================================
-   OVERLAY
-   ========================================================= */
-
-.px-image-overlay{
+  content:"";
 
   position:absolute;
   inset:0;
@@ -488,152 +353,344 @@
   background:
   linear-gradient(
     to top,
-    rgba(0,0,0,0.88),
-    rgba(0,0,0,0.15),
-    transparent
+    rgba(0,0,0,0.78),
+    rgba(0,0,0,0.15)
   );
 }
 
 /* =========================================================
-   CONTENT
+   GLASS PANEL
    ========================================================= */
 
-.px-content{
+.px-glass-panel{
 
   position:absolute;
 
-  left:0;
-  bottom:0;
+  left:20px;
+  right:20px;
+  bottom:20px;
 
   z-index:5;
 
-  width:100%;
+  padding:24px;
 
-  padding:40px;
+  border-radius:28px;
+
+  /* background:
+  rgba(255,255,255,0.08); */
+
+  border:
+  1px solid rgba(255,255,255,0.12);
+
+  backdrop-filter:
+  blur(2px);
+
+  overflow:hidden;
+
+  transition:
+  transform 0.8s ease,
+  background 0.8s ease,
+  border 0.8s ease;
 }
 
-/* NUMBER */
+/* GLOW */
 
-.px-content span{
+.px-glass-panel::before{
 
-  display:inline-block;
+  content:"";
 
-  margin-bottom:18px;
+  position:absolute;
 
-  font-size:0.75rem;
+  inset:-40%;
 
-  letter-spacing:4px;
+  /* background:
+  radial-gradient(
+    circle,
+    rgba(120,180,255,0.16),
+    transparent 70%
+  ); */
 
-  text-transform:uppercase;
+  opacity:0;
 
-  color:
-  rgba(255,255,255,0.55);
+  transition:1s ease;
 }
 
 /* =========================================================
-   TITLE
+   NUMBER
    ========================================================= */
 
-.px-content h3{
+.px-number{
 
-  font-size:2rem;
+  position:absolute;
 
-  margin-bottom:18px;
+  top:18px;
+  right:18px;
 
-  line-height:1.1;
+  width:42px;
+  height:42px;
+
+  border-radius:50%;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  font-size:0.82rem;
+
+  background:
+  rgba(255,255,255,0.08);
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  color:
+  rgba(255,255,255,0.8);
 }
 
 /* =========================================================
    TEXT
    ========================================================= */
 
-.px-content p{
+.px-text{
 
-  max-width:480px;
+  position:relative;
+
+  z-index:5;
+}
+
+.px-text h3{
+
+  font-size:1.6rem;
+
+  margin-bottom:14px;
+
+  color:white;
+}
+
+.px-text p{
+
+  color:
+  rgba(255,255,255,0.76);
 
   line-height:1.8;
 
-  color:
-  rgba(255,255,255,0.72);
+  font-size:0.94rem;
 
-  font-size:0.96rem;
-
-  margin-bottom:28px;
+  margin-bottom:22px;
 }
 
 /* =========================================================
    BUTTON
    ========================================================= */
 
-.px-content button{
+.px-glass-panel button{
 
-  padding:16px 28px;
+  height:46px;
+
+  padding:0 24px;
 
   border:none;
 
-  border-radius:999px;
-
-  cursor:pointer;
-
-  background:
-  rgba(255,255,255,0.08);
-
-  border:
-  1px solid rgba(255,255,255,0.1);
-
-  color:white;
-
-  backdrop-filter:blur(20px);
-
-  letter-spacing:2px;
-
-  text-transform:uppercase;
-
-  font-size:0.72rem;
-
-  transition:0.5s ease;
-}
-
-/* HOVER */
-
-.px-content button:hover{
+  border-radius:40px;
 
   background:white;
 
   color:black;
 
-  transform:
-  translateY(-4px);
+  font-size:0.9rem;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:0.5s ease;
 }
 
 /* =========================================================
-   HUGE TEXT
+   HOVER EFFECTS
+   ========================================================= */
+
+.px-card:hover{
+
+  transform:
+  translateY(-18px);
+}
+
+/* IMAGE */
+
+.px-card:hover img{
+
+  transform:
+  scale(1.14);
+
+  filter:
+  brightness(0.76)
+  contrast(1.08)
+;
+}
+
+/* PANEL */
+
+.px-card:hover .px-glass-panel{
+
+  transform:
+  translateY(-8px);
+
+  background:
+  rgba(255,255,255,0.12);
+
+  border:
+  1px solid rgba(255,255,255,0.18);
+
+  box-shadow:
+  0 25px 60px rgba(0,0,0,0.4);
+}
+
+/* GLOW */
+
+.px-card:hover .px-glass-panel::before{
+
+  opacity:1;
+}
+
+/* BUTTON */
+
+.px-glass-panel button:hover{
+
+  background:
+  rgba(255,255,255,0.85);
+
+  transform:
+  translateY(-3px);
+}
+
+/* =========================================================
+   BOTTOM BUTTON
+   ========================================================= */
+
+.px-bottom{
+
+  position:relative;
+
+  z-index:10;
+
+  display:flex;
+
+  justify-content:center;
+
+  margin-top:70px;
+}
+
+/* BUTTON */
+
+.px-explore-btn{
+
+  position:relative;
+
+  overflow:hidden;
+
+  height:62px;
+
+  padding:0 42px;
+
+  border:none;
+
+  border-radius:60px;
+
+  background:white;
+
+  color:black;
+
+  font-size:1rem;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:0.5s ease;
+}
+
+.px-explore-btn span{
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+  linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.5),
+    transparent
+  );
+
+  transform:
+  translateX(-120%);
+
+  transition:1s ease;
+}
+
+.px-explore-btn:hover span{
+
+  transform:
+  translateX(120%);
+}
+
+.px-explore-btn:hover{
+
+  transform:
+  translateY(-6px);
+
+  box-shadow:
+  0 20px 50px rgba(255,255,255,0.2);
+}
+
+/* =========================================================
+   HUGE TYPO
    ========================================================= */
 
 .px-bg-text{
 
   position:absolute;
 
-  bottom:-20px;
+  bottom:-30px;
   left:50%;
 
-  transform:translateX(-50%);
+  transform:
+  translateX(-50%);
 
-  font-size:14vw;
+  font-size:16vw;
 
   font-weight:700;
 
   letter-spacing:-10px;
 
   color:
-  rgba(255,255,255,0.018);
+  rgba(255,255,255,0.02);
 
   z-index:1;
 }
 
 /* =========================================================
-   ANIMATION
+   ANIMATIONS
    ========================================================= */
+
+@keyframes pxZoom{
+
+  from{
+
+    transform:
+    scale(1.05);
+  }
+
+  to{
+
+    transform:
+    scale(1.14);
+  }
+}
 
 @keyframes pxFloat{
 
@@ -650,11 +707,54 @@
   }
 }
 
+@keyframes pxParticle{
+
+  from{
+
+    transform:
+    translateY(0px);
+
+    opacity:0;
+  }
+
+  50%{
+
+    opacity:1;
+  }
+
+  to{
+
+    transform:
+    translateY(-120px);
+
+    opacity:0;
+  }
+}
+
 /* =========================================================
-   LAPTOP
+   RESPONSIVE
    ========================================================= */
 
 @media(max-width:1200px){
+
+  .px-layout{
+
+    grid-template-columns:
+    repeat(2,1fr);
+  }
+}
+
+@media(max-width:768px){
+
+  .px-section{
+
+    padding:100px 5%;
+  }
+
+  .px-top h2{
+
+    font-size:3rem;
+  }
 
   .px-layout{
 
@@ -663,84 +763,23 @@
 
   .px-card{
 
-    min-height:500px;
-  }
-}
-
-/* =========================================================
-   TABLET
-   ========================================================= */
-
-@media(max-width:768px){
-
-  .px-section{
-
-    padding:110px 5%;
+    height:420px;
   }
 
-  .px-top{
+  .px-glass-panel{
 
-    margin-bottom:70px;
-  }
-
-  .px-top h2{
-
-    font-size:3rem;
-
-    letter-spacing:-3px;
-  }
-
-  .px-card{
-
-    min-height:440px;
-
-    border-radius:26px;
-  }
-
-  .px-content{
-
-    padding:30px;
-  }
-
-  .px-content h3{
-
-    font-size:1.6rem;
-  }
-
-  .px-content p{
-
-    font-size:0.92rem;
-  }
-
-  .px-card:hover{
-
-    transform:
-    translateY(-8px);
+    left:16px;
+    right:16px;
+    bottom:16px;
   }
 
   .px-bg-text{
 
-    font-size:22vw;
+    font-size:24vw;
   }
 }
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
 @media(max-width:480px){
-
-  .px-section{
-
-    padding:90px 20px;
-  }
-
-  .px-badge{
-
-    font-size:0.62rem;
-
-    letter-spacing:2px;
-  }
 
   .px-top h2{
 
@@ -751,175 +790,42 @@
 
   .px-top p{
 
-    font-size:0.92rem;
-
-    line-height:1.7;
+    font-size:1rem;
   }
 
   .px-card{
 
-    min-height:360px;
+    height:360px;
+
+    border-radius:24px;
+  }
+
+  .px-glass-panel{
+
+    padding:20px;
 
     border-radius:22px;
   }
 
-  .px-content{
-
-    padding:22px;
-  }
-
-  .px-content h3{
+  .px-text h3{
 
     font-size:1.3rem;
   }
 
-  .px-content p{
+  .px-text p{
 
-    font-size:0.88rem;
+    font-size:0.9rem;
 
-    margin-bottom:20px;
+    line-height:1.7;
   }
 
-  .px-content button{
+  .px-glass-panel button{
 
     width:100%;
-  }
-
-  .px-bg-text{
-
-    font-size:24vw;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-/* =========================================================
-   BOTTOM BUTTON
-   ========================================================= */
-
-.px-bottom{
-
-  position:relative;
-
-  z-index:10;
-
-  margin-top:70px;
-
-  display:flex;
-  justify-content:center;
-}
-
-/* BUTTON */
-
-.px-explore-btn{
-
-  position:relative;
-
-  overflow:hidden;
-
-  padding:18px 34px;
-
-  border-radius:999px;
-
-  border:
-  1px solid rgba(255,255,255,0.1);
-
-  background:
-  rgba(255,255,255,0.05);
-
-  color:white;
-
-  backdrop-filter:blur(20px);
-
-  cursor:pointer;
-
-  font-size:0.74rem;
-
-  letter-spacing:3px;
-
-  text-transform:uppercase;
-
-  transition:
-  transform 0.5s ease,
-  border 0.5s ease,
-  background 0.5s ease;
-
-  box-shadow:
-  0 20px 60px rgba(0,0,0,0.3);
-}
-
-/* GLOW */
-
-.px-explore-btn span{
-
-  position:absolute;
-
-  inset:-40%;
-
-  background:
-  radial-gradient(
-    circle,
-    rgba(120,180,255,0.15),
-    transparent 70%
-  );
-
-  opacity:0;
-
-  transition:0.6s ease;
-}
-
-/* HOVER */
-
-.px-explore-btn:hover{
-
-  transform:
-  translateY(-6px)
-  scale(1.02);
-
-  border:
-  1px solid rgba(255,255,255,0.18);
-
-  background:
-  rgba(255,255,255,0.08);
-}
-
-.px-explore-btn:hover span{
-
-  opacity:1;
-}
-
-/* ACTIVE */
-
-.px-explore-btn:active{
-
-  transform:
-  scale(0.98);
-}
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media(max-width:768px){
-
-  .px-bottom{
-
-    margin-top:50px;
   }
 
   .px-explore-btn{
 
     width:100%;
-
-    justify-content:center;
-
-    padding:16px 24px;
   }
 }

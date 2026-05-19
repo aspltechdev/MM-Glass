@@ -38,9 +38,10 @@ function HomePage() {
      <WhyChoose />
    <Trusted />
       {/* <Strength /> */}
+           <Products />
       <Certification />
      
-       <Products />
+       {/* <Products /> */}
       <Achievements />
       <CoreFeatures />
       {/* <Expertise /> */}
