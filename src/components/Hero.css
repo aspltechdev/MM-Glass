@@ -205,12 +205,20 @@
 .bg-gradient-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
+  /* background: linear-gradient(
     135deg,
-    rgba(3, 3, 3, 0.95) 0%,
-    rgba(3, 3, 3, 0.6) 40%,
-    rgba(3, 3, 3, 0.3) 70%,
-    rgba(3, 3, 3, 0.6) 100%
+    rgba(79, 79, 79, 0.95) 0%,
+    rgba(55, 55, 55, 0.6) 40%,
+    rgba(79, 79, 79, 0.3) 70%,
+    rgba(81, 81, 81, 0.6) 100%
+  ); */
+
+    background:
+  linear-gradient(
+    10deg,
+    rgba(99, 98, 98, 0.92),
+    rgba(89, 89, 89, 0.72),
+    rgba(78, 78, 78, 0.9)
   );
 }
 
@@ -983,7 +991,7 @@
 /* ===========================================
    BOTTOM GRADIENT
    =========================================== */
-.bottom-gradient {
+/* .bottom-gradient {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -996,7 +1004,7 @@
   );
   z-index: 15;
   pointer-events: none;
-}
+} */
 
 /* ===========================================
    SCROLL PROGRESS

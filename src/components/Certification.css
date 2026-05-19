@@ -1,5 +1,5 @@
 /* =========================================================
-   CERTIFICATION — CINEMATIC AI UI
+   RESET
    ========================================================= */
 
 *{
@@ -8,83 +8,120 @@
   box-sizing:border-box;
 }
 
+/* =========================================================
+   SECTION
+   ========================================================= */
+
 .crt-section{
 
   position:relative;
 
   overflow:hidden;
 
-  background:
-  #050505;
+  min-height:100vh;
 
-  padding:140px 7%;
+  padding:120px 8%;
+
+  display:grid;
+
+  grid-template-columns:
+  1fr 1fr;
+
+  gap:80px;
+
+  align-items:center;
+
+  background:#050505;
 
   color:white;
+
+  opacity:0;
+
+  transform:
+  translateY(100px);
+
+  transition:
+  opacity 1.4s ease,
+  transform 1.4s ease;
+}
+
+.crt-show{
+
+  opacity:1;
+
+  transform:
+  translateY(0px);
 }
 
 /* =========================================================
    BACKGROUND
    ========================================================= */
 
-.crt-gradient{
+.crt-bg{
+
+  position:absolute;
+  inset:0;
+
+  overflow:hidden;
+}
+
+.crt-bg img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  filter:
+  brightness(1.52)
+  contrast(1.7)
+  saturate(1.3);
+
+  animation:
+  crtZoom 18s ease infinite alternate;
+}
+
+/* OVERLAY */
+
+.crt-overlay{
 
   position:absolute;
   inset:0;
 
   background:
-  radial-gradient(
-    circle at top right,
-    rgba(120,180,255,0.12),
-    transparent 30%
-  ),
-
-  radial-gradient(
-    circle at bottom left,
-    rgba(255,255,255,0.04),
-    transparent 35%
+  linear-gradient(
+    to right,
+    rgba(90, 90, 90, 0.95),
+    rgba(72, 72, 72, 0.82)
   );
 
-  filter:blur(120px);
-
-  z-index:1;
+  z-index:2;
 }
 
-/* =========================================================
-   GRID
-   ========================================================= */
+/* GRADIENT */
 
-.crt-grid{
+.crt-gradient{
 
   position:absolute;
   inset:0;
 
-  background-image:
-  linear-gradient(
-    rgba(255,255,255,0.02) 1px,
-    transparent 1px
+  z-index:3;
+
+  background:
+  radial-gradient(
+    circle at top left,
+    rgba(120,180,255,0.18),
+    transparent 35%
   ),
 
-  linear-gradient(
-    90deg,
-    rgba(255,255,255,0.02) 1px,
-    transparent 1px
-  );
-
-  background-size:70px 70px;
-
-  z-index:2;
-
-  mask-image:
   radial-gradient(
-    circle,
-    rgba(0,0,0,1),
-    transparent 85%
+    circle at bottom right,
+    rgba(255,255,255,0.05),
+    transparent 30%
   );
 }
 
-/* =========================================================
-   NOISE
-   ========================================================= */
+/* NOISE */
 
 .crt-noise{
 
@@ -94,9 +131,9 @@
   background-image:
   url("https://grainy-gradients.vercel.app/noise.svg");
 
-  opacity:0.05;
+  opacity:0.04;
 
-  z-index:3;
+  z-index:4;
 }
 
 /* =========================================================
@@ -107,72 +144,102 @@
 
   position:absolute;
 
-  width:700px;
-  height:700px;
-
   border-radius:50%;
 
   filter:blur(120px);
 
-  z-index:1;
+  z-index:5;
+}
+
+.crt-light1{
+
+  width:400px;
+  height:400px;
+
+  background:
+  rgba(120,180,255,0.16);
+
+  top:-120px;
+  left:-120px;
+
+  animation:
+  crtFloat 8s ease infinite alternate;
+}
+
+.crt-light2{
+
+  width:320px;
+  height:320px;
+
+  background:
+  rgba(255,255,255,0.05);
+
+  bottom:-80px;
+  right:-80px;
 
   animation:
   crtFloat 10s ease infinite alternate;
 }
 
-.crt-light1{
+/* =========================================================
+   PARTICLES
+   ========================================================= */
 
-  top:-10%;
-  right:-10%;
+.crt-particles{
 
-  background:
-  rgba(120,180,255,0.12);
+  position:absolute;
+  inset:0;
+
+  z-index:5;
 }
 
-.crt-light2{
+.crt-particle{
 
-  bottom:-10%;
-  left:-10%;
+  position:absolute;
+
+  width:2px;
+  height:2px;
+
+  border-radius:50%;
 
   background:
-  rgba(255,255,255,0.05);
+  rgba(255,255,255,0.7);
+
+  animation:
+  crtParticle linear infinite;
 }
 
 /* =========================================================
-   TOP
+   LEFT CONTENT
    ========================================================= */
 
-.crt-top{
+.crt-content-side{
 
   position:relative;
 
   z-index:10;
-
-  max-width:760px;
-
-  margin-bottom:90px;
 }
 
-/* =========================================================
-   BADGE
-   ========================================================= */
+/* BADGE */
 
 .crt-badge{
 
   display:inline-flex;
+
   align-items:center;
+
   gap:12px;
 
   margin-bottom:28px;
 
-  font-size:0.72rem;
+  font-size:0.75rem;
 
   letter-spacing:4px;
 
   text-transform:uppercase;
 
   color:
-  rgba(255,255,255,0.6);
+  rgba(255,255,255,0.65);
 }
 
 .crt-badge span{
@@ -181,71 +248,200 @@
   height:1px;
 
   background:
-  rgba(255,255,255,0.4);
+  rgba(255,255,255,0.5);
 }
 
-/* =========================================================
-   TITLE
-   ========================================================= */
+/* TITLE */
 
-.crt-top h2{
+.crt-content-side h2{
 
   font-size:
-  clamp(2.8rem,5vw,5.5rem);
+  clamp(3rem,7vw,6rem);
 
-  line-height:0.92;
+  line-height:0.9;
 
   letter-spacing:-4px;
 
+  margin-bottom:30px;
+
   text-transform:uppercase;
-
-  font-weight:650;
-
-  margin-bottom:24px;
 }
 
-/* HIGHLIGHT */
-
-.crt-top h2 span{
+.crt-content-side h2 span{
 
   color:
   rgba(180,220,255,1);
-
-  text-shadow:
-  0 0 40px rgba(120,180,255,0.25);
 }
 
-/* =========================================================
-   PARAGRAPH
-   ========================================================= */
+/* TEXT */
 
-.crt-top p{
+.crt-content-side p{
 
-  max-width:620px;
+  max-width:580px;
+
+  font-size:1.08rem;
 
   line-height:1.9;
 
   color:
-  rgba(255,255,255,0.68);
+  rgba(255,255,255,0.72);
 
-  font-size:1rem;
+  margin-bottom:40px;
 }
 
 /* =========================================================
-   GRID LAYOUT
+   STATS
    ========================================================= */
 
-.crt-grid-layout{
+.crt-stats{
+
+  display:flex;
+
+  gap:18px;
+
+  margin-bottom:40px;
+
+  flex-wrap:wrap;
+}
+
+.crt-stat-card{
+
+  min-width:180px;
+
+  padding:24px;
+
+  border-radius:24px;
+
+  background:
+  rgba(125, 125, 125, 0.904);
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(20px);
+
+  transition:0.5s ease;
+}
+
+.crt-stat-card:hover{
+
+  transform:
+  translateY(-10px);
+
+  background:
+  rgba(255,255,255,0.08);
+}
+
+.crt-stat-card h3{
+
+  font-size:2rem;
+
+  margin-bottom:8px;
+}
+
+.crt-stat-card span{
+
+  color:
+  rgba(255,255,255,0.65);
+}
+
+/* BUTTON */
+
+.crt-btn{
+
+  height:58px;
+
+  padding:0 34px;
+
+  border:none;
+
+  border-radius:50px;
+
+  background:white;
+
+  color:black;
+
+  font-size:0.95rem;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:0.5s ease;
+}
+
+.crt-btn:hover{
+
+  transform:
+  translateY(-6px);
+
+  box-shadow:
+  0 15px 40px rgba(255,255,255,0.2);
+}
+
+/* =========================================================
+   RIGHT SIDE
+   ========================================================= */
+
+.crt-scroll-side{
 
   position:relative;
 
   z-index:10;
 
   display:grid;
-  grid-template-columns:
-  repeat(3,1fr);
 
-  gap:28px;
+  grid-template-columns:
+  repeat(2,1fr);
+
+  gap:24px;
+
+  height:750px;
+
+  overflow:hidden;
+
+  mask-image:
+  linear-gradient(
+    to bottom,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+/* COLUMN */
+
+.crt-column{
+
+  overflow:hidden;
+}
+
+/* TRACK */
+
+.crt-track{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:24px;
+}
+
+/* DOWN */
+
+.track-down{
+
+  animation:
+  crtScrollDown 28s linear infinite;
+}
+
+/* UP */
+
+.track-up{
+
+  animation:
+  crtScrollUp 28s linear infinite;
 }
 
 /* =========================================================
@@ -256,29 +452,27 @@
 
   position:relative;
 
-  overflow:hidden;
-
-  min-height:380px;
+  min-height:250px;
 
   padding:28px;
 
-  border-radius:28px;
+  border-radius:30px;
+
+  overflow:hidden;
 
   background:
-  rgba(255,255,255,0.045);
+  rgba(82, 81, 81, 0.644);
 
   border:
-  1px solid rgba(255,255,255,0.06);
+  1px solid rgba(255,255,255,0.08);
 
-  backdrop-filter:blur(24px);
+  backdrop-filter:blur(20px);
 
   transition:
   transform 0.8s ease,
-  border 0.8s ease,
-  background 0.8s ease;
+  border 0.8s ease;
 
-  box-shadow:
-  0 20px 60px rgba(0,0,0,0.25);
+  isolation:isolate;
 }
 
 /* GLOW */
@@ -292,85 +486,44 @@
   background:
   radial-gradient(
     circle,
-    rgba(120,180,255,0.08),
+    rgba(120,180,255,0.18),
     transparent 70%
   );
 
   opacity:0;
 
-  transition:0.8s ease;
+  transition:1s ease;
+
+  z-index:1;
 }
 
-/* HOVER */
+/* SHINE */
 
-.crt-card:hover{
+.crt-card::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:-150%;
+
+  background:
+  linear-gradient(
+    120deg,
+    transparent 20%,
+    rgba(255,255,255,0.14),
+    transparent 80%
+  );
 
   transform:
-  perspective(1800px)
-  rotateY(8deg)
-  rotateX(4deg)
-  translateY(-12px);
+  rotate(25deg);
 
-  border:
-  1px solid rgba(255,255,255,0.12);
-
-  background:
-  rgba(255,255,255,0.06);
-}
-
-.crt-card:hover .crt-card-glow{
-
-  opacity:1;
-}
-
-/* =========================================================
-   TOP BAR
-   ========================================================= */
-
-.crt-top-bar{
-
-  position:relative;
+  transition:1.5s ease;
 
   z-index:5;
-
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-
-  margin-bottom:28px;
 }
 
-.crt-top-bar span{
-
-  font-size:0.68rem;
-
-  letter-spacing:3px;
-
-  text-transform:uppercase;
-
-  color:
-  rgba(255,255,255,0.55);
-}
-
-/* DOT */
-
-.crt-dot{
-
-  width:10px;
-  height:10px;
-
-  border-radius:50%;
-
-  background:
-  rgba(180,220,255,1);
-
-  box-shadow:
-  0 0 20px rgba(120,180,255,0.7);
-}
-
-/* =========================================================
-   IMAGE
-   ========================================================= */
+/* IMAGE */
 
 .crt-image-wrap{
 
@@ -379,127 +532,139 @@
   z-index:5;
 
   width:100%;
-  height:180px;
-
-  border-radius:22px;
-
-  overflow:hidden;
-
-  background:white;
+  height:120px;
 
   display:flex;
+
   align-items:center;
+
   justify-content:center;
 
-  padding:24px;
-
-  margin-bottom:26px;
+  margin-bottom:24px;
 }
-
-/* IMAGE */
 
 .crt-image-wrap img{
 
-  max-width:100%;
+  max-width:70%;
+
   max-height:100%;
 
   object-fit:contain;
 
+  filter:
+  grayscale(1)
+  brightness(1.2);
+
   transition:
-  transform 1s ease;
+  transform 0.8s ease,
+  filter 0.8s ease;
+}
+
+/* CONTENT */
+
+.crt-card-content{
+
+  position:relative;
+
+  z-index:5;
+
+  text-align:center;
+}
+
+.crt-card-content h3{
+
+  font-size:1.4rem;
+
+  margin-bottom:10px;
+}
+
+.crt-card-content p{
+
+  color:
+  rgba(255,255,255,0.68);
+
+  line-height:1.7;
 }
 
 /* HOVER */
+
+.crt-card:hover{
+
+  transform:
+  translateY(-12px)
+  scale(1.02);
+
+  border:
+  1px solid rgba(255,255,255,0.16);
+
+  box-shadow:
+  0 20px 50px rgba(0,0,0,0.45);
+}
+
+.crt-card:hover::before{
+
+  inset:120%;
+}
+
+.crt-card:hover .crt-card-glow{
+
+  opacity:1;
+}
 
 .crt-card:hover img{
 
   transform:
   scale(1.08);
+
+  filter:
+  grayscale(0)
+  brightness(1);
 }
 
 /* =========================================================
-   CONTENT
-   ========================================================= */
-
-.crt-content{
-
-  position:relative;
-
-  z-index:5;
-}
-
-/* TITLE */
-
-.crt-content h3{
-
-  font-size:1.5rem;
-
-  margin-bottom:12px;
-}
-
-/* TEXT */
-
-.crt-content p{
-
-  color:
-  rgba(255,255,255,0.68);
-
-  line-height:1.8;
-
-  font-size:0.95rem;
-}
-
-/* =========================================================
-   NUMBER
-   ========================================================= */
-
-.crt-number{
-
-  position:absolute;
-
-  bottom:20px;
-  right:20px;
-
-  font-size:4rem;
-
-  font-weight:700;
-
-  color:
-  rgba(255,255,255,0.03);
-
-  user-select:none;
-}
-
-/* =========================================================
-   HUGE TYPO
+   HUGE TEXT
    ========================================================= */
 
 .crt-bg-text{
 
   position:absolute;
 
-  bottom:-20px;
+  bottom:-30px;
   left:50%;
 
-  transform:translateX(-50%);
+  transform:
+  translateX(-50%);
 
-  font-size:14vw;
+  font-size:16vw;
 
   font-weight:700;
 
   letter-spacing:-10px;
 
   color:
-  rgba(255,255,255,0.018);
-
-  user-select:none;
+  rgba(255,255,255,0.02);
 
   z-index:1;
 }
 
 /* =========================================================
-   ANIMATION
+   ANIMATIONS
    ========================================================= */
+
+@keyframes crtZoom{
+
+  from{
+
+    transform:
+    scale(1.05);
+  }
+
+  to{
+
+    transform:
+    scale(1.14);
+  }
+}
 
 @keyframes crtFloat{
 
@@ -516,132 +681,105 @@
   }
 }
 
-/* =========================================================
-   LAPTOP
-   ========================================================= */
+@keyframes crtParticle{
 
-@media(max-width:1200px){
+  from{
 
-  .crt-grid-layout{
+    transform:
+    translateY(0px);
 
-    grid-template-columns:
-    repeat(2,1fr);
+    opacity:0;
+  }
+
+  50%{
+
+    opacity:1;
+  }
+
+  to{
+
+    transform:
+    translateY(-120px);
+
+    opacity:0;
+  }
+}
+
+/* SCROLL DOWN */
+
+@keyframes crtScrollDown{
+
+  from{
+
+    transform:
+    translateY(-50%);
+  }
+
+  to{
+
+    transform:
+    translateY(0%);
+  }
+}
+
+/* SCROLL UP */
+
+@keyframes crtScrollUp{
+
+  from{
+
+    transform:
+    translateY(0%);
+  }
+
+  to{
+
+    transform:
+    translateY(-50%);
   }
 }
 
 /* =========================================================
-   TABLET
+   RESPONSIVE
    ========================================================= */
+
+@media(max-width:1200px){
+
+  .crt-section{
+
+    grid-template-columns:1fr;
+
+    gap:70px;
+  }
+
+  .crt-scroll-side{
+
+    height:650px;
+  }
+}
 
 @media(max-width:768px){
 
   .crt-section{
 
-    padding:110px 5%;
+    padding:100px 5%;
   }
 
-  .crt-top{
-
-    margin-bottom:70px;
-  }
-
-  .crt-top h2{
+  .crt-content-side h2{
 
     font-size:3rem;
-
-    letter-spacing:-3px;
   }
 
-  .crt-grid-layout{
+  .crt-scroll-side{
 
     grid-template-columns:1fr;
 
-    gap:22px;
+    height:600px;
   }
 
-  .crt-card{
+  .column-hide-mobile{
 
-    min-height:auto;
-
-    border-radius:24px;
-  }
-
-  .crt-card:hover{
-
-    transform:
-    translateY(-8px);
-  }
-
-  .crt-image-wrap{
-
-    height:160px;
-  }
-
-  .crt-bg-text{
-
-    font-size:22vw;
-  }
-}
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media(max-width:480px){
-
-  .crt-section{
-
-    padding:90px 20px;
-  }
-
-  .crt-badge{
-
-    font-size:0.62rem;
-
-    letter-spacing:2px;
-  }
-
-  .crt-top h2{
-
-    font-size:2.3rem;
-
-    letter-spacing:-2px;
-  }
-
-  .crt-top p{
-
-    font-size:0.92rem;
-
-    line-height:1.7;
-  }
-
-  .crt-card{
-
-    padding:22px;
-
-    border-radius:22px;
-  }
-
-  .crt-image-wrap{
-
-    height:140px;
-
-    border-radius:18px;
-  }
-
-  .crt-content h3{
-
-    font-size:1.2rem;
-  }
-
-  .crt-content p{
-
-    font-size:0.9rem;
-  }
-
-  .crt-number{
-
-    font-size:3rem;
+    display:none;
   }
 
   .crt-bg-text{
@@ -650,135 +788,44 @@
   }
 }
 
+@media(max-width:480px){
 
+  .crt-content-side h2{
 
-/* =========================================================
-   REAL BG IMAGE
-   ========================================================= */
+    font-size:2.3rem;
 
-.crt-bg-image{
+    letter-spacing:-2px;
+  }
 
-  position:absolute;
-  inset:0;
+  .crt-content-side p{
 
-  z-index:0;
+    font-size:1rem;
+  }
 
-  overflow:hidden;
-}
+  .crt-card{
 
-.crt-bg-image img{
+    min-height:220px;
 
-  width:100%;
-  height:100%;
+    padding:24px;
+  }
 
-  object-fit:cover;
+  .crt-card-content h3{
 
-  transform:scale(1.05);
+    font-size:1.2rem;
+  }
 
-  animation:
-  crtZoom 18s ease-in-out infinite alternate;
+  .crt-stats{
 
-  filter:
-  brightness(0.72)
-  contrast(1.05)
-  saturate(1.08);
-}
+    flex-direction:column;
+  }
 
-/* =========================================================
-   OVERLAY
-   ========================================================= */
+  .crt-stat-card{
 
-.crt-gradient-overlay{
+    width:100%;
+  }
 
-  position:absolute;
-  inset:0;
+  .crt-btn{
 
-  z-index:1;
-
-  background:
-
-  radial-gradient(
-    circle at top right,
-    rgba(120,180,255,0.14),
-    transparent 40%
-  ),
-
-  linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.08),
-    rgba(0,0,0,0.28),
-    rgba(0,0,0,0.82)
-  );
-}
-
-/* =========================================================
-   GRID
-   ========================================================= */
-
-.crt-grid{
-
-  position:absolute;
-  inset:0;
-
-  z-index:2;
-
-  background-image:
-  linear-gradient(
-    rgba(255,255,255,0.02) 1px,
-    transparent 1px
-  ),
-
-  linear-gradient(
-    90deg,
-    rgba(255,255,255,0.02) 1px,
-    transparent 1px
-  );
-
-  background-size:70px 70px;
-}
-
-/* =========================================================
-   LIGHT
-   ========================================================= */
-
-.crt-light{
-
-  position:absolute;
-
-  top:-20%;
-  left:-10%;
-
-  width:700px;
-  height:700px;
-
-  border-radius:50%;
-
-  z-index:1;
-
-  background:
-  rgba(120,180,255,0.14);
-
-  filter:blur(120px);
-
-  animation:
-  crtFloat 8s ease infinite alternate;
-}
-
-/* =========================================================
-   VIGNETTE
-   ========================================================= */
-
-.crt-vignette{
-
-  position:absolute;
-  inset:0;
-
-  z-index:2;
-
-  background:
-  radial-gradient(
-    circle,
-    transparent 50%,
-    rgba(0,0,0,0.52) 100%
-  );
+    width:100%;
+  }
 }

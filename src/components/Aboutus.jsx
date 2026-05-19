@@ -1,185 +1,17 @@
-// // // About.jsx
-
-// // import "./Aboutus.css";
-
-// // import {
-// //   useEffect,
-// //   useRef,
-// //   useState,
-// // } from "react";
-
-// // function Aboutus() {
-
-// //   const sectionRef = useRef(null);
-
-// //   const [visible, setVisible] = useState(false);
-
-// //   /* REVEAL */
-
-// //   useEffect(() => {
-
-// //     const observer = new IntersectionObserver(
-// //       ([entry]) => {
-
-// //         if (entry.isIntersecting) {
-// //           setVisible(true);
-// //         }
-// //       },
-// //       {
-// //         threshold: 0.2,
-// //       }
-// //     );
-
-// //     if (sectionRef.current) {
-// //       observer.observe(sectionRef.current);
-// //     }
-
-// //     return () => {
-// //       if (sectionRef.current) {
-// //         observer.unobserve(sectionRef.current);
-// //       }
-// //     };
-
-// //   }, []);
-
-// //   return (
-// //     <section
-// //       className={`about ${visible ? "show" : ""}`}
-// //       ref={sectionRef}
-// //     >
-
-// //       {/* BACKGROUND EFFECTS */}
-
-// //       <div className="about-gradient"></div>
-// //       <div className="about-grid"></div>
-// //       <div className="about-noise"></div>
-// //       <div className="ambient-light"></div>
-
-// //       {/* LEFT SIDE */}
-
-// //       <div className="about-content">
-
-// //         <div className="about-badge">
-
-// //           <span></span>
-
-// //           ABOUT MM GLASS HOUSE
-
-// //         </div>
-
-// //         <h2>
-// //           Crafting Modern <br />
-// //           Spaces Through <br />
-// //           Precision Glass
-// //         </h2>
-
-// //         <p>
-// //           M M Glass House provides high-quality cladding services,
-// //           glass partitions, and customized glass solutions for
-// //           residential and commercial spaces.
-// //         </p>
-
-// //         <p>
-// //           We focus on delivering durable products with
-// //           professional workmanship and timely service,
-// //           ensuring every project reflects innovation,
-// //           reliability, and premium architectural aesthetics.
-// //         </p>
-
-// //         {/* METRICS */}
-
-// //         <div className="about-metrics">
-
-// //           <div className="metric-card">
-
-// //             <h3>500+</h3>
-
-// //             <span>Projects Delivered</span>
-
-// //           </div>
-
-// //           <div className="metric-card">
-
-// //             <h3>25+</h3>
-
-// //             <span>Years Experience</span>
-
-// //           </div>
-
-// //           <div className="metric-card">
-
-// //             <h3>98%</h3>
-
-// //             <span>Client Satisfaction</span>
-
-// //           </div>
-
-// //         </div>
-
-// //       </div>
-
-// //       {/* RIGHT SIDE */}
-
-// //       <div className="about-visual">
-
-// //         {/* MAIN CARD */}
-
-// //         <div className="glass-card main-card">
-
-// //           <img
-// //             src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=1600&auto=format&fit=crop"
-// //             alt=""
-// //           />
-
-// //           <div className="card-overlay"></div>
-
-// //           <div className="card-content">
-
-// //             <span>ARCHITECTURAL SYSTEMS</span>
-
-// //             <h3>Premium Glass Solutions</h3>
-
-// //           </div>
-
-// //           <div className="glass-reflection"></div>
-
-// //         </div>
-
-// //         {/* FLOATING CARD */}
-
-// //         <div className="glass-card floating-card">
-
-// //           <h4>Modern Excellence</h4>
-
-// //           <p>
-// //             Intelligent glass craftsmanship
-// //             engineered for contemporary spaces.
-// //           </p>
-
-// //         </div>
-
-// //       </div>
-
-// //     </section>
-// //   );
-// // }
-
-// // export default Aboutus; 
 
 
 
-// // About.jsx
 
 // import "./Aboutus.css";
 // import { useEffect, useRef, useState } from "react";
 
 // function Aboutus() {
 
-//   const sectionRef = useRef(null);
+//   const aboutRef = useRef(null);
 
-//   const [visible, setVisible] = useState(false);
+//   const [isVisible, setIsVisible] = useState(false);
 
-//   /* REVEAL */
+//   /* SCROLL REVEAL */
 
 //   useEffect(() => {
 
@@ -187,7 +19,7 @@
 //       ([entry]) => {
 
 //         if (entry.isIntersecting) {
-//           setVisible(true);
+//           setIsVisible(true);
 //         }
 //       },
 //       {
@@ -195,13 +27,13 @@
 //       }
 //     );
 
-//     if (sectionRef.current) {
-//       observer.observe(sectionRef.current);
+//     if (aboutRef.current) {
+//       observer.observe(aboutRef.current);
 //     }
 
 //     return () => {
-//       if (sectionRef.current) {
-//         observer.unobserve(sectionRef.current);
+//       if (aboutRef.current) {
+//         observer.unobserve(aboutRef.current);
 //       }
 //     };
 
@@ -210,123 +42,190 @@
 //   return (
 
 //     <section
-//       className={`about ${visible ? "show" : ""}`}
-//       ref={sectionRef}
+//       className={`ae-section ${isVisible ? "ae-show" : ""}`}
+//       ref={aboutRef}
 //     >
 
 //       {/* BACKGROUND */}
 
-//       <div className="about-bg"></div>
-//       <div className="about-gradient"></div>
-//       <div className="about-noise"></div>
-//       <div className="about-grid"></div>
+//       {/* <div className="ae-bg"></div> */}
 
-//       {/* FLOATING GLOW */}
+//       {/* REAL BACKGROUND IMAGE */}
 
-//       <div className="ambient-light light-1"></div>
-//       <div className="ambient-light light-2"></div>
+// <div className="ae-bg-image">
 
-//       {/* LEFT SIDE */}
+//   <img
+//     // src="https://images.pexels.com/photos/9317997/pexels-photo-9317997.jpeg"
+//     src="https://images.pexels.com/photos/270480/pexels-photo-270480.jpeg"
+//     alt=""
+//   />
 
-//       <div className="about-left">
+// </div>
+// <div className="ae-bg-gradient"></div>
+//       <div className="ae-grid"></div>
+//       <div className="ae-noise"></div>
 
-//         <div className="about-badge">
+//       {/* GLOW LIGHTS */}
+
+//       <div className="ae-light ae-light1"></div>
+//       <div className="ae-light ae-light2"></div>
+
+//       {/* LEFT STORY */}
+
+//       <div className="ae-story">
+
+//         <div className="ae-badge">
 
 //           <span></span>
 
-//           SPATIAL GLASS SYSTEMS
+//           SPATIAL GLASS INTELLIGENCE
 
 //         </div>
 
 //         <h2>
 
-//           WE DON'T <br />
+//           WE BUILD <br />
 
-//           INSTALL <span>GLASS.</span> <br />
+//           <span>ARCHITECTURAL</span> <br />
 
-//           WE ENGINEER <br />
+//           EXPERIENCES <br />
 
-//           <span>EXPERIENCES.</span>
+//           THROUGH <br />
+
+//           GLASS.
 
 //         </h2>
 
 //         <p>
-//           M M Glass House delivers premium cladding systems,
-//           architectural partitions, and custom-engineered glass
-//           experiences designed for modern residential and
-//           commercial environments.
+//           M M Glass House creates futuristic glass systems,
+//           premium cladding environments, and immersive
+//           architectural solutions engineered for modern
+//           residential and commercial ecosystems.
 //         </p>
 
-//         <div className="about-actions">
+//         {/* ACTIONS */}
 
-//           <button className="primary-btn">
-//             Explore Projects
+//         <div className="ae-actions">
+
+//           <button className="ae-primary-btn">
+//             Explore Spaces
 //           </button>
 
-//           <button className="secondary-btn">
-//             Our Story
+//           <button className="ae-secondary-btn">
+//             Watch Story
 //           </button>
 
 //         </div>
 
-//       </div>
+//         {/* FLOATING DATA */}
 
-//       {/* RIGHT SIDE */}
+//         {/* <div className="ae-data-grid">
 
-//       <div className="about-right">
+//           <div className="ae-data-card">
 
-//         {/* MAIN CARD */}
+//             <h3>500+</h3>
 
-//         <div className="main-card">
-
-//           <img
-//             src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2000&auto=format&fit=crop"
-//             alt=""
-//           />
-
-//           <div className="card-overlay"></div>
-
-//           <div className="card-content">
-
-//             <span>ARCHITECTURAL INTELLIGENCE</span>
-
-//             <h3>Future-Driven Spaces</h3>
+//             <span>Projects Delivered</span>
 
 //           </div>
 
-//           <div className="card-reflection"></div>
+//           <div className="ae-data-card">
+
+//             <h3>9+</h3>
+
+//             <span>Years Excellence</span>
+
+//           </div>
+//            <div className="ae-data-card">
+
+//             <h3>2M+</h3>
+
+//             <span>Units Sold</span>
+
+//           </div>
+//            <div className="ae-data-card">
+
+//             <h3>50+</h3>
+
+//             <span>Variants</span>
+
+//           </div>
+
+//           <div className="ae-data-card">
+
+//             <h3>98%</h3>
+
+//             <span>Client Satisfaction</span>
+
+//           </div>
+
+//         </div> */}
+
+//       </div>
+
+//       {/* RIGHT VISUAL */}
+
+//       <div className="ae-visual">
+
+//         {/* MAIN IMAGE */}
+
+//         <div className="ae-main-frame">
+
+//           <img
+//             src="https://images.pexels.com/photos/270480/pexels-photo-270480.jpeg"
+//             alt=""
+//           />
+
+//           <div className="ae-image-overlay"></div>
+
+//           <div className="ae-reflection"></div>
+
+//           <div className="ae-frame-content">
+
+//             {/* <span>FUTURE ARCHITECTURE</span>
+
+//             <h3>HyperSpatial Systems</h3> */}
+
+//           </div>
 
 //         </div>
 
 //         {/* FLOATING AI PANEL */}
 
-//         <div className="floating-panel panel-1">
+//         <div className="ae-floating-panel panel-top">
 
-//           <span>AI SPATIAL SYSTEMS</span>
+//           <div className="ae-panel-glow"></div>
 
-//           <h4>98%</h4>
+//           <span>AI ARCHITECTURE</span>
 
-//           <p>Client Satisfaction</p>
+//           <h4>Smart Glass.</h4>
+
+//           <p>
+//             Intelligent Glass Ecosystems powered by
+//             modern engineering.
+//           </p>
 
 //         </div>
 
-//         {/* FLOATING PANEL */}
+//         {/* FLOATING DASHBOARD */}
 
-//         <div className="floating-panel panel-2">
+//         <div className="ae-floating-panel panel-bottom">
 
-//           <span>GLOBAL EXECUTION</span>
+//           <div className="ae-panel-glow"></div>
 
-//           <h4>500+</h4>
+//           <span>LIVE METRICS</span>
 
-//           <p>Projects Delivered</p>
+//           <h4>98.2%</h4>
+
+//           <p>Performance Efficiency</p>
 
 //         </div>
 
 //       </div>
 
-//       {/* HUGE BACK TEXT */}
+//       {/* HUGE BACKGROUND TYPO */}
 
-//       <div className="background-text">
+//       <div className="ae-background-text">
 
 //         MM GLASS
 
@@ -341,8 +240,6 @@
 
 
 
-// Aboutus.jsx
-
 
 
 
@@ -356,7 +253,7 @@ function Aboutus() {
 
   const [isVisible, setIsVisible] = useState(false);
 
-  /* SCROLL REVEAL */
+  /* REVEAL */
 
   useEffect(() => {
 
@@ -366,6 +263,7 @@ function Aboutus() {
         if (entry.isIntersecting) {
           setIsVisible(true);
         }
+
       },
       {
         threshold: 0.2,
@@ -377,9 +275,11 @@ function Aboutus() {
     }
 
     return () => {
+
       if (aboutRef.current) {
         observer.unobserve(aboutRef.current);
       }
+
     };
 
   }, []);
@@ -393,184 +293,154 @@ function Aboutus() {
 
       {/* BACKGROUND */}
 
-      {/* <div className="ae-bg"></div> */}
+      <div className="ae-bg-image">
 
-      {/* REAL BACKGROUND IMAGE */}
+        <img
+          src="https://images.pexels.com/photos/12842631/pexels-photo-12842631.jpeg"
+          alt=""
+        />
 
-<div className="ae-bg-image">
+      </div>
 
-  <img
-    // src="https://images.pexels.com/photos/9317997/pexels-photo-9317997.jpeg"
-    src="https://images.pexels.com/photos/270480/pexels-photo-270480.jpeg"
-    alt=""
-  />
+      <div className="ae-overlay"></div>
 
-</div>
-<div className="ae-bg-gradient"></div>
-      <div className="ae-grid"></div>
+      <div className="ae-gradient"></div>
+
       <div className="ae-noise"></div>
 
-      {/* GLOW LIGHTS */}
+      {/* FLOATING LIGHTS */}
 
       <div className="ae-light ae-light1"></div>
+
       <div className="ae-light ae-light2"></div>
 
-      {/* LEFT STORY */}
+      {/* LEFT SIDE */}
 
-      <div className="ae-story">
+      <div className="ae-content">
 
         <div className="ae-badge">
 
           <span></span>
 
-          SPATIAL GLASS INTELLIGENCE
+          NEXT GEN GLASS SYSTEMS
 
         </div>
 
         <h2>
 
-          WE BUILD <br />
+          DESIGNING <br />
 
-          <span>ARCHITECTURAL</span> <br />
+          <span>SPACES</span> <br />
 
-          EXPERIENCES <br />
+          THAT FEEL <br />
 
-          THROUGH <br />
-
-          GLASS.
+          FUTURISTIC.
 
         </h2>
 
         <p>
-          M M Glass House creates futuristic glass systems,
-          premium cladding environments, and immersive
-          architectural solutions engineered for modern
-          residential and commercial ecosystems.
+
+          We engineer premium architectural glass systems,
+          luxury façades, and immersive spatial environments
+          that transform modern residential and commercial
+          experiences.
+
         </p>
 
-        {/* ACTIONS */}
+        {/* STATS */}
 
-        <div className="ae-actions">
+     
 
-          <button className="ae-primary-btn">
-            Explore Spaces
+        {/* BUTTONS */}
+
+        <div className="ae-buttons">
+
+          <button className="ae-btn-primary">
+
+            Explore Projects
+
           </button>
 
-          <button className="ae-secondary-btn">
-            Watch Story
+          <button className="ae-btn-secondary">
+
+            View Story
+
           </button>
 
         </div>
-
-        {/* FLOATING DATA */}
-
-        {/* <div className="ae-data-grid">
-
-          <div className="ae-data-card">
-
-            <h3>500+</h3>
-
-            <span>Projects Delivered</span>
-
-          </div>
-
-          <div className="ae-data-card">
-
-            <h3>9+</h3>
-
-            <span>Years Excellence</span>
-
-          </div>
-           <div className="ae-data-card">
-
-            <h3>2M+</h3>
-
-            <span>Units Sold</span>
-
-          </div>
-           <div className="ae-data-card">
-
-            <h3>50+</h3>
-
-            <span>Variants</span>
-
-          </div>
-
-          <div className="ae-data-card">
-
-            <h3>98%</h3>
-
-            <span>Client Satisfaction</span>
-
-          </div>
-
-        </div> */}
 
       </div>
 
-      {/* RIGHT VISUAL */}
+      {/* RIGHT SIDE */}
 
-      <div className="ae-visual">
+      <div className="ae-gallery">
 
-        {/* MAIN IMAGE */}
+        {/* BIG CARD */}
 
-        <div className="ae-main-frame">
+        <div className="ae-card ae-card-large">
 
           <img
-            src="https://images.pexels.com/photos/270480/pexels-photo-270480.jpeg"
+            src="https://media.istockphoto.com/id/537956543/photo/glass-cubes.jpg?b=1&s=612x612&w=0&k=20&c=KjrMep3vWd5-PauwtwX3hN6WW2SQ7D9IDH5JPJvZUMo="
             alt=""
           />
 
-          <div className="ae-image-overlay"></div>
+          <div className="ae-card-overlay"></div>
 
-          <div className="ae-reflection"></div>
+          <div className="ae-card-content">
 
-          <div className="ae-frame-content">
+            <span>FUTURE ARCHITECTURE</span>
 
-            {/* <span>FUTURE ARCHITECTURE</span>
-
-            <h3>HyperSpatial Systems</h3> */}
+            <h3> Glass Spaces</h3>
 
           </div>
 
         </div>
 
-        {/* FLOATING AI PANEL */}
+        {/* SMALL CARD */}
 
-        <div className="ae-floating-panel panel-top">
+        <div className="ae-card ae-card-small">
 
-          <div className="ae-panel-glow"></div>
+          <img
+            src="https://images.pexels.com/photos/32421760/pexels-photo-32421760.png"
+            alt=""
+          />
 
-          <span>AI ARCHITECTURE</span>
+          <div className="ae-card-overlay"></div>
 
-          <h4>Smart Glass.</h4>
+          <div className="ae-card-content">
+
+            <span>SMART SYSTEMS</span>
+
+            <h3>Minimal Elegance</h3>
+
+          </div>
+
+        </div>
+
+        {/* FLOAT PANEL */}
+
+        <div className="ae-floating-box">
+
+          <div className="ae-box-glow"></div>
+
+     
+
+          <h4>Spatial Intelligence</h4>
 
           <p>
-            Intelligent Glass Ecosystems powered by
-            modern engineering.
+
+            Precision engineered glass ecosystems
+            for futuristic environments.
+
           </p>
 
         </div>
 
-        {/* FLOATING DASHBOARD */}
-
-        <div className="ae-floating-panel panel-bottom">
-
-          <div className="ae-panel-glow"></div>
-
-          <span>LIVE METRICS</span>
-
-          <h4>98.2%</h4>
-
-          <p>Performance Efficiency</p>
-
-        </div>
-
       </div>
 
-      {/* HUGE BACKGROUND TYPO */}
+      {/* HUGE TEXT */}
 
-      <div className="ae-background-text">
+      <div className="ae-bg-text">
 
         MM GLASS
 

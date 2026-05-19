@@ -1,85 +1,3 @@
-// import "./Trusted.css";
-
-// // Import logo images
-// import logo1 from "../assets/brands/AGP.png";
-// import logo2 from "../assets/brands/AIS.png";
-// import logo3 from "../assets/brands/CrystalEdgeGlass.png";
-// import logo4 from "../assets/brands/MirrorEdgeGlass.png";
-// import logo5 from "../assets/brands/PrimeShieldGlass.png";
-// import logo6 from "../assets/brands/ReflectaGlass.jfif";
-// import logo7 from "../assets/brands/Saint-Gobain.png";
-
-// function Trusted() {
-
-//   const logos = [
-//     logo1,
-//     logo2,
-//     logo3,
-//     logo4,
-//     logo5,
-//     logo6,
-//     logo7,
-//   ];
-
-//   return (
-//     <section className="trusted">
-
-//       {/* Heading */}
-//       <div className="trusted-title">
-//         <p>
-//           <span className="dot"></span>
-//           Trusted By Leading Brands
-//         </p>
-//       </div>
-
-//       {/* Two Row Scrolling */}
-//       <div className="logo-scroll-wrapper">
-
-//         {/* First Row */}
-//         <div className="logo-scroll">
-//           <div className="logo-track">
-//             {[...logos, ...logos].map((logo, index) => (
-//               <div className="logo-box" key={index}>
-//                 <img
-//                   src={logo}
-//                   alt={`logo-${index}`}
-//                   className="logo-img"
-//                 />
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-
-//         {/* Second Row */}
-//         <div className="logo-scroll">
-//           <div className="logo-track reverse">
-//             {[...logos, ...logos].map((logo, index) => (
-//               <div className="logo-box" key={index}>
-//                 <img
-//                   src={logo}
-//                   alt={`logo-${index}`}
-//                   className="logo-img"
-//                 />
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-
-//       </div>
-
-//     </section>
-//   );
-// }
-
-// export default Trusted;
-
-
-
-
-
-
-// Trusted.jsx
-
 import "./Trusted.css";
 
 import {
@@ -88,7 +6,7 @@ import {
   useState,
 } from "react";
 
-// LOGOS
+/* LOGOS */
 
 import logo1 from "../assets/brands/AGP.png";
 import logo2 from "../assets/brands/AIS.png";
@@ -104,7 +22,7 @@ function Trusted() {
 
   const [visible, setVisible] = useState(false);
 
-  /* INTERSECTION */
+  /* REVEAL */
 
   useEffect(() => {
 
@@ -114,6 +32,7 @@ function Trusted() {
         if (entry.isIntersecting) {
           setVisible(true);
         }
+
       },
       {
         threshold: 0.2,
@@ -125,9 +44,11 @@ function Trusted() {
     }
 
     return () => {
+
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
+
     };
 
   }, []);
@@ -143,29 +64,66 @@ function Trusted() {
   ];
 
   return (
+
     <section
-      className={`trusted ${visible ? "show" : ""}`}
+      className={`trusted-section ${visible ? "trusted-show" : ""}`}
       ref={sectionRef}
     >
 
-      {/* BACKGROUND EFFECTS */}
-{/* REAL BG IMAGE */}
+      {/* =====================================================
+          BACKGROUND
+      ====================================================== */}
 
-<div className="trusted-bg-image">
+      <div className="trusted-bg">
 
-  <img
-    src="https://images.pexels.com/photos/575363/pexels-photo-575363.jpeg"
-    alt=""
-  />
+        <img
+          src="https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg"
+          alt=""
+        />
 
-</div>
-      {/* <div className="trusted-gradient"></div> */}
-      {/* <div className="trusted-gradient"></div> */}
-      <div className="trusted-gradient-overlay"></div>
+      </div>
+
+      {/* OVERLAY */}
+
+      <div className="trusted-overlay"></div>
+
+      {/* GRADIENT */}
+
+      <div className="trusted-gradient"></div>
+
+      {/* NOISE */}
+
       <div className="trusted-noise"></div>
-      <div className="trusted-grid"></div>
 
-      {/* TOP */}
+      {/* LIGHTS */}
+
+      <div className="trusted-light light-1"></div>
+
+      <div className="trusted-light light-2"></div>
+
+      {/* PARTICLES */}
+
+      <div className="trusted-particles">
+
+        {Array.from({ length: 40 }).map((_, i) => (
+
+          <span
+            key={i}
+            className="trusted-particle"
+            style={{
+              left: `${Math.random() * 100}%`,
+              animationDuration: `${5 + Math.random() * 8}s`,
+              animationDelay: `${Math.random() * 5}s`,
+            }}
+          ></span>
+
+        ))}
+
+      </div>
+
+      {/* =====================================================
+          HEADER
+      ====================================================== */}
 
       <div className="trusted-header">
 
@@ -173,86 +131,87 @@ function Trusted() {
 
           <span></span>
 
-          TRUSTED BY INDUSTRY LEADERS
+          GLOBAL BRAND PARTNERS
 
         </div>
 
         <h2>
-          Partnerships Built <br />
-          On Precision & Trust
+
+        {/* BUILT ON */}
+{/* <br></br> */}
+          <span> BUILD ON TRUST</span>
+
         </h2>
 
         <p>
-          Collaborating with globally recognized architectural,
-          construction, and glass technology brands to shape
-          modern premium environments.
+
+          Collaborating with globally recognized glass,
+          architecture, and engineering brands to shape
+          futuristic premium environments.
+
         </p>
 
       </div>
 
-      {/* FLOATING GLOW */}
+      {/* =====================================================
+          RUNNING LOGOS
+      ====================================================== */}
 
-      <div className="ambient-glow"></div>
+      <div className="trusted-marquee">
 
-      {/* SCROLL SECTION */}
+        <div className="trusted-track">
 
-      <div className="trusted-slider">
+          {[...logos, ...logos, ...logos].map((logo, index) => (
 
-        {/* ROW 1 */}
+            <div
+              className="trusted-card"
+              key={index}
+            >
 
-        <div className="logo-row">
+              {/* GLOW */}
 
-          <div className="logo-track">
+              <div className="trusted-card-glow"></div>
 
-            {[...logos, ...logos].map((logo, index) => (
+              {/* LOGO */}
 
-              <div
-                className="logo-card"
-                key={index}
-              >
+              <img
+                src={logo}
+                alt={`brand-${index}`}
+              />
 
-                <div className="card-glow"></div>
+            </div>
 
-                <img
-                  src={logo}
-                  alt={`logo-${index}`}
-                />
-
-              </div>
-
-            ))}
-
-          </div>
+          ))}
 
         </div>
 
-        {/* ROW 2 */}
+      </div>
 
-        <div className="logo-row reverse-row">
+      {/* =====================================================
+          FLOATING PANEL
+      ====================================================== */}
 
-          <div className="logo-track reverse">
+      {/* <div className="trusted-panel">
 
-            {[...logos, ...logos].map((logo, index) => (
+        <div className="trusted-panel-glow"></div>
 
-              <div
-                className="logo-card"
-                key={index}
-              >
 
-                <div className="card-glow"></div>
+        <h3>50+ Strategic Collaborations</h3>
 
-                <img
-                  src={logo}
-                  alt={`logo-${index}`}
-                />
+        <p>
 
-              </div>
+          Engineered partnerships built on innovation,
+          precision fabrication, and architectural trust.
 
-            ))}
+        </p>
 
-          </div>
+      </div> */}
 
-        </div>
+      {/* HUGE TYPO */}
+
+      <div className="trusted-bg-text">
+
+        TRUSTED
 
       </div>
 

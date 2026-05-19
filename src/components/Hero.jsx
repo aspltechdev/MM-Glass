@@ -3,7 +3,7 @@ import "./Hero.css";
 
 const slides = [
   {
-    title: "Architecture in Light",
+    title: "ARCHITECTURE IN LIGHT",
     subtitle:
       "Where precision glass meets visionary design — creating spaces that breathe with transparency and light.",
     image:
@@ -11,7 +11,7 @@ const slides = [
     accent: "#64b5f6",
   },
   {
-    title: "The Art of Transparency",
+    title: "CLARITY MEETS CRAFTSMANSHIP",
     subtitle:
       "Intelligent glass systems that transform environments through seamless integration of technology and elegance.",
     image:
@@ -19,7 +19,7 @@ const slides = [
     accent: "#82b1ff",
   },
   {
-    title: "Beyond the Surface",
+    title: "WHERE GLASS BECOMES ART",
     subtitle:
       "Engineering emotional connections through light-responsive surfaces and architectural innovation.",
     image:
