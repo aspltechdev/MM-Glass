@@ -195,7 +195,7 @@ function WhyChoose() {
 <div className="wc-bg">
 
   <img
-    src="https://images.pexels.com/photos/32427304/pexels-photo-32427304.jpeg"
+    src="https://images.pexels.com/photos/9161638/pexels-photo-9161638.jpeg"
     alt=""
   />
 

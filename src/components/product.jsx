@@ -4,82 +4,279 @@ import "./product.css";
 
 function Product() {
 
+  // const sections = [
+  //   {
+  //     heading: "Architectural Glass",
+  //     products: [
+  //       {
+  //         title: "Tempered Glass",
+  //         image:
+  //           "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2000&auto=format&fit=crop",
+  //         desc:
+  //           "Processed safety glass engineered for superior strength and durability.",
+  //       },
+
+  //       {
+  //         title: "Laminated Glass",
+  //         image:
+  //           "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=2000&auto=format&fit=crop",
+  //         desc:
+  //           "Advanced laminated systems designed for security and UV protection.",
+  //       },
+
+  //       {
+  //         title: "Reflective Glass",
+  //         image:
+  //           "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2000&auto=format&fit=crop",
+  //         desc:
+  //           "Luxury reflective architectural glass with premium aesthetics.",
+  //       },
+
+  //       {
+  //         title: "Insulated Glass",
+  //         image:
+  //           "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2000&auto=format&fit=crop",
+  //         desc:
+  //           "Thermal and acoustic insulation for modern spaces.",
+  //       },
+  //     ],
+  //   },
+
+  //   {
+  //     heading: "Speciality Glass",
+  //     products: [
+  //       {
+  //         title: "Magic Glass",
+  //         image:
+  //           "https://images.unsplash.com/photo-1519643381401-22c77e60520e?q=80&w=2000&auto=format&fit=crop",
+  //         desc:
+  //           "Switchable privacy glass powered by smart technology.",
+  //       },
+
+  //       {
+  //         title: "Curved Glass",
+  //         image:
+  //           "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2000&auto=format&fit=crop",
+  //         desc:
+  //           "Architectural curved glass for futuristic structures.",
+  //       },
+
+  //       {
+  //         title: "Fire Resistant Glass",
+  //         image:
+  //           "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2000&auto=format&fit=crop",
+  //         desc:
+  //           "High-performance fire safety glass systems.",
+  //       },
+
+  //       {
+  //         title: "Acoustic Glass",
+  //         image:
+  //           "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=2000&auto=format&fit=crop",
+  //         desc:
+  //           "Premium acoustic glazing engineered for silence.",
+  //       },
+  //     ],
+  //   },
+  // ];
+
   const sections = [
-    {
-      heading: "Architectural Glass",
-      products: [
-        {
-          title: "Tempered Glass",
-          image:
-            "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2000&auto=format&fit=crop",
-          desc:
-            "Processed safety glass engineered for superior strength and durability.",
-        },
+  {
+    heading: "Architectural Glass",
 
-        {
-          title: "Laminated Glass",
-          image:
-            "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=2000&auto=format&fit=crop",
-          desc:
-            "Advanced laminated systems designed for security and UV protection.",
-        },
+    products: [
+      {
+        title: "Tempered Glass",
+        image:
+          "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2000&auto=format&fit=crop",
+        desc:
+          "Processed safety glass engineered for superior strength and durability.",
+      },
 
-        {
-          title: "Reflective Glass",
-          image:
-            "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2000&auto=format&fit=crop",
-          desc:
-            "Luxury reflective architectural glass with premium aesthetics.",
-        },
+      {
+        title: "Laminated Glass",
+        image:
+          "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=2000&auto=format&fit=crop",
+        desc:
+          "Advanced laminated systems designed for security and UV protection.",
+      },
 
-        {
-          title: "Insulated Glass",
-          image:
-            "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2000&auto=format&fit=crop",
-          desc:
-            "Thermal and acoustic insulation for modern spaces.",
-        },
-      ],
-    },
+      {
+        title: "Reflective Glass",
+        image:
+          "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2000&auto=format&fit=crop",
+        desc:
+          "Luxury reflective architectural glass with premium aesthetics.",
+      },
 
-    {
-      heading: "Speciality Glass",
-      products: [
-        {
-          title: "Magic Glass",
-          image:
-            "https://images.unsplash.com/photo-1519643381401-22c77e60520e?q=80&w=2000&auto=format&fit=crop",
-          desc:
-            "Switchable privacy glass powered by smart technology.",
-        },
+      {
+        title: "Insulated Glass (DGU)",
+        image:
+          "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2000&auto=format&fit=crop",
+        desc:
+          "Double glazed insulated glass for thermal and acoustic efficiency.",
+      },
 
-        {
-          title: "Curved Glass",
-          image:
-            "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2000&auto=format&fit=crop",
-          desc:
-            "Architectural curved glass for futuristic structures.",
-        },
+      {
+        title: "PVB Lamination",
+        image:
+          "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2000&auto=format&fit=crop",
+        desc:
+          "High-strength laminated safety glass using premium PVB interlayers.",
+      },
 
-        {
-          title: "Fire Resistant Glass",
-          image:
-            "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2000&auto=format&fit=crop",
-          desc:
-            "High-performance fire safety glass systems.",
-        },
+      {
+        title: "Resin Lamination",
+        image:
+          "https://images.unsplash.com/photo-1519643381401-22c77e60520e?q=80&w=2000&auto=format&fit=crop",
+        desc:
+          "Decorative and durable resin laminated glass solutions.",
+      },
 
-        {
-          title: "Acoustic Glass",
-          image:
-            "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=2000&auto=format&fit=crop",
-          desc:
-            "Premium acoustic glazing engineered for silence.",
-        },
-      ],
-    },
-  ];
+      {
+        title: "Frosted Glass",
+        image:
+          "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=2000&auto=format&fit=crop",
+        desc:
+          "Elegant frosted finishes providing privacy and aesthetics.",
+      },
 
+      {
+        title: "Acid Work Glass",
+        image:
+          "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2000&auto=format&fit=crop",
+        desc:
+          "Premium acid etched glass crafted for modern interiors.",
+      },
+
+      {
+        title: "Colour Glass",
+        image:
+          "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2000&auto=format&fit=crop",
+        desc:
+          "Stylish colored glass panels for decorative architecture.",
+      },
+
+      {
+        title: "Multi Design Glass",
+        image:
+          "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2000&auto=format&fit=crop",
+        desc:
+          "Creative designer glass patterns for customized interiors.",
+      },
+
+      {
+        title: "V-Groove Glass",
+        image:
+          "https://images.unsplash.com/photo-1519643381401-22c77e60520e?q=80&w=2000&auto=format&fit=crop",
+        desc:
+          "Decorative engraved glass with elegant V-groove patterns.",
+      },
+
+      {
+        title: "Normal Bend Glass",
+        image:
+          "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2000&auto=format&fit=crop",
+        desc:
+          "Curved architectural glass designed for modern structures.",
+      },
+    ],
+  },
+
+  {
+    heading: "Designer & Decorative Glass",
+
+    products: [
+      {
+        title: "Design Glass",
+        image:
+          "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=2000&auto=format&fit=crop",
+        desc:
+          "Decorative designer glass crafted for luxury interiors.",
+      },
+
+      {
+        title: "Pinned Glass",
+        image:
+          "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2000&auto=format&fit=crop",
+        desc:
+          "Classic textured pinned glass with elegant patterns.",
+      },
+
+      {
+        title: "Katrachi Glass",
+        image:
+          "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2000&auto=format&fit=crop",
+        desc:
+          "Traditional decorative Katrachi patterned glass.",
+      },
+
+      {
+        title: "Master Light Glass",
+        image:
+          "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2000&auto=format&fit=crop",
+        desc:
+          "Premium textured glass allowing soft natural lighting.",
+      },
+
+      {
+        title: "Swasthick Glass",
+        image:
+          "https://images.unsplash.com/photo-1519643381401-22c77e60520e?q=80&w=2000&auto=format&fit=crop",
+        desc:
+          "Decorative Swasthick pattern glass for traditional aesthetics.",
+      },
+
+      {
+        title: "Crystal Glass",
+        image:
+          "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2000&auto=format&fit=crop",
+        desc:
+          "High clarity crystal finish glass with premium elegance.",
+      },
+
+      {
+        title: "Kasumi Glass",
+        image:
+          "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=2000&auto=format&fit=crop",
+        desc:
+          "Japanese-inspired textured Kasumi decorative glass.",
+      },
+
+      {
+        title: "Karisham Glass",
+        image:
+          "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2000&auto=format&fit=crop",
+        desc:
+          "Stylish patterned Karisham glass for decorative spaces.",
+      },
+
+      {
+        title: "Grill Glass",
+        image:
+          "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2000&auto=format&fit=crop",
+        desc:
+          "Glass integrated with grill designs for safety and elegance.",
+      },
+
+      {
+        title: "5mm Pinned Glass",
+        image:
+          "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2000&auto=format&fit=crop",
+        desc:
+          "Durable 5mm pinned textured glass for versatile applications.",
+      },
+
+      {
+        title: "5mm Kasumi Glass",
+        image:
+          "https://images.unsplash.com/photo-1519643381401-22c77e60520e?q=80&w=2000&auto=format&fit=crop",
+        desc:
+          "Elegant 5mm Kasumi patterned glass with premium finish.",
+      },
+    ],
+  },
+];
   const itemsPerSlide = 4;
 
   const [slides, setSlides] = useState([0, 0]);

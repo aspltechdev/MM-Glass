@@ -206,13 +206,13 @@
 
   transition:0.8s ease;
 
-  background:
-  rgba(255,255,255,0.05);
+  /* background:
+  rgba(255, 255, 255, 0); */
 
   border:
   1px solid rgba(255,255,255,0.08);
 
-  backdrop-filter:blur(20px);
+  /* backdrop-filter:blur(20px); */
 }
 
 .ag-card.large{
@@ -243,9 +243,9 @@
 
   transition:1.5s ease;
 
-  filter:
+  /* filter:
   brightness(0.82)
-  contrast(1.05);
+  contrast(1.05); */
 }
 
 /* HOVER */
@@ -263,12 +263,12 @@
   position:absolute;
   inset:0;
 
-  background:
+  /* background:
   linear-gradient(
     to top,
-    rgba(0,0,0,0.45),
+    rgba(0, 0, 0, 0),
     transparent 60%
-  );
+  ); */
 }
 
 /* =========================================================
@@ -523,7 +523,7 @@
 
   z-index:1;
 
-  background:
+  /* background:
 
   radial-gradient(
     circle at top right,
@@ -536,7 +536,9 @@
     rgba(0,0,0,0.08),
     rgba(0,0,0,0.3),
     rgba(0,0,0,0.82)
-  );
+  ); */
+
+
 }
 
 /* =========================================================

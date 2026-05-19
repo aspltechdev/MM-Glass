@@ -400,7 +400,8 @@ function Aboutus() {
 <div className="ae-bg-image">
 
   <img
-    src="https://images.pexels.com/photos/37200723/pexels-photo-37200723.jpeg"
+    // src="https://images.pexels.com/photos/9317997/pexels-photo-9317997.jpeg"
+    src="https://images.pexels.com/photos/270480/pexels-photo-270480.jpeg"
     alt=""
   />
 
@@ -463,7 +464,7 @@ function Aboutus() {
 
         {/* FLOATING DATA */}
 
-        <div className="ae-data-grid">
+        {/* <div className="ae-data-grid">
 
           <div className="ae-data-card">
 
@@ -503,7 +504,7 @@ function Aboutus() {
 
           </div>
 
-        </div>
+        </div> */}
 
       </div>
 
@@ -516,7 +517,7 @@ function Aboutus() {
         <div className="ae-main-frame">
 
           <img
-            src="https://images.pexels.com/photos/17131943/pexels-photo-17131943.jpeg"
+            src="https://images.pexels.com/photos/270480/pexels-photo-270480.jpeg"
             alt=""
           />
 
