@@ -434,7 +434,7 @@ function WhyChoose() {
       <div className="wc-bg">
 
         <img
-          src="https://images.pexels.com/photos/9161638/pexels-photo-9161638.jpeg"
+          src="https://images.pexels.com/photos/2073623/pexels-photo-2073623.jpeg"
           alt=""
         />
 

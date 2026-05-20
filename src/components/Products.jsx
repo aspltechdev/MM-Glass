@@ -180,6 +180,7 @@
 import "./Products.css";
 import img1 from "../assets/products1.png";
 import img2 from "../assets/products2.png";
+import { Link } from "react-router-dom";
 
 function Products() {
 
@@ -347,12 +348,14 @@ function Products() {
               </div>
 
               {/* BUTTON */}
+              <Link to="/product">
 
               <button>
 
                 Explore System
 
-              </button>
+              </button> 
+              </Link>
 
             </div>
 

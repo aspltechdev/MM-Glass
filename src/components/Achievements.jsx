@@ -150,7 +150,7 @@ function Achievements() {
           <div className="gl-small-card">
 
             <img
-              src="https://images.pexels.com/photos/5504654/pexels-photo-5504654.jpeg"
+              src="https://images.pexels.com/photos/934350/pexels-photo-934350.jpeg"
               alt=""
             />
 
@@ -178,7 +178,7 @@ function Achievements() {
           <div className="gl-small-card">
 
             <img
-              src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2000&auto=format&fit=crop"
+              src="https://images.pexels.com/photos/34667128/pexels-photo-34667128.jpeg"
               alt=""
             />
 
@@ -206,7 +206,7 @@ function Achievements() {
           <div className="gl-small-card">
 
             <img
-              src="https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=2000&auto=format&fit=crop"
+              src="https://images.pexels.com/photos/12940594/pexels-photo-12940594.jpeg"
               alt=""
             />
 
@@ -234,7 +234,7 @@ function Achievements() {
           <div className="gl-small-card">
 
             <img
-              src="https://images.unsplash.com/photo-1519643381401-22c77e60520e?q=80&w=2000&auto=format&fit=crop"
+              src="https://images.pexels.com/photos/8825132/pexels-photo-8825132.jpeg"
               alt=""
             />
 

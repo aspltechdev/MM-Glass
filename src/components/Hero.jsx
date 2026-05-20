@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import "./Hero.css";
+import { Link } from "react-router-dom";
 
 const slides = [
   {
@@ -902,6 +903,7 @@ useEffect(() => {
             </div>
 
             <div className="hero-actions">
+              <Link to="/contactus">
               <button className="cta-primary">
                 <span className="cta-text">Explore Collection</span>
                 <span className="cta-icon">
@@ -910,6 +912,7 @@ useEffect(() => {
                   </svg>
                 </span>
               </button>
+              </Link>
              
             </div>
 

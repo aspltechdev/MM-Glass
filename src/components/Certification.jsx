@@ -12,6 +12,7 @@ import cert3 from "../assets/certifications/BIS.png";
 import cert4 from "../assets/certifications/GSI.png";
 import cert5 from "../assets/certifications/ISO.jpg";
 import cert6 from "../assets/certifications/SGS.png";
+import { Link } from "react-router-dom";
 
 function Certification() {
 
@@ -192,12 +193,14 @@ function Certification() {
         </div>
 
         {/* BUTTON */}
+        <Link to="/contactus">
 
         <button className="crt-btn">
 
           Explore Standards
 
         </button>
+        </Link>
 
       </div>
 

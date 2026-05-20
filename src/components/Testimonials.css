@@ -1,6 +1,6 @@
 /* =========================================================
-   CINEMATIC TESTIMONIALS
-   ========================================================= */
+   RESET
+========================================================= */
 
 *{
   margin:0;
@@ -8,85 +8,335 @@
   box-sizing:border-box;
 }
 
+/* =========================================================
+   SECTION
+========================================================= */
+
 .ts-section{
 
   position:relative;
 
   overflow:hidden;
 
-  background:#050505;
-
-  padding:140px 0;
+  padding:140px 7%;
 
   color:white;
+
+  background:
+  linear-gradient(
+    to bottom,
+    rgba(100, 100, 100, 0.53),
+    rgba(134, 134, 134, 0.596),
+    rgba(90, 90, 90, 0.749)
+  );
 }
 
 /* =========================================================
-   BACKGROUND
-   ========================================================= */
+   CINEMATIC BACKGROUND
+========================================================= */
 
-.ts-gradient{
+.ts-cinematic-bg{
 
   position:absolute;
+
   inset:0;
 
-  background:
-  radial-gradient(
-    circle at top right,
-    rgba(120,180,255,0.12),
-    transparent 30%
-  ),
+  overflow:hidden;
 
-  radial-gradient(
-    circle at bottom left,
-    rgba(255,255,255,0.04),
-    transparent 35%
-  );
+  z-index:0;
 
-  filter:blur(120px);
+  pointer-events:none;
 }
 
-.ts-grid{
+/* =========================================================
+   BUILDINGS
+========================================================= */
+
+.ts-building{
 
   position:absolute;
+
+  bottom:-5%;
+
+  width:260px;
+
+  border-radius:30px 30px 0 0;
+
+  overflow:hidden;
+
+  background:
+  linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.16),
+    rgba(255,255,255,0.03)
+  );
+
+  border:
+  1px solid rgba(255,255,255,0.12);
+
+  backdrop-filter:
+  blur(14px);
+
+  opacity:0.7;
+}
+
+.ts-building::before{
+
+  content:"";
+
+  position:absolute;
+
   inset:0;
 
   background-image:
   linear-gradient(
-    rgba(255,255,255,0.02) 1px,
+    rgba(255,255,255,0.05) 1px,
     transparent 1px
   ),
-
   linear-gradient(
     90deg,
-    rgba(255,255,255,0.02) 1px,
+    rgba(255,255,255,0.05) 1px,
+    transparent 1px
+  );
+
+  background-size:35px 35px;
+}
+
+.ts-building::after{
+
+  content:"";
+
+  position:absolute;
+
+  top:-20%;
+
+  left:-50%;
+
+  width:60%;
+
+  height:180%;
+
+  background:
+  linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.22),
+    transparent
+  );
+
+  transform:
+  rotate(18deg);
+
+  animation:
+  buildingShine 10s linear infinite;
+}
+
+.building-1{
+
+  left:5%;
+
+  height:72vh;
+}
+
+.building-2{
+
+  left:38%;
+
+  height:58vh;
+}
+
+.building-3{
+
+  right:6%;
+
+  height:86vh;
+}
+
+/* =========================================================
+   REFLECTIONS
+========================================================= */
+
+.ts-reflection{
+
+  position:absolute;
+
+  width:2px;
+
+  height:140vh;
+
+  background:
+  linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255,255,255,0.35),
+    transparent
+  );
+
+  opacity:0.8;
+
+  filter:blur(1px);
+
+  transform:
+  rotate(24deg);
+
+  animation:
+  reflectionMove 12s ease infinite;
+}
+
+.reflection-1{
+
+  left:18%;
+}
+
+.reflection-2{
+
+  left:58%;
+
+  animation-duration:15s;
+}
+
+.reflection-3{
+
+  left:82%;
+
+  animation-duration:10s;
+}
+
+/* =========================================================
+   ORBS
+========================================================= */
+
+.ts-orb{
+
+  position:absolute;
+
+  border-radius:50%;
+
+  filter:blur(120px);
+
+  opacity:0.45;
+}
+
+.orb-1{
+
+  width:340px;
+  height:340px;
+
+  background:
+  rgba(180,220,255,0.18);
+
+  top:-120px;
+  left:-80px;
+
+  animation:
+  floatOrb 14s ease infinite;
+}
+
+.orb-2{
+
+  width:280px;
+  height:280px;
+
+  background:
+  rgba(255,255,255,0.08);
+
+  bottom:-100px;
+  right:-100px;
+
+  animation:
+  floatOrb 18s ease infinite;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.ts-grid{
+
+  position:absolute;
+
+  inset:0;
+
+  z-index:1;
+
+  background-image:
+  linear-gradient(
+    rgba(255,255,255,0.04) 1px,
+    transparent 1px
+  ),
+  linear-gradient(
+    90deg,
+    rgba(255,255,255,0.04) 1px,
     transparent 1px
   );
 
   background-size:70px 70px;
 
-  mask-image:
-  radial-gradient(
-    circle,
-    rgba(0,0,0,1),
-    transparent 90%
+  opacity:0.35;
+}
+
+/* =========================================================
+   OVERLAYS
+========================================================= */
+
+.ts-overlay{
+
+  position:absolute;
+
+  inset:0;
+
+  z-index:1;
+
+  background:
+  linear-gradient(
+    to bottom,
+    rgba(20,20,20,0.25),
+    rgba(20,20,20,0.18),
+    rgba(20,20,20,0.35)
   );
 }
 
-.ts-noise{
+.ts-light{
 
   position:absolute;
+
   inset:0;
 
-  background-image:
-  url("https://grainy-gradients.vercel.app/noise.svg");
+  z-index:1;
 
-  opacity:0.05;
+  background:
+  radial-gradient(
+    circle at top left,
+    rgba(180,220,255,0.12),
+    transparent 35%
+  ),
+
+  radial-gradient(
+    circle at bottom right,
+    rgba(255,255,255,0.06),
+    transparent 30%
+  );
+}
+
+.ts-vignette{
+
+  position:absolute;
+
+  inset:0;
+
+  z-index:1;
+
+  background:
+  radial-gradient(
+    circle,
+    transparent 45%,
+    rgba(0,0,0,0.45)
+  );
 }
 
 /* =========================================================
    TOP
-   ========================================================= */
+========================================================= */
 
 .ts-top{
 
@@ -94,14 +344,10 @@
 
   z-index:5;
 
-  max-width:760px;
-
-  padding:0 7%;
+  text-align:center;
 
   margin-bottom:90px;
 }
-
-/* LABEL */
 
 .ts-label{
 
@@ -109,40 +355,419 @@
 
   margin-bottom:24px;
 
-  font-size:0.72rem;
+  font-size:0.76rem;
 
-  letter-spacing:4px;
+  letter-spacing:5px;
 
   color:
-  rgba(255,255,255,0.55);
+  rgba(255,255,255,0.75);
 }
-
-/* TITLE */
 
 .ts-top h2{
 
   font-size:
-  clamp(3rem,6vw,5.5rem);
+  clamp(3rem,7vw,6rem);
 
-  line-height:0.9;
+  line-height:0.92;
 
-  letter-spacing:-5px;
-
-  text-transform:uppercase;
+  letter-spacing:-4px;
 }
 
 .ts-top h2 span{
 
   color:
-  rgba(180,220,255,1);
-
-  text-shadow:
-  0 0 40px rgba(120,180,255,0.25);
+  rgba(220,240,255,1);
 }
 
 /* =========================================================
+   GRID LAYOUT
+========================================================= */
+
+.ts-grid-layout{
+
+  position:relative;
+
+  z-index:5;
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(3,1fr);
+
+  gap:30px;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.ts-card{
+
+  position:relative;
+
+  overflow:hidden;
+
+  border-radius:30px;
+
+  background:
+  rgba(255,255,255,0.08);
+
+  border:
+  1px solid rgba(255,255,255,0.1);
+
+  backdrop-filter:
+  blur(20px);
+
+  transition:
+  transform 0.5s ease;
+}
+
+.ts-card:hover{
+
+  transform:
+  translateY(-10px);
+}
+
+/* IMAGE */
+
+.ts-image-wrap{
+
+  position:relative;
+
+  height:280px;
+
+  overflow:hidden;
+}
+
+.ts-image-wrap img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transition:
+  transform 1.5s ease,
+  filter 1.5s ease;
+
+  transform:
+  scale(1.05);
+
+  filter:
+  brightness(0.78);
+}
+
+.ts-card:hover img{
+
+  transform:
+  scale(1.12);
+
+  filter:
+  brightness(0.55);
+}
+
+/* OVERLAY */
+
+.ts-card-overlay{
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+  linear-gradient(
+    to top,
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.08)
+  );
+}
+
+/* SHINE */
+
+.ts-shine{
+
+  position:absolute;
+
+  top:-20%;
+
+  left:-50%;
+
+  width:60%;
+
+  height:180%;
+
+  background:
+  linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.16),
+    transparent
+  );
+
+  transform:
+  rotate(18deg);
+
+  animation:
+  shineMove 7s linear infinite;
+}
+
+/* CONTENT */
+
+.ts-content{
+
+  padding:28px;
+}
+
+.ts-quote{
+
+  font-size:4rem;
+
+  line-height:1;
+
+  color:
+  rgba(180,220,255,1);
+
+  margin-bottom:10px;
+}
+
+.ts-content p{
+
+  font-size:0.95rem;
+
+  line-height:1.9;
+
+  color:
+  rgba(255,255,255,0.82);
+
+  margin-bottom:28px;
+}
+
+/* USER */
+
+.ts-user h4{
+
+  font-size:1.1rem;
+
+  margin-bottom:8px;
+}
+
+.ts-user span{
+
+  font-size:0.82rem;
+
+  color:
+  rgba(255,255,255,0.65);
+}
+
+/* =========================================================
+   HUGE TEXT
+========================================================= */
+
+.ts-bg-text{
+
+  position:absolute;
+
+  bottom:-20px;
+  left:50%;
+
+  transform:
+  translateX(-50%);
+
+  font-size:15vw;
+
+  font-weight:700;
+
+  letter-spacing:-10px;
+
+  color:
+  rgba(255,255,255,0.04);
+
+  pointer-events:none;
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes buildingShine{
+
+  from{
+
+    transform:
+    translateX(-300%)
+    rotate(18deg);
+  }
+
+  to{
+
+    transform:
+    translateX(400%)
+    rotate(18deg);
+  }
+}
+
+@keyframes reflectionMove{
+
+  0%{
+
+    transform:
+    translateY(-10%)
+    rotate(24deg);
+  }
+
+  50%{
+
+    transform:
+    translateY(10%)
+    rotate(24deg);
+  }
+
+  100%{
+
+    transform:
+    translateY(-10%)
+    rotate(24deg);
+  }
+}
+
+@keyframes floatOrb{
+
+  0%{
+
+    transform:
+    translateY(0)
+    scale(1);
+  }
+
+  50%{
+
+    transform:
+    translateY(-30px)
+    scale(1.08);
+  }
+
+  100%{
+
+    transform:
+    translateY(0)
+    scale(1);
+  }
+}
+
+@keyframes shineMove{
+
+  from{
+
+    transform:
+    translateX(-300%)
+    rotate(18deg);
+  }
+
+  to{
+
+    transform:
+    translateX(400%)
+    rotate(18deg);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1100px){
+
+  .ts-grid-layout{
+
+    grid-template-columns:
+    repeat(2,1fr);
+  }
+}
+
+@media(max-width:768px){
+
+  .ts-section{
+
+    padding:100px 5%;
+  }
+
+  .ts-grid-layout{
+
+    grid-template-columns:1fr;
+  }
+
+  .ts-image-wrap{
+
+    height:240px;
+  }
+
+  .ts-content{
+
+    padding:24px;
+  }
+
+  .building-2{
+
+    display:none;
+  }
+
+  .ts-building{
+
+    width:140px;
+
+    opacity:0.45;
+  }
+
+  .ts-grid{
+
+    background-size:45px 45px;
+  }
+
+  .ts-bg-text{
+
+    font-size:22vw;
+  }
+}
+
+@media(max-width:480px){
+
+  .ts-top h2{
+
+    font-size:2.6rem;
+
+    letter-spacing:-2px;
+  }
+
+  .ts-content p{
+
+    font-size:0.9rem;
+  }
+
+  .ts-quote{
+
+    font-size:3rem;
+  }
+
+  .ts-image-wrap{
+
+    height:220px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
    MARQUEE
-   ========================================================= */
+========================================================= */
 
 .ts-marquee{
 
@@ -153,6 +778,24 @@
   overflow:hidden;
 
   width:100%;
+
+  mask-image:
+  linear-gradient(
+    to right,
+    transparent,
+    white 10%,
+    white 90%,
+    transparent
+  );
+
+  -webkit-mask-image:
+  linear-gradient(
+    to right,
+    transparent,
+    white 10%,
+    white 90%,
+    transparent
+  );
 }
 
 /* TRACK */
@@ -161,15 +804,17 @@
 
   display:flex;
 
+  align-items:stretch;
+
   gap:28px;
 
   width:max-content;
 
   animation:
-  marquee 40s linear infinite;
+  marqueeScroll 40s linear infinite;
 }
 
-/* HOVER PAUSE */
+/* PAUSE ON HOVER */
 
 .ts-marquee:hover .ts-track{
 
@@ -178,44 +823,35 @@
 
 /* =========================================================
    CARD
-   ========================================================= */
+========================================================= */
 
 .ts-card{
 
   position:relative;
 
-  width:360px;
-  height:500px;
-
-  overflow:hidden;
-
-  border-radius:32px;
+  width:380px;
 
   flex-shrink:0;
 
+  overflow:hidden;
+
+  border-radius:30px;
+
   background:
-  rgba(255,255,255,0.04);
+  rgba(255,255,255,0.08);
 
   border:
-  1px solid rgba(255,255,255,0.08);
+  1px solid rgba(255,255,255,0.1);
 
-  transform:
-  perspective(1800px)
-  rotateY(-6deg);
-
-  transition:
-  transform 1s ease,
-  border 1s ease;
+  backdrop-filter:
+  blur(20px);
 
   box-shadow:
-  0 30px 100px rgba(0,0,0,0.4);
-}
+  0 20px 60px rgba(0,0,0,0.18);
 
-/* DIFFERENT DEPTH */
-
-.ts-card:nth-child(even){
-
-  margin-top:60px;
+  transition:
+  transform 0.5s ease,
+  border 0.5s ease;
 }
 
 /* HOVER */
@@ -223,103 +859,104 @@
 .ts-card:hover{
 
   transform:
-  perspective(1800px)
-  rotateY(0deg)
-  translateY(-12px)
-  scale(1.02);
+  translateY(-10px);
 
   border:
-  1px solid rgba(255,255,255,0.14);
+  1px solid rgba(180,220,255,0.3);
 }
 
 /* =========================================================
    IMAGE
-   ========================================================= */
+========================================================= */
 
-.ts-card img{
+.ts-image-wrap{
+
+  position:relative;
+
+  height:260px;
+
+  overflow:hidden;
+}
+
+.ts-image-wrap img{
 
   width:100%;
   height:100%;
 
   object-fit:cover;
 
-  transition:
-  transform 2s ease;
+  transform:
+  scale(1.04);
 
   filter:
-  brightness(0.6)
-  contrast(1.05);
-}
+  brightness(0.78);
 
-/* HOVER */
+  transition:
+  transform 1.5s ease,
+  filter 1.5s ease;
+}
 
 .ts-card:hover img{
 
   transform:
-  scale(1.08);
+  scale(1.12);
+
+  filter:
+  brightness(0.55);
 }
 
-/* =========================================================
-   OVERLAY
-   ========================================================= */
+/* OVERLAY */
 
-.ts-overlay{
+.ts-card-overlay{
 
   position:absolute;
+
   inset:0;
 
   background:
   linear-gradient(
     to top,
-    rgba(0,0,0,0.95),
-    rgba(0,0,0,0.3),
-    transparent
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.08)
   );
 }
 
 /* =========================================================
    SHINE
-   ========================================================= */
+========================================================= */
 
 .ts-shine{
 
   position:absolute;
 
-  top:-120%;
-  left:-40%;
+  top:-20%;
 
-  width:40%;
-  height:300%;
+  left:-50%;
+
+  width:60%;
+
+  height:180%;
 
   background:
   linear-gradient(
     to right,
     transparent,
-    rgba(255,255,255,0.12),
+    rgba(255,255,255,0.16),
     transparent
   );
 
   transform:
-  rotate(25deg);
+  rotate(18deg);
 
   animation:
-  shine 8s linear infinite;
+  shineMove 7s linear infinite;
 }
 
 /* =========================================================
    CONTENT
-   ========================================================= */
+========================================================= */
 
 .ts-content{
-
-  position:absolute;
-
-  left:0;
-  bottom:0;
-
-  z-index:5;
-
-  width:100%;
 
   padding:28px;
 }
@@ -332,24 +969,24 @@
 
   line-height:1;
 
-  margin-bottom:10px;
-
   color:
-  rgba(180,220,255,0.35);
+  rgba(180,220,255,1);
+
+  margin-bottom:10px;
 }
 
 /* TEXT */
 
 .ts-content p{
 
-  line-height:1.8;
+  font-size:0.94rem;
+
+  line-height:1.9;
 
   color:
-  rgba(255,255,255,0.74);
+  rgba(255,255,255,0.82);
 
   margin-bottom:28px;
-
-  font-size:0.92rem;
 }
 
 /* USER */
@@ -358,106 +995,96 @@
 
   font-size:1.1rem;
 
-  margin-bottom:6px;
+  margin-bottom:8px;
 }
 
 .ts-user span{
 
-  color:
-  rgba(255,255,255,0.55);
+  font-size:0.82rem;
 
-  font-size:0.84rem;
+  color:
+  rgba(255,255,255,0.65);
 }
 
 /* =========================================================
-   HUGE TEXT
-   ========================================================= */
+   MARQUEE ANIMATION
+========================================================= */
 
-.ts-bg-text{
-
-  position:absolute;
-
-  bottom:-20px;
-  left:50%;
-
-  transform:translateX(-50%);
-
-  font-size:14vw;
-
-  font-weight:700;
-
-  letter-spacing:-10px;
-
-  color:
-  rgba(255,255,255,0.018);
-}
-
-/* =========================================================
-   ANIMATIONS
-   ========================================================= */
-
-@keyframes marquee{
+@keyframes marqueeScroll{
 
   from{
+
     transform:
-    translateX(0%);
+    translateX(0);
   }
 
   to{
+
     transform:
     translateX(-50%);
   }
 }
 
-@keyframes shine{
+/* =========================================================
+   SHINE
+========================================================= */
+
+@keyframes shineMove{
 
   from{
+
     transform:
-    translateX(-200%)
-    rotate(25deg);
+    translateX(-300%)
+    rotate(18deg);
   }
 
   to{
+
     transform:
-    translateX(700%)
-    rotate(25deg);
+    translateX(400%)
+    rotate(18deg);
   }
 }
 
 /* =========================================================
    RESPONSIVE
-   ========================================================= */
+========================================================= */
 
 @media(max-width:768px){
 
-  .ts-section{
+  .ts-card{
 
-    padding:110px 0;
+    width:320px;
   }
 
-  .ts-top{
+  .ts-image-wrap{
 
-    padding:0 5%;
+    height:220px;
   }
 
-  .ts-top h2{
+  .ts-track{
 
-    font-size:3rem;
+    gap:20px;
 
-    letter-spacing:-3px;
+    animation-duration:30s;
   }
+}
+
+@media(max-width:480px){
 
   .ts-card{
 
-    width:300px;
-    height:430px;
-
-    border-radius:28px;
+    width:280px;
   }
 
   .ts-content{
 
-    padding:24px;
+    padding:22px;
+  }
+
+  .ts-quote{
+
+    font-size:3rem;
   }
 
   .ts-content p{
@@ -465,216 +1092,8 @@
     font-size:0.88rem;
   }
 
-  .ts-bg-text{
+  .ts-image-wrap{
 
-    font-size:22vw;
+    height:200px;
   }
-}
-
-@media(max-width:480px){
-
-  .ts-section{
-
-    padding:90px 0;
-  }
-
-  .ts-top{
-
-    padding:0 20px;
-  }
-
-  .ts-top h2{
-
-    font-size:2.3rem;
-
-    letter-spacing:-2px;
-  }
-
-  .ts-card{
-
-    width:260px;
-    height:380px;
-
-    border-radius:22px;
-  }
-
-  .ts-content{
-
-    padding:20px;
-  }
-
-  .ts-content p{
-
-    font-size:0.84rem;
-
-    line-height:1.7;
-  }
-
-  .ts-user h4{
-
-    font-size:1rem;
-  }
-
-  .ts-user span{
-
-    font-size:0.78rem;
-  }
-
-  .ts-bg-text{
-
-    font-size:24vw;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-.ts-bg-image{
-
-  position:absolute;
-  inset:0;
-
-  z-index:0;
-
-  overflow:hidden;
-}
-
-.gl-bg-image img{
-
-  width:100%;
-  height:100%;
-
-  object-fit:cover;
-
-  transform:scale(1.05);
-
-  animation:
-  pxZoom 18s ease-in-out infinite alternate;
-
-  filter:
-  brightness(0.72)
-  contrast(1.05)
-  saturate(1.08);
-}
-
-/* =========================================================
-   OVERLAY
-   ========================================================= */
-
-.ts-gradient-overlay{
-
-  position:absolute;
-  inset:0;
-
-  z-index:1;
-
-  background:
-
-  radial-gradient(
-    circle at top right,
-    rgba(120,180,255,0.14),
-    transparent 40%
-  ),
-
-  linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.08),
-    rgba(0,0,0,0.3),
-    rgba(0,0,0,0.82)
-  );
-}
-
-/* =========================================================
-   GRID
-   ========================================================= */
-
-.ts-grid{
-
-  position:absolute;
-  inset:0;
-
-  z-index:2;
-
-  background-image:
-  linear-gradient(
-    rgba(255,255,255,0.02) 1px,
-    transparent 1px
-  ),
-
-  linear-gradient(
-    90deg,
-    rgba(255,255,255,0.02) 1px,
-    transparent 1px
-  );
-
-  background-size:70px 70px;
-}
-
-/* =========================================================
-   NOISE
-   ========================================================= */
-
-.ts-noise{
-
-  position:absolute;
-  inset:0;
-
-  z-index:2;
-
-  opacity:0.04;
-
-  mix-blend-mode:overlay;
-}
-
-/* =========================================================
-   LIGHT
-   ========================================================= */
-
-.ts-light{
-
-  position:absolute;
-
-  top:-20%;
-  left:-10%;
-
-  width:700px;
-  height:700px;
-
-  border-radius:50%;
-
-  z-index:1;
-
-  background:
-  rgba(120,180,255,0.14);
-
-  filter:blur(120px);
-
-  animation:
-  pxFloat 8s ease infinite alternate;
-}
-
-/* =========================================================
-   VIGNETTE
-   ========================================================= */
-
-.ts-vignette{
-
-  position:absolute;
-  inset:0;
-
-  z-index:2;
-
-  background:
-  radial-gradient(
-    circle,
-    transparent 50%,
-    rgba(0,0,0,0.52) 100%
-  );
 }

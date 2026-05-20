@@ -1,6 +1,6 @@
 /* =========================================================
-   CONTACT PAGE
-   ========================================================= */
+   RESET
+========================================================= */
 
 *{
   margin:0;
@@ -8,268 +8,373 @@
   box-sizing:border-box;
 }
 
+/* =========================================================
+   PAGE
+========================================================= */
+
 .cx-contact-page{
 
   position:relative;
 
   overflow:hidden;
 
-  background:#fbf8f82c;
+  padding:120px 7%;
 
   color:white;
-}
-
-/* =========================================================
-   BACKGROUND
-   ========================================================= */
-
-.cx-gradient{
-
-  position:absolute;
-  inset:0;
 
   background:
-  radial-gradient(
-    circle at top right,
-    rgba(120,180,255,0.12),
-    transparent 30%
-  );
-
-  filter:blur(120px);
-}
-
-.cx-grid{
-
-  position:absolute;
-  inset:0;
-
-  background-image:
-  /* linear-gradient(
-    rgba(255,255,255,0.02) 1px,
-    transparent 1px
-  ), */
   linear-gradient(
-    90deg,
-    rgba(255,255,255,0.02) 1px,
-    transparent 1px
+    to bottom,
+    rgba(100,100,100,0.53),
+    rgba(134,134,134,0.596),
+    rgba(90,90,90,0.749)
   );
-
-  background-size:70px 70px;
-}
-
-.cx-noise{
-
-  position:absolute;
-  inset:0;
-
-  background-image:
-  url("https://grainy-gradients.vercel.app/noise.svg");
-
-  opacity:0.05;
 }
 
 /* =========================================================
-   HERO
-   ========================================================= */
+   CINEMATIC BG
+========================================================= */
 
-.cx-hero{
-
-  position:relative;
-
-  height:85vh;
-
-  display:flex;
-  align-items:center;
-
-  padding:0 7%;
-}
-
-
-
-/* =========================================================
-   HERO BACKGROUND
-   ========================================================= */
-
-.cx-hero-bg{
+.cx-cinematic-bg{
 
   position:absolute;
+
   inset:0;
 
   overflow:hidden;
+
+  z-index:0;
 }
 
-/* IMAGE */
+/* BUILDINGS */
 
-.cx-hero-bg img{
+.cx-building{
 
-  width:100%;
-  height:100%;
+  position:absolute;
 
-  object-fit:cover;
+  bottom:-5%;
 
-  transform:scale(1.05);
+  width:260px;
+
+  border-radius:30px 30px 0 0;
+
+  overflow:hidden;
+
+  background:
+  linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.16),
+    rgba(255,255,255,0.03)
+  );
+
+  border:
+  1px solid rgba(255,255,255,0.12);
+
+  backdrop-filter:
+  blur(14px);
+
+  opacity:0.7;
+}
+
+.cx-building::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background-image:
+  linear-gradient(
+    rgba(255,255,255,0.05) 1px,
+    transparent 1px
+  ),
+  linear-gradient(
+    90deg,
+    rgba(255,255,255,0.05) 1px,
+    transparent 1px
+  );
+
+  background-size:35px 35px;
+}
+
+.cx-building::after{
+
+  content:"";
+
+  position:absolute;
+
+  top:-20%;
+
+  left:-50%;
+
+  width:60%;
+
+  height:180%;
+
+  background:
+  linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.22),
+    transparent
+  );
+
+  transform:
+  rotate(18deg);
 
   animation:
-  heroZoom 18s ease-in-out infinite alternate;
+  shineMove 10s linear infinite;
+}
 
-  filter:
-  brightness(0.72)
-  contrast(1.05)
-  saturate(1.05);
+.building-1{
+  left:5%;
+  height:70vh;
+}
+
+.building-2{
+  left:40%;
+  height:55vh;
+}
+
+.building-3{
+  right:5%;
+  height:86vh;
 }
 
 /* =========================================================
-   OVERLAY
-   ========================================================= */
+   REFLECTIONS
+========================================================= */
+
+.cx-reflection{
+
+  position:absolute;
+
+  width:2px;
+
+  height:140vh;
+
+  background:
+  linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255,255,255,0.35),
+    transparent
+  );
+
+  transform:
+  rotate(24deg);
+
+  animation:
+  reflectionMove 12s ease infinite;
+}
+
+.reflection-1{
+  left:18%;
+}
+
+.reflection-2{
+  left:58%;
+}
+
+.reflection-3{
+  left:82%;
+}
+
+/* =========================================================
+   ORBS
+========================================================= */
+
+.cx-orb{
+
+  position:absolute;
+
+  border-radius:50%;
+
+  filter:blur(120px);
+
+  opacity:0.45;
+}
+
+.orb-1{
+
+  width:340px;
+  height:340px;
+
+  background:
+  rgba(180,220,255,0.18);
+
+  top:-120px;
+  left:-80px;
+}
+
+.orb-2{
+
+  width:280px;
+  height:280px;
+
+  background:
+  rgba(255,255,255,0.08);
+
+  bottom:-100px;
+  right:-100px;
+}
+
+/* =========================================================
+   OVERLAYS
+========================================================= */
 
 .cx-overlay{
 
   position:absolute;
+
   inset:0;
 
   background:
   linear-gradient(
     to bottom,
-    rgba(0,0,0,0.35),
-    rgba(0,0,0,0.45),
-    rgba(0,0,0,0.82)
+    rgba(20,20,20,0.2),
+    rgba(20,20,20,0.18),
+    rgba(20,20,20,0.35)
   );
+
+  z-index:1;
 }
 
-/* =========================================================
-   LIGHT
-   ========================================================= */
-
-.cx-light{
+.cx-gradient{
 
   position:absolute;
 
-  top:-20%;
-  right:-10%;
-
-  width:700px;
-  height:700px;
-
-  border-radius:50%;
+  inset:0;
 
   background:
-  rgba(120,180,255,0.16);
+  radial-gradient(
+    circle at top left,
+    rgba(180,220,255,0.12),
+    transparent 35%
+  );
 
-  filter:blur(120px);
-
-  animation:
-  floatLight 8s ease infinite alternate;
+  z-index:1;
 }
 
-/* =========================================================
-   VIGNETTE
-   ========================================================= */
+.cx-grid{
+
+  position:absolute;
+
+  inset:0;
+
+  background-image:
+  linear-gradient(
+    rgba(255,255,255,0.04) 1px,
+    transparent 1px
+  ),
+  linear-gradient(
+    90deg,
+    rgba(255,255,255,0.04) 1px,
+    transparent 1px
+  );
+
+  background-size:70px 70px;
+
+  opacity:0.35;
+
+  z-index:1;
+}
 
 .cx-vignette{
 
   position:absolute;
+
   inset:0;
 
   background:
   radial-gradient(
     circle,
     transparent 45%,
-    rgba(0,0,0,0.65) 100%
+    rgba(0,0,0,0.45)
   );
+
+  z-index:1;
+}
+
+.cx-noise{
+
+  position:absolute;
+
+  inset:0;
+
+  opacity:0.04;
+
+  background-image:
+  url("https://grainy-gradients.vercel.app/noise.svg");
+
+  z-index:1;
 }
 
 /* =========================================================
-   ANIMATIONS
-   ========================================================= */
+   HERO
+========================================================= */
 
-@keyframes heroZoom{
-
-  from{
-
-    transform:
-    scale(1.05);
-  }
-
-  to{
-
-    transform:
-    scale(1.12);
-  }
-}
-
-@keyframes floatLight{
-
-  from{
-
-    transform:
-    translateY(0px);
-  }
-
-  to{
-
-    transform:
-    translateY(40px);
-  }
-}
-
-.cx-hero-content{
+.cx-hero{
 
   position:relative;
 
   z-index:5;
 
-  max-width:760px;
+  text-align:center;
+
+  margin-bottom:100px;
 }
 
 .cx-hero-content span{
 
   display:inline-block;
 
-  margin-bottom:22px;
+  margin-bottom:24px;
 
-  font-size:0.68rem;
+  font-size:0.76rem;
 
-  letter-spacing:4px;
+  letter-spacing:5px;
 
   color:
-  rgba(255,255,255,0.58);
+  rgba(255,255,255,0.72);
 }
 
 .cx-hero-content h1{
 
   font-size:
-  clamp(3rem,7vw,6.5rem);
+  clamp(3rem,7vw,6rem);
 
-  line-height:0.9;
+  line-height:0.92;
 
-  letter-spacing:-5px;
+  letter-spacing:-4px;
 
-  margin-bottom:24px;
-
-  text-transform:uppercase;
+  margin-bottom:28px;
 }
 
 .cx-hero-content h1 span{
 
   color:
-  rgba(180,220,255,1);
+  rgba(220,240,255,1);
 }
 
 .cx-hero-content p{
 
-  max-width:620px;
+  max-width:700px;
 
-  line-height:1.8;
+  margin:auto;
+
+  font-size:1rem;
+
+  line-height:1.9;
 
   color:
-  rgba(255,255,255,0.7);
-
-  font-size:0.95rem;
+  rgba(255,255,255,0.82);
 }
 
 /* =========================================================
-   CONTACT GRID
-   ========================================================= */
+   GRID
+========================================================= */
 
 .cx-contact-grid{
 
@@ -278,336 +383,364 @@
   z-index:5;
 
   display:grid;
+
   grid-template-columns:
   1fr 1fr;
 
-  gap:28px;
+  gap:40px;
 
-  padding:110px 7%;
+  margin-bottom:100px;
 }
 
-/* =========================================================
-   PANELS
-   ========================================================= */
+/* PANELS */
 
 .cx-panel,
 .cx-form-card{
 
-  background:
-  rgba(255,255,255,0.05);
-
-  border:
-  1px solid rgba(255,255,255,0.08);
-
-  backdrop-filter:blur(24px);
-
-  border-radius:28px;
+  position:relative;
 
   padding:40px;
 
-  box-shadow:
-  0 30px 100px rgba(0,0,0,0.35);
+  border-radius:34px;
+
+  background:
+  rgba(255,255,255,0.08);
+
+  border:
+  1px solid rgba(255,255,255,0.1);
+
+  backdrop-filter:
+  blur(20px);
 }
 
-/* MINI */
+/* =========================================================
+   LEFT
+========================================================= */
 
 .cx-mini{
 
   display:inline-block;
 
-  margin-bottom:20px;
+  margin-bottom:18px;
 
-  font-size:0.68rem;
+  font-size:0.72rem;
 
   letter-spacing:4px;
 
   color:
-  rgba(255,255,255,0.5);
+  rgba(255,255,255,0.7);
 }
 
-/* TITLES */
+.cx-panel h2{
 
-.cx-panel h2,
-.cx-form-card h3{
+  font-size:3rem;
 
-  font-size:2.5rem;
-
-  line-height:1;
+  line-height:1.1;
 
   margin-bottom:20px;
 }
 
-/* TEXT */
-
 .cx-panel p{
 
-  line-height:1.8;
+  font-size:0.95rem;
+
+  line-height:1.9;
 
   color:
-  rgba(255,255,255,0.68);
+  rgba(255,255,255,0.8);
 
-  margin-bottom:34px;
-
-  font-size:0.95rem;
+  margin-bottom:30px;
 }
 
-/* =========================================================
-   CONTACT ITEMS
-   ========================================================= */
+/* CONTACT ITEMS */
 
 .cx-contact-items{
 
   display:flex;
+
   flex-direction:column;
 
-  gap:22px;
+  gap:18px;
 
-  margin-bottom:34px;
+  margin-bottom:30px;
 }
 
 .cx-contact-box{
 
   display:flex;
+
   gap:16px;
 
   align-items:flex-start;
+
+  padding:22px;
+
+  border-radius:22px;
+
+  background:
+  rgba(255,255,255,0.05);
 }
 
 .cx-contact-box svg{
 
-  margin-top:5px;
+  font-size:1.2rem;
+
+  margin-top:4px;
 
   color:
-  rgba(180,220,255,1);
-
-  font-size:1rem;
+  rgba(220,240,255,1);
 }
 
 .cx-contact-box span{
 
-  display:block;
-
-  margin-bottom:8px;
-
-  font-size:0.68rem;
-
-  letter-spacing:3px;
+  font-size:0.78rem;
 
   color:
-  rgba(255,255,255,0.45);
+  rgba(255,255,255,0.65);
 }
 
 .cx-contact-box h4{
 
-  font-size:0.95rem;
+  margin-top:6px;
 
-  line-height:1.7;
+  font-size:1rem;
 
-  color:
-  rgba(255,255,255,0.78);
-
-  font-weight:500;
+  line-height:1.6;
 }
 
-/* =========================================================
-   MAP
-   ========================================================= */
+/* MAP */
 
 .cx-map{
 
   overflow:hidden;
 
-  border-radius:22px;
-
-  height:280px;
-
-  border:
-  1px solid rgba(255,255,255,0.08);
+  border-radius:24px;
 }
 
 .cx-map iframe{
 
   width:100%;
-  height:100%;
+  height:260px;
 
   border:none;
-
-  filter:
-  grayscale(1)
-  contrast(1.1)
-  brightness(0.8);
 }
 
 /* =========================================================
    FORM
-   ========================================================= */
+========================================================= */
 
-form{
+.cx-form-card h3{
 
-  display:flex;
-  flex-direction:column;
+  font-size:2rem;
 
-  gap:16px;
+  margin-bottom:30px;
 }
 
-input,
-textarea{
+/* SHINE */
+
+.cx-form-shine{
+
+  position:absolute;
+
+  top:-20%;
+
+  left:-50%;
+
+  width:60%;
+
+  height:180%;
 
   background:
-  rgba(255,255,255,0.04);
+  linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.14),
+    transparent
+  );
 
-  border:
-  1px solid rgba(255,255,255,0.08);
+  transform:
+  rotate(18deg);
 
-  padding:16px 18px;
+  animation:
+  shineMove 8s linear infinite;
+}
 
-  border-radius:16px;
+.cx-form-card form{
 
-  color:white;
+  display:flex;
+
+  flex-direction:column;
+
+  gap:18px;
+}
+
+.cx-form-card input,
+.cx-form-card textarea{
+
+  width:100%;
+
+  border:none;
 
   outline:none;
 
-  font-size:0.92rem;
+  padding:18px 20px;
+
+  border-radius:18px;
+
+  background:
+  rgba(255,255,255,0.06);
+
+  color:white;
+
+  font-size:0.95rem;
 }
 
-textarea{
+.cx-form-card textarea{
 
   resize:none;
 }
 
-form button{
+.cx-form-card input::placeholder,
+.cx-form-card textarea::placeholder{
 
-  margin-top:8px;
+  color:
+  rgba(255,255,255,0.5);
+}
+
+/* BUTTON */
+
+.cx-form-card button{
 
   height:56px;
 
   border:none;
 
-  border-radius:999px;
+  border-radius:50px;
+
+  cursor:pointer;
 
   background:white;
 
   color:black;
 
-  cursor:pointer;
+  font-size:0.92rem;
+
+  font-weight:600;
 
   display:flex;
+
   align-items:center;
+
   justify-content:center;
 
-  gap:10px;
+  gap:12px;
 
-  letter-spacing:2px;
-
-  text-transform:uppercase;
-
-  font-size:0.72rem;
-
-  transition:0.5s ease;
+  transition:0.4s ease;
 }
 
-form button:hover{
+.cx-form-card button:hover{
 
   transform:
-  translateY(-6px);
+  translateY(-5px);
 }
 
 /* =========================================================
    FAQ
-   ========================================================= */
+========================================================= */
 
 .cx-faq-section{
 
   position:relative;
 
   z-index:5;
-
-  padding:0 7% 120px;
 }
-
-/* TOP */
 
 .cx-faq-top{
 
-  margin-bottom:60px;
+  text-align:center;
+
+  margin-bottom:50px;
 }
 
 .cx-faq-top span{
 
   display:inline-block;
 
-  margin-bottom:22px;
+  margin-bottom:18px;
 
-  font-size:0.68rem;
+  font-size:0.72rem;
 
   letter-spacing:4px;
 
   color:
-  rgba(255,255,255,0.55);
+  rgba(255,255,255,0.72);
 }
 
 .cx-faq-top h2{
 
   font-size:
-  clamp(2.8rem,6vw,5rem);
+  clamp(2.5rem,5vw,4.5rem);
 
-  line-height:0.92;
-
-  letter-spacing:-4px;
+  line-height:1.1;
 }
 
-/* FAQ ITEM */
+/* FAQ LIST */
+
+.cx-faq-list{
+
+  max-width:1000px;
+
+  margin:auto;
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:20px;
+}
 
 .cx-faq-item{
 
-  border-bottom:
-  1px solid rgba(255,255,255,0.08);
+  overflow:hidden;
 
-  padding:24px 0;
+  border-radius:24px;
+
+  background:
+  rgba(255,255,255,0.08);
+
+  border:
+  1px solid rgba(255,255,255,0.08);
 }
 
 /* QUESTION */
 
 .cx-faq-question{
 
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+  padding:28px;
 
-  gap:20px;
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
 
   cursor:pointer;
 }
 
 .cx-faq-question h3{
 
-  font-size:1rem;
-
-  color:white;
-
-  font-weight:500;
+  font-size:1.1rem;
 }
-
-/* BUTTON */
 
 .cx-faq-question button{
 
-  width:44px;
-  height:44px;
+  border:none;
 
-  border-radius:50%;
-
-  border:
-  1px solid rgba(255,255,255,0.1);
-
-  background:
-  rgba(255,255,255,0.04);
+  background:none;
 
   color:white;
 
-  cursor:pointer;
-
-  flex-shrink:0;
+  font-size:1rem;
 }
 
 /* ANSWER */
@@ -618,35 +751,30 @@ form button:hover{
 
   overflow:hidden;
 
-  transition:
-  max-height 0.5s ease,
-  opacity 0.5s ease;
-
-  opacity:0;
+  transition:0.5s ease;
 }
 
 .cx-faq-item.active .cx-faq-answer{
 
   max-height:200px;
 
-  opacity:1;
+  padding:
+  0 28px 28px;
 }
 
 .cx-faq-answer p{
 
-  padding-top:18px;
+  font-size:0.95rem;
 
-  max-width:760px;
-
-  line-height:1.8;
+  line-height:1.9;
 
   color:
-  rgba(255,255,255,0.68);
-
-  font-size:0.94rem;
+  rgba(255,255,255,0.78);
 }
 
-/* HUGE TEXT */
+/* =========================================================
+   HUGE TEXT
+========================================================= */
 
 .cx-bg-text{
 
@@ -655,23 +783,71 @@ form button:hover{
   bottom:-20px;
   left:50%;
 
-  transform:translateX(-50%);
+  transform:
+  translateX(-50%);
 
-  font-size:13vw;
+  font-size:15vw;
 
   font-weight:700;
 
   letter-spacing:-10px;
 
   color:
-  rgba(255,255,255,0.02);
+  rgba(255,255,255,0.04);
+
+  z-index:1;
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes shineMove{
+
+  from{
+
+    transform:
+    translateX(-300%)
+    rotate(18deg);
+  }
+
+  to{
+
+    transform:
+    translateX(400%)
+    rotate(18deg);
+  }
+}
+
+@keyframes reflectionMove{
+
+  0%{
+
+    transform:
+    translateY(-10%)
+    rotate(24deg);
+  }
+
+  50%{
+
+    transform:
+    translateY(10%)
+    rotate(24deg);
+  }
+
+  100%{
+
+    transform:
+    translateY(-10%)
+    rotate(24deg);
+  }
 }
 
 /* =========================================================
    RESPONSIVE
-   ========================================================= */
+========================================================= */
 
-@media(max-width:992px){
+@media(max-width:1100px){
 
   .cx-contact-grid{
 
@@ -681,87 +857,71 @@ form button:hover{
 
 @media(max-width:768px){
 
-  .cx-hero{
+  .cx-contact-page{
 
-    padding:0 5%;
-  }
-
-  .cx-contact-grid,
-  .cx-faq-section{
-
-    padding-left:5%;
-    padding-right:5%;
+    padding:100px 5%;
   }
 
   .cx-panel,
   .cx-form-card{
 
-    padding:32px;
+    padding:30px;
   }
 
-  .cx-panel h2,
-  .cx-form-card h3{
+  .cx-panel h2{
 
-    font-size:2rem;
+    font-size:2.3rem;
   }
 
-  .cx-map{
+  .cx-grid{
 
-    height:240px;
+    background-size:45px 45px;
+  }
+
+  .building-2{
+
+    display:none;
+  }
+
+  .cx-building{
+
+    width:140px;
+
+    opacity:0.45;
+  }
+
+  .cx-bg-text{
+
+    font-size:20vw;
   }
 }
 
 @media(max-width:480px){
 
-  .cx-hero{
-
-    height:75vh;
-
-    padding:0 20px;
-  }
-
   .cx-hero-content h1{
 
-    font-size:2.5rem;
+    font-size:2.8rem;
 
     letter-spacing:-2px;
   }
 
-  .cx-contact-grid,
-  .cx-faq-section{
+  .cx-panel h2{
 
-    padding-left:20px;
-    padding-right:20px;
+    font-size:2rem;
   }
 
-  .cx-panel,
-  .cx-form-card{
-
-    padding:22px;
-
-    border-radius:22px;
-  }
-
-  .cx-panel h2,
   .cx-form-card h3{
 
-    font-size:1.7rem;
+    font-size:1.6rem;
   }
 
-  .cx-faq-top h2{
+  .cx-faq-question{
 
-    font-size:2.2rem;
+    padding:22px;
   }
 
-  .cx-map{
+  .cx-faq-question h3{
 
-    height:200px;
-
-    border-radius:18px;
-  }
-
-  .cx-bg-text{
-
-    font-size:24vw;
+    font-size:0.95rem;
   }
 }

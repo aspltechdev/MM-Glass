@@ -69,6 +69,12 @@ const projects = [
     location:"Ahmedabad",
     image:project8,
   },
+   {
+    id:9,
+    title:"World Trade Center",
+    location:"Pune",
+    image:project2,
+  },
 
 ];
 
@@ -78,18 +84,39 @@ function StoryProjectsSection() {
 
     <section className="sp-section">
 
-      {/* BG */}
+      {/* =====================================================
+          CINEMATIC GLASS BACKGROUND
+      ====================================================== */}
 
-      <div className="sp-bg-image">
+      <div className="sp-cinematic-bg">
 
-        <img
-          src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2400&auto=format&fit=crop"
-          alt=""
-        />
+        {/* BUILDINGS */}
+
+        <div className="sp-building building-1"></div>
+
+        <div className="sp-building building-2"></div>
+
+        <div className="sp-building building-3"></div>
+
+        {/* REFLECTIONS */}
+
+        <div className="sp-reflection reflection-1"></div>
+
+        <div className="sp-reflection reflection-2"></div>
+
+        <div className="sp-reflection reflection-3"></div>
+
+        {/* ORBS */}
+
+        <div className="sp-orb orb-1"></div>
+
+        <div className="sp-orb orb-2"></div>
 
       </div>
 
-      {/* LAYERS */}
+      {/* =====================================================
+          OVERLAYS
+      ====================================================== */}
 
       <div className="sp-overlay"></div>
 
@@ -99,7 +126,17 @@ function StoryProjectsSection() {
 
       <div className="sp-vignette"></div>
 
-      {/* TOP */}
+      {/* HUGE BG TEXT */}
+
+      <div className="sp-bg-text">
+
+        PROJECTS
+
+      </div>
+
+      {/* =====================================================
+          TOP
+      ====================================================== */}
 
       <div className="sp-top">
 
@@ -111,9 +148,9 @@ function StoryProjectsSection() {
 
         <h2>
 
-          Spaces built
-          with precision
-          and transparency.
+        SPACES BUILT
+WITH PRECISION
+AND TRANSPARENCY
 
         </h2>
 
@@ -127,7 +164,9 @@ function StoryProjectsSection() {
 
       </div>
 
-      {/* GRID */}
+      {/* =====================================================
+          GRID
+      ====================================================== */}
 
       <div className="sp-grid">
 
@@ -160,6 +199,10 @@ function StoryProjectsSection() {
 
             <div className="sp-glow"></div>
 
+            {/* SHINE */}
+
+            <div className="sp-card-shine"></div>
+
             {/* CONTENT */}
 
             <div className="sp-content">
@@ -190,9 +233,13 @@ function StoryProjectsSection() {
 
       </div>
 
-      {/* FLOATING PANEL */}
+      {/* =====================================================
+          FLOATING PANEL
+      ====================================================== */}
 
       <div className="sp-floating-panel">
+
+        <div className="sp-panel-glow"></div>
 
         <span>
 
@@ -202,11 +249,18 @@ function StoryProjectsSection() {
 
         <h3>
 
-          Engineering iconic
-          architectural landmarks
-          with premium glass systems.
+   ICONIC ARCHITECTURE
+POWERED BY PREMIUM GLASS
 
         </h3>
+
+        <p>
+
+          Luxury architectural ecosystems
+          powered by futuristic fabrication
+          and precision-engineered glass technologies.
+
+        </p>
 
       </div>
 
