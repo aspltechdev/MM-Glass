@@ -3,7 +3,7 @@ import "./Navbar.css";
 
 import logo from "../assets/mmglasslogo.png";
 
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
 
