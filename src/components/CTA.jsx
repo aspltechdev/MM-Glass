@@ -138,6 +138,7 @@
 
 
 
+import { Link } from "react-router-dom";
 import "./CTA.css";
 
 function CTA() {
@@ -236,18 +237,21 @@ function CTA() {
           {/* ACTIONS */}
 
           <div className="cta-actions">
-
+<Link to="/contactus">
             <button className="cta-primary">
 
               Start Your Project
 
             </button>
+            </Link>
+            <Link to="/contactus">
 
             <button className="cta-secondary">
 
               Explore Products
 
             </button>
+            </Link>
 
           </div>
 
