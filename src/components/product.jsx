@@ -457,57 +457,452 @@
 
 
 
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
+
+// import "./product.css";
+
+// function Product() {
+
+
+
+//   const sections = [
+
+//   {
+//     heading: "Architectural Glass",
+
+//     products: [
+
+//       {
+//         title: "Tempered Glass",
+//         image: "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2000&auto=format&fit=crop",
+//         desc: "Processed safety glass engineered for superior strength and durability.",
+//       },
+
+//       {
+//         title: "Laminated Glass",
+//         image: "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=2000&auto=format&fit=crop",
+//         desc: "Advanced laminated systems designed for security and UV protection.",
+//       },
+
+//       {
+//         title: "Reflective Glass",
+//         image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2000&auto=format&fit=crop",
+//         desc: "Luxury reflective architectural glass with premium aesthetics.",
+//       },
+
+//       {
+//         title: "Insulated Glass (DGU)",
+//         image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2000&auto=format&fit=crop",
+//         desc: "Double glazed insulated glass for thermal and acoustic efficiency.",
+//       },
+
+//       {
+//         title: "PVB Lamination",
+//         image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2000&auto=format&fit=crop",
+//         desc: "High-strength laminated safety glass using premium PVB interlayers.",
+//       },
+
+//       {
+//         title: "Resin Lamination",
+//         image: "https://images.unsplash.com/photo-1519643381401-22c77e60520e?q=80&w=2000&auto=format&fit=crop",
+//         desc: "Decorative and durable resin laminated glass solutions.",
+//       },
+
+//       {
+//         title: "Frosted Glass",
+//         image: "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=2000&auto=format&fit=crop",
+//         desc: "Elegant frosted finishes providing privacy and aesthetics.",
+//       },
+
+//       {
+//         title: "Acid Work Glass",
+//         image: "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2000&auto=format&fit=crop",
+//         desc: "Premium acid etched glass crafted for modern interiors.",
+//       },
+
+//       {
+//         title: "Colour Glass",
+//         image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2000&auto=format&fit=crop",
+//         desc: "Stylish colored glass panels for decorative architecture.",
+//       },
+
+//       {
+//         title: "Multi Design Glass",
+//         image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2000&auto=format&fit=crop",
+//         desc: "Creative designer glass patterns for customized interiors.",
+//       },
+
+//       {
+//         title: "V-Groove Glass",
+//         image: "https://images.unsplash.com/photo-1519643381401-22c77e60520e?q=80&w=2000&auto=format&fit=crop",
+//         desc: "Decorative engraved glass with elegant V-groove patterns.",
+//       },
+
+//       {
+//         title: "Normal Bend Glass",
+//         image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2000&auto=format&fit=crop",
+//         desc: "Curved architectural glass designed for modern structures.",
+//       },
+
+//     ],
+//   },
+
+//   {
+//     heading: "Designer & Decorative Glass",
+
+//     products: [
+
+//       {
+//         title: "Design Glass",
+//         image: "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=2000&auto=format&fit=crop",
+//         desc: "Decorative designer glass crafted for luxury interiors.",
+//       },
+
+//       {
+//         title: "Pinned Glass",
+//         image: "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2000&auto=format&fit=crop",
+//         desc: "Classic textured pinned glass with elegant patterns.",
+//       },
+
+//       {
+//         title: "Katrachi Glass",
+//         image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2000&auto=format&fit=crop",
+//         desc: "Traditional decorative Katrachi patterned glass.",
+//       },
+
+//       {
+//         title: "Master Light Glass",
+//         image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2000&auto=format&fit=crop",
+//         desc: "Premium textured glass allowing soft natural lighting.",
+//       },
+
+//       {
+//         title: "Swasthick Glass",
+//         image: "https://images.unsplash.com/photo-1519643381401-22c77e60520e?q=80&w=2000&auto=format&fit=crop",
+//         desc: "Decorative Swasthick pattern glass for traditional aesthetics.",
+//       },
+
+//       {
+//         title: "Crystal Glass",
+//         image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2000&auto=format&fit=crop",
+//         desc: "High clarity crystal finish glass with premium elegance.",
+//       },
+
+//       {
+//         title: "Kasumi Glass",
+//         image: "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=2000&auto=format&fit=crop",
+//         desc: "Japanese-inspired textured Kasumi decorative glass.",
+//       },
+
+//       {
+//         title: "Karisham Glass",
+//         image: "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2000&auto=format&fit=crop",
+//         desc: "Stylish patterned Karisham glass for decorative spaces.",
+//       },
+
+//       {
+//         title: "Grill Glass",
+//         image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2000&auto=format&fit=crop",
+//         desc: "Glass integrated with grill designs for safety and elegance.",
+//       },
+
+//       {
+//         title: "5mm Pinned Glass",
+//         image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2000&auto=format&fit=crop",
+//         desc: "Durable 5mm pinned textured glass for versatile applications.",
+//       },
+
+//       {
+//         title: "5mm Kasumi Glass",
+//         image: "https://images.unsplash.com/photo-1519643381401-22c77e60520e?q=80&w=2000&auto=format&fit=crop",
+//         desc: "Elegant 5mm Kasumi patterned glass with premium finish.",
+//       },
+
+//     ],
+//   },
+
+// ];
+//   return (
+
+//     <div className="pr-page">
+
+//       {/* =====================================================
+//           HERO
+//       ====================================================== */}
+
+//       <section className="pr-hero">
+
+//         {/* BACKGROUND */}
+
+//         <div className="pr-hero-bg">
+
+//           <img
+//             src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2400&auto=format&fit=crop"
+//             alt=""
+//           />
+
+//         </div>
+
+//         <div className="pr-overlay"></div>
+
+//         <div className="pr-gradient"></div>
+
+//         <div className="pr-grid-bg"></div>
+
+//         <div className="pr-noise"></div>
+
+//         {/* LIGHTS */}
+
+//         <div className="pr-light pr-light1"></div>
+
+//         <div className="pr-light pr-light2"></div>
+
+//         {/* CONTENT */}
+
+//         <div className="pr-hero-content">
+
+//           <span>
+
+//             FUTURE • GLASS • SYSTEMS
+
+//           </span>
+
+//           <h1>
+
+//             ENGINEERED <br />
+
+//             GLASS <span>COLLECTIONS</span>
+
+//           </h1>
+
+      
+
+//         </div>
+
+//       </section>
+
+   
+
+//       {sections.map((section, sectionIndex) => (
+
+//         <section
+//           className="pr-section"
+//           key={sectionIndex}
+//         >
+
+//           {/* TOP */}
+
+//           <div className="pr-top">
+
+//             <span>
+
+//               PREMIUM GLASS COLLECTION
+
+//             </span>
+
+//             <h2>
+
+//               {section.heading}
+
+//             </h2>
+
+//           </div>
+
+//           {/* PRODUCTS */}
+
+//           <div className="pr-products">
+
+//             {section.products.map((item, index) => (
+
+//               <div
+//                 className={`pr-product ${
+//                   index % 2 === 0
+//                     ? "normal"
+//                     : "reverse"
+//                 }`}
+//                 key={index}
+//               >
+
+//                 {/* IMAGE */}
+
+//                 <div className="pr-image-wrap">
+
+//                   <img
+//                     src={item.image}
+//                     alt={item.title}
+//                   />
+
+//                   <div className="pr-image-overlay"></div>
+
+//                   <div className="pr-image-glow"></div>
+
+//                 </div>
+
+//                 {/* CONTENT */}
+
+//                 <div className="pr-content">
+
+//                   <div className="pr-tag">
+
+//                     FUTURE GLASS
+
+//                   </div>
+
+//                   <h3>
+
+//                     {item.title}
+
+//                   </h3>
+
+//                   <p>
+
+//                     {item.desc}
+
+//                   </p>
+
+//                   <button>
+
+//                     Explore Product
+
+//                   </button>
+
+//                 </div>
+
+//               </div>
+
+//             ))}
+
+//           </div>
+
+//         </section>
+
+//       ))}
+
+//     </div>
+//   );
+// }
+
+// export default Product;
+
+
+
+
+
+
+
+
+
+
+
+import { useEffect } from "react";
 
 import "./product.css";
 
 function Product() {
 
+  /* =====================================================
+      CINEMATIC INTERACTION
+  ====================================================== */
+
+  useEffect(() => {
+
+    const moveReflection = (e) => {
+
+      const reflections =
+        document.querySelectorAll(".reflection");
+
+      const towers =
+        document.querySelectorAll(".glass-tower");
+
+      const x =
+        (e.clientX / window.innerWidth - 0.5);
+
+      const y =
+        (e.clientY / window.innerHeight - 0.5);
+
+      reflections.forEach((item, i) => {
+
+        const speed = (i + 1) * 18;
+
+        item.style.transform = `
+          translate(
+            ${x * speed}px,
+            ${y * speed}px
+          )
+          rotate(25deg)
+        `;
+      });
+
+      towers.forEach((tower, i) => {
+
+        const speed = (i + 1) * 10;
+
+        tower.style.transform = `
+          translateY(${y * speed}px)
+          translateX(${x * speed}px)
+        `;
+      });
+    };
+
+    if(window.innerWidth > 768){
+
+      window.addEventListener(
+        "mousemove",
+        moveReflection
+      );
+    }
+
+    return () => {
+
+      window.removeEventListener(
+        "mousemove",
+        moveReflection
+      );
+    };
+
+  }, []);
+
+  /* =====================================================
+      DATA
+  ====================================================== */
+
   // const sections = [
 
   //   {
-  //     heading: "Architectural Glass",
+  //     heading: "Ar",
 
   //     products: [
 
   //       {
   //         title: "Tempered Glass",
-
   //         image:
-  //           "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2400&auto=format&fit=crop",
-
+  //           "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2000&auto=format&fit=crop",
   //         desc:
   //           "Processed safety glass engineered for superior strength and durability.",
   //       },
 
   //       {
   //         title: "Laminated Glass",
-
   //         image:
-  //           "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=2400&auto=format&fit=crop",
-
+  //           "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=2000&auto=format&fit=crop",
   //         desc:
   //           "Advanced laminated systems designed for security and UV protection.",
   //       },
 
   //       {
   //         title: "Reflective Glass",
-
   //         image:
-  //           "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2400&auto=format&fit=crop",
-
+  //           "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2000&auto=format&fit=crop",
   //         desc:
   //           "Luxury reflective architectural glass with premium aesthetics.",
   //       },
 
   //       {
   //         title: "Insulated Glass",
-
   //         image:
-  //           "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2400&auto=format&fit=crop",
-
+  //           "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2000&auto=format&fit=crop",
   //         desc:
-  //           "Thermal and acoustic insulation for futuristic environments.",
+  //           "Double glazed insulated glass for thermal and acoustic efficiency.",
   //       },
 
   //     ],
@@ -520,42 +915,34 @@ function Product() {
 
   //       {
   //         title: "Crystal Glass",
-
   //         image:
-  //           "https://images.unsplash.com/photo-1519643381401-22c77e60520e?q=80&w=2400&auto=format&fit=crop",
-
+  //           "https://images.unsplash.com/photo-1519643381401-22c77e60520e?q=80&w=2000&auto=format&fit=crop",
   //         desc:
-  //           "High-clarity crystal finish glass engineered for premium interiors.",
+  //           "High clarity crystal finish glass with premium elegance.",
   //       },
 
   //       {
   //         title: "Master Light Glass",
-
   //         image:
-  //           "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2400&auto=format&fit=crop",
-
+  //           "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2000&auto=format&fit=crop",
   //         desc:
-  //           "Elegant textured glass allowing soft natural lighting experiences.",
+  //           "Premium textured glass allowing soft natural lighting.",
   //       },
 
   //       {
   //         title: "Kasumi Glass",
-
   //         image:
-  //           "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=2400&auto=format&fit=crop",
-
+  //           "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=2000&auto=format&fit=crop",
   //         desc:
-  //           "Japanese-inspired decorative glass crafted for luxury architecture.",
+  //           "Japanese-inspired textured Kasumi decorative glass.",
   //       },
 
   //       {
   //         title: "Colour Glass",
-
   //         image:
-  //           "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2400&auto=format&fit=crop",
-
+  //           "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2000&auto=format&fit=crop",
   //         desc:
-  //           "Stylish coloured architectural glass for modern premium spaces.",
+  //           "Stylish colored architectural glass for premium spaces.",
   //       },
 
   //     ],
@@ -564,11 +951,10 @@ function Product() {
   // ];
 
 
-
-  const sections = [
+    const sections = [
 
   {
-    heading: "Architectural Glass",
+    heading: "ARCHITECTURAL GLASS",
 
     products: [
 
@@ -727,37 +1113,44 @@ function Product() {
     <div className="pr-page">
 
       {/* =====================================================
+          CINEMATIC BACKGROUND
+      ====================================================== */}
+
+      <div className="pr-cinematic-bg">
+
+        <div className="glass-tower tower-1"></div>
+
+        <div className="glass-tower tower-2"></div>
+
+        <div className="glass-tower tower-3"></div>
+
+        <div className="reflection reflection-1"></div>
+
+        <div className="reflection reflection-2"></div>
+
+        <div className="reflection reflection-3"></div>
+
+        <div className="scan-light"></div>
+
+        <div className="orb orb-1"></div>
+
+        <div className="orb orb-2"></div>
+
+        <div className="orb orb-3"></div>
+
+        <div className="hud-grid"></div>
+
+      </div>
+
+      {/* =====================================================
           HERO
       ====================================================== */}
 
       <section className="pr-hero">
 
-        {/* BACKGROUND */}
-
-        <div className="pr-hero-bg">
-
-          <img
-            src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2400&auto=format&fit=crop"
-            alt=""
-          />
-
-        </div>
-
         <div className="pr-overlay"></div>
 
         <div className="pr-gradient"></div>
-
-        <div className="pr-grid-bg"></div>
-
-        <div className="pr-noise"></div>
-
-        {/* LIGHTS */}
-
-        <div className="pr-light pr-light1"></div>
-
-        <div className="pr-light pr-light2"></div>
-
-        {/* CONTENT */}
 
         <div className="pr-hero-content">
 
@@ -771,7 +1164,7 @@ function Product() {
 
             ENGINEERED <br />
 
-            GLASS <span>COLLECTIONS</span>
+            <span> GLASS COLLECTIONS</span>
 
           </h1>
 
@@ -779,23 +1172,16 @@ function Product() {
 
             Premium architectural and decorative
             glass systems crafted with futuristic
-            aesthetics, cinematic precision,
-            and modern engineering excellence.
+            aesthetics and precision engineering.
 
-          </p>
-
-          <button>
-
-            Explore Products
-
-          </button> */}
+          </p> */}
 
         </div>
 
       </section>
 
       {/* =====================================================
-          PRODUCT SECTIONS
+          SECTIONS
       ====================================================== */}
 
       {sections.map((section, sectionIndex) => (
@@ -857,11 +1243,11 @@ function Product() {
 
                 <div className="pr-content">
 
-                  <div className="pr-tag">
+                  {/* <div className="pr-tag">
 
                     FUTURE GLASS
 
-                  </div>
+                  </div> */}
 
                   <h3>
 
@@ -892,6 +1278,14 @@ function Product() {
         </section>
 
       ))}
+
+      {/* HUGE TYPO */}
+
+      <div className="pr-bg-text">
+
+        PRODUCTS
+
+      </div>
 
     </div>
   );
