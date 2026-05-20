@@ -170,7 +170,7 @@
 
 import "./Footer.css";
 import { Link } from "react-router-dom";
-import logo from "../assets/mmlogo.png";
+import logo from "../assets/mmlogofooter.jpg";
 
 function Footer() {
 
@@ -274,16 +274,14 @@ function Footer() {
                 <Link to="/about">About</Link>
               </li>
 
-              <li>
-                <Link to="/ourstory">Our Story</Link>
-              </li>
+            
 
               <li>
                 <Link to="/product">Products</Link>
               </li>
 
               <li>
-                <Link to="/gallery">Gallery</Link>
+                <Link to="/gallery">Projects</Link>
               </li>
 
               <li>

@@ -797,6 +797,7 @@
 import { useEffect } from "react";
 
 import "./product.css";
+import { Link } from "react-router-dom";
 
 function Product() {
 
@@ -1260,12 +1261,13 @@ function Product() {
                     {item.desc}
 
                   </p>
-
+<Link to="/contactus">
                   <button>
 
                     Explore Product
 
                   </button>
+                  </Link>
 
                 </div>
 

@@ -903,7 +903,7 @@ useEffect(() => {
             </div>
 
             <div className="hero-actions">
-              <Link to="/contactus">
+              <Link to="/product">
               <button className="cta-primary">
                 <span className="cta-text">Explore Collection</span>
                 <span className="cta-icon">

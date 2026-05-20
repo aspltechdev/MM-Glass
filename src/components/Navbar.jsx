@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Navbar.css";
 
-import logo from "../assets/mm-logo.jpeg";
+import logo from "../assets/mmglasslogo.png";
 
 import { NavLink } from "react-router-dom";
 
@@ -37,13 +37,13 @@ function Navbar() {
         {/* LEFT */}
 
         <div className="nav-left">
-
+<Link to="/">
           <img
             src={logo}
             alt="MM Glass"
             className="logo"
           />
-
+</Link>
         </div>
 
         {/* CENTER */}

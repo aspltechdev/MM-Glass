@@ -635,7 +635,7 @@ function Aboutus() {
           {/* BUTTONS */}
 
           <div className="ae-buttons">
-            <Link to ="/about">
+            <Link to ="/gallery">
 
             <button className="ae-btn-primary">
 

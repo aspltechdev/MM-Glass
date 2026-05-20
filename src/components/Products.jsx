@@ -370,6 +370,7 @@ function Products() {
       ====================================================== */}
 
       <div className="px-bottom">
+        <Link to="/product">
 
         <button className="px-explore-btn">
 
@@ -378,6 +379,7 @@ function Products() {
           Explore More Products
 
         </button>
+        </Link>
 
       </div>
 

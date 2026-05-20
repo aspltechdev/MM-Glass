@@ -244,7 +244,7 @@ function CTA() {
 
             </button>
             </Link>
-            <Link to="/contactus">
+            <Link to="/product">
 
             <button className="cta-secondary">
 
