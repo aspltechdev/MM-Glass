@@ -775,7 +775,7 @@ function Product() {
 
           </h1>
 
-          <p>
+          {/* <p>
 
             Premium architectural and decorative
             glass systems crafted with futuristic
@@ -788,7 +788,7 @@ function Product() {
 
             Explore Products
 
-          </button>
+          </button> */}
 
         </div>
 
