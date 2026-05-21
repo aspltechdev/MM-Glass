@@ -172,7 +172,7 @@
 .row-right .ag-track{
 
   animation:
-  scrollRight 30s linear infinite;
+  scrollRight 60s linear infinite;
 }
 
 /* LEFT */
@@ -180,7 +180,7 @@
 .row-left .ag-track{
 
   animation:
-  scrollLeft 30s linear infinite;
+  scrollLeft 60s linear infinite;
 }
 
 /* =========================================================

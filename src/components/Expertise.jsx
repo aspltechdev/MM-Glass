@@ -291,7 +291,12 @@
 
 
 
+import { i } from "framer-motion/client";
 import "./Expertise.css";
+import img1 from "../assets/mmglass_1.png";
+import img2 from "../assets/mmglass_8.png";
+import img3 from "../assets/mmglass_3.png";
+
 
 function Expertise() {
 
@@ -303,7 +308,7 @@ function Expertise() {
       text:
         "Advanced CNC fabrication systems engineered for flawless architectural finishing.",
       image:
-        "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1600&auto=format&fit=crop",
+       img1,
     },
 
     {
@@ -312,7 +317,7 @@ function Expertise() {
       text:
         "Every glass panel undergoes intensive quality and structural testing procedures.",
       image:
-        "https://images.unsplash.com/photo-1519643381401-22c77e60520e?q=80&w=1600&auto=format&fit=crop",
+       img3,
     },
 
     {
@@ -320,8 +325,7 @@ function Expertise() {
       title: "Architectural Accuracy",
       text:
         "Precision-engineered glass systems tailored for luxury modern environments.",
-      image:
-        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop",
+      image:img2,
     },
 
   ];
@@ -337,7 +341,7 @@ function Expertise() {
       <div className="exp-bg">
 
         <img
-          src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2400&auto=format&fit=crop"
+          src="https://images.pexels.com/photos/9321327/pexels-photo-9321327.jpeg"
           alt=""
         />
 

@@ -20,7 +20,7 @@
 
   padding:120px 7%;
 
-  background:#050505;
+
 
   color:white;
 }
@@ -45,7 +45,7 @@
   object-fit:cover;
 
   filter:
-  brightness(0.08)
+  brightness(0.04)
   contrast(1.08);
 
   animation:
@@ -59,11 +59,12 @@
   position:absolute;
   inset:0;
 
-  background:
+ background:
   linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.9),
-    rgba(0,0,0,0.96)
+    to right,
+    rgba(147, 146, 146, 0.495),
+    rgba(142, 139, 139, 0.534),
+    rgba(121, 120, 120, 0.189)
   );
 
   z-index:2;
@@ -101,7 +102,7 @@
 
   z-index:4;
 
-  background-image:
+  /* background-image:
   linear-gradient(
     rgba(255,255,255,0.03) 1px,
     transparent 1px
@@ -110,7 +111,7 @@
     90deg,
     rgba(255,255,255,0.03) 1px,
     transparent 1px
-  );
+  ); */
 
   background-size:70px 70px;
 }
@@ -218,6 +219,12 @@
 
   color:
   rgba(180,220,255,1);
+    font-size:
+  clamp(3rem,7vw,6rem);
+
+  line-height:0.92;
+
+  letter-spacing:-4px;
 }
 
 /* =========================================================
@@ -282,12 +289,12 @@
   position:absolute;
   inset:0;
 
-  background:
+  /* background:
   linear-gradient(
     to top,
     rgba(0,0,0,0.65),
     rgba(0,0,0,0.08)
-  );
+  ); */
 }
 
 /* HOVER */
@@ -502,12 +509,12 @@
   position:absolute;
   inset:0;
 
-  background:
+  /* background:
   linear-gradient(
     to top,
     rgba(0,0,0,0.5),
     transparent
-  );
+  ); */
 }
 
 /* HOVER */
