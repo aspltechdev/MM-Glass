@@ -291,7 +291,7 @@
 
 
 
-import { i } from "framer-motion/client";
+// import { i } from "framer-motion/client";
 import "./Expertise.css";
 import img1 from "../assets/mmglass_1.png";
 import img2 from "../assets/mmglass_8.png";
