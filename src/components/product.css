@@ -531,8 +531,8 @@ object-fit: contain;
 
   margin-bottom:28px;
 
-  text-shadow:
-  0 0 40px rgb(88, 95, 146);
+  /* text-shadow:
+  0 0 40px rgb(88, 95, 146); */
 }
 
 .pr-hero-content h1 span{
@@ -545,11 +545,12 @@ object-fit: contain;
   letter-spacing:-5px;
 
   margin-bottom:28px;
-  color:
-  rgba(180,220,255,1);
+  /* color:
+  rgba(180,220,255,1); */
+  color: #ff0000ac;
 
-  text-shadow:
-  0 0 40px rgba(255,255,255,0.12);
+  /* text-shadow:
+  0 0 40px rgba(255,255,255,0.12); */
 }
 
 .pr-hero-content p{

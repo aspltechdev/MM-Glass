@@ -254,8 +254,9 @@
 
 .ae-content h2 span{
 
-  color:
-  rgba(180,220,255,1);
+  /* color:
+  rgb(255, 2, 2); */
+  color: #ff0000cf;
 }
 
 /* TEXT */

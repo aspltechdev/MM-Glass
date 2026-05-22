@@ -138,7 +138,7 @@ function Strength() {
 
           {/* TEXT BLOCK */}
 
-          <div className="str-text-box">
+          {/* <div className="str-text-box">
 
             <div className="str-line"></div>
 
@@ -164,7 +164,7 @@ function Strength() {
 
             </p>
 
-          </div>
+          </div> */}
 
           {/* CARDS */}
 

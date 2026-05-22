@@ -249,8 +249,9 @@
 
 .px-top h2 span{
 
-  color:
-  rgba(180,220,255,1);
+  /* color:
+  rgba(180,220,255,1); */
+  color: #ff0000cf;
 }
 
 /* TEXT */

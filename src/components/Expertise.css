@@ -228,8 +228,9 @@
 
   margin-bottom:24px;
 
-  color:
-  rgba(180,220,255,1);
+  /* color:
+  rgba(180,220,255,1); */
+  color: #ff0000b3;
 }
 
 /* TEXT */
@@ -395,7 +396,7 @@
   margin-bottom:18px;
 
   color:
-  rgba(180,220,255,1);
+  rgb(233, 33, 33);
 }
 
 /* TITLE */
@@ -459,7 +460,7 @@
   margin:auto auto 30px;
 
   background:
-  rgba(180,220,255,1);
+  rgba(255, 42, 42, 0.831);
 }
 
 /* TITLE */

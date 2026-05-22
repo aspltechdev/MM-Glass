@@ -29,8 +29,9 @@
 
   padding: 20px 60px;
 
-  background:
-    rgba(5,5,5,0.55);
+  /* background:
+    rgba(194, 4, 4, 0.938); */
+    background: #ff0000af;
 
   backdrop-filter: blur(24px);
 
@@ -42,7 +43,7 @@
 
 .logo {
 
-  width: 120px;
+  width: 80px;
 
   object-fit: contain;
 

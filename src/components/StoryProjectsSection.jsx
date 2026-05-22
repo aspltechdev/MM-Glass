@@ -128,11 +128,11 @@ function StoryProjectsSection() {
 
       {/* HUGE BG TEXT */}
 
-      <div className="sp-bg-text">
+      {/* <div className="sp-bg-text">
 
         PROJECTS
 
-      </div>
+      </div> */}
 
       {/* =====================================================
           TOP
@@ -148,9 +148,9 @@ function StoryProjectsSection() {
 
         <h2>
 
-        SPACES BUILT
-WITH PRECISION
-AND TRANSPARENCY
+       BUILT WITH <span>
+PRECISION & GLASS </span>
+
 
         </h2>
 

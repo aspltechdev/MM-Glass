@@ -217,8 +217,9 @@
 
 .str-top h2 span{
 
-  color:
-  rgba(180,220,255,1);
+  /* color:
+  rgba(180,220,255,1); */
+  color: #ff0000c4;
     font-size:
   clamp(3rem,7vw,6rem);
 

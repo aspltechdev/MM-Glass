@@ -137,9 +137,9 @@ function Trusted() {
 
         <h2>
 
-        {/* BUILT ON */}
-{/* <br></br> */}
-          <span> BUILD ON TRUST</span>
+        BUILT ON
+<br></br>
+          <span>TRUST</span>
 
         </h2>
 

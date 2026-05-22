@@ -443,8 +443,9 @@
 
 .cta-content h2 span{
 
-  color:
-  rgba(220,240,255,1);
+  /* color:
+  rgba(220,240,255,1); */
+  color: #ff00009c;
 }
 
 /* TEXT */

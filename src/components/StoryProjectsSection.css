@@ -386,6 +386,17 @@
 
   margin-bottom:26px;
 }
+.sp-top h2 span{
+  font-size:
+  clamp(3rem,7vw,6rem);
+
+  line-height:0.92;
+
+  letter-spacing:-4px;
+
+  margin-bottom:26px;
+  color: #ff0000c6;
+}
 
 .sp-top p{
 

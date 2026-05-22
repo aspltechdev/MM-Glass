@@ -1122,9 +1122,13 @@ function ContactUs() {
 
           <h2>
 
-            Everything you <br />
+            {/* Everything you <br />
 
-            need to know
+            need to know */}
+
+            EVERYTHING YOU <span>
+NEED TO KNOW </span>
+
 
           </h2>
 

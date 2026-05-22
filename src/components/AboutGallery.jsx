@@ -235,7 +235,7 @@ function AboutGallery() {
           {/* Sneak peek into
           our glass world. */}
 
-          STEP INTO OUR GLASS WORLD
+          STEP INTO OUR  <span>GLASS WORLD </span>
         </h2>
 
       </div>

@@ -140,6 +140,15 @@
 
   color:white;
 }
+.ag-top h2 span{
+   font-size:
+  clamp(2.5rem,5vw,5rem);
+
+  line-height:0.95;
+
+  letter-spacing:-4px;
+  color: #ff0000ba;
+}
 
 /* =========================================================
    ROWS

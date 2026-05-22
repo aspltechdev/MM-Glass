@@ -375,8 +375,9 @@
 
 .ts-top h2 span{
 
-  color:
-  rgba(220,240,255,1);
+  /* color:
+  rgba(220,240,255,1); */
+  color: #ff0000a3;
 }
 
 /* =========================================================
@@ -524,9 +525,9 @@
 
   line-height:1;
 
-  color:
-  rgba(180,220,255,1);
-
+  /* color:
+  rgba(180,220,255,1); */
+color: #ff0000a7;
   margin-bottom:10px;
 }
 
@@ -969,8 +970,9 @@
 
   line-height:1;
 
-  color:
-  rgba(180,220,255,1);
+  /* color:
+  rgba(180,220,255,1); */
+  color: #ff0000aa;
 
   margin-bottom:10px;
 }
