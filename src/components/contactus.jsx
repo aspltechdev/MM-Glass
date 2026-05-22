@@ -342,6 +342,407 @@
 
 // ContactUs.jsx
 
+
+
+
+// import "./contactus.css";
+// import { useState } from "react";
+
+// import {
+//   FaPhoneAlt,
+//   FaMapMarkerAlt,
+//   FaArrowRight,
+//   FaPlus,
+//   FaMinus,
+//   FaEnvelope,
+// } from "react-icons/fa";
+
+// function ContactUs() {
+
+//   const [activeFaq, setActiveFaq] =
+//     useState(0);
+
+//   const faqs = [
+
+//     {
+//       q: "What glass systems do you manufacture?",
+//       a: "We manufacture premium toughened, laminated, insulated, decorative, reflective, and architectural glass systems for luxury residential and commercial spaces.",
+//     },
+
+//     {
+//       q: "Do you provide customized fabrication?",
+//       a: "Yes. We engineer custom glass solutions tailored for architectural, facade, and interior requirements with precision processing.",
+//     },
+
+//     {
+//       q: "Do you support PAN India delivery?",
+//       a: "Our logistics ecosystem delivers precision-crafted glass systems across India with safe transportation and installation-ready processing.",
+//     },
+
+//     {
+//       q: "How do you ensure quality standards?",
+//       a: "Every glass unit undergoes advanced inspection, edge finishing validation, stress testing, and performance checks before dispatch.",
+//     },
+
+//   ];
+
+//   return (
+
+//     <section className="cx-contact-page">
+
+//       {/* =====================================================
+//           CINEMATIC GLASS BACKGROUND
+//       ====================================================== */}
+
+//       <div className="cx-cinematic-bg">
+
+//         {/* BUILDINGS */}
+
+//         <div className="cx-building building-1"></div>
+
+//         <div className="cx-building building-2"></div>
+
+//         <div className="cx-building building-3"></div>
+
+//         {/* REFLECTIONS */}
+
+//         <div className="cx-reflection reflection-1"></div>
+
+//         <div className="cx-reflection reflection-2"></div>
+
+//         <div className="cx-reflection reflection-3"></div>
+
+//         {/* ORBS */}
+
+//         <div className="cx-orb orb-1"></div>
+
+//         <div className="cx-orb orb-2"></div>
+
+//       </div>
+
+//       {/* =====================================================
+//           OVERLAYS
+//       ====================================================== */}
+
+//       <div className="cx-overlay"></div>
+
+//       <div className="cx-gradient"></div>
+
+//       <div className="cx-grid"></div>
+
+//       <div className="cx-vignette"></div>
+
+//       <div className="cx-noise"></div>
+
+//       {/* HUGE BG TEXT */}
+
+//       <div className="cx-bg-text">
+
+//         CONTACT
+
+//       </div>
+
+//       {/* =====================================================
+//           HERO
+//       ====================================================== */}
+
+//       <section className="cx-hero">
+
+//         <div className="cx-hero-content">
+
+//           <span>
+
+//             CONTACT • GLASS • ARCHITECTURE
+
+//           </span>
+
+//           <h1>
+
+//             LET’S BUILD <br />
+
+//             SOMETHING <span>ICONIC</span>
+
+//           </h1>
+
+//           <p>
+
+//             Connect with our specialists
+//             for premium architectural
+//             glass systems engineered
+//             with precision and luxury.
+
+//           </p>
+
+//         </div>
+
+//       </section>
+
+//       {/* =====================================================
+//           CONTACT GRID
+//       ====================================================== */}
+
+//       <section className="cx-contact-grid">
+
+//         {/* LEFT */}
+
+//         <div className="cx-panel">
+
+//           <span className="cx-mini">
+
+//             CONTACT DETAILS
+
+//           </span>
+
+//           <h2>
+
+//             Start your <br />
+
+//             next project.
+
+//           </h2>
+
+//           <p>
+
+//             We help architects,
+//             developers, and interior
+//             designers build immersive
+//             modern spaces with
+//             precision-crafted glass systems.
+
+//           </p>
+
+//           {/* CONTACT */}
+
+//           <div className="cx-contact-items">
+
+//             <div className="cx-contact-box">
+
+//               <FaPhoneAlt />
+
+//               <div>
+
+//                 <span>Phone</span>
+
+//                 <h4>+91 9876543210</h4>
+
+//               </div>
+
+//             </div>
+
+//             <div className="cx-contact-box">
+
+//               <FaEnvelope />
+
+//               <div>
+
+//                 <span>Email</span>
+
+//                 <h4>
+
+//                   info@mmglasshouse.com
+
+//                 </h4>
+
+//               </div>
+
+//             </div>
+
+//             <div className="cx-contact-box">
+
+//               <FaMapMarkerAlt />
+
+//               <div>
+
+//                 <span>Branch Address</span>
+
+//                 <h4>
+
+//                   BDS Nagar, Kothanur,
+//                   Bengaluru,
+//                   Karnataka 560077
+
+//                 </h4>
+
+//               </div>
+
+//             </div>
+
+//           </div>
+
+
+
+       
+
+//         </div>
+
+//         {/* RIGHT */}
+
+//         <div className="cx-form-card">
+
+//           <div className="cx-form-shine"></div>
+
+//           <span className="cx-mini">
+
+//             SEND ENQUIRY
+
+//           </span>
+
+//           <h3>
+
+//             Tell us about your project
+
+//           </h3>
+
+//           <form>
+
+//             <input
+//               type="text"
+//               placeholder="Your Name"
+//             />
+
+//             <input
+//               type="text"
+//               placeholder="Phone Number"
+//             />
+            
+            
+
+//             <input
+//               type="email"
+//               placeholder="Email Address"
+//             />
+
+//             <input
+//               type="text"
+//               placeholder="Project Type"
+//             />
+
+            
+
+//             <textarea
+//               rows="5"
+//               placeholder="Tell us about your project..."
+//             ></textarea>
+
+//             <button>
+
+//               Send Message
+
+//               <FaArrowRight />
+
+//             </button>
+
+//           </form>
+
+//         </div>
+
+
+
+//       </section>
+//        <div className="cx-map">
+
+//             <iframe
+//               title="map"
+//               src="https://www.google.com/maps?q=BDS+Nagar,+Kothanur,+Bengaluru,+Karnataka+560077&output=embed"
+//               loading="lazy"
+//             ></iframe>
+
+//           </div>
+
+//       {/* =====================================================
+//           FAQ
+//       ====================================================== */}
+
+//       <section className="cx-faq-section">
+
+//         <div className="cx-faq-top">
+
+//           <span>
+
+//             FREQUENTLY ASKED QUESTIONS
+
+//           </span>
+
+//           <h2>
+
+//             Everything you <br />
+
+//             need to know
+
+//           </h2>
+
+//         </div>
+
+//         <div className="cx-faq-list">
+
+//           {faqs.map((item, index) => (
+
+//             <div
+//               className={`cx-faq-item ${
+//                 activeFaq === index
+//                   ? "active"
+//                   : ""
+//               }`}
+//               key={index}
+//             >
+
+//               {/* QUESTION */}
+
+//               <div
+//                 className="cx-faq-question"
+//                 onClick={() =>
+//                   setActiveFaq(index)
+//                 }
+//               >
+
+//                 <h3>
+
+//                   {item.q}
+
+//                 </h3>
+
+//                 <button>
+
+//                   {activeFaq === index
+//                     ? <FaMinus />
+//                     : <FaPlus />
+//                   }
+
+//                 </button>
+
+//               </div>
+
+//               {/* ANSWER */}
+
+//               <div className="cx-faq-answer">
+
+//                 <p>
+
+//                   {item.a}
+
+//                 </p>
+
+//               </div>
+
+//             </div>
+
+//           ))}
+
+//         </div>
+
+//       </section>
+
+//     </section>
+//   );
+// }
+
+// export default ContactUs;
+
+
+
+
+
+
 import "./contactus.css";
 import { useState } from "react";
 
@@ -536,7 +937,7 @@ function ContactUs() {
 
                 <h4>
 
-                  info@mmglasshouse.com
+                  info@mmglass.co.in
 
                 </h4>
 
@@ -566,18 +967,6 @@ function ContactUs() {
 
           </div>
 
-          {/* MAP */}
-
-          <div className="cx-map">
-
-            <iframe
-              title="map"
-              src="https://www.google.com/maps?q=BDS+Nagar,+Kothanur,+Bengaluru,+Karnataka+560077&output=embed"
-              loading="lazy"
-            ></iframe>
-
-          </div>
-
         </div>
 
         {/* RIGHT */}
@@ -598,38 +987,100 @@ function ContactUs() {
 
           </h3>
 
-          <form>
+          {/* WEB3FORMS FORM */}
+
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+          >
+
+            {/* ACCESS KEY */}
+
+            <input
+              type="hidden"
+              name="access_key"
+              value="dcabf5bc-3f99-4c62-a99d-ed181dda4db0"
+            />
+
+            {/* SUBJECT */}
+
+            <input
+              type="hidden"
+              name="subject"
+              value="New Enquiry From MM Glass Website"
+            />
+
+            {/* FROM NAME */}
+
+            <input
+              type="hidden"
+              name="from_name"
+              value="MM Glass House"
+            />
+
+            {/* RECEIVER EMAIL */}
+
+            <input
+              type="hidden"
+              name="to"
+              value="info@mmglass.co.in"
+            />
+
+            {/* REDIRECT */}
+
+            <input
+              type="hidden"
+              name="redirect"
+              value="https://web3forms.com/success"
+            />
+
+            {/* NAME */}
 
             <input
               type="text"
+              name="name"
               placeholder="Your Name"
+              required
             />
+
+            {/* PHONE */}
 
             <input
               type="text"
+              name="phone"
               placeholder="Phone Number"
+              required
             />
-            
-            
+
+            {/* EMAIL */}
 
             <input
               type="email"
+              name="email"
               placeholder="Email Address"
+              required
             />
+
+            {/* PROJECT */}
 
             <input
               type="text"
+              name="project"
               placeholder="Project Type"
             />
 
-            
+            {/* MESSAGE */}
 
             <textarea
               rows="5"
+              name="message"
               placeholder="Tell us about your project..."
+              required
             ></textarea>
 
-            <button>
+            {/* BUTTON */}
+
+            <button type="submit">
 
               Send Message
 
@@ -642,6 +1093,18 @@ function ContactUs() {
         </div>
 
       </section>
+
+      {/* MAP */}
+
+      <div className="cx-map">
+
+        <iframe
+          title="map"
+          src="https://www.google.com/maps?q=BDS+Nagar,+Kothanur,+Bengaluru,+Karnataka+560077&output=embed"
+          loading="lazy"
+        ></iframe>
+
+      </div>
 
       {/* =====================================================
           FAQ
@@ -695,7 +1158,7 @@ function ContactUs() {
 
                 </h3>
 
-                <button>
+                <button type="button">
 
                   {activeFaq === index
                     ? <FaMinus />

@@ -37,13 +37,13 @@ function Navbar() {
         {/* LEFT */}
 
         <div className="nav-left">
-<Link to="/">
-          <img
-            src={logo}
-            alt="MM Glass"
-            className="logo"
-          />
-</Link>
+          <Link to="/">
+            <img
+              src={logo}
+              alt="MM Glass"
+              className="logo"
+            />
+          </Link>
         </div>
 
         {/* CENTER */}
@@ -67,10 +67,11 @@ function Navbar() {
         {/* RIGHT */}
 
         <div className="nav-right">
-
-          <button className="quote-btn">
-            Request Quote
-          </button>
+          <Link to="/contactus">
+            <button className="quote-btn">
+              Request Quote
+            </button>
+          </Link>
 
           {/* MOBILE */}
 
