@@ -201,7 +201,7 @@ function Products() {
     },
 
     {
-      title: "Heat Strengthened",
+      title: "Insulated Glass",
       text:
         "Future-ready glass solutions engineered for structural resilience and optical clarity.",
       image:

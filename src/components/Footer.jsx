@@ -170,7 +170,7 @@
 
 import "./Footer.css";
 import { Link } from "react-router-dom";
-import logo from "../assets/mmlogofooter.jpg";
+import logo from "../assets/mmglass11.png";
 
 function Footer() {
 
@@ -352,11 +352,18 @@ function Footer() {
 
               <span>Phone</span>
 
-              <a href="tel:+919876543210">
+              <a href="tel:+919606859044">
 
-                +91 9876543210
+                +91 9606859044 <br>
+                </br> 
+                +91 7975833653
 
               </a>
+                {/* <a href="tel:+917975833653">
+
+                +91 7975833653
+
+              </a> */}
 
             </div>
 
@@ -364,9 +371,9 @@ function Footer() {
 
               <span>Email</span>
 
-              <a href="mailto:mmglass@gmail.com">
+              <a href="mailto:info@mmglass.co.in">
 
-                mmglass@gmail.com
+              info@mmglass.co.in
 
               </a>
 

@@ -183,7 +183,7 @@
   opacity: 0;
   transform: scale(1.15);
   transition: opacity 2s var(--ease-out-expo), transform 2.5s var(--ease-out-expo);
-  filter: brightness(0.6) saturate(0.8);
+  filter: brightness(0.9) saturate(1.3);
 }
 
 .bg-slide::after {
@@ -207,19 +207,26 @@
   inset: 0;
   /* background: linear-gradient(
     135deg,
-    rgba(79, 79, 79, 0.95) 0%,
-    rgba(55, 55, 55, 0.6) 40%,
-    rgba(79, 79, 79, 0.3) 70%,
-    rgba(81, 81, 81, 0.6) 100%
+    rgba(227, 227, 227, 0.237) 0%,
+    rgba(172, 172, 172, 0.203) 40%,
+    rgba(192, 192, 192, 0.3) 70%,
+    rgba(207, 207, 207, 0.6) 100%
   ); */
+  background: linear-gradient(
+  135deg,
+  rgba(255, 255, 255, 0.08) 0%,
+  rgba(255, 255, 255, 0.14) 35%,
+  rgba(255, 255, 255, 0.18) 65%,
+  rgba(255, 255, 255, 0.28) 100%
+);
 
-    background:
+    /* background:
   linear-gradient(
     10deg,
-    rgba(99, 98, 98, 0.92),
-    rgba(89, 89, 89, 0.72),
-    rgba(78, 78, 78, 0.9)
-  );
+    rgba(197, 227, 248, 0.92),
+    rgba(139, 166, 202, 0.72),
+    rgba(136, 185, 205, 0.9)
+  ); */
 }
 
 /* ===========================================

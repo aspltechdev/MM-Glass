@@ -10,7 +10,7 @@ import cert1 from "../assets/certifications/ANSI.jfif";
 import cert2 from "../assets/certifications/ASTM.jfif";
 import cert3 from "../assets/certifications/BIS.png";
 import cert4 from "../assets/certifications/GSI.png";
-import cert5 from "../assets/certifications/ISO.jpg";
+import cert5 from "../assets/brands/Saint-Gobain.png";
 import cert6 from "../assets/certifications/SGS.png";
 import { Link } from "react-router-dom";
 
@@ -77,8 +77,8 @@ function Certification() {
 
     {
       image: cert5,
-      title: "ISO Certified",
-      subtitle: "International Excellence",
+      title: "Saint-Gobain",
+      subtitle: "Co-branding Partner",
     },
 
     {

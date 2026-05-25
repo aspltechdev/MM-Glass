@@ -1021,7 +1021,7 @@ function Product() {
 
       {
         title: "V-Groove Glass",
-        image: "https://images.pexels.com/photos/4982956/pexels-photo-4982956.jpeg",
+        image: "https://images.pexels.com/photos/12956032/pexels-photo-12956032.jpeg",
         desc: "Decorative engraved glass with elegant V-groove patterns.",
       },
 
@@ -1045,17 +1045,17 @@ function Product() {
         desc: "Decorative designer glass crafted for luxury interiors.",
       },
 
-      {
-        title: "Pinned Glass",
-        image: "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2000&auto=format&fit=crop",
-        desc: "Classic textured pinned glass with elegant patterns.",
-      },
+      // {
+      //   title: "Pinned Glass",
+      //   image: "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2000&auto=format&fit=crop",
+      //   desc: "Classic textured pinned glass with elegant patterns.",
+      // },
 
-      {
-        title: "Katrachi Glass",
-        image: "https://images.pexels.com/photos/32547165/pexels-photo-32547165.jpeg",
-        desc: "Traditional decorative Katrachi patterned glass.",
-      },
+      // {
+      //   title: "Katrachi Glass",
+      //   image: "https://images.pexels.com/photos/32547165/pexels-photo-32547165.jpeg",
+      //   desc: "Traditional decorative Katrachi patterned glass.",
+      // },
 
       {
         title: "Master Light Glass",
@@ -1064,46 +1064,46 @@ function Product() {
       },
 
       {
-        title: "Swasthick Glass",
-        image: "https://images.pexels.com/photos/32547165/pexels-photo-32547165.jpeg",
+        title: "Mirror Glass",
+        image: "https://images.pexels.com/photos/30824915/pexels-photo-30824915.jpeg",
         desc: "Decorative Swasthick pattern glass for traditional aesthetics.",
       },
 
       {
-        title: "Crystal Glass",
-        image: "https://images.pexels.com/photos/41170/architecture-blue-building-business-41170.jpeg",
+        title: "Ceramic Printed ",
+        image: "https://images.pexels.com/photos/5502411/pexels-photo-5502411.jpeg",
         desc: "High clarity crystal finish glass with premium elegance.",
       },
 
-      {
-        title: "Kasumi Glass",
-        image: "https://images.pexels.com/photos/164370/pexels-photo-164370.jpeg",
-        desc: "Japanese-inspired textured Kasumi decorative glass.",
-      },
+      // {
+      //   title: "Kasumi Glass",
+      //   image: "https://images.pexels.com/photos/164370/pexels-photo-164370.jpeg",
+      //   desc: "Japanese-inspired textured Kasumi decorative glass.",
+      // },
 
-      {
-        title: "Karisham Glass",
-        image: "https://images.pexels.com/photos/25643301/pexels-photo-25643301.jpeg",
-        desc: "Stylish patterned Karisham glass for decorative spaces.",
-      },
+      // {
+      //   title: "Karisham Glass",
+      //   image: "https://images.pexels.com/photos/25643301/pexels-photo-25643301.jpeg",
+      //   desc: "Stylish patterned Karisham glass for decorative spaces.",
+      // },
 
-      {
-        title: "Grill Glass",
-        image: "https://images.pexels.com/photos/575895/pexels-photo-575895.jpeg",
-        desc: "Glass integrated with grill designs for safety and elegance.",
-      },
+      // {
+      //   title: "Grill Glass",
+      //   image: "https://images.pexels.com/photos/575895/pexels-photo-575895.jpeg",
+      //   desc: "Glass integrated with grill designs for safety and elegance.",
+      // },
 
-      {
-        title: "5mm Pinned Glass",
-        image: "https://images.pexels.com/photos/2040476/pexels-photo-2040476.jpeg",
-        desc: "Durable 5mm pinned textured glass for versatile applications.",
-      },
+      // {
+      //   title: "5mm Pinned Glass",
+      //   image: "https://images.pexels.com/photos/2040476/pexels-photo-2040476.jpeg",
+      //   desc: "Durable 5mm pinned textured glass for versatile applications.",
+      // },
 
-      {
-        title: "5mm Kasumi Glass",
-        image: "https://images.pexels.com/photos/2374987/pexels-photo-2374987.jpeg",
-        desc: "Elegant 5mm Kasumi patterned glass with premium finish.",
-      },
+      // {
+      //   title: "5mm Kasumi Glass",
+      //   image: "https://images.pexels.com/photos/2374987/pexels-photo-2374987.jpeg",
+      //   desc: "Elegant 5mm Kasumi patterned glass with premium finish.",
+      // },
 
     ],
   },

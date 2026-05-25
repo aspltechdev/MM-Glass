@@ -8,7 +8,7 @@ const slides = [
     subtitle:
       "Where precision glass meets visionary design — creating spaces that breathe with transparency and light.",
     image:
-      "https://images.pexels.com/photos/9255001/pexels-photo-9255001.jpeg",
+      "https://images.pexels.com/photos/31252885/pexels-photo-31252885.jpeg",
     accent: "#64b5f6",
   },
   {
@@ -16,7 +16,7 @@ const slides = [
     subtitle:
       "Intelligent glass systems that transform environments through seamless integration of technology and elegance.",
     image:
-      "https://images.pexels.com/photos/19599880/pexels-photo-19599880.jpeg",
+      "https://images.pexels.com/photos/13402861/pexels-photo-13402861.jpeg",
     accent: "#82b1ff",
   },
   {
@@ -24,7 +24,7 @@ const slides = [
     subtitle:
       "Engineering emotional connections through light-responsive surfaces and architectural innovation.",
     image:
-      "https://images.pexels.com/photos/6016190/pexels-photo-6016190.jpeg",
+      "https://images.pexels.com/photos/13275363/pexels-photo-13275363.jpeg",
     accent: "#b388ff",
   },
 ];
@@ -862,7 +862,7 @@ useEffect(() => {
           <div className="hero-content">
             <div className="content-meta">
               <span className="meta-line" />
-              <span className="meta-text">Est. 2024</span>
+              <span className="meta-text">Est. 2019</span>
             </div>
 
             <div className="content-slider">

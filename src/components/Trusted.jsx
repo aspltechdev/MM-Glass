@@ -8,12 +8,12 @@ import {
 
 /* LOGOS */
 
-import logo1 from "../assets/brands/AGP.png";
-import logo2 from "../assets/brands/AIS.png";
+// import logo1 from "../assets/brands/AGP.png";
+// import logo2 from "../assets/brands/AIS.png";
 import logo3 from "../assets/brands/CrystalEdgeGlass.png";
-import logo4 from "../assets/brands/MirrorEdgeGlass.png";
+// import logo4 from "../assets/brands/MirrorEdgeGlass.png";
 import logo5 from "../assets/brands/PrimeShieldGlass.png";
-import logo6 from "../assets/brands/ReflectaGlass.jfif";
+// import logo6 from "../assets/brands/ReflectaGlass.jfif";
 import logo7 from "../assets/brands/Saint-Gobain.png";
 
 function Trusted() {
@@ -54,12 +54,12 @@ function Trusted() {
   }, []);
 
   const logos = [
-    logo1,
-    logo2,
+    // logo1,
+    // logo2,
     logo3,
-    logo4,
+    // logo4,
     logo5,
-    logo6,
+    // logo6,
     logo7,
   ];
 

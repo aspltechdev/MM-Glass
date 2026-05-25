@@ -921,7 +921,7 @@ function ContactUs() {
 
                 <span>Phone</span>
 
-                <h4>+91 9876543210</h4>
+                <h4>+91 9606859044</h4>
 
               </div>
 
