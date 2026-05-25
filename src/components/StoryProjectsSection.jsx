@@ -10,6 +10,7 @@ import project7 from "../assets/story7.png";
 import project8 from "../assets/story8.png";
 import ProjectGallery from "./glassprojects";
 import { image } from "framer-motion/m";
+import { motion } from "framer-motion";
 
 const projects = [
 
