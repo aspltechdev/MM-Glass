@@ -1,30 +1,30 @@
 /* =========================================================
-   CINEMATIC HORIZONTAL GLASS GALLERY
+   LUXURY GLASS GALLERY SECTION
 ========================================================= */
 
-.project-gallery {
+.luxury-glass-gallery-section {
 
   position: relative;
 
-  padding: 140px 0;
-
   overflow: hidden;
 
+  padding: 140px 0;
+
   background:
-  linear-gradient(
-    to right,
-    rgba(147, 146, 146, 0.495),
-    rgba(142, 139, 139, 0.534),
-    rgba(121, 120, 120, 0.189)
-  );
+    linear-gradient(
+      to right,
+      rgba(16,16,16,0.96),
+      rgba(28,28,28,0.92),
+      rgba(12,12,12,0.96)
+    );
 }
 
 /* =========================================================
-   CINEMATIC BACKGROUND
+   CINEMATIC BLOBS
 ========================================================= */
 
-.project-gallery::before,
-.project-gallery::after {
+.luxury-glass-gallery-section::before,
+.luxury-glass-gallery-section::after {
 
   content: "";
 
@@ -37,63 +37,67 @@
   z-index: 0;
 }
 
-.project-gallery::before {
+.luxury-glass-gallery-section::before {
 
-  width: 600px;
-  height: 600px;
+  width: 550px;
+  height: 550px;
 
   background:
-    rgba(255,0,0,0.12);
+    rgba(255,0,0,0.18);
 
   top: -180px;
   left: -120px;
 
   animation:
-    cinematicBlob1 18s ease infinite alternate;
+    luxuryGlassBlob1 18s ease infinite alternate;
 }
 
-.project-gallery::after {
+.luxury-glass-gallery-section::after {
 
-  width: 700px;
-  height: 700px;
+  width: 650px;
+  height: 650px;
 
-  /* background:
-    rgba(255,255,255,0.9); */
+  background:
+    rgba(255,255,255,0.08);
 
   right: -200px;
   bottom: -250px;
 
   animation:
-    cinematicBlob2 20s ease infinite alternate;
+    luxuryGlassBlob2 20s ease infinite alternate;
 }
 
-@keyframes cinematicBlob1 {
+@keyframes luxuryGlassBlob1 {
 
   from {
+
     transform:
       translate(0px,0px)
       scale(1);
   }
 
   to {
+
     transform:
       translate(80px,60px)
-      scale(1.1);
+      scale(1.12);
   }
 }
 
-@keyframes cinematicBlob2 {
+@keyframes luxuryGlassBlob2 {
 
   from {
+
     transform:
       translate(0px,0px)
       scale(1);
   }
 
   to {
+
     transform:
-      translate(-100px,-50px)
-      scale(1.12);
+      translate(-100px,-60px)
+      scale(1.14);
   }
 }
 
@@ -101,38 +105,100 @@
    GRID
 ========================================================= */
 
-.gallery-grid {
+.luxury-glass-gallery-grid {
 
   position: absolute;
   inset: 0;
-/* 
+
   background-image:
-    linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
 
   background-size: 70px 70px;
 
   mask-image:
     radial-gradient(circle,
       rgba(255,255,255,1),
-      transparent 85%); */
+      transparent 85%);
 
   z-index: 0;
+}
+
+/* =========================================================
+   PARTICLES
+========================================================= */
+
+.luxury-glass-gallery-particles {
+
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+
+  z-index: 1;
+}
+
+.luxury-glass-gallery-particle {
+
+  position: absolute;
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,0,0,0.9);
+
+  box-shadow:
+    0 0 20px rgba(255,0,0,0.8);
+
+  bottom: -20px;
+
+  animation:
+    luxuryGlassParticle linear infinite;
+}
+
+@keyframes luxuryGlassParticle {
+
+  from {
+
+    transform:
+      translateY(0px)
+      scale(0.7);
+
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  to {
+
+    transform:
+      translateY(-120vh)
+      scale(1.5);
+
+    opacity: 0;
+  }
 }
 
 /* =========================================================
    HEADER
 ========================================================= */
 
-.gallery-header {
+.luxury-glass-gallery-header {
 
   position: relative;
+
   z-index: 5;
 
   width: 92%;
   max-width: 1100px;
 
   margin: auto;
+
   text-align: center;
 
   margin-bottom: 90px;
@@ -142,7 +208,7 @@
    BADGE
 ========================================================= */
 
-.gallery-badge {
+.luxury-glass-gallery-badge {
 
   width: fit-content;
 
@@ -152,25 +218,25 @@
 
   margin: auto;
 
-  padding: 14px 22px;
+  padding: 14px 24px;
 
   border-radius: 999px;
 
   background:
-    rgba(255,255,255,0.4);
+    rgba(255,255,255,0.08);
 
   backdrop-filter: blur(20px);
 
   border:
-    1px solid rgba(255,255,255,0.45);
+    1px solid rgba(255,255,255,0.12);
 
   box-shadow:
-    0 10px 30px rgba(15,23,42,0.04);
+    0 10px 40px rgba(0,0,0,0.2);
 
   margin-bottom: 34px;
 }
 
-.gallery-badge span {
+.luxury-glass-gallery-badge span {
 
   width: 10px;
   height: 10px;
@@ -180,40 +246,42 @@
   background: #ff1e1e;
 
   box-shadow:
-    0 0 20px rgba(255,0,0,0.8);
+    0 0 20px rgba(255,0,0,0.9);
 }
 
-.gallery-badge p {
+.luxury-glass-gallery-badge p {
 
   font-size: 13px;
   font-weight: 700;
 
   letter-spacing: 1px;
 
-  color: #0f172a;
+  text-transform: uppercase;
+
+  color: #ffffff;
 }
 
 /* =========================================================
    TITLE
 ========================================================= */
 
-.gallery-header h2 {
+.luxury-glass-gallery-header h2 {
 
   font-size:
-    clamp(3.5rem, 8vw, 7rem);
+    clamp(3.5rem,8vw,7rem);
 
   line-height: 0.9;
 
-  letter-spacing: -5px;
-
   font-weight: 900;
 
-  color: #efefef;
+  letter-spacing: -5px;
+
+  color: #ffffff;
 
   margin-bottom: 28px;
 }
 
-.gallery-header p {
+.luxury-glass-gallery-header p {
 
   max-width: 760px;
 
@@ -223,14 +291,14 @@
 
   line-height: 1.9;
 
-  color: #d5daea;
+  color: rgba(255,255,255,0.7);
 }
 
 /* =========================================================
-   SCROLL WRAPPER
+   HORIZONTAL SCROLL
 ========================================================= */
 
-.gallery-scroll-wrapper {
+.luxury-glass-gallery-scroll-wrapper {
 
   position: relative;
 
@@ -241,79 +309,102 @@
   z-index: 5;
 }
 
-/* =========================================================
-   HORIZONTAL TRACK
-========================================================= */
-
-.gallery-track {
+.luxury-glass-gallery-track {
 
   display: flex;
   align-items: center;
-  gap: 30px;
+
+  gap: 32px;
 
   width: max-content;
 
   animation:
-    horizontalScroll 35s linear infinite;
+    luxuryGlassHorizontalScroll 36s linear infinite;
 }
 
-.gallery-track:hover {
+.luxury-glass-gallery-track:hover {
 
   animation-play-state: paused;
 }
 
-@keyframes horizontalScroll {
+@keyframes luxuryGlassHorizontalScroll {
 
   from {
+
     transform:
       translateX(0%);
   }
 
   to {
+
     transform:
       translateX(-50%);
   }
 }
 
 /* =========================================================
-   GLASS CARD
+   CARD
 ========================================================= */
 
-.gallery-card {
+.luxury-glass-gallery-card {
 
   position: relative;
 
-  width: 520px;
-  height: 620px;
-
-  flex-shrink: 0;
+  width: 500px;
+  height: 640px;
 
   overflow: hidden;
 
-  border-radius: 36px;
+  flex-shrink: 0;
+
+  border-radius: 38px;
 
   background:
-    rgba(255,255,255,0.16);
+    rgba(255,255,255,0.08);
 
   backdrop-filter: blur(30px);
 
   border:
-    1px solid rgba(255,255,255,0.4);
+    1px solid rgba(255,255,255,0.12);
 
   box-shadow:
-    0 40px 100px rgba(15,23,42,0.12);
+    0 40px 120px rgba(0,0,0,0.35);
+
+  transform-style: preserve-3d;
 
   transition:
     0.8s ease;
 
-  transform-style: preserve-3d;
+  opacity: 0;
+
+  transform:
+    translateY(120px);
+}
+
+.luxury-glass-gallery-card-show {
+
+  opacity: 1;
+
+  transform:
+    translateY(0px);
+}
+
+.luxury-glass-gallery-card:hover {
+
+  transform:
+    translateY(-18px)
+    rotateY(6deg)
+    scale(1.02);
+
+  box-shadow:
+    0 60px 140px rgba(255,0,0,0.16);
 }
 
 /* =========================================================
    IMAGE
 ========================================================= */
 
-.gallery-card img {
+.luxury-glass-gallery-image {
 
   width: 100%;
   height: 100%;
@@ -324,14 +415,21 @@
     scale(1.08);
 
   transition:
-    transform 1.5s ease;
+    transform 1.6s ease;
+}
+
+.luxury-glass-gallery-card:hover
+.luxury-glass-gallery-image {
+
+  transform:
+    scale(1.18);
 }
 
 /* =========================================================
    OVERLAY
 ========================================================= */
 
-.gallery-overlay {
+.luxury-glass-gallery-overlay {
 
   position: absolute;
   inset: 0;
@@ -339,8 +437,8 @@
   background:
     linear-gradient(
       to top,
-      rgba(0,0,0,0.8),
-      rgba(0,0,0,0.05)
+      rgba(0,0,0,0.88),
+      rgba(0,0,0,0.08)
     );
 }
 
@@ -348,7 +446,7 @@
    SHINE
 ========================================================= */
 
-.gallery-shine {
+.luxury-glass-gallery-shine {
 
   position: absolute;
   inset: 0;
@@ -358,24 +456,26 @@
   background:
     linear-gradient(
       120deg,
-      rgba(255,255,255,0.4),
+      rgba(255,255,255,0.35),
       transparent 30%,
       transparent 60%,
-      rgba(255,255,255,0.16)
+      rgba(255,255,255,0.08)
     );
 
   animation:
-    shineMove 6s linear infinite;
+    luxuryGlassShine 6s linear infinite;
 }
 
-@keyframes shineMove {
+@keyframes luxuryGlassShine {
 
   from {
+
     transform:
       translateX(-20%);
   }
 
   to {
+
     transform:
       translateX(20%);
   }
@@ -385,17 +485,17 @@
    CONTENT
 ========================================================= */
 
-.gallery-content {
+.luxury-glass-gallery-content {
 
   position: absolute;
 
-  left: 40px;
-  bottom: 40px;
+  left: 35px;
+  bottom: 35px;
 
   z-index: 5;
 }
 
-.gallery-content span {
+.luxury-glass-gallery-category {
 
   display: inline-block;
 
@@ -404,54 +504,78 @@
   border-radius: 999px;
 
   background:
-    rgba(255,255,255,0.18);
+    rgba(255,255,255,0.12);
 
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(16px);
+
+  border:
+    1px solid rgba(255,255,255,0.14);
 
   color: white;
 
   font-size: 13px;
+
   font-weight: 700;
 
   margin-bottom: 18px;
 }
 
-.gallery-content h3 {
+.luxury-glass-gallery-title {
 
   color: white;
 
   font-size: 2rem;
 
-  line-height: 1.15;
+  line-height: 1.1;
 
   max-width: 320px;
+
+  margin-bottom: 24px;
 }
 
 /* =========================================================
-   HOVER
+   CTA BUTTON
 ========================================================= */
 
-.gallery-card:hover {
+.luxury-glass-gallery-button {
 
-  transform:
-    translateY(-18px)
-    rotateY(6deg)
-    scale(1.02);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 28px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff1e1e,
+      #b30000
+    );
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    0.4s ease;
 
   box-shadow:
-    0 50px 120px rgba(255,0,0,0.16);
+    0 12px 30px rgba(255,0,0,0.28);
 }
 
-.gallery-card:hover img {
+.luxury-glass-gallery-button:hover {
 
   transform:
-    scale(1.16);
+    translateY(-4px);
+
+  box-shadow:
+    0 18px 40px rgba(255,0,0,0.45);
 }
-
-/* =========================================================
-   FLOATING PARTICLES
-========================================================= */
-
 
 /* =========================================================
    RESPONSIVE
@@ -459,37 +583,47 @@
 
 @media(max-width:1200px){
 
-  .gallery-card {
+  .luxury-glass-gallery-card {
 
-    width: 460px;
+    width: 430px;
     height: 560px;
   }
 }
 
 @media(max-width:768px){
 
-  .gallery-header h2 {
+  .luxury-glass-gallery-section {
 
-    font-size: 3.2rem;
+    padding: 110px 0;
+  }
+
+  .luxury-glass-gallery-header h2 {
+
+    font-size: 3rem;
 
     letter-spacing: -3px;
   }
 
-  .gallery-card {
+  .luxury-glass-gallery-header p {
 
-    width: 340px;
-    height: 460px;
+    font-size: 1rem;
+  }
+
+  .luxury-glass-gallery-card {
+
+    width: 320px;
+    height: 440px;
 
     border-radius: 28px;
   }
 
-  .gallery-content {
+  .luxury-glass-gallery-content {
 
     left: 24px;
     bottom: 24px;
   }
 
-  .gallery-content h3 {
+  .luxury-glass-gallery-title {
 
     font-size: 1.5rem;
   }
@@ -497,34 +631,36 @@
 
 @media(max-width:540px){
 
-  .project-gallery {
-
-    padding: 100px 0;
-  }
-
-  .gallery-header {
+  .luxury-glass-gallery-header {
 
     width: 94%;
   }
 
-  .gallery-header h2 {
+  .luxury-glass-gallery-header h2 {
 
     font-size: 2.4rem;
   }
 
-  .gallery-header p {
+  .luxury-glass-gallery-header p {
 
-    font-size: 1rem;
+    font-size: 0.95rem;
+
+    line-height: 1.7;
   }
 
-  .gallery-card {
+  .luxury-glass-gallery-card {
 
-    width: 280px;
-    height: 390px;
+    width: 270px;
+    height: 380px;
   }
 
-  .gallery-content h3 {
+  .luxury-glass-gallery-title {
 
     font-size: 1.2rem;
+  }
+
+  .luxury-glass-gallery-button {
+
+    width: 100%;
   }
 }
