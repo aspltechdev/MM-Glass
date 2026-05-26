@@ -60,7 +60,7 @@ function Achievements() {
 <div className="gl-bg-image">
 
   <img
-    src="https://images.pexels.com/photos/34520321/pexels-photo-34520321.jpeg"
+    src="https://images.pexels.com/photos/36552948/pexels-photo-36552948.jpeg"
     alt=""
   />
 
@@ -76,8 +76,7 @@ function Achievements() {
 
       {/* FLOATING LIGHTS */}
 
-      <div className="gl-light gl-light1"></div>
-      <div className="gl-light gl-light2"></div>
+  
 
       {/* TOP */}
 
@@ -108,7 +107,7 @@ function Achievements() {
         <div className="gl-main-card">
 
           <img
-            src="https://images.pexels.com/photos/9808243/pexels-photo-9808243.jpeg"
+            src="https://images.pexels.com/photos/443383/pexels-photo-443383.jpeg"
             alt=""
           />
 
@@ -150,7 +149,7 @@ function Achievements() {
           <div className="gl-small-card">
 
             <img
-              src="https://images.pexels.com/photos/934350/pexels-photo-934350.jpeg"
+              src="https://images.pexels.com/photos/25525976/pexels-photo-25525976.jpeg"
               alt=""
             />
 

@@ -229,7 +229,7 @@ function Products() {
       <div className="px-bg-image">
 
         <img
-          src="https://images.pexels.com/photos/16473128/pexels-photo-16473128.jpeg"
+          src="https://images.pexels.com/photos/33719016/pexels-photo-33719016.jpeg"
           alt=""
         />
 

@@ -270,7 +270,7 @@ function CTA() {
           <div className="cta-panel-image">
 
             <img
-              src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2200&auto=format&fit=crop"
+              src="https://images.pexels.com/photos/20433821/pexels-photo-20433821.jpeg"
               alt=""
             />
 

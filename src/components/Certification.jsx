@@ -101,7 +101,7 @@ function Certification() {
       <div className="crt-bg">
 
         <img
-          src="https://images.pexels.com/photos/29644165/pexels-photo-29644165.jpeg"
+          src="https://images.pexels.com/photos/36786596/pexels-photo-36786596.jpeg"
           alt=""
         />
 

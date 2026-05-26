@@ -195,7 +195,7 @@ function Testimonials() {
       name: "Arjun Mehta",
       role: "Luxury Villa Architect",
       image:
-        "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2200&auto=format&fit=crop",
+        "https://images.pexels.com/photos/5387614/pexels-photo-5387614.jpeg",
       text:
         "Exceptional detailing and premium glass execution transformed our project beautifully.",
     },
@@ -204,7 +204,7 @@ function Testimonials() {
       name: "Sarah Williams",
       role: "Interior Design Director",
       image:
-        "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=2200&auto=format&fit=crop",
+        "https://images.pexels.com/photos/33827315/pexels-photo-33827315.jpeg",
       text:
         "The finish quality and architectural precision are truly world-class.",
     },
@@ -213,7 +213,7 @@ function Testimonials() {
       name: "Rahul Kapoor",
       role: "Commercial Builder",
       image:
-        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2200&auto=format&fit=crop",
+        "https://images.pexels.com/photos/8236022/pexels-photo-8236022.jpeg",
       text:
         "Reliable delivery systems and flawless craftsmanship across every installation.",
     },
@@ -222,7 +222,7 @@ function Testimonials() {
       name: "Daniel Foster",
       role: "Luxury Developer",
       image:
-        "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2200&auto=format&fit=crop",
+        "https://images.pexels.com/photos/33827309/pexels-photo-33827309.jpeg",
       text:
         "M M Glass House brings cinematic architectural elegance into reality.",
     },
@@ -231,7 +231,7 @@ function Testimonials() {
       name: "Ava Richardson",
       role: "Spatial Designer",
       image:
-        "https://images.unsplash.com/photo-1519643381401-22c77e60520e?q=80&w=2200&auto=format&fit=crop",
+        "https://images.pexels.com/photos/36286288/pexels-photo-36286288.jpeg",
       text:
         "Their glass systems create emotionally immersive modern environments.",
     },
@@ -240,7 +240,7 @@ function Testimonials() {
       name: "Michael Reed",
       role: "Project Consultant",
       image:
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2200&auto=format&fit=crop",
+        "https://images.pexels.com/photos/8236021/pexels-photo-8236021.jpeg",
       text:
         "Architectural precision, speed, and premium aesthetics in every detail.",
     },
@@ -449,11 +449,11 @@ function Testimonials() {
 
             </h4>
 
-            <span>
+            {/* <span>
 
               {item.role}
 
-            </span>
+            </span> */}
 
           </div>
 

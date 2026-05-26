@@ -355,7 +355,7 @@ function CoreFeatures() {
           <div className="nx-visual">
 
             <img
-              src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2200&auto=format&fit=crop"
+              src="https://images.pexels.com/photos/33719016/pexels-photo-33719016.jpeg"
               alt=""
             />
 
@@ -374,7 +374,7 @@ function CoreFeatures() {
           <div className="nx-visual">
 
             <img
-              src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=2200&auto=format&fit=crop"
+              src="https://images.pexels.com/photos/19538787/pexels-photo-19538787.jpeg"
               alt=""
             />
 
@@ -440,7 +440,7 @@ function CoreFeatures() {
           <div className="nx-visual">
 
             <img
-              src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2200&auto=format&fit=crop"
+              src="https://images.pexels.com/photos/27075286/pexels-photo-27075286.jpeg"
               alt=""
             />
 

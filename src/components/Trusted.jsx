@@ -59,7 +59,7 @@ function Trusted() {
     logo3,
     // logo4,
     logo5,
-    // logo6,
+    // logo6,  
     logo7,
   ];
 
@@ -77,7 +77,7 @@ function Trusted() {
       <div className="trusted-bg">
 
         <img
-          src="https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg"
+          src="https://images.pexels.com/photos/2606383/pexels-photo-2606383.jpeg"
           alt=""
         />
 

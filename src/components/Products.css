@@ -47,7 +47,7 @@
   object-fit:cover;
 
   filter:
-  brightness(0.42)
+  brightness(0.92)
   contrast(1.08) 
   saturate(1.24);
 
@@ -65,7 +65,7 @@
      background:
   linear-gradient(
     10deg,
-    rgba(99, 98, 98, 0.614),
+    rgba(200, 201, 201, 0.646),
     rgba(89, 89, 89, 0.534),
     rgba(78, 78, 78, 0.9)
   );
