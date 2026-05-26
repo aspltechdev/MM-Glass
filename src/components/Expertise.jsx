@@ -291,11 +291,11 @@
 
 
 
-// import { i } from "framer-motion/client";
+
 import "./Expertise.css";
-import img1 from "../assets/mmglass_1.png";
-import img2 from "../assets/mmglass_8.png";
-import img3 from "../assets/mmglass_3.png";
+import img1 from "../assets/gallery/exp2.png";
+import img2 from "../assets/gallery/exp1.png";
+import img3 from "../assets/gallery/exp3.png";
 import video1 from "../assets/eee.mp4";
 
 
@@ -309,7 +309,7 @@ function Expertise() {
       text:
         "Advanced CNC fabrication systems engineered for flawless architectural finishing.",
       image:
-       img1,
+        img1,
     },
 
     {
@@ -318,7 +318,7 @@ function Expertise() {
       text:
         "Every glass panel undergoes intensive quality and structural testing procedures.",
       image:
-       img3,
+        img2,
     },
 
     {
@@ -326,7 +326,7 @@ function Expertise() {
       title: "Architectural Accuracy",
       text:
         "Precision-engineered glass systems tailored for luxury modern environments.",
-      image:img2,
+      image: img3,
     },
 
   ];
@@ -350,22 +350,22 @@ function Expertise() {
 
       <div className="exp-bg">
 
-  <video
-    autoPlay
-    muted
-    loop
-    playsInline
-    className="exp-bg-video"
-  >
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="exp-bg-video"
+        >
 
-    <source
-      src= {video1}
-      type="video/mp4"
-    />
+          <source
+            src={video1}
+            type="video/mp4"
+          />
 
-  </video>
+        </video>
 
-</div>
+      </div>
 
       <div className="exp-overlay"></div>
 
@@ -416,7 +416,7 @@ function Expertise() {
           MAIN SHOWCASE
       ====================================================== */}
 
-      <div className="exp-showcase">
+      {/* <div className="exp-showcase">
 
         {expertiseData.map((item, index) => (
 
@@ -425,7 +425,7 @@ function Expertise() {
             key={index}
           >
 
-            {/* IMAGE */}
+        
 
             <div className="exp-image-wrap">
 
@@ -438,7 +438,7 @@ function Expertise() {
 
             </div>
 
-            {/* CONTENT */}
+           
 
             <div className="exp-content">
 
@@ -461,6 +461,66 @@ function Expertise() {
               </p>
 
             </div>
+
+          </div>
+
+        ))}
+
+      </div> */}
+
+
+      <div className="exp-showcase">
+
+        {expertiseData.map((item, index) => (
+
+          <div
+            className={`exp-cinematic-card exp-cinematic-card-${index + 1}`}
+            key={index}
+          >
+
+            {/* IMAGE */}
+
+            <img
+              src={item.image}
+              alt={item.title}
+              className="exp-cinematic-image"
+            />
+
+            {/* OVERLAY */}
+
+            <div className="exp-cinematic-overlay"></div>
+
+            {/* GLASS LAYER */}
+
+            <div className="exp-cinematic-glass"></div>
+
+            {/* CONTENT */}
+
+            <div className="exp-cinematic-content">
+
+              <span className="exp-cinematic-number">
+
+                {item.number}
+
+              </span>
+
+              <h3>
+
+                {item.title}
+
+              </h3>
+
+              <p>
+
+                {item.text}
+
+              </p>
+
+            </div>
+
+            {/* GLOW */}
+
+            <div className="exp-cinematic-glow"></div>
 
           </div>
 

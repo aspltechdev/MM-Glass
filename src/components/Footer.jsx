@@ -174,6 +174,7 @@ import {
   FaLinkedinIn,
   FaFacebookF,
   FaXTwitter,
+  FaYoutube
 } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import logo from "../assets/mmglass11.png";
@@ -300,7 +301,7 @@ function Footer() {
     className="ft-social-icon"
   >
 
-    <FaXTwitter />
+    <FaYoutube />
 
   </a>
 

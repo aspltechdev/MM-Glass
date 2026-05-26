@@ -9,40 +9,101 @@
   overflow: hidden;
 
   padding: 140px 0;
-
-  background:
-    radial-gradient(circle at top left,
-      rgba(146, 144, 144, 0.573),
-      transparent 30%),
-
-    radial-gradient(circle at bottom right,
-      rgba(138, 137, 137, 0.505),
-      transparent 35%),
-
-    linear-gradient(
-      180deg,
-      #807c7c52,
-      #6e6e6e8a,
-      #afacac56
-    );
+/* 
+  background: #050505; */
 }
 
 /* =========================================================
-   GRID BACKGROUND
+   VIDEO BACKGROUND
+========================================================= */
+
+.qa-video-wrapper {
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  overflow: hidden;
+}
+
+.qa-bg-video {
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transform: scale(1.08);
+
+  filter:
+    brightness(0.48)
+    contrast(1.08)
+    saturate(1.08);
+
+  animation:
+    qaVideoMotion 18s ease-in-out infinite alternate;
+}
+
+/* =========================================================
+   VIDEO MOTION
+========================================================= */
+
+@keyframes qaVideoMotion {
+
+  from {
+
+    transform:
+      scale(1.05)
+      translateY(0px);
+  }
+
+  to {
+
+    transform:
+      scale(1.15)
+      translateY(-18px);
+  }
+}
+
+/* =========================================================
+   VIDEO OVERLAY
+========================================================= */
+
+.qa-video-overlay {
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(154, 154, 154, 0.619),
+      rgba(160, 160, 160, 0.498)
+    );
+
+  z-index: 2;
+}
+
+/* =========================================================
+   GRID
 ========================================================= */
 
 .qa-grid {
 
   position: absolute;
+
   inset: 0;
 
-  /* background-image:
+  z-index: 2;
+
+  background-image:
     linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); */
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
 
   background-size: 70px 70px;
-
-  opacity: 0.5;
 }
 
 /* =========================================================
@@ -55,18 +116,18 @@
 
   border-radius: 50%;
 
-  filter: blur(140px);
+  filter: blur(120px);
 
-  pointer-events: none;
+  z-index: 2;
 }
 
 .qa-glow-one {
 
-  width: 450px;
-  height: 450px;
+  width: 350px;
+  height: 350px;
 
   background:
-    rgba(131, 130, 130, 0.733);
+    rgba(255,0,0,0.14);
 
   top: -120px;
   left: -120px;
@@ -74,14 +135,14 @@
 
 .qa-glow-two {
 
-  width: 550px;
-  height: 550px;
+  width: 450px;
+  height: 450px;
 
   background:
-    rgba(152, 151, 151, 0.596);
+    rgba(255,255,255,0.05);
 
-  right: -180px;
   bottom: -180px;
+  right: -180px;
 }
 
 /* =========================================================
@@ -95,13 +156,13 @@
   z-index: 5;
 
   width: 92%;
-  max-width: 1100px;
+  max-width: 950px;
 
   margin: auto;
 
   text-align: center;
 
-  margin-bottom: 100px;
+  margin-bottom: 90px;
 }
 
 .qa-header span {
@@ -111,56 +172,52 @@
   align-items: center;
   justify-content: center;
 
-  padding: 14px 24px;
+  padding: 12px 22px;
 
   border-radius: 999px;
 
   background:
-    rgba(255,255,255,0.08);
+    rgba(255,255,255,0.06);
 
   border:
-    1px solid rgba(255,255,255,0.12);
+    1px solid rgba(255,255,255,0.08);
 
   backdrop-filter: blur(20px);
 
-  color: #ffffff;
+  color: white;
 
   font-size: 12px;
-  font-weight: 700;
 
   letter-spacing: 2px;
 
-  margin-bottom: 28px;
+  margin-bottom: 26px;
 }
 
 .qa-header h2 {
 
   font-size:
-    clamp(3rem,8vw,7rem);
+    clamp(3rem,7vw,6rem);
 
-  line-height: 0.9;
-
-  font-weight: 900;
-
-  letter-spacing: -5px;
+  line-height: 1;
 
   color: white;
 
-  margin-bottom: 28px;
+  letter-spacing: -4px;
+
+  margin-bottom: 24px;
+}
+.h2-span{
+  color: #ab0505;
 }
 
 .qa-header p {
 
-  max-width: 760px;
-
-  margin: auto;
-
-  color:
-    rgba(255,255,255,0.72);
+  font-size: 17px;
 
   line-height: 1.9;
 
-  font-size: 1.05rem;
+  color:
+    rgba(255,255,255,0.72);
 }
 
 /* =========================================================
@@ -173,19 +230,18 @@
 
   z-index: 5;
 
-  width: 92%;
-  max-width: 1500px;
+  width: 86%;
 
   margin: auto;
 
   display: grid;
 
   grid-template-columns:
-    repeat(2,1fr);
+    1fr 1fr;
 
-  gap: 40px;
+  gap: 28px;
 
-  height: 1400px;
+  height: 1000px;
 
   overflow: hidden;
 }
@@ -199,25 +255,20 @@
   position: relative;
 
   overflow: hidden;
-
-  height: 100%;
 }
 
 /* =========================================================
-   TRACKS
+   TRACK
 ========================================================= */
 
 .qa-marquee-track {
 
   display: flex;
+
   flex-direction: column;
 
-  gap: 34px;
+  gap: 26px;
 }
-
-/* =========================================================
-   ANIMATION
-========================================================= */
 
 .qa-track-up {
 
@@ -230,6 +281,10 @@
   animation:
     qaScrollDown 40s linear infinite;
 }
+
+/* =========================================================
+   SCROLL ANIMATION
+========================================================= */
 
 @keyframes qaScrollUp {
 
@@ -262,7 +317,7 @@
 }
 
 /* =========================================================
-   CARD
+   TEST CARD
 ========================================================= */
 
 .qa-test-card {
@@ -271,70 +326,35 @@
 
   overflow: hidden;
 
-  border-radius: 38px;
+  border-radius: 30px;
 
   background:
-    rgba(255,255,255,0.05);
-
-  backdrop-filter: blur(24px);
+    rgba(255,255,255,0.06);
 
   border:
     1px solid rgba(255,255,255,0.08);
 
-  padding: 22px;
+  backdrop-filter: blur(24px);
 
   transition:
-    0.7s ease;
-}
+    transform 0.6s ease,
+    border 0.6s ease,
+    box-shadow 0.6s ease;
 
-/* =========================================================
-   HOVER
-========================================================= */
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.3);
+}
 
 .qa-test-card:hover {
 
   transform:
-    translateY(-10px)
-    scale(1.02);
+    translateY(-8px);
 
   border:
-    1px solid rgba(255,0,0,0.18);
+    1px solid rgba(255,255,255,0.12);
 
   box-shadow:
-    0 40px 120px rgba(255,0,0,0.14);
-}
-
-/* =========================================================
-   GLASS SWEEP
-========================================================= */
-
-.qa-test-card::before {
-
-  content: "";
-
-  position: absolute;
-
-  inset: 0;
-
-  background:
-    linear-gradient(
-      120deg,
-      transparent,
-      rgba(255,255,255,0.12),
-      transparent
-    );
-
-  transform:
-    translateX(-120%);
-
-  transition:
-    transform 1.2s ease;
-}
-
-.qa-test-card:hover::before {
-
-  transform:
-    translateX(120%);
+    0 30px 80px rgba(0,0,0,0.45);
 }
 
 /* =========================================================
@@ -345,15 +365,9 @@
 
   position: relative;
 
-  height: 260px;
+  height: 280px;
 
   overflow: hidden;
-
-  border-radius: 26px;
-
-  margin-bottom: 26px;
-
-  isolation: isolate;
 }
 
 .qa-test-image img {
@@ -363,85 +377,42 @@
 
   object-fit: cover;
 
-  transform:
-    scale(1.08);
-
   transition:
-    transform 1.6s ease,
+    transform 1.2s ease,
     filter 1s ease;
-}
 
-/* =========================================================
-   IMAGE HOVER
-========================================================= */
+  filter:
+    brightness(0.78)
+    contrast(1.05);
+}
 
 .qa-test-card:hover
 .qa-test-image img {
 
   transform:
-    scale(1.18);
+    scale(1.08);
 
   filter:
-    brightness(1.1)
-    saturate(1.1);
+    brightness(0.92)
+    contrast(1.08);
 }
 
 /* =========================================================
-   IMAGE LIGHT SWEEP
-========================================================= */
-
-.qa-test-image::before {
-
-  content: "";
-
-  position: absolute;
-
-  top: 0;
-  left: -120%;
-
-  width: 60%;
-  height: 100%;
-
-  background:
-    linear-gradient(
-      120deg,
-      transparent,
-      rgba(255,255,255,0.45),
-      transparent
-    );
-
-  transform:
-    skewX(-20deg);
-
-  z-index: 4;
-
-  transition:
-    left 1.3s ease;
-}
-
-.qa-test-card:hover
-.qa-test-image::before {
-
-  left: 150%;
-}
-
-/* =========================================================
-   OVERLAY
+   IMAGE OVERLAY
 ========================================================= */
 
 .qa-test-overlay {
 
   position: absolute;
+
   inset: 0;
 
-  background:
+  /* background:
     linear-gradient(
       to top,
-      rgba(0,0,0,0.72),
-      rgba(0,0,0,0.08)
-    );
-
-  z-index: 2;
+      rgba(0,0,0,0.82),
+      rgba(0,0,0,0.15)
+    ); */
 }
 
 /* =========================================================
@@ -451,49 +422,35 @@
 .qa-test-shine {
 
   position: absolute;
-  inset: 0;
 
-  z-index: 3;
+  inset: 0;
 
   background:
     linear-gradient(
       120deg,
-      rgba(255,255,255,0.14),
+      rgba(255,255,255,0.08),
       transparent 30%,
-      transparent 60%,
-      rgba(255,255,255,0.08)
+      transparent 70%,
+      rgba(255,255,255,0.04)
     );
-
-  animation:
-    qaShine 6s linear infinite;
-}
-
-@keyframes qaShine {
-
-  from {
-
-    transform:
-      translateX(-20%);
-  }
-
-  to {
-
-    transform:
-      translateX(20%);
-  }
 }
 
 /* =========================================================
    CONTENT
 ========================================================= */
 
+.qa-test-content {
+
+  padding: 30px;
+}
+
 .qa-test-content h3 {
 
   color: white;
 
-  font-size: 1.7rem;
+  font-size: 28px;
 
-  line-height: 1.2;
+  line-height: 1.3;
 
   margin-bottom: 16px;
 }
@@ -503,9 +460,9 @@
   color:
     rgba(255,255,255,0.72);
 
-  line-height: 1.9;
+  font-size: 15px;
 
-  margin-bottom: 24px;
+  line-height: 1.8;
 }
 
 /* =========================================================
@@ -515,68 +472,36 @@
 .qa-highlight-box {
 
   display: flex;
+
   align-items: flex-start;
 
   gap: 14px;
 
+  margin-top: 24px;
+
   padding: 18px;
 
-  border-radius: 22px;
+  border-radius: 18px;
 
   background:
     rgba(255,255,255,0.05);
 
   border:
-    1px solid rgba(255,255,255,0.08);
-
-  backdrop-filter: blur(14px);
-
-  transition:
-    0.6s ease;
-}
-
-.qa-test-card:hover
-.qa-highlight-box {
-
-  background:
-    rgba(255,0,0,0.08);
-
-  border:
-    1px solid rgba(255,0,0,0.18);
+    1px solid rgba(255,255,255,0.06);
 }
 
 .qa-highlight-box span {
 
-  min-width: 34px;
-  height: 34px;
+  color: #00ff95;
 
-  border-radius: 50%;
+  font-size: 22px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background:
-    linear-gradient(
-      135deg,
-      #00ff95,
-      #00d87f
-    );
-
-  color: #04110a;
-
-  font-weight: 900;
-
-  box-shadow:
-    0 0 24px rgba(0,255,149,0.35);
+  line-height: 1;
 }
 
 .qa-highlight-box p {
 
-  margin: 0;
-
-  color:
-    rgba(255,255,255,0.82);
+  font-size: 13px;
 
   line-height: 1.7;
 }
@@ -605,204 +530,347 @@
 
   letter-spacing: -10px;
 
+  z-index: 1;
+
   pointer-events: none;
 }
 
 /* =========================================================
-   LARGE LAPTOPS
+   TABLET
 ========================================================= */
 
-@media(max-width:1400px){
+@media(max-width:992px){
 
-  .qa-marquee-wrapper {
+  .qa-section{
 
-    height: 1200px;
-  }
-}
-
-/* =========================================================
-   TABLETS
-========================================================= */
-
-@media(max-width:1100px){
-
-  .qa-marquee-wrapper {
-
-    grid-template-columns: 1fr;
-
-    height: auto;
+    padding: 110px 0;
   }
 
-  .qa-marquee-column {
+  .qa-header{
 
-    height: auto;
+    width: 92%;
+
+    margin-bottom: 60px;
   }
 
-  .qa-track-up,
-  .qa-track-down {
+  .qa-header h2{
 
-    animation: none;
-  }
-
-  .qa-test-image {
-
-    height: 320px;
-  }
-}
-
-/* =========================================================
-   SMALL TABLETS
-========================================================= */
-
-@media(max-width:768px){
-
-  .qa-section {
-
-    padding: 100px 0;
-  }
-
-  .qa-header {
-
-    margin-bottom: 70px;
-  }
-
-  .qa-header h2 {
-
-    font-size: 3rem;
-
-    letter-spacing: -3px;
-  }
-
-  .qa-marquee-wrapper {
-
-    width: 94%;
-
-    gap: 28px;
-  }
-
-  .qa-test-card {
-
-    padding: 18px;
-
-    border-radius: 28px;
-  }
-
-  .qa-test-image {
-
-    height: 240px;
-
-    border-radius: 20px;
-  }
-
-  .qa-test-content h3 {
-
-    font-size: 1.4rem;
-  }
-
-  .qa-highlight-box {
-
-    padding: 16px;
-  }
-}
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media(max-width:540px){
-
-  .qa-section {
-
-    padding: 80px 0;
-  }
-
-  .qa-header {
-
-    width: 94%;
-  }
-
-  .qa-header span {
-
-    font-size: 10px;
-
-    padding: 12px 18px;
-  }
-
-  .qa-header h2 {
-
-    font-size: 2.2rem;
+    font-size: 4rem;
 
     letter-spacing: -2px;
   }
 
-  .qa-header p {
+  .qa-header p{
 
-    font-size: 0.95rem;
+    font-size: 15px;
 
-    line-height: 1.7;
+    line-height: 1.8;
   }
 
-  .qa-marquee-wrapper {
+  .qa-marquee-wrapper{
 
-    width: 94%;
+    grid-template-columns: 1fr;
+
+    gap: 24px;
+
+    height: auto;
+
+    width: 92%;
   }
 
-  .qa-test-card {
+  .qa-track-up,
+  .qa-track-down{
 
-    padding: 14px;
+    animation: none;
+  }
+
+  .qa-marquee-track{
+
+    gap: 24px;
+  }
+
+  .qa-test-card{
+
+    border-radius: 26px;
+  }
+
+  .qa-test-image{
+
+    height: 280px;
+  }
+
+  .qa-test-content{
+
+    padding: 26px;
+  }
+
+  .qa-test-content h3{
+
+    font-size: 24px;
+  }
+
+  .qa-bg-text{
+
+    font-size: 8rem;
+  }
+}
+
+/* =========================================================
+   MOBILE LARGE
+========================================================= */
+
+@media(max-width:768px){
+
+  .qa-section{
+
+    padding: 90px 0;
+  }
+
+  .qa-grid{
+
+    background-size: 45px 45px;
+  }
+
+  .qa-header{
+
+    width: 92%;
+
+    margin-bottom: 50px;
+  }
+
+  .qa-header span{
+
+    padding: 10px 18px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .qa-header h2{
+
+    font-size: 2.8rem;
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+  }
+
+  .qa-header p{
+
+    font-size: 14px;
+
+    line-height: 1.8;
+  }
+
+  .qa-marquee-wrapper{
+
+    width: 92%;
+
+    gap: 20px;
+  }
+
+  .qa-marquee-track{
+
+    gap: 20px;
+  }
+
+  .qa-test-card{
 
     border-radius: 22px;
   }
 
-  .qa-test-image {
+  .qa-test-image{
 
-    height: 190px;
-
-    border-radius: 18px;
-
-    margin-bottom: 18px;
+    height: 230px;
   }
 
-  .qa-test-content h3 {
+  .qa-test-content{
 
-    font-size: 1.1rem;
-
-    margin-bottom: 12px;
+    padding: 22px;
   }
 
-  .qa-test-content p {
+  .qa-test-content h3{
 
-    font-size: 0.92rem;
+    font-size: 20px;
+
+    line-height: 1.3;
+  }
+
+  .qa-test-content p{
+
+    font-size: 13px;
+
+    line-height: 1.8;
+  }
+
+  .qa-highlight-box{
+
+    padding: 16px;
+
+    gap: 12px;
+
+    border-radius: 16px;
+  }
+
+  .qa-highlight-box span{
+
+    font-size: 18px;
+  }
+
+  .qa-highlight-box p{
+
+    font-size: 12px;
 
     line-height: 1.7;
   }
 
-  .qa-highlight-box {
+  .qa-bg-text{
 
-    flex-direction: column;
+    font-size: 4.5rem;
 
-    gap: 12px;
+    bottom: 10px;
 
-    padding: 14px;
+    letter-spacing: -4px;
+  }
+
+  .qa-glow-one{
+
+    width: 220px;
+    height: 220px;
+  }
+
+  .qa-glow-two{
+
+    width: 260px;
+    height: 260px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:540px){
+
+  .qa-section{
+
+    padding: 75px 0;
+  }
+
+  .qa-header{
+
+    width: 94%;
+  }
+
+  .qa-header h2{
+
+    font-size: 2.2rem;
+  }
+
+  .qa-header p{
+
+    font-size: 13px;
+  }
+
+  .qa-marquee-wrapper{
+
+    width: 94%;
+  }
+
+  .qa-test-card{
 
     border-radius: 18px;
   }
 
-  .qa-highlight-box span {
+  .qa-test-image{
 
-    min-width: 30px;
-    height: 30px;
-
-    font-size: 14px;
+    height: 200px;
   }
 
-  .qa-highlight-box p {
+  .qa-test-content{
 
-    font-size: 0.9rem;
+    padding: 18px;
   }
 
-  .qa-bg-text {
+  .qa-test-content h3{
 
-    font-size: 5rem;
+    font-size: 18px;
+  }
+
+  .qa-test-content p{
+
+    font-size: 12px;
+
+    line-height: 1.7;
+  }
+
+  .qa-highlight-box{
+
+    padding: 14px;
+  }
+
+  .qa-highlight-box span{
+
+    font-size: 16px;
+  }
+
+  .qa-highlight-box p{
+
+    font-size: 11px;
+  }
+
+  .qa-bg-text{
+
+    font-size: 3rem;
+
+    letter-spacing: -2px;
+  }
+
+  .qa-bg-video{
+
+    transform: scale(1.15);
+  }
+}
+
+/* =========================================================
+   EXTRA SMALL
+========================================================= */
+
+@media(max-width:380px){
+
+  .qa-header h2{
+
+    font-size: 1.9rem;
+  }
+
+  .qa-test-image{
+
+    height: 180px;
+  }
+
+  .qa-test-content{
+
+    padding: 16px;
+  }
+
+  .qa-test-content h3{
+
+    font-size: 16px;
+  }
+
+  .qa-test-content p{
+
+    font-size: 11px;
+  }
+
+  .qa-highlight-box{
+
+    padding: 12px;
+  }
+
+  .qa-bg-text{
+
+    font-size: 2.3rem;
   }
 }

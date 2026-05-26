@@ -251,6 +251,7 @@ import About from "./components/Aboutpage";
 
 import "./App.css";
 import VisitorCounter from "./VisitorCounter";
+import { FaYoutube } from "react-icons/fa6";
 
 function HomePage() {
 
@@ -329,62 +330,88 @@ function App() {
           FLOATING SOCIAL MEDIA
       ====================================================== */}
 
-      <div className="luxury-social-floating-wrapper">
+    {/* =====================================================
+    FLOATING SOCIAL MENU
+===================================================== */}
 
-        {/* WHATSAPP */}
+{/* =====================================================
+    FLOATING SOCIAL MENU
+===================================================== */}
 
-        <a
-          href="https://wa.me/9606859044"
-          className="luxury-social-float whatsapp-float-icon"
-          target="_blank"
-          rel="noreferrer"
-        >
+<div className="luxury-social-wrapper">
 
-          <FaWhatsapp />
+  {/* MAIN WHATSAPP BUTTON */}
 
-        </a>
+  <a
+    href="https://wa.me/9606859044"
+    target="_blank"
+    rel="noreferrer"
+    className="luxury-social-main"
+  >
 
-        {/* INSTAGRAM */}
+    <FaWhatsapp />
 
-        <a
-          href="https://www.instagram.com/mm_safety_glass?utm_source=qr"
-          className="luxury-social-float instagram-float-icon"
-          target="_blank"
-          rel="noreferrer"
-        >
+  </a>
 
-          <FaInstagram />
+  {/* OTHER SOCIAL ICONS */}
 
-        </a>
+  <div className="luxury-social-icons">
 
-        {/* FACEBOOK */}
+    {/* INSTAGRAM */}
 
-        <a
-          href="https://facebook.com/"
-          className="luxury-social-float facebook-float-icon"
-          target="_blank"
-          rel="noreferrer"
-        >
+    <a
+      href="https://www.instagram.com/mm_safety_glass?utm_source=qr"
+      target="_blank"
+      rel="noreferrer"
+      className="luxury-social-icon instagram-icon"
+    >
 
-          <FaFacebookF />
+      <FaInstagram />
 
-        </a>
+    </a>
 
-        {/* LINKEDIN */}
+    {/* FACEBOOK */}
 
-        <a
-          href="https://www.linkedin.com/company/mm-safety-glass/"
-          className="luxury-social-float linkedin-float-icon"
-          target="_blank"
-          rel="noreferrer"
-        >
+    <a
+      href="https://facebook.com/"
+      target="_blank"
+      rel="noreferrer"
+      className="luxury-social-icon facebook-icon"
+    >
 
-          <FaLinkedinIn />
+      <FaFacebookF />
 
-        </a>
-        {/* <VisitorCounter/> */}
+    </a>
 
-      </div>
+    {/* LINKEDIN */}
+
+    <a
+      href="https://www.linkedin.com/company/mm-safety-glass/"
+      target="_blank"
+      rel="noreferrer"
+      className="luxury-social-icon linkedin-icon"
+    >
+
+      <FaLinkedinIn />
+
+    </a>
+
+    {/* YOUTUBE */}
+
+    <a
+      href="https://youtube.com/"
+      target="_blank"
+      rel="noreferrer"
+      className="luxury-social-icon youtube-icon"
+    >
+
+      <FaYoutube />
+
+    </a>
+
+  </div>
+
+</div>
 
       <Footer />
 
