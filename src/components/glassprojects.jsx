@@ -1,191 +1,3 @@
-// import { useEffect, useRef } from "react";
-// import "./glassprojects.css";
-// import gal1 from '../assets/gal1.jpeg';
-// import gal2 from '../assets/gal2.jpeg';
-// import gal3 from '../assets/gal3.jpeg';
-// import gal4 from '../assets/gal4.jpeg';
-// import gal5 from '../assets/gal5.jpeg';
-// import gal6 from '../assets/gal6.jpeg';
-
-// const projects = [
-//   {
-//     id: 1,
-//     // title: "Luxury Glass Facade",
-//     // category: "Commercial Architecture",
-//     image:gal1
-//   },
-
-//   {
-//     id: 2,
-//     // title: "Modern Interior Glass",
-//     // category: "Premium Interiors",
-//     image:gal2,
-//   },
-
-//   {
-//     id: 3,
-//     // title: "Futuristic Office Design",
-//     // category: "Corporate Space",
-//     image:gal3,
-//   },
-
-//   {
-//     id: 4,
-//     // title: "Luxury Stair Glass",
-//     // category: "Modern Living",
-//     image:gal4,
-//   },
-
-//   {
-//     id: 5,
-//     // title: "Smart Glass Exterior",
-//     // category: "Luxury Exterior",
-//     image:gal5
-//   },
-
-//   {
-//     id: 6,
-//     // title: "Immersive Glass Space",
-//     // category: "Futuristic Design",
-//     image:gal6,
-//   },
-// ];
-
-// function ProjectGallery() {
-//   const sectionRef = useRef(null);
-
-//   /* =========================================================
-//       SCROLL REVEAL
-//   ========================================================= */
-
-//   useEffect(() => {
-//     const cards =
-//       document.querySelectorAll(".gallery-card");
-
-//     const observer = new IntersectionObserver(
-
-//       (entries) => {
-
-//         entries.forEach((entry) => {
-
-//           if (entry.isIntersecting) {
-//             entry.target.classList.add("show");
-//           }
-
-//         });
-
-//       },
-
-//       {
-//         threshold: 0.2,
-//       }
-//     );
-
-//     cards.forEach((card) => observer.observe(card));
-
-//     return () => observer.disconnect();
-
-//   }, []);
-
-//   return (
-//  <section className="project-gallery">
-
-//   {/* GRID */}
-//   <div className="gallery-grid"></div>
-
-//   {/* PARTICLES */}
-//   <div className="gallery-particles">
-
-//     {Array.from({ length: 35 }).map((_, i) => (
-
-//       <span
-//         key={i}
-//         className="gallery-particle"
-//         style={{
-//           left: `${Math.random() * 100}%`,
-//           animationDuration: `${8 + Math.random() * 10}s`,
-//           animationDelay: `${Math.random() * 4}s`,
-//         }}
-//       ></span>
-
-//     ))}
-
-//   </div>
-
-//   {/* HEADER */}
-//   <div className="gallery-header">
-
-   
-
-//     <h2>
-  
-//       Architecture Gallery
-//     </h2>
-
-//     <p>
-//       Immersive futuristic architectural environments
-//       engineered with cinematic luxury aesthetics,
-//       spatial storytelling and next-generation glass systems.
-//     </p>
-
-//   </div>
-
-//   {/* =========================================================
-//       HORIZONTAL SCROLL GALLERY
-//   ========================================================= */}
-
-//   <div className="gallery-scroll-wrapper">
-
-//     <div className="gallery-track">
-
-//       {[...projects, ...projects].map((project, index) => (
-
-//         <div
-//           key={index}
-//           className="gallery-card"
-//         >
-
-//           {/* IMAGE */}
-//           <img
-//             src={project.image}
-//             alt={project.title}
-//           />
-
-//           {/* OVERLAY */}
-//           <div className="gallery-overlay"></div>
-
-       
-
-//           {/* CONTENT */}
-//           <div className="gallery-content">
-
-//             <span>
-//               {project.category}
-//             </span>
-
-//             {/* <h3>
-//               {project.title}
-//             </h3> */}
-
-//           </div>
-
-//         </div>
-
-//       ))}
-
-//     </div>
-
-//   </div>
-
-// </section>
-
-//   );
-// }
-
-// export default ProjectGallery;
-
-
-
 import { useEffect, useRef } from "react";
 import "./glassprojects.css";
 
@@ -197,35 +9,49 @@ import gal5 from "../assets/gal5.jpeg";
 import gal6 from "../assets/gal6.jpeg";
 
 const luxuryGlassProjects = [
+
   {
     id: 1,
     image: gal1,
+    title: "Luxury Glass Facade",
+    category: "Premium Architecture",
   },
 
   {
     id: 2,
     image: gal2,
+    title: "Modern Glass Interiors",
+    category: "Luxury Interior Design",
   },
 
   {
     id: 3,
     image: gal3,
+    title: "Futuristic Office Spaces",
+    category: "Corporate Architecture",
   },
 
   {
     id: 4,
     image: gal4,
+    title: "Premium Stair Glass",
+    category: "Modern Living",
   },
 
   {
     id: 5,
     image: gal5,
+    title: "Immersive Exterior Systems",
+    category: "Luxury Exterior",
   },
 
   {
     id: 6,
     image: gal6,
+    title: "Architectural Glass Vision",
+    category: "Cinematic Design",
   },
+
 ];
 
 function ProjectGallery() {
@@ -233,17 +59,17 @@ function ProjectGallery() {
   const luxuryGalleryRef = useRef(null);
 
   /* =========================================================
-      SCROLL REVEAL
+      INTERSECTION ANIMATION
   ========================================================= */
 
   useEffect(() => {
 
-    const luxuryCards =
+    const cards =
       document.querySelectorAll(
         ".luxury-glass-gallery-card"
       );
 
-    const luxuryObserver =
+    const observer =
       new IntersectionObserver(
 
         (entries) => {
@@ -253,7 +79,7 @@ function ProjectGallery() {
             if (entry.isIntersecting) {
 
               entry.target.classList.add(
-                "luxury-glass-gallery-card-show"
+                "luxury-glass-gallery-show"
               );
 
             }
@@ -268,12 +94,12 @@ function ProjectGallery() {
 
       );
 
-    luxuryCards.forEach((card) =>
-      luxuryObserver.observe(card)
+    cards.forEach((card) =>
+      observer.observe(card)
     );
 
     return () =>
-      luxuryObserver.disconnect();
+      observer.disconnect();
 
   }, []);
 
@@ -284,117 +110,133 @@ function ProjectGallery() {
       ref={luxuryGalleryRef}
     >
 
-      {/* GRID */}
+      {/* =========================================================
+          BACKGROUND
+      ========================================================= */}
 
       <div className="luxury-glass-gallery-grid"></div>
 
-      {/* PARTICLES */}
+      <div className="luxury-glass-gallery-glow glow-left"></div>
 
-      <div className="luxury-glass-gallery-particles">
+      <div className="luxury-glass-gallery-glow glow-right"></div>
 
-        {Array.from({ length: 35 }).map((_, i) => (
+      {/* =========================================================
+          PARTICLES
+      ========================================================= */}
 
-          <span
-            key={i}
-            className="luxury-glass-gallery-particle"
-            style={{
-              left: `${Math.random() * 100}%`,
-              animationDuration: `${8 + Math.random() * 10}s`,
-              animationDelay: `${Math.random() * 4}s`,
-            }}
-          ></span>
+     
 
-        ))}
-
-      </div>
-
-      {/* HEADER */}
+      {/* =========================================================
+          HEADER
+      ========================================================= */}
 
       <div className="luxury-glass-gallery-header">
 
-        <div className="luxury-glass-gallery-badge">
-
-          <span></span>
-
-          <p>
-            Luxury Glass Projects
-          </p>
-
-        </div>
+      
 
         <h2>
-          Architecture Gallery
+
+          ARCHITECTURE GALLERY
+
         </h2>
 
         <p>
+
           Immersive futuristic architectural environments
           engineered with cinematic luxury aesthetics,
           spatial storytelling and next-generation
           glass systems.
+
         </p>
 
       </div>
 
       {/* =========================================================
-          HORIZONTAL SCROLL GALLERY
+          CINEMATIC SCROLL GALLERY
       ========================================================= */}
 
       <div className="luxury-glass-gallery-scroll-wrapper">
 
         <div className="luxury-glass-gallery-track">
 
-          {[
-            ...luxuryGlassProjects,
-            ...luxuryGlassProjects,
-          ].map((project, index) => (
+          {[...luxuryGlassProjects, ...luxuryGlassProjects].map(
 
-            <div
-              key={index}
-              className="luxury-glass-gallery-card"
-            >
+            (project, index) => (
 
-              {/* IMAGE */}
+              <div
+                key={index}
+                className="luxury-glass-gallery-card"
+              >
 
-              <img
-                src={project.image}
-                alt="Luxury Glass Project"
-                className="luxury-glass-gallery-image"
-              />
+                {/* IMAGE */}
 
-              {/* OVERLAY */}
+                <div className="luxury-glass-gallery-image-wrap">
 
-              <div className="luxury-glass-gallery-overlay"></div>
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="luxury-glass-gallery-image"
+                  />
 
-              {/* SHINE */}
+                  <div className="luxury-glass-gallery-overlay"></div>
 
-              <div className="luxury-glass-gallery-shine"></div>
+                  <div className="luxury-glass-gallery-shine"></div>
 
-              {/* CONTENT */}
+                </div>
 
-              <div className="luxury-glass-gallery-content">
+                {/* CONTENT */}
 
-                <span className="luxury-glass-gallery-category">
-                  Premium Glass Design
-                </span>
+                <div className="luxury-glass-gallery-content">
 
-                <h3 className="luxury-glass-gallery-title">
-                  Modern Luxury Architecture
-                </h3>
+                  <span className="luxury-glass-gallery-category">
 
-                <a
-                  href="/contact"
-                  className="luxury-glass-gallery-button"
-                >
-                  Contact Enquiry
-                </a>
+                    {project.category}
+
+                  </span>
+
+                  <h3 className="luxury-glass-gallery-title">
+
+                    {project.title}
+
+                  </h3>
+
+                  <p className="luxury-glass-gallery-description">
+
+                    Precision-engineered architectural
+                    glass solutions delivering premium
+                    aesthetics and futuristic luxury
+                    spatial experiences.
+
+                  </p>
+
+                  <a
+                    href="/contact"
+                    className="luxury-glass-gallery-button"
+                  >
+
+                    Contact Enquiry
+
+                  </a>
+
+                </div>
 
               </div>
 
-            </div>
+            )
 
-          ))}
+          )}
 
         </div>
+
+      </div>
+
+      {/* =========================================================
+          HUGE BACKGROUND TEXT
+      ========================================================= */}
+
+      <div className="luxury-glass-gallery-bg-text">
+
+        PROJECTS
 
       </div>
 

@@ -1,1053 +1,16 @@
-
-// import "./Strength.css";
-// import str1 from "../assets/mmglass_6.png"
-
-// function Strength() {
-
-//   const strengthCards = [
-
-//     {
-//       title: "Precision Engineering",
-//       text:
-//         "Advanced fabrication systems delivering flawless dimensional accuracy.",
-//       image:
-//         str1,
-//     },
-
-//     {
-//       title: "Architectural Excellence",
-//       text:
-//         "Premium glass ecosystems crafted for luxury interiors and facades.",
-//       image:
-//         "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1600&auto=format&fit=crop",
-//     },
-
-//     {
-//       title: "Future Ready Systems",
-//       text:
-//         "Modern automated processes ensuring durability and optical clarity.",
-//       image:
-//         "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1600&auto=format&fit=crop",
-//     },
-
-//   ];
-
-//   return (
-
-//     <section className="str-section">
-
-//       {/* =====================================================
-//           BACKGROUND
-//       ====================================================== */}
-
-//       <div className="str-bg">
-
-//         <img
-//           src="https://media.istockphoto.com/id/184619832/photo/business-district-at-dusk-london.jpg?b=1&s=612x612&w=0&k=20&c=JiX4z2EUobVhvE8ruPaOv_BjZ6OqaRiBJ_R9B0YzUNk="
-//           alt=""
-//         />
-
-//       </div>
-
-//       <div className="str-overlay"></div>
-
-//       <div className="str-gradient"></div>
-
-//       <div className="str-grid"></div>
-
-//       <div className="str-noise"></div>
-
-//       {/* LIGHTS */}
-
-//       <div className="str-light str-light1"></div>
-
-//       <div className="str-light str-light2"></div>
-
-//       {/* =====================================================
-//           TOP
-//       ====================================================== */}
-
-//       <div className="str-top">
-
-//         <span>
-
-//           STRENGTH • PERFORMANCE • PRECISION
-
-//         </span>
-
-//         <h2>
-
-//           BUILT FOR <br />
-
-//           FUTURE <span>ARCHITECTURE</span>
-
-//         </h2>
-
-//       </div>
-
-//       {/* =====================================================
-//           MAIN LAYOUT
-//       ====================================================== */}
-
-//       <div className="str-layout">
-
-//         {/* =====================================================
-//             LEFT SIDE
-//         ====================================================== */}
-
-//         <div className="str-left">
-
-//           <div className="str-image-box">
-
-//             <img
-//               src={str1}
-//               alt=""
-//             />
-
-//             <div className="str-image-overlay"></div>
-
-//             {/* FLOATING PANEL */}
-
-//             <div className="str-floating-panel">
-
-//               <span>
-
-//                 FUTURE SYSTEMS
-
-//               </span>
-
-//               <h3>
-
-//                 Intelligent glass solutions
-//                 engineered for modern
-//                 premium environments.
-
-//               </h3>
-
-//             </div>
-
-//           </div>
-
-//         </div>
-
-//         {/* =====================================================
-//             RIGHT SIDE
-//         ====================================================== */}
-
-//         <div className="str-right">
-
-//           {/* TEXT BLOCK */}
-
-//           {/* <div className="str-text-box">
-
-//             <div className="str-line"></div>
-
-//             <p>
-
-//               Our engineering philosophy
-//               combines precision fabrication,
-//               modern automation, and
-//               architectural innovation to
-//               create glass systems that
-//               redefine contemporary spaces.
-
-//             </p>
-
-//             <p>
-
-//               Every panel is manufactured
-//               using high-performance
-//               technologies ensuring
-//               structural durability,
-//               premium clarity, and
-//               exceptional finishing quality.
-
-//             </p>
-
-//           </div> */}
-
-//           {/* CARDS */}
-
-//           <div className="str-cards">
-
-//             {strengthCards.map((item, index) => (
-
-//               <div
-//                 className="str-card"
-//                 key={index}
-//               >
-
-//                 {/* IMAGE */}
-
-//                 <div className="str-card-image">
-
-//                   <img
-//                     src={item.image}
-//                     alt={item.title}
-//                   />
-
-//                   <div className="str-card-overlay"></div>
-
-//                 </div>
-
-//                 {/* CONTENT */}
-
-//                 <div className="str-card-content">
-
-//                   <h3>
-
-//                     {item.title}
-
-//                   </h3>
-
-//                   <p>
-
-//                     {item.text}
-
-//                   </p>
-
-//                 </div>
-
-//               </div>
-
-//             ))}
-
-//           </div>
-
-//         </div>
-
-//       </div>
-
-//       {/* HUGE TEXT */}
-
-//       <div className="str-bg-text">
-
-//         STRENGTH
-
-//       </div>
-
-//     </section>
-//   );
-// }
-
-// export default Strength;
-
-
-
-
-
-
-
-
-
-// import "./Strength.css";
-// import str1 from "../assets/mmglass_6.png";
-
-// function Strength() {
-
-//   const qualityTests = [
-
-//     {
-//       title: "Resistance To Shock Test",
-//       text:
-//         "Engineered to withstand sudden thermal and physical impact for long-lasting structural reliability.",
-//     },
-
-//     {
-//       title: "Fracture & Adhesion Test",
-//       text:
-//         "Advanced bonding integrity ensures maximum safety, durability and premium architectural performance.",
-//     },
-
-//     {
-//       title: "Fragmentation Test",
-//       text:
-//         "Designed to minimize hazardous breakage while maintaining superior toughened glass safety standards.",
-//     },
-
-//     {
-//       title: "Visual Light Transmission",
-//       text:
-//         "Optimized clarity and transparency delivering luxurious aesthetics with balanced natural illumination.",
-//     },
-
-//     {
-//       title: "Roller Waviness Test",
-//       text:
-//         "Precision manufacturing process ensuring distortion-free premium glass finishing quality.",
-//     },
-
-//     {
-//       title: "Impact Resistance Test",
-//       text:
-//         "Built for modern high-performance environments with superior impact durability and resilience.",
-//     },
-
-//     {
-//       title: "Stress Measurement Test",
-//       text:
-//         "Controlled structural stress distribution ensures enhanced strength and long-term architectural stability.",
-//     },
-
-//     {
-//       title: "Butterfly Test",
-//       text:
-//         "Advanced toughness validation process ensuring exceptional durability under critical conditions.",
-//     },
-
-//     {
-//       title: "Glass Quality Test",
-//       text:
-//         "Every panel undergoes precision inspection for premium-grade flawless finishing and consistency.",
-//     },
-
-//     {
-//       title: "Snap Time Test",
-//       text:
-//         "Engineered with high-performance response characteristics for reliable structural integrity.",
-//     },
-
-//     {
-//       title: "Skin Over Time Test",
-//       text:
-//         "Long-term surface durability testing preserving luxury finish and optical excellence.",
-//     },
-
-//     {
-//       title: "Delta T Test",
-//       text:
-//         "Thermal stability tested to withstand extreme temperature variations in modern architecture.",
-//     },
-
-//   ];
-
-//   return (
-
-//     <section className="premium-strength-section">
-
-//       {/* =====================================================
-//           BACKGROUND
-//       ====================================================== */}
-
-//       <div className="premium-strength-bg">
-
-//         <img
-//           src={str1}
-//           alt=""
-//         />
-
-//       </div>
-
-//       <div className="premium-strength-overlay"></div>
-
-//       <div className="premium-strength-grid"></div>
-
-//       {/* =====================================================
-//           LIGHTS
-//       ====================================================== */}
-
-//       <div className="premium-strength-light premium-strength-light1"></div>
-
-//       <div className="premium-strength-light premium-strength-light2"></div>
-
-//       {/* =====================================================
-//           HEADER
-//       ====================================================== */}
-
-//       <div className="premium-strength-header">
-
-//         <span>
-
-//           DURABILITY • PERFORMANCE • SAFETY
-
-//         </span>
-
-//         <h2>
-
-//           Premium Quality <br />
-
-//           Glass Testing Systems
-
-//         </h2>
-
-//         <p>
-
-//           Every glass panel undergoes advanced
-//           engineering validation ensuring unmatched
-//           durability, architectural safety, premium
-//           finish and long-term performance reliability.
-
-//         </p>
-
-//       </div>
-
-//       {/* =====================================================
-//           MAIN CONTENT
-//       ====================================================== */}
-
-//       <div className="premium-strength-layout">
-
-//         {/* LEFT */}
-
-//         <div className="premium-strength-left">
-
-//           <div className="premium-strength-image-box">
-
-//             <img
-//               src={str1}
-//               alt=""
-//             />
-
-//             <div className="premium-strength-image-overlay"></div>
-
-//             {/* FLOATING CARD */}
-
-//             <div className="premium-strength-floating-card">
-
-//               <span>
-
-//                 CERTIFIED QUALITY
-
-//               </span>
-
-//               <h3>
-
-//                 Engineered with advanced
-//                 testing systems for superior
-//                 strength and modern luxury
-//                 architectural applications.
-
-//               </h3>
-
-//             </div>
-
-//           </div>
-
-//         </div>
-
-//         {/* RIGHT */}
-
-//         <div className="premium-strength-right">
-
-//           <div className="premium-strength-test-grid">
-
-//             {qualityTests.map((item, index) => (
-
-//               <div
-//                 className="premium-strength-test-card"
-//                 key={index}
-//               >
-
-//                 {/* TICK */}
-
-//                 <div className="premium-strength-tick">
-
-//                   ✓
-
-//                 </div>
-
-//                 {/* CONTENT */}
-
-//                 <div className="premium-strength-test-content">
-
-//                   <h3>
-
-//                     {item.title}
-
-//                   </h3>
-
-//                   <p>
-
-//                     {item.text}
-
-//                   </p>
-
-//                 </div>
-
-//               </div>
-
-//             ))}
-
-//           </div>
-
-//         </div>
-
-//       </div>
-
-//       {/* HUGE TEXT */}
-
-//       <div className="premium-strength-bg-text">
-
-//         QUALITY
-
-//       </div>
-
-//     </section>
-
-//   );
-// }
-
-// export default Strength;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import "./Strength.css";
-
-// // import test1 from "../assets/test1.jpg";
-// // import test2 from "../assets/test2.jpg";
-// // import test3 from "../assets/test3.jpg";
-// // import test4 from "../assets/test4.jpg";
-// // import test5 from "../assets/test5.jpg";
-// // import test6 from "../assets/test6.jpg";
-
-// // const testSystems = [
-
-// //   {
-// //     id: 1,
-// //     title: "Impact Resistance Test",
-// //     desc:
-// //       "Advanced impact validation ensuring superior durability and structural reliability.",
-// //     image: test1,
-// //   },
-
-// //   {
-// //     id: 2,
-// //     title: "Fragmentation Test",
-// //     desc:
-// //       "Engineered breakage analysis for enhanced safety and premium architectural standards.",
-// //     image: test2,
-// //   },
-
-// //   {
-// //     id: 3,
-// //     title: "Visual Light Transmission",
-// //     desc:
-// //       "Optimized transparency and optical clarity delivering luxury modern aesthetics.",
-// //     image: test3,
-// //   },
-
-// //   {
-// //     id: 4,
-// //     title: "Stress Measurement Test",
-// //     desc:
-// //       "Precision-tested stress distribution ensuring long-term structural performance.",
-// //     image: test4,
-// //   },
-
-// //   {
-// //     id: 5,
-// //     title: "Thermal Delta T Test",
-// //     desc:
-// //       "Extreme thermal stability validation for modern exterior architectural environments.",
-// //     image: test5,
-// //   },
-
-// //   {
-// //     id: 6,
-// //     title: "Shock Resistance Test",
-// //     desc:
-// //       "High-performance engineering built to withstand sudden pressure and impact conditions.",
-// //     image: test6,
-// //   },
-
-// // ];
-
-
-// const testSystems = [
-
-//   {
-//     id: 1,
-//     title: "Impact Resistance Test",
-//     desc:
-//       "Advanced impact validation ensuring superior durability and structural reliability.",
-//     image:
-//       "https://images.pexels.com/photos/5691626/pexels-photo-5691626.jpeg",
-//   },
-
-//   {
-//     id: 2,
-//     title: "Fragmentation Test",
-//     desc:
-//       "Engineered breakage analysis for enhanced safety and premium architectural standards.",
-//     image:
-//       "https://images.pexels.com/photos/6474342/pexels-photo-6474342.jpeg",
-//   },
-
-//   {
-//     id: 3,
-//     title: "Visual Light Transmission",
-//     desc:
-//       "Optimized transparency and optical clarity delivering luxury modern aesthetics.",
-//     image:
-//       "https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg",
-//   },
-
-//   {
-//     id: 4,
-//     title: "Stress Measurement Test",
-//     desc:
-//       "Precision-tested stress distribution ensuring long-term structural performance.",
-//     image:
-//       "https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg",
-//   },
-
-//   {
-//     id: 5,
-//     title: "Thermal Delta T Test",
-//     desc:
-//       "Extreme thermal stability validation for modern exterior architectural environments.",
-//     image:
-//       "https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg",
-//   },
-
-//   {
-//     id: 6,
-//     title: "Shock Resistance Test",
-//     desc:
-//       "High-performance engineering built to withstand sudden pressure and impact conditions.",
-//     image:
-//       "https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg",
-//   },
-
-// ];
-// function Strength() {
-
-//   return (
-
-//     <section className="premium-quality-section">
-
-//       {/* =====================================================
-//           BACKGROUND
-//       ====================================================== */}
-
-//       <div className="premium-quality-grid"></div>
-
-//       <div className="premium-quality-light premium-quality-light1"></div>
-
-//       <div className="premium-quality-light premium-quality-light2"></div>
-
-//       {/* =====================================================
-//           HEADER
-//       ====================================================== */}
-
-//       <div className="premium-quality-header">
-
-//         <span>
-
-//           ENGINEERED TESTING SYSTEMS
-
-//         </span>
-
-//         <h2>
-
-//           Premium Quality <br />
-
-//           Validation Process
-
-//         </h2>
-
-//         <p>
-
-//           Every glass system undergoes precision-engineered
-//           testing procedures ensuring unmatched durability,
-//           safety, optical clarity and long-term architectural
-//           performance.
-
-//         </p>
-
-//       </div>
-
-//       {/* =====================================================
-//           CINEMATIC LAYOUT
-//       ====================================================== */}
-
-//       <div className="premium-quality-showcase">
-
-//         {testSystems.map((item, index) => (
-
-//           <div
-//             className={`premium-quality-card premium-quality-card-${index + 1}`}
-//             key={item.id}
-//           >
-
-//             {/* IMAGE */}
-
-//             <div className="premium-quality-image-wrapper">
-
-//               <img
-//                 src={item.image}
-//                 alt={item.title}
-//               />
-
-//               <div className="premium-quality-overlay"></div>
-
-//               <div className="premium-quality-shine"></div>
-
-//             </div>
-
-//             {/* CONTENT */}
-
-//             <div className="premium-quality-content">
-
-//               <div className="premium-quality-number">
-
-//                 0{item.id}
-
-//               </div>
-
-//               <h3>
-
-//                 {item.title}
-
-//               </h3>
-
-//               <p>
-
-//                 {item.desc}
-
-//               </p>
-
-//               <button>
-
-//                 Explore Testing
-
-//               </button>
-
-//             </div>
-
-//           </div>
-
-//         ))}
-
-//       </div>
-
-//       {/* HUGE TEXT */}
-
-//       <div className="premium-quality-bg-text">
-
-//         TESTING
-
-//       </div>
-
-//     </section>
-
-//   );
-// }
-
-// export default Strength;
-
-
-
-
-
-// import "./Strength.css";
-
-// const qualityChecks = [
-
-//   {
-//     title: "Impact Resistance Testing",
-
-//     desc:
-//       "Every glass panel is engineered to withstand high-impact architectural conditions ensuring superior durability and long-term structural safety.",
-
-//     image:
-//       "https://images.pexels.com/photos/5691626/pexels-photo-5691626.jpeg",
-//   },
-
-//   {
-//     title: "Optical Clarity Validation",
-
-//     desc:
-//       "Advanced light transmission testing guarantees crystal-clear transparency and luxury visual aesthetics for premium architectural spaces.",
-
-//     image:
-//       "https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg",
-//   },
-
-//   {
-//     title: "Thermal Stability Testing",
-
-//     desc:
-//       "Extreme thermal validation ensures reliable performance against sudden temperature fluctuations in modern exterior environments.",
-
-//     image:
-//       "https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg",
-//   },
-
-//   {
-//     title: "Structural Stress Analysis",
-
-//     desc:
-//       "Precision stress balancing technology enhances long-term durability and ensures market-leading engineering reliability.",
-
-//     image:
-//       "https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg",
-//   },
-
-// ];
-
-// function Strength() {
-
-//   return (
-
-//     <section className="quality-assurance-section">
-
-//       {/* BACKGROUND */}
-
-//       <div className="quality-assurance-grid"></div>
-
-//       <div className="quality-assurance-glow qa-glow-1"></div>
-
-//       <div className="quality-assurance-glow qa-glow-2"></div>
-
-//       {/* HEADER */}
-
-//       <div className="quality-assurance-header">
-
-//         <span>
-
-//           QUALITY ASSURANCE SYSTEM
-
-//         </span>
-
-//         <h2>
-
-//           Precision Tested.
-//           <br />
-
-//           Market Trusted.
-
-//         </h2>
-
-//         <p>
-
-//           Our quality control process is built around
-//           advanced engineering validation systems ensuring
-//           every glass product delivers superior durability,
-//           optical perfection and premium architectural
-//           performance.
-
-//         </p>
-
-//       </div>
-
-//       {/* STORY SECTION */}
-
-//       <div className="quality-assurance-story">
-
-//         {/* LEFT IMAGE */}
-
-//         <div className="quality-story-image-wrap">
-
-//           <div className="quality-story-image-card">
-
-//             <img
-//               src="https://images.pexels.com/photos/6474342/pexels-photo-6474342.jpeg"
-//               alt=""
-//             />
-
-//             <div className="quality-story-overlay"></div>
-
-//             <div className="quality-story-floating">
-
-//               <h3>
-
-//                 100%
-//                 <br />
-
-//                 Quality Validated
-
-//               </h3>
-
-//               <p>
-
-//                 Engineered through
-//                 premium testing standards.
-
-//               </p>
-
-//             </div>
-
-//           </div>
-
-//         </div>
-
-//         {/* RIGHT CONTENT */}
-
-//         <div className="quality-story-content">
-
-    
-
-//           <div className="quality-story-list">
-
-//             {qualityChecks.map((item, index) => (
-
-//               <div
-//                 className="quality-story-item"
-//                 key={index}
-//               >
-
-//                 {/* IMAGE */}
-
-//                 <div className="quality-story-item-image">
-
-//                   <img
-//                     src={item.image}
-//                     alt={item.title}
-//                   />
-
-//                 </div>
-
-//                 {/* CONTENT */}
-
-//                 <div className="quality-story-item-content">
-
-//                   <div className="quality-story-line"></div>
-
-//                   <h3>
-
-//                     {item.title}
-
-//                   </h3>
-
-//                   <p>
-
-//                     {item.desc}
-
-//                   </p>
-
-//                 </div>
-
-//               </div>
-
-//             ))}
-
-//           </div>
-
-//         </div>
-
-//       </div>
-
-//       {/* BOTTOM PANEL */}
-
-//       <div className="quality-assurance-panel">
-
-//         <div className="quality-panel-box">
-
-//           <h3>
-
-//             Superior Strength
-
-//           </h3>
-
-//           <p>
-
-//             High-performance engineering
-//             for long-lasting durability.
-
-//           </p>
-
-//         </div>
-
-//         <div className="quality-panel-box">
-
-//           <h3>
-
-//             Optical Precision
-
-//           </h3>
-
-//           <p>
-
-//             Crystal-clear premium finish
-//             with luxury visual quality.
-
-//           </p>
-
-//         </div>
-
-//         <div className="quality-panel-box">
-
-//           <h3>
-
-//             Thermal Reliability
-
-//           </h3>
-
-//           <p>
-
-//             Stable performance under
-//             demanding climatic conditions.
-
-//           </p>
-
-//         </div>
-
-//       </div>
-
-//       {/* BG TEXT */}
-
-//       <div className="quality-assurance-bg-text">
-
-//         QUALITY
-
-//       </div>
-
-//     </section>
-
-//   );
-// }
-
-// export default Strength;
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import "./Strength.css";
-
+import "./Strength.css";
+import reflection from '../assets/reflection.jpeg';
+import fracture from '../assets/fracture.jpeg';
+import visual from '../assets/visual.jpeg';
+import snaptest from "../assets/snaptest.png";
+import delta from "../assets/delta.jpeg";
 // const qualityChecks = [
 
 //   {
 //     title: "Resistance To Shock Test",
 
 //     desc:
-//       "Engineered to withstand sudden impact and thermal stress ensuring superior long-term durability.",
+//       "Engineered to withstand sudden impact and thermal stress ensuring superior long-term durability and architectural reliability.",
 
 //     image:
 //       "https://images.pexels.com/photos/5691626/pexels-photo-5691626.jpeg",
@@ -1057,7 +20,7 @@
 //     title: "Fracture & Adhesion Test",
 
 //     desc:
-//       "Advanced bonding validation process ensuring maximum structural integrity and safety.",
+//       "Advanced bonding validation process ensuring maximum structural integrity, edge stability and long-lasting performance.",
 
 //     image:
 //       "https://images.pexels.com/photos/6474342/pexels-photo-6474342.jpeg",
@@ -1067,7 +30,7 @@
 //     title: "Fragmentation Test",
 
 //     desc:
-//       "Ensures controlled breakage patterns improving safety and premium architectural reliability.",
+//       "Ensures controlled breakage patterns improving safety standards and premium structural reliability.",
 
 //     image:
 //       "https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg",
@@ -1077,7 +40,7 @@
 //     title: "Visual Light Transmission Test",
 
 //     desc:
-//       "Optimized clarity and transparency delivering luxury aesthetics and balanced illumination.",
+//       "Optimized optical clarity delivering balanced natural lighting and luxury architectural aesthetics.",
 
 //     image:
 //       "https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg",
@@ -1087,7 +50,7 @@
 //     title: "Roller Waviness Test",
 
 //     desc:
-//       "Precision flatness testing ensuring distortion-free premium glass finish quality.",
+//       "Precision flatness validation minimizing distortion while ensuring premium-quality surface finish.",
 
 //     image:
 //       "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
@@ -1097,7 +60,7 @@
 //     title: "Impact Resistance Test",
 
 //     desc:
-//       "Designed for high-performance environments requiring superior strength and durability.",
+//       "Designed for high-performance architectural systems requiring superior strength and durability.",
 
 //     image:
 //       "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
@@ -1107,7 +70,7 @@
 //     title: "Stress Measurement Test",
 
 //     desc:
-//       "Scientifically balanced stress engineering for long-lasting structural performance.",
+//       "Scientifically engineered stress balancing ensuring long-term structural consistency and safety.",
 
 //     image:
 //       "https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg",
@@ -1117,17 +80,17 @@
 //     title: "Butterfly Test",
 
 //     desc:
-//       "Advanced toughness validation process ensuring premium-grade reliability standards.",
+//       "Advanced toughness validation process ensuring premium-grade reliability and engineering excellence.",
 
 //     image:
 //       "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg",
 //   },
 
 //   {
-//     title: "Glass Test",
+//     title: "Glass Flatness Test",
 
 //     desc:
-//       "Comprehensive quality inspection ensuring flawless finish and modern architectural excellence.",
+//       "Comprehensive flatness inspection ensuring smooth premium finish and flawless architectural aesthetics.",
 
 //     image:
 //       "https://images.pexels.com/photos/37347/office-sitting-room-executive-sitting.jpg",
@@ -1137,7 +100,7 @@
 //     title: "Snap Time Test",
 
 //     desc:
-//       "Precision-tested timing consistency improving performance reliability under pressure.",
+//       "Precision-tested timing consistency improving durability and high-performance operational stability.",
 
 //     image:
 //       "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg",
@@ -1147,7 +110,7 @@
 //     title: "Skin Over Time Test",
 
 //     desc:
-//       "Long-term surface durability testing preserving optical clarity and premium finish quality.",
+//       "Long-term surface durability validation preserving clarity, coating stability and luxury appearance.",
 
 //     image:
 //       "https://images.pexels.com/photos/290595/pexels-photo-290595.jpeg",
@@ -1157,180 +120,83 @@
 //     title: "Delta T Test",
 
 //     desc:
-//       "Extreme thermal variation testing ensuring durability in demanding exterior environments.",
+//       "Extreme thermal variation testing ensuring reliable performance under harsh environmental conditions.",
 
 //     image:
 //       "https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg",
 //   },
 
+//   {
+//     title: "Boil Test",
+
+//     desc:
+//       "High-temperature boiling validation ensuring exceptional thermal endurance and bonding stability.",
+
+//     image:
+//       "https://images.pexels.com/photos/2760241/pexels-photo-2760241.jpeg",
+//   },
+
+//   {
+//     title: "Break Test",
+
+//     desc:
+//       "Advanced break resistance analysis validating superior toughness, impact safety and structural integrity.",
+
+//     image:
+//       "https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg",
+//   },
+
+//   {
+//     title: "Optical Distortion Test",
+
+//     desc:
+//       "Advanced optical inspection maintaining crystal-clear viewing quality and premium transparency consistency.",
+
+//     image:
+//       "https://images.pexels.com/photos/290595/pexels-photo-290595.jpeg",
+//   },
+
+//   {
+//     title: "Edge Strength Test",
+
+//     desc:
+//       "Precision edge durability testing reducing crack propagation and improving installation safety.",
+
+//     image:
+//       "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg",
+//   },
+
+//   {
+//     title: "Surface Compression Test",
+
+//     desc:
+//       "Controlled compression analysis enhancing load-bearing strength and structural performance.",
+
+//     image:
+//       "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
+//   },
+
+//   {
+//     title: "Heat Soak Test",
+
+//     desc:
+//       "Specialized heat soak process eliminating internal imperfections and improving safety reliability.",
+
+//     image:
+//       "https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg",
+//   },
+
+//   {
+//     title: "Lamination Adhesion Test",
+
+//     desc:
+//       "Ensures superior bonding performance for laminated glass systems under demanding applications.",
+
+//     image:
+//       "https://images.pexels.com/photos/6474342/pexels-photo-6474342.jpeg",
+//   },
+
 // ];
-
-// function Strength() {
-
-//   return (
-
-//     <section className="qa-section">
-
-//       {/* =====================================================
-//           BACKGROUND
-//       ====================================================== */}
-
-//       <div className="qa-grid"></div>
-
-//       <div className="qa-glow qa-glow-one"></div>
-
-//       <div className="qa-glow qa-glow-two"></div>
-
-//       {/* =====================================================
-//           HEADER
-//       ====================================================== */}
-
-//       <div className="qa-header">
-
-//         <span>
-
-//           QUALITY ASSURANCE SYSTEM
-
-//         </span>
-
-//         <h2>
-
-//           Every Product <br />
-
-//           Goes Through <br />
-
-//           Precision Testing
-
-//         </h2>
-
-//         <p>
-
-//           Our advanced quality assurance process
-//           guarantees superior durability, structural
-//           reliability and premium architectural
-//           performance making our products stand
-//           out in the market.
-
-//         </p>
-
-//       </div>
-
-//       {/* =====================================================
-//           TEST GRID
-//       ====================================================== */}
-
-//       <div className="qa-test-layout">
-
-//         {qualityChecks.map((item, index) => (
-
-//           <div
-//             className="qa-test-row"
-//             key={index}
-//           >
-
-//             {/* LEFT IMAGE */}
-
-//             <div className="qa-test-image">
-
-//               <img
-//                 src={item.image}
-//                 alt={item.title}
-//               />
-
-//               <div className="qa-test-overlay"></div>
-
-//               <div className="qa-test-shine"></div>
-
-//             </div>
-
-//             {/* RIGHT CONTENT */}
-
-//             <div className="qa-test-content">
-
-//               <div className="qa-test-count">
-
-//                 0{index + 1}
-
-//               </div>
-
-//               <h3>
-
-//                 {item.title}
-
-//               </h3>
-
-//               <p>
-
-//                 {item.desc}
-
-//               </p>
-
-//               {/* HIGHLIGHT */}
-
-//               <div className="qa-highlight-box">
-
-//                 <span>
-
-//                   ✓
-
-//                 </span>
-
-//                 <p>
-
-//                   This testing process ensures
-//                   our glass systems deliver
-//                   superior market-leading
-//                   durability and premium
-//                   performance quality.
-
-//                 </p>
-
-//               </div>
-
-//             </div>
-
-//           </div>
-
-//         ))}
-
-//       </div>
-
-//       {/* HUGE TEXT */}
-
-//       <div className="qa-bg-text">
-
-//         TESTING
-
-//       </div>
-
-//     </section>
-
-//   );
-// }
-
-// export default Strength;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-import "./Strength.css";
-import reflection from '../assets/reflection.jpeg';
-import fracture from '../assets/fracture.jpeg';
-import visual from '../assets/visual.jpeg';
-import snaptest from "../assets/snaptest.png";
-import delta from "../assets/delta.jpeg";
 
 const qualityChecks = [
 
@@ -1463,9 +329,7 @@ function Strength() {
 
     <section className="qa-section">
 
-      {/* =====================================================
-          BACKGROUND
-      ====================================================== */}
+      {/* BACKGROUND */}
 
       <div className="qa-grid"></div>
 
@@ -1473,9 +337,7 @@ function Strength() {
 
       <div className="qa-glow qa-glow-two"></div>
 
-      {/* =====================================================
-          HEADER
-      ====================================================== */}
+      {/* HEADER */}
 
       <div className="qa-header">
 
@@ -1488,7 +350,6 @@ function Strength() {
         <h2>
 
           Precision Tested.
-          
 
         </h2>
 
@@ -1503,87 +364,158 @@ function Strength() {
 
       </div>
 
-      {/* =====================================================
-          TESTING ROWS
-      ====================================================== */}
+  
 
-      <div className="qa-test-layout">
+      <div className="qa-marquee-wrapper">
 
-        {qualityChecks.map((item, index) => (
 
-          <div
-            className="qa-test-row"
-            key={index}
-          >
 
-            {/* IMAGE */}
+        <div className="qa-marquee-column">
 
-            <div className="qa-test-image">
+          <div className="qa-marquee-track qa-track-up">
 
-              <img
-                src={item.image}
-                alt={item.title}
-              />
+            {[...qualityChecks, ...qualityChecks].map((item, index) => (
 
-              <div className="qa-test-overlay"></div>
+              <div
+                className="qa-test-card"
+                key={index}
+              >
 
-              <div className="qa-test-shine"></div>
+                {/* IMAGE */}
 
-            </div>
+                <div className="qa-test-image">
 
-            {/* CONTENT */}
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                  />
 
-            <div className="qa-test-content">
+                  <div className="qa-test-overlay"></div>
 
-              {/* <div className="qa-test-count">
+                  <div className="qa-test-shine"></div>
 
-                0{index + 1}
+                </div>
 
-              </div> */}
+                {/* CONTENT */}
 
-              <h3>
+                <div className="qa-test-content">
 
-                {item.title}
+                  <h3>
 
-              </h3>
+                    {item.title}
 
-              <p>
+                  </h3>
 
-                {item.desc}
+                  <p>
 
-              </p>
+                    {item.desc}
 
-              {/* HIGHLIGHT */}
+                  </p>
 
-              <div className="qa-highlight-box">
+                  <div className="qa-highlight-box">
 
-                <span>
+                    <span>
 
-                  ✓
+                      ✓
 
-                </span>
+                    </span>
 
-                <p>
+                    <p>
 
-                  This testing process ensures
-                  our glass systems deliver
-                  superior market-leading
-                  durability and premium
-                  performance quality.
+                      Premium validated testing
+                      ensuring superior market-leading
+                      durability and architectural
+                      reliability.
 
-                </p>
+                    </p>
+
+                  </div>
+
+                </div>
 
               </div>
 
-            </div>
+            ))}
 
           </div>
 
-        ))}
+        </div>
+
+        {/* RIGHT COLUMN */}
+
+        <div className="qa-marquee-column">
+
+          <div className="qa-marquee-track qa-track-down">
+
+            {[...qualityChecks, ...qualityChecks].map((item, index) => (
+
+              <div
+                className="qa-test-card"
+                key={index}
+              >
+
+                {/* IMAGE */}
+
+                <div className="qa-test-image">
+
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                  />
+
+                  <div className="qa-test-overlay"></div>
+
+                  <div className="qa-test-shine"></div>
+
+                </div>
+
+                {/* CONTENT */}
+
+                <div className="qa-test-content">
+
+                  <h3>
+
+                    {item.title}
+
+                  </h3>
+
+                  <p>
+
+                    {item.desc}
+
+                  </p>
+
+                  <div className="qa-highlight-box">
+
+                    <span>
+
+                      ✓
+
+                    </span>
+
+                    <p>
+
+                      Advanced engineered quality
+                      control delivering premium
+                      glass performance and durability.
+
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            ))}
+
+          </div>
+
+        </div>
 
       </div>
 
-      {/* HUGE BG TEXT */}
+      {/* HUGE BACKGROUND TEXT */}
 
       <div className="qa-bg-text">
 
@@ -1597,9 +529,3 @@ function Strength() {
 }
 
 export default Strength;
-
-
-
-
-
-

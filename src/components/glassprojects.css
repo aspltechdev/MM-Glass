@@ -1,5 +1,5 @@
 /* =========================================================
-   LUXURY GLASS GALLERY SECTION
+   SECTION
 ========================================================= */
 
 .luxury-glass-gallery-section {
@@ -11,94 +11,22 @@
   padding: 140px 0;
 
   background:
+    radial-gradient(circle at top left,
+      rgba(154, 153, 153, 0.55),
+      transparent 30%),
+
+    radial-gradient(circle at bottom right,
+      rgba(169, 167, 167, 0.537),
+      transparent 35%),
+
     linear-gradient(
-      to right,
-      rgba(16,16,16,0.96),
-      rgba(28,28,28,0.92),
-      rgba(12,12,12,0.96)
+      180deg,
+      #807e7e6b,
+      #767676,
+      #5d5d5d
     );
-}
 
-/* =========================================================
-   CINEMATIC BLOBS
-========================================================= */
-
-.luxury-glass-gallery-section::before,
-.luxury-glass-gallery-section::after {
-
-  content: "";
-
-  position: absolute;
-
-  border-radius: 50%;
-
-  filter: blur(120px);
-
-  z-index: 0;
-}
-
-.luxury-glass-gallery-section::before {
-
-  width: 550px;
-  height: 550px;
-
-  background:
-    rgba(255,0,0,0.18);
-
-  top: -180px;
-  left: -120px;
-
-  animation:
-    luxuryGlassBlob1 18s ease infinite alternate;
-}
-
-.luxury-glass-gallery-section::after {
-
-  width: 650px;
-  height: 650px;
-
-  background:
-    rgba(255,255,255,0.08);
-
-  right: -200px;
-  bottom: -250px;
-
-  animation:
-    luxuryGlassBlob2 20s ease infinite alternate;
-}
-
-@keyframes luxuryGlassBlob1 {
-
-  from {
-
-    transform:
-      translate(0px,0px)
-      scale(1);
-  }
-
-  to {
-
-    transform:
-      translate(80px,60px)
-      scale(1.12);
-  }
-}
-
-@keyframes luxuryGlassBlob2 {
-
-  from {
-
-    transform:
-      translate(0px,0px)
-      scale(1);
-  }
-
-  to {
-
-    transform:
-      translate(-100px,-60px)
-      scale(1.14);
-  }
+  perspective: 1800px;
 }
 
 /* =========================================================
@@ -116,12 +44,46 @@
 
   background-size: 70px 70px;
 
-  mask-image:
-    radial-gradient(circle,
-      rgba(255,255,255,1),
-      transparent 85%);
+  opacity: 0.5;
+}
 
-  z-index: 0;
+/* =========================================================
+   GLOW
+========================================================= */
+
+.luxury-glass-gallery-glow {
+
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(140px);
+
+  pointer-events: none;
+}
+
+.glow-left {
+
+  width: 450px;
+  height: 450px;
+
+  background:
+    rgba(255,0,0,0.15);
+
+  top: -120px;
+  left: -120px;
+}
+
+.glow-right {
+
+  width: 550px;
+  height: 550px;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  right: -180px;
+  bottom: -180px;
 }
 
 /* =========================================================
@@ -135,12 +97,14 @@
 
   overflow: hidden;
 
-  z-index: 1;
+  pointer-events: none;
 }
 
 .luxury-glass-gallery-particle {
 
   position: absolute;
+
+  bottom: -20px;
 
   width: 4px;
   height: 4px;
@@ -148,29 +112,29 @@
   border-radius: 50%;
 
   background:
-    rgba(255,0,0,0.9);
+    rgba(255,255,255,0.6);
 
-  box-shadow:
-    0 0 20px rgba(255,0,0,0.8);
-
-  bottom: -20px;
+  filter: blur(1px);
 
   animation:
-    luxuryGlassParticle linear infinite;
+    cinematicFloat linear infinite;
+
+  opacity: 0.6;
 }
 
-@keyframes luxuryGlassParticle {
+@keyframes cinematicFloat {
 
   from {
 
     transform:
       translateY(0px)
-      scale(0.7);
+      scale(0.6);
 
     opacity: 0;
   }
 
-  10% {
+  20% {
+
     opacity: 1;
   }
 
@@ -178,7 +142,7 @@
 
     transform:
       translateY(-120vh)
-      scale(1.5);
+      scale(1.3);
 
     opacity: 0;
   }
@@ -202,6 +166,28 @@
   text-align: center;
 
   margin-bottom: 90px;
+
+  animation:
+    cinematicFadeUp 1.2s ease;
+}
+
+@keyframes cinematicFadeUp {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translateY(80px);
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translateY(0px);
+  }
 }
 
 /* =========================================================
@@ -210,30 +196,49 @@
 
 .luxury-glass-gallery-badge {
 
-  width: fit-content;
+  display: inline-flex;
 
-  display: flex;
   align-items: center;
+
   gap: 12px;
 
-  margin: auto;
-
-  padding: 14px 24px;
+  padding: 14px 22px;
 
   border-radius: 999px;
 
   background:
     rgba(255,255,255,0.08);
 
-  backdrop-filter: blur(20px);
-
   border:
     1px solid rgba(255,255,255,0.12);
 
-  box-shadow:
-    0 10px 40px rgba(0,0,0,0.2);
+  backdrop-filter: blur(20px);
 
-  margin-bottom: 34px;
+  margin-bottom: 30px;
+
+  animation:
+    glowPulse 3s ease infinite;
+}
+
+@keyframes glowPulse {
+
+  0% {
+
+    box-shadow:
+      0 0 0px rgba(255,0,0,0);
+  }
+
+  50% {
+
+    box-shadow:
+      0 0 30px rgba(255,0,0,0.25);
+  }
+
+  100% {
+
+    box-shadow:
+      0 0 0px rgba(255,0,0,0);
+  }
 }
 
 .luxury-glass-gallery-badge span {
@@ -243,22 +248,20 @@
 
   border-radius: 50%;
 
-  background: #ff1e1e;
+  background: #ff2a2a;
 
   box-shadow:
-    0 0 20px rgba(255,0,0,0.9);
+    0 0 18px rgba(255,0,0,0.6);
 }
 
 .luxury-glass-gallery-badge p {
 
-  font-size: 13px;
+  color: white;
+
+  font-size: 12px;
   font-weight: 700;
 
-  letter-spacing: 1px;
-
-  text-transform: uppercase;
-
-  color: #ffffff;
+  letter-spacing: 2px;
 }
 
 /* =========================================================
@@ -268,7 +271,7 @@
 .luxury-glass-gallery-header h2 {
 
   font-size:
-    clamp(3.5rem,8vw,7rem);
+    clamp(3rem,8vw,7rem);
 
   line-height: 0.9;
 
@@ -276,10 +279,14 @@
 
   letter-spacing: -5px;
 
-  color: #ffffff;
+  color: white;
 
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
+
+/* =========================================================
+   HEADER TEXT
+========================================================= */
 
 .luxury-glass-gallery-header p {
 
@@ -287,47 +294,53 @@
 
   margin: auto;
 
-  font-size: 1.08rem;
+  color:
+    rgba(255,255,255,0.72);
 
   line-height: 1.9;
 
-  color: rgba(255,255,255,0.7);
+  font-size: 1.05rem;
 }
 
 /* =========================================================
-   HORIZONTAL SCROLL
+   SCROLL WRAPPER
 ========================================================= */
 
 .luxury-glass-gallery-scroll-wrapper {
 
   position: relative;
 
-  width: 100%;
-
   overflow: hidden;
+
+  mask-image:
+    linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
 
   z-index: 5;
 }
 
+/* =========================================================
+   TRACK
+========================================================= */
+
 .luxury-glass-gallery-track {
 
   display: flex;
-  align-items: center;
 
-  gap: 32px;
+  gap: 34px;
 
   width: max-content;
 
   animation:
-    luxuryGlassHorizontalScroll 36s linear infinite;
+    luxuryScroll 38s linear infinite;
 }
 
-.luxury-glass-gallery-track:hover {
-
-  animation-play-state: paused;
-}
-
-@keyframes luxuryGlassHorizontalScroll {
+@keyframes luxuryScroll {
 
   from {
 
@@ -343,6 +356,16 @@
 }
 
 /* =========================================================
+   PAUSE ON HOVER
+========================================================= */
+
+.luxury-glass-gallery-scroll-wrapper:hover
+.luxury-glass-gallery-track {
+
+  animation-play-state: paused;
+}
+
+/* =========================================================
    CARD
 ========================================================= */
 
@@ -350,59 +373,80 @@
 
   position: relative;
 
-  width: 500px;
-  height: 640px;
+  width: 430px;
 
   overflow: hidden;
 
-  flex-shrink: 0;
-
   border-radius: 38px;
 
-  background:
-    rgba(255,255,255,0.08);
+  /* background:
+    rgba(255,255,255,0.05);
 
-  backdrop-filter: blur(30px);
+  backdrop-filter: blur(24px); */
 
   border:
-    1px solid rgba(255,255,255,0.12);
-
-  box-shadow:
-    0 40px 120px rgba(0,0,0,0.35);
+    1px solid rgba(255,255,255,0.08);
 
   transform-style: preserve-3d;
 
   transition:
-    0.8s ease;
+    transform 0.9s ease,
+    box-shadow 0.8s ease,
+    border 0.8s ease;
 
   opacity: 0;
 
   transform:
-    translateY(120px);
+    translateY(100px)
+    scale(0.92);
+
+  animation:
+    cardReveal 1.2s ease forwards;
 }
 
-.luxury-glass-gallery-card-show {
+@keyframes cardReveal {
 
-  opacity: 1;
+  to {
 
-  transform:
-    translateY(0px);
+    opacity: 1;
+
+    transform:
+      translateY(0px)
+      scale(1);
+  }
 }
+
+/* =========================================================
+   HOVER
+========================================================= */
 
 .luxury-glass-gallery-card:hover {
 
   transform:
-    translateY(-18px)
-    rotateY(6deg)
-    scale(1.02);
+    translateY(-20px)
+    rotateY(-6deg)
+    rotateX(4deg)
+    scale(1.03);
+
+  border:
+    1px solid rgba(255,0,0,0.18);
 
   box-shadow:
-    0 60px 140px rgba(255,0,0,0.16);
+    0 50px 140px rgba(255,0,0,0.18);
 }
 
 /* =========================================================
    IMAGE
 ========================================================= */
+
+.luxury-glass-gallery-image-wrap {
+
+  position: relative;
+
+  overflow: hidden;
+
+  height: 520px;
+}
 
 .luxury-glass-gallery-image {
 
@@ -415,7 +459,8 @@
     scale(1.08);
 
   transition:
-    transform 1.6s ease;
+    transform 2s ease,
+    filter 1s ease;
 }
 
 .luxury-glass-gallery-card:hover
@@ -423,6 +468,49 @@
 
   transform:
     scale(1.18);
+
+  filter:
+    brightness(1.08)
+    saturate(1.8);
+}
+
+/* =========================================================
+   IMAGE SWEEP
+========================================================= */
+
+.luxury-glass-gallery-image-wrap::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 60%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      120deg,
+      transparent,
+      rgba(255,255,255,0.4),
+      transparent
+    );
+
+  transform:
+    skewX(-20deg);
+
+  z-index: 5;
+
+  transition:
+    left 1.2s ease;
+}
+
+.luxury-glass-gallery-card:hover
+.luxury-glass-gallery-image-wrap::before {
+
+  left: 150%;
 }
 
 /* =========================================================
@@ -434,12 +522,12 @@
   position: absolute;
   inset: 0;
 
-  background:
+  /* background:
     linear-gradient(
       to top,
-      rgba(0,0,0,0.88),
-      rgba(0,0,0,0.08)
-    );
+      rgba(0,0,0,0.92),
+      rgba(0,0,0,0.18)
+    ); */
 }
 
 /* =========================================================
@@ -451,22 +539,20 @@
   position: absolute;
   inset: 0;
 
-  z-index: 2;
-
   background:
     linear-gradient(
       120deg,
-      rgba(255,255,255,0.35),
+      rgba(255,255,255,0.14),
       transparent 30%,
       transparent 60%,
       rgba(255,255,255,0.08)
     );
 
   animation:
-    luxuryGlassShine 6s linear infinite;
+    glassShine 6s linear infinite;
 }
 
-@keyframes luxuryGlassShine {
+@keyframes glassShine {
 
   from {
 
@@ -487,38 +573,40 @@
 
 .luxury-glass-gallery-content {
 
-  position: absolute;
+  padding: 28px;
 
-  left: 35px;
-  bottom: 35px;
+  position: relative;
 
-  z-index: 5;
+  z-index: 10;
 }
 
 .luxury-glass-gallery-category {
 
-  display: inline-block;
+  display: inline-flex;
 
   padding: 10px 18px;
 
   border-radius: 999px;
 
   background:
-    rgba(255,255,255,0.12);
-
-  backdrop-filter: blur(16px);
+    rgba(255,255,255,0.08);
 
   border:
-    1px solid rgba(255,255,255,0.14);
+    1px solid rgba(255,255,255,0.12);
 
   color: white;
 
-  font-size: 13px;
-
+  font-size: 11px;
   font-weight: 700;
+
+  letter-spacing: 1px;
 
   margin-bottom: 18px;
 }
+
+/* =========================================================
+   TITLE
+========================================================= */
 
 .luxury-glass-gallery-title {
 
@@ -528,20 +616,47 @@
 
   line-height: 1.1;
 
-  max-width: 320px;
+  margin-bottom: 18px;
 
-  margin-bottom: 24px;
+  transition:
+    0.6s ease;
+}
+
+.luxury-glass-gallery-card:hover
+.luxury-glass-gallery-title {
+
+  transform:
+    translateX(8px);
 }
 
 /* =========================================================
-   CTA BUTTON
+   DESCRIPTION
+========================================================= */
+
+.luxury-glass-gallery-description {
+
+  color:
+    rgba(255,255,255,0.72);
+
+  line-height: 1.8;
+
+  margin-bottom: 28px;
+}
+
+/* =========================================================
+   BUTTON
 ========================================================= */
 
 .luxury-glass-gallery-button {
 
+  position: relative;
+
   display: inline-flex;
+
   align-items: center;
   justify-content: center;
+
+  overflow: hidden;
 
   padding: 14px 28px;
 
@@ -550,22 +665,22 @@
   background:
     linear-gradient(
       135deg,
-      #ff1e1e,
-      #b30000
+      #ff2a2a,
+      #b40000
     );
 
   color: white;
 
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
 
   text-decoration: none;
 
   transition:
-    0.4s ease;
+    0.6s ease;
 
   box-shadow:
-    0 12px 30px rgba(255,0,0,0.28);
+    0 14px 34px rgba(255,0,0,0.22);
 }
 
 .luxury-glass-gallery-button:hover {
@@ -574,27 +689,129 @@
     translateY(-4px);
 
   box-shadow:
-    0 18px 40px rgba(255,0,0,0.45);
+    0 18px 44px rgba(255,0,0,0.35);
 }
 
 /* =========================================================
-   RESPONSIVE
+   BUTTON LIGHT
 ========================================================= */
 
-@media(max-width:1200px){
+.luxury-glass-gallery-button::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 60%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      120deg,
+      transparent,
+      rgba(255,255,255,0.45),
+      transparent
+    );
+
+  transition:
+    left 0.9s ease;
+}
+
+.luxury-glass-gallery-button:hover::before {
+
+  left: 150%;
+}
+
+/* =========================================================
+   BG TEXT
+========================================================= */
+
+.luxury-glass-gallery-bg-text {
+
+  position: absolute;
+
+  bottom: 10px;
+  left: 50%;
+
+  transform:
+    translateX(-50%);
+
+  font-size:
+    clamp(5rem,15vw,18rem);
+
+  font-weight: 900;
+
+  color:
+    rgba(255,255,255,0.02);
+
+  letter-spacing: -10px;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   LARGE DEVICES
+========================================================= */
+
+@media(max-width:1400px){
 
   .luxury-glass-gallery-card {
 
-    width: 430px;
-    height: 560px;
+    width: 380px;
+  }
+
+  .luxury-glass-gallery-image-wrap {
+
+    height: 470px;
   }
 }
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media(max-width:1100px){
+
+  .luxury-glass-gallery-track {
+
+    gap: 24px;
+  }
+
+  .luxury-glass-gallery-card {
+
+    width: 330px;
+  }
+
+  .luxury-glass-gallery-image-wrap {
+
+    height: 420px;
+  }
+
+  .luxury-glass-gallery-title {
+
+    font-size: 1.6rem;
+  }
+}
+
+/* =========================================================
+   MOBILE TABLETS
+========================================================= */
 
 @media(max-width:768px){
 
   .luxury-glass-gallery-section {
 
-    padding: 110px 0;
+    padding: 100px 0;
+  }
+
+  .luxury-glass-gallery-header {
+
+    width: 94%;
+
+    margin-bottom: 70px;
   }
 
   .luxury-glass-gallery-header h2 {
@@ -604,41 +821,64 @@
     letter-spacing: -3px;
   }
 
-  .luxury-glass-gallery-header p {
+  .luxury-glass-gallery-track {
 
-    font-size: 1rem;
+    animation-duration: 24s;
+
+    gap: 20px;
   }
 
   .luxury-glass-gallery-card {
 
-    width: 320px;
-    height: 440px;
+    width: 280px;
 
     border-radius: 28px;
   }
 
+  .luxury-glass-gallery-image-wrap {
+
+    height: 340px;
+  }
+
   .luxury-glass-gallery-content {
 
-    left: 24px;
-    bottom: 24px;
+    padding: 20px;
   }
 
   .luxury-glass-gallery-title {
 
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+  }
+
+  .luxury-glass-gallery-description {
+
+    font-size: 0.95rem;
+  }
+
+  .luxury-glass-gallery-card:hover {
+
+    transform:
+      translateY(-10px)
+      scale(1.02);
   }
 }
 
+/* =========================================================
+   MOBILE
+========================================================= */
+
 @media(max-width:540px){
 
-  .luxury-glass-gallery-header {
+  .luxury-glass-gallery-section {
 
-    width: 94%;
+    padding: 80px 0;
   }
 
   .luxury-glass-gallery-header h2 {
 
-    font-size: 2.4rem;
+    font-size: 2.2rem;
+
+    letter-spacing: -2px;
   }
 
   .luxury-glass-gallery-header p {
@@ -648,19 +888,67 @@
     line-height: 1.7;
   }
 
+  .luxury-glass-gallery-track {
+
+    gap: 16px;
+  }
+
   .luxury-glass-gallery-card {
 
-    width: 270px;
-    height: 380px;
+    width: 240px;
+
+    border-radius: 22px;
+  }
+
+  .luxury-glass-gallery-image-wrap {
+
+    height: 280px;
+  }
+
+  .luxury-glass-gallery-content {
+
+    padding: 16px;
+  }
+
+  .luxury-glass-gallery-category {
+
+    font-size: 10px;
+
+    padding: 8px 14px;
   }
 
   .luxury-glass-gallery-title {
 
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+
+    margin-bottom: 12px;
+  }
+
+  .luxury-glass-gallery-description {
+
+    font-size: 0.88rem;
+
+    line-height: 1.6;
   }
 
   .luxury-glass-gallery-button {
 
     width: 100%;
+
+    font-size: 13px;
+
+    padding: 12px 18px;
+  }
+
+  .luxury-glass-gallery-card:hover {
+
+    transform:
+      translateY(-6px)
+      scale(1.01);
+  }
+
+  .luxury-glass-gallery-bg-text {
+
+    font-size: 5rem;
   }
 }

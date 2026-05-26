@@ -9,6 +9,7 @@ import project6 from "../assets/story6.png";
 import project7 from "../assets/story7.png";
 import project8 from "../assets/story8.png";
 import ProjectGallery from "./glassprojects";
+import { Link } from "react-router-dom";
 // import { image } from "framer-motion/m";
 // import { motion } from "framer-motion";
 
@@ -244,6 +245,20 @@ POWERED BY PREMIUM GLASS
           and precision-engineered glass technologies.
 
         </p>
+{/* <Link to="/contactus">
+           <button>
+
+                    Explore Product
+
+                  </button>
+                  </Link> */}
+                  <Link to="/contactus">
+  <button className="luxury-product-explore-btn">
+
+    Explore Product
+
+  </button>
+</Link>
 
       </div>
 

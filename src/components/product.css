@@ -403,8 +403,8 @@ object-fit: contain;
 
   background-image:
   linear-gradient(
-    rgba(20,20,20,0.55),
-    rgba(20,20,20,0.72)
+    rgba(177, 174, 174, 0.55),
+    rgba(161, 160, 160, 0.72)
   ),
 
   url("https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=2400&auto=format&fit=crop");

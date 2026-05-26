@@ -170,3 +170,247 @@ html, body {
     font-size:1.7rem;
   }
 }
+
+
+/* =========================================================
+   FLOATING SOCIAL WRAPPER
+========================================================= */
+
+.luxury-social-floating-wrapper {
+
+  position: fixed;
+
+  right: 22px;
+  bottom: 24px;
+
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+/* =========================================================
+   COMMON ICON STYLE
+========================================================= */
+
+.luxury-social-float {
+
+  position: relative;
+
+  width: 62px;
+  height: 62px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  color: white;
+
+  font-size: 1.6rem;
+
+  backdrop-filter: blur(20px);
+
+  border:
+    1px solid rgba(255,255,255,0.12);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+
+  animation:
+    socialFloat 3s ease-in-out infinite;
+}
+
+/* =========================================================
+   FLOAT ANIMATION
+========================================================= */
+
+@keyframes socialFloat {
+
+  0% {
+
+    transform:
+      translateY(0px);
+  }
+
+  50% {
+
+    transform:
+      translateY(-8px);
+  }
+
+  100% {
+
+    transform:
+      translateY(0px);
+  }
+}
+
+/* =========================================================
+   LIGHT SWEEP
+========================================================= */
+
+.luxury-social-float::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 60%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      120deg,
+      transparent,
+      rgba(255,255,255,0.45),
+      transparent
+    );
+
+  transform:
+    skewX(-20deg);
+
+  transition:
+    left 1s ease;
+}
+
+.luxury-social-float:hover::before {
+
+  left: 150%;
+}
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.luxury-social-float:hover {
+
+  transform:
+    translateY(-6px)
+    scale(1.08);
+
+  box-shadow:
+    0 18px 44px rgba(255,255,255,0.18);
+}
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.whatsapp-float-icon {
+
+  background:
+    linear-gradient(
+      135deg,
+      #1bd741,
+      #0f9d30
+    );
+
+  box-shadow:
+    0 14px 34px rgba(27,215,65,0.35);
+}
+
+/* =========================================================
+   INSTAGRAM
+========================================================= */
+
+.instagram-float-icon {
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff3cac,
+      #784ba0,
+      #ffb86c
+    );
+
+  box-shadow:
+    0 14px 34px rgba(255,60,172,0.35);
+}
+
+/* =========================================================
+   FACEBOOK
+========================================================= */
+
+.facebook-float-icon {
+
+  background:
+    linear-gradient(
+      135deg,
+      #1877f2,
+      #0d5fd3
+    );
+
+  box-shadow:
+    0 14px 34px rgba(24,119,242,0.35);
+}
+
+/* =========================================================
+   LINKEDIN
+========================================================= */
+
+.linkedin-float-icon {
+
+  background:
+    linear-gradient(
+      135deg,
+      #0a66c2,
+      #004182
+    );
+
+  box-shadow:
+    0 14px 34px rgba(10,102,194,0.35);
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:768px){
+
+  .luxury-social-floating-wrapper {
+
+    right: 16px;
+    bottom: 20px;
+
+    gap: 12px;
+  }
+
+  .luxury-social-float {
+
+    width: 54px;
+    height: 54px;
+
+    font-size: 1.3rem;
+  }
+}
+
+@media(max-width:540px){
+
+  .luxury-social-floating-wrapper {
+
+    right: 12px;
+    bottom: 16px;
+
+    gap: 10px;
+  }
+
+  .luxury-social-float {
+
+    width: 48px;
+    height: 48px;
+
+    font-size: 1.1rem;
+  }
+}

@@ -1,5 +1,5 @@
 /* =========================================================
-   CINEMATIC QUALITY ASSURANCE SECTION
+   QA SECTION
 ========================================================= */
 
 .qa-section {
@@ -8,19 +8,27 @@
 
   overflow: hidden;
 
-  padding: 180px 0;
+  padding: 140px 0;
 
   background:
-  linear-gradient(
-    10deg,
-    rgb(99, 98, 98),
-    rgb(89, 89, 89),
-    rgb(78, 78, 78)
-  );
+    radial-gradient(circle at top left,
+      rgba(146, 144, 144, 0.573),
+      transparent 30%),
+
+    radial-gradient(circle at bottom right,
+      rgba(138, 137, 137, 0.505),
+      transparent 35%),
+
+    linear-gradient(
+      180deg,
+      #807c7c52,
+      #6e6e6e8a,
+      #afacac56
+    );
 }
 
 /* =========================================================
-   GRID
+   GRID BACKGROUND
 ========================================================= */
 
 .qa-grid {
@@ -28,20 +36,17 @@
   position: absolute;
   inset: 0;
 
-  background-image:
+  /* background-image:
     linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); */
 
   background-size: 70px 70px;
 
-  mask-image:
-    radial-gradient(circle,
-      rgba(255,255,255,1),
-      transparent 85%);
+  opacity: 0.5;
 }
 
 /* =========================================================
-   GLOWS
+   GLOW EFFECTS
 ========================================================= */
 
 .qa-glow {
@@ -57,26 +62,26 @@
 
 .qa-glow-one {
 
-  width: 500px;
-  height: 500px;
+  width: 450px;
+  height: 450px;
 
   background:
-    rgba(255,0,0,0.15);
+    rgba(131, 130, 130, 0.733);
 
   top: -120px;
-  left: -100px;
+  left: -120px;
 }
 
 .qa-glow-two {
 
-  width: 650px;
-  height: 650px;
+  width: 550px;
+  height: 550px;
 
   background:
-    rgba(255,255,255,0.05);
+    rgba(152, 151, 151, 0.596);
 
-  right: -200px;
-  bottom: -200px;
+  right: -180px;
+  bottom: -180px;
 }
 
 /* =========================================================
@@ -96,7 +101,7 @@
 
   text-align: center;
 
-  margin-bottom: 140px;
+  margin-bottom: 100px;
 }
 
 .qa-header span {
@@ -106,7 +111,7 @@
   align-items: center;
   justify-content: center;
 
-  padding: 14px 26px;
+  padding: 14px 24px;
 
   border-radius: 999px;
 
@@ -118,30 +123,30 @@
 
   backdrop-filter: blur(20px);
 
-  color: white;
+  color: #ffffff;
 
   font-size: 12px;
   font-weight: 700;
 
   letter-spacing: 2px;
 
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .qa-header h2 {
 
   font-size:
-    clamp(3.5rem,8vw,7rem);
+    clamp(3rem,8vw,7rem);
 
   line-height: 0.9;
 
-  letter-spacing: -5px;
-
   font-weight: 900;
+
+  letter-spacing: -5px;
 
   color: white;
 
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .qa-header p {
@@ -159,10 +164,10 @@
 }
 
 /* =========================================================
-   TEST LAYOUT
+   MARQUEE WRAPPER
 ========================================================= */
 
-.qa-test-layout {
+.qa-marquee-wrapper {
 
   position: relative;
 
@@ -173,32 +178,100 @@
 
   margin: auto;
 
-  display: flex;
-  flex-direction: column; 
-
-  gap: 70px;
-}
-
-/* =========================================================
-   ROW
-========================================================= */
-
-.qa-test-row {
-
-  position: relative;
-
   display: grid;
 
   grid-template-columns:
-    480px 1fr;
+    repeat(2,1fr);
 
-  gap: 50px;
+  gap: 40px;
 
-  align-items: center;
+  height: 1400px;
 
-  padding: 34px;
+  overflow: hidden;
+}
 
-  border-radius: 42px;
+/* =========================================================
+   COLUMN
+========================================================= */
+
+.qa-marquee-column {
+
+  position: relative;
+
+  overflow: hidden;
+
+  height: 100%;
+}
+
+/* =========================================================
+   TRACKS
+========================================================= */
+
+.qa-marquee-track {
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 34px;
+}
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+.qa-track-up {
+
+  animation:
+    qaScrollUp 40s linear infinite;
+}
+
+.qa-track-down {
+
+  animation:
+    qaScrollDown 40s linear infinite;
+}
+
+@keyframes qaScrollUp {
+
+  from {
+
+    transform:
+      translateY(0%);
+  }
+
+  to {
+
+    transform:
+      translateY(-50%);
+  }
+}
+
+@keyframes qaScrollDown {
+
+  from {
+
+    transform:
+      translateY(-50%);
+  }
+
+  to {
+
+    transform:
+      translateY(0%);
+  }
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.qa-test-card {
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 38px;
 
   background:
     rgba(255,255,255,0.05);
@@ -208,113 +281,34 @@
   border:
     1px solid rgba(255,255,255,0.08);
 
-  overflow: hidden;
-
-  opacity: 0;
-
-  transform:
-    translateY(120px)
-    scale(0.95);
-
-  animation:
-    qaReveal 1.2s ease forwards;
+  padding: 22px;
 
   transition:
-    transform 0.7s ease,
-    border 0.7s ease,
-    box-shadow 0.7s ease;
-}
-
-/* =========================================================
-   STAGGER ANIMATION
-========================================================= */
-
-.qa-test-row:nth-child(1) {
-  animation-delay: 0.1s;
-}
-
-.qa-test-row:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.qa-test-row:nth-child(3) {
-  animation-delay: 0.3s;
-}
-
-.qa-test-row:nth-child(4) {
-  animation-delay: 0.4s;
-}
-
-.qa-test-row:nth-child(5) {
-  animation-delay: 0.5s;
-}
-
-.qa-test-row:nth-child(6) {
-  animation-delay: 0.6s;
-}
-
-.qa-test-row:nth-child(7) {
-  animation-delay: 0.7s;
-}
-
-.qa-test-row:nth-child(8) {
-  animation-delay: 0.8s;
-}
-
-.qa-test-row:nth-child(9) {
-  animation-delay: 0.9s;
-}
-
-.qa-test-row:nth-child(10) {
-  animation-delay: 1s;
-}
-
-.qa-test-row:nth-child(11) {
-  animation-delay: 1.1s;
-}
-
-.qa-test-row:nth-child(12) {
-  animation-delay: 1.2s;
-}
-
-/* =========================================================
-   REVEAL
-========================================================= */
-
-@keyframes qaReveal {
-
-  to {
-
-    opacity: 1;
-
-    transform:
-      translateY(0px)
-      scale(1);
-  }
+    0.7s ease;
 }
 
 /* =========================================================
    HOVER
 ========================================================= */
 
-.qa-test-row:hover {
+.qa-test-card:hover {
 
   transform:
-    translateY(-14px)
-    scale(1.015);
+    translateY(-10px)
+    scale(1.02);
 
   border:
     1px solid rgba(255,0,0,0.18);
 
   box-shadow:
-    0 50px 140px rgba(255,0,0,0.14);
+    0 40px 120px rgba(255,0,0,0.14);
 }
 
 /* =========================================================
    GLASS SWEEP
 ========================================================= */
 
-.qa-test-row::before {
+.qa-test-card::before {
 
   content: "";
 
@@ -334,10 +328,10 @@
     translateX(-120%);
 
   transition:
-    transform 1.3s ease;
+    transform 1.2s ease;
 }
 
-.qa-test-row:hover::before {
+.qa-test-card:hover::before {
 
   transform:
     translateX(120%);
@@ -351,11 +345,13 @@
 
   position: relative;
 
-  height: 340px;
+  height: 260px;
 
   overflow: hidden;
 
-  border-radius: 32px;
+  border-radius: 26px;
+
+  margin-bottom: 26px;
 
   isolation: isolate;
 }
@@ -371,7 +367,7 @@
     scale(1.08);
 
   transition:
-    transform 1.8s ease,
+    transform 1.6s ease,
     filter 1s ease;
 }
 
@@ -379,20 +375,19 @@
    IMAGE HOVER
 ========================================================= */
 
-.qa-test-row:hover
+.qa-test-card:hover
 .qa-test-image img {
 
   transform:
     scale(1.18);
 
   filter:
-    brightness(1.15)
-    contrast(1.05)
-    saturate(1.08);
+    brightness(1.1)
+    saturate(1.1);
 }
 
 /* =========================================================
-   IMAGE LIGHT
+   IMAGE LIGHT SWEEP
 ========================================================= */
 
 .qa-test-image::before {
@@ -424,7 +419,7 @@
     left 1.3s ease;
 }
 
-.qa-test-row:hover
+.qa-test-card:hover
 .qa-test-image::before {
 
   left: 150%;
@@ -442,8 +437,8 @@
   background:
     linear-gradient(
       to top,
-      rgba(0,0,0,0.75),
-      rgba(0,0,0,0.1)
+      rgba(0,0,0,0.72),
+      rgba(0,0,0,0.08)
     );
 
   z-index: 2;
@@ -463,7 +458,7 @@
   background:
     linear-gradient(
       120deg,
-      rgba(255,255,255,0.16),
+      rgba(255,255,255,0.14),
       transparent 30%,
       transparent 60%,
       rgba(255,255,255,0.08)
@@ -492,66 +487,16 @@
    CONTENT
 ========================================================= */
 
-.qa-test-content {
-
-  position: relative;
-}
-
-.qa-test-count {
-
-  font-size: 5rem;
-
-  font-weight: 900;
-
-  line-height: 1;
-
-  color:
-    rgba(255,255,255,0.06);
-
-  margin-bottom: 20px;
-
-  transition:
-    0.6s ease;
-}
-
-.qa-test-row:hover
-.qa-test-count {
-
-  color:
-    rgba(255,0,0,0.18);
-
-  transform:
-    translateX(8px);
-}
-
-/* =========================================================
-   TITLE
-========================================================= */
-
 .qa-test-content h3 {
 
   color: white;
 
-  font-size: 2.2rem;
+  font-size: 1.7rem;
 
-  line-height: 1.1;
+  line-height: 1.2;
 
-  margin-bottom: 18px;
-
-  transition:
-    0.5s ease;
+  margin-bottom: 16px;
 }
-
-.qa-test-row:hover
-.qa-test-content h3 {
-
-  transform:
-    translateX(6px);
-}
-
-/* =========================================================
-   DESCRIPTION
-========================================================= */
 
 .qa-test-content p {
 
@@ -560,21 +505,11 @@
 
   line-height: 1.9;
 
-  margin-bottom: 30px;
-
-  transition:
-    0.5s ease;
-}
-
-.qa-test-row:hover
-.qa-test-content p {
-
-  color:
-    rgba(255,255,255,0.92);
+  margin-bottom: 24px;
 }
 
 /* =========================================================
-   HIGHLIGHT
+   HIGHLIGHT BOX
 ========================================================= */
 
 .qa-highlight-box {
@@ -584,9 +519,9 @@
 
   gap: 14px;
 
-  padding: 20px;
+  padding: 18px;
 
-  border-radius: 24px;
+  border-radius: 22px;
 
   background:
     rgba(255,255,255,0.05);
@@ -594,15 +529,13 @@
   border:
     1px solid rgba(255,255,255,0.08);
 
-  backdrop-filter: blur(16px);
-
-  max-width: 650px;
+  backdrop-filter: blur(14px);
 
   transition:
     0.6s ease;
 }
 
-.qa-test-row:hover
+.qa-test-card:hover
 .qa-highlight-box {
 
   background:
@@ -610,15 +543,12 @@
 
   border:
     1px solid rgba(255,0,0,0.18);
-
-  transform:
-    translateY(-4px);
 }
 
 .qa-highlight-box span {
 
-  min-width: 36px;
-  height: 36px;
+  min-width: 34px;
+  height: 34px;
 
   border-radius: 50%;
 
@@ -652,7 +582,7 @@
 }
 
 /* =========================================================
-   HUGE TEXT
+   HUGE BG TEXT
 ========================================================= */
 
 .qa-bg-text {
@@ -679,27 +609,61 @@
 }
 
 /* =========================================================
-   RESPONSIVE
+   LARGE LAPTOPS
+========================================================= */
+
+@media(max-width:1400px){
+
+  .qa-marquee-wrapper {
+
+    height: 1200px;
+  }
+}
+
+/* =========================================================
+   TABLETS
 ========================================================= */
 
 @media(max-width:1100px){
 
-  .qa-test-row {
+  .qa-marquee-wrapper {
 
     grid-template-columns: 1fr;
+
+    height: auto;
+  }
+
+  .qa-marquee-column {
+
+    height: auto;
+  }
+
+  .qa-track-up,
+  .qa-track-down {
+
+    animation: none;
   }
 
   .qa-test-image {
 
-    height: 360px;
+    height: 320px;
   }
 }
+
+/* =========================================================
+   SMALL TABLETS
+========================================================= */
 
 @media(max-width:768px){
 
   .qa-section {
 
-    padding: 110px 0;
+    padding: 100px 0;
+  }
+
+  .qa-header {
+
+    margin-bottom: 70px;
   }
 
   .qa-header h2 {
@@ -709,67 +673,136 @@
     letter-spacing: -3px;
   }
 
-  .qa-test-layout {
+  .qa-marquee-wrapper {
 
-    gap: 40px;
-  }
-
-  .qa-test-row {
+    width: 94%;
 
     gap: 28px;
-
-    padding: 24px;
   }
 
-  .qa-test-image {
-
-    height: 260px;
-  }
-
-  .qa-test-content h3 {
-
-    font-size: 1.5rem;
-  }
-}
-
-@media(max-width:540px){
-
-  .qa-header {
-
-    width: 94%;
-  }
-
-  .qa-test-layout {
-
-    width: 94%;
-  }
-
-  .qa-header h2 {
-
-    font-size: 2.3rem;
-  }
-
-  .qa-test-row {
-
-    border-radius: 24px;
+  .qa-test-card {
 
     padding: 18px;
+
+    border-radius: 28px;
   }
 
   .qa-test-image {
 
-    height: 220px;
+    height: 240px;
 
     border-radius: 20px;
   }
 
   .qa-test-content h3 {
 
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+  }
+
+  .qa-highlight-box {
+
+    padding: 16px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:540px){
+
+  .qa-section {
+
+    padding: 80px 0;
+  }
+
+  .qa-header {
+
+    width: 94%;
+  }
+
+  .qa-header span {
+
+    font-size: 10px;
+
+    padding: 12px 18px;
+  }
+
+  .qa-header h2 {
+
+    font-size: 2.2rem;
+
+    letter-spacing: -2px;
+  }
+
+  .qa-header p {
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+  }
+
+  .qa-marquee-wrapper {
+
+    width: 94%;
+  }
+
+  .qa-test-card {
+
+    padding: 14px;
+
+    border-radius: 22px;
+  }
+
+  .qa-test-image {
+
+    height: 190px;
+
+    border-radius: 18px;
+
+    margin-bottom: 18px;
+  }
+
+  .qa-test-content h3 {
+
+    font-size: 1.1rem;
+
+    margin-bottom: 12px;
+  }
+
+  .qa-test-content p {
+
+    font-size: 0.92rem;
+
+    line-height: 1.7;
   }
 
   .qa-highlight-box {
 
     flex-direction: column;
+
+    gap: 12px;
+
+    padding: 14px;
+
+    border-radius: 18px;
+  }
+
+  .qa-highlight-box span {
+
+    min-width: 30px;
+    height: 30px;
+
+    font-size: 14px;
+  }
+
+  .qa-highlight-box p {
+
+    font-size: 0.9rem;
+  }
+
+  .qa-bg-text {
+
+    font-size: 5rem;
   }
 }
