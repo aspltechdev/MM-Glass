@@ -296,6 +296,7 @@ import "./Expertise.css";
 import img1 from "../assets/mmglass_1.png";
 import img2 from "../assets/mmglass_8.png";
 import img3 from "../assets/mmglass_3.png";
+import video1 from "../assets/eee.mp4";
 
 
 function Expertise() {
@@ -338,14 +339,33 @@ function Expertise() {
           BACKGROUND
       ====================================================== */}
 
-      <div className="exp-bg">
+      {/* <div className="exp-bg">
 
         <img
           src="https://images.pexels.com/photos/9321327/pexels-photo-9321327.jpeg"
           alt=""
         />
 
-      </div>
+      </div> */}
+
+      <div className="exp-bg">
+
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="exp-bg-video"
+  >
+
+    <source
+      src= {video1}
+      type="video/mp4"
+    />
+
+  </video>
+
+</div>
 
       <div className="exp-overlay"></div>
 

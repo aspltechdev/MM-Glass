@@ -347,7 +347,7 @@ function App() {
         {/* INSTAGRAM */}
 
         <a
-          href="https://instagram.com/"
+          href="https://www.instagram.com/mm_safety_glass?utm_source=qr"
           className="luxury-social-float instagram-float-icon"
           target="_blank"
           rel="noreferrer"
@@ -373,7 +373,7 @@ function App() {
         {/* LINKEDIN */}
 
         <a
-          href="https://linkedin.com/"
+          href="https://www.linkedin.com/company/mm-safety-glass/"
           className="luxury-social-float linkedin-float-icon"
           target="_blank"
           rel="noreferrer"

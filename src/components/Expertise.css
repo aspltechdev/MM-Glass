@@ -648,3 +648,65 @@
     font-size:0.9rem;
   }
 }
+
+
+
+
+
+
+
+
+/* =========================================================
+   VIDEO BACKGROUND
+========================================================= */
+
+.exp-bg {
+
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+
+  z-index: 1;
+}
+
+.exp-bg-video {
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transform:
+    scale(1.12);
+
+  filter:
+    brightness(0.45)
+    contrast(1.05)
+    saturate(1.1);
+
+  animation:
+    expVideoZoom 18s ease-in-out infinite alternate;
+}
+
+/* =========================================================
+   CINEMATIC ZOOM
+========================================================= */
+
+@keyframes expVideoZoom {
+
+  from {
+
+    transform:
+      scale(1.08)
+      translateY(0px);
+  }
+
+  to {
+
+    transform:
+      scale(1.18)
+      translateY(-18px);
+  }
+}

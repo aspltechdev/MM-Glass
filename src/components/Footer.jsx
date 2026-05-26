@@ -169,6 +169,12 @@
 // Footer.jsx
 
 import "./Footer.css";
+import {
+  FaInstagram,
+  FaLinkedinIn,
+  FaFacebookF,
+  FaXTwitter,
+} from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import logo from "../assets/mmglass11.png";
 
@@ -226,11 +232,16 @@ function Footer() {
 
           {/* SOCIALS */}
 
-          <div className="ft-socials">
+          {/* <div className="ft-socials">
 
             <a href="#">
 
               <span>Instagram</span>
+
+            </a>
+             <a href="#">
+
+              <span>LinkedIn</span>
 
             </a>
 
@@ -246,7 +257,54 @@ function Footer() {
 
             </a>
 
-          </div>
+          </div> */}
+          <div className="ft-socials">
+
+  <a
+    href="https://www.instagram.com/mm_safety_glass?utm_source=qr"
+    target="_blank"
+    rel="noreferrer"
+    className="ft-social-icon"
+  >
+
+    <FaInstagram />
+
+  </a>
+
+  <a
+    href="https://www.linkedin.com/company/mm-safety-glass/"
+    target="_blank"
+    rel="noreferrer"
+    className="ft-social-icon"
+  >
+
+    <FaLinkedinIn />
+
+  </a>
+
+  <a
+    href="https://facebook.com"
+    target="_blank"
+    rel="noreferrer"
+    className="ft-social-icon"
+  >
+
+    <FaFacebookF />
+
+  </a>
+
+  <a
+    href="https://twitter.com"
+    target="_blank"
+    rel="noreferrer"
+    className="ft-social-icon"
+  >
+
+    <FaXTwitter />
+
+  </a>
+
+</div>
 
         </div>
 
