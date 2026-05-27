@@ -399,7 +399,7 @@ function App() {
     {/* YOUTUBE */}
 
     <a
-      href="https://youtube.com/"
+      href="https://www.youtube.com/@MMSafetyGlass"
       target="_blank"
       rel="noreferrer"
       className="luxury-social-icon youtube-icon"

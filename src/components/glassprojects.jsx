@@ -7,6 +7,12 @@ import gal3 from "../assets/gal3.jpeg";
 import gal4 from "../assets/gal4.jpeg";
 import gal5 from "../assets/gal5.jpeg";
 import gal6 from "../assets/gal6.jpeg";
+import gal7 from "../assets/pro.jpeg";
+import gal8 from "../assets/pro11.jpeg";
+import gal9 from "../assets/pro12.jpeg";
+import gal10 from "../assets/pro13.jpeg";
+import gal11 from "../assets/pro14.jpeg";
+import gal12 from "../assets/pro15.jpeg";
 
 const luxuryGlassProjects = [
 
@@ -51,6 +57,48 @@ const luxuryGlassProjects = [
     title: "Architectural Glass Vision",
     category: "Cinematic Design",
   },
+
+  {
+  id: 7,
+  image: gal7,
+  title: "Elegant Glass Partitions",
+  category: "Contemporary Interiors",
+},
+
+{
+  id: 8,
+  image: gal8,
+  title: "Panoramic Glass Walls",
+  category: "Luxury Architecture",
+},
+
+{
+  id: 9,
+  image: gal9,
+  title: "Frameless Balcony Glass",
+  category: "Modern Exterior",
+},
+
+{
+  id: 10,
+  image: gal10,
+  title: "Designer Glass Ceilings",
+  category: "Premium Spaces",
+},
+
+{
+  id: 11,
+  image: gal11,
+  title: "Smart Reflective Facades",
+  category: "Innovative Architecture",
+},
+{
+  id: 12,
+  image: gal12,
+  title: "Smart Reflective Facades",
+  category: "Innovative Architecture",
+},
+
 
 ];
 

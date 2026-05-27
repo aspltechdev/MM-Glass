@@ -295,7 +295,7 @@ function Footer() {
   </a>
 
   <a
-    href="https://twitter.com"
+    href="https://www.youtube.com/@MMSafetyGlass"
     target="_blank"
     rel="noreferrer"
     className="ft-social-icon"
