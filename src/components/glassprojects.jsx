@@ -14,12 +14,101 @@ import gal10 from "../assets/pro13.jpeg";
 import gal11 from "../assets/pro14.jpeg";
 import gal12 from "../assets/pro15.jpeg";
 
+
+// const luxuryGlassProjects = [
+
+//   {
+//     id: 1,
+//     image: gal1,
+//     title: "Luxury Glass Facade",
+//     category: "Premium Architecture",
+//   },
+
+//   {
+//     id: 2,
+//     image: gal2,
+//     title: "Modern Glass Interiors",
+//     category: "Luxury Interior Design",
+//   },
+
+//   {
+//     id: 3,
+//     image: gal3,
+//     title: "Futuristic Office Spaces",
+//     category: "Corporate Architecture",
+//   },
+
+//   {
+//     id: 4,
+//     image: gal4,
+//     title: "Premium Stair Glass",
+//     category: "Modern Living",
+//   },
+
+//   {
+//     id: 5,
+//     image: gal5,
+//     title: "Immersive Exterior Systems",
+//     category: "Luxury Exterior",
+//   },
+
+//   {
+//     id: 6,
+//     image: gal6,
+//     title: "Architectural Glass Vision",
+//     category: "Cinematic Design",
+//   },
+
+//   {
+//   id: 7,
+//   image: gal7,
+//   title: "Elegant Glass Partitions",
+//   category: "Contemporary Interiors",
+// },
+
+// {
+//   id: 8,
+//   image: gal8,
+//   title: "Panoramic Glass Walls",
+//   category: "Luxury Architecture",
+// },
+
+// {
+//   id: 9,
+//   image: gal9,
+//   title: "Frameless Balcony Glass",
+//   category: "Modern Exterior",
+// },
+
+// {
+//   id: 10,
+//   image: gal10,
+//   title: "Designer Glass Ceilings",
+//   category: "Premium Spaces",
+// },
+
+// {
+//   id: 11,
+//   image: gal11,
+//   title: "Smart Reflective Facades",
+//   category: "Innovative Architecture",
+// },
+// {
+//   id: 12,
+//   image: gal12,
+//   title: "Smart Reflective Facades",
+//   category: "Innovative Architecture",
+// },
+
+
+// ];
+
 const luxuryGlassProjects = [
 
   {
     id: 1,
     image: gal1,
-    title: "Luxury Glass Facade",
+    title: "Luxury Glass Staircase",
     category: "Premium Architecture",
   },
 
@@ -33,21 +122,21 @@ const luxuryGlassProjects = [
   {
     id: 3,
     image: gal3,
-    title: "Futuristic Office Spaces",
+    title: "Curved Toughened Glass Staircase",
     category: "Corporate Architecture",
   },
 
   {
     id: 4,
     image: gal4,
-    title: "Premium Stair Glass",
+    title: "Premium Curved Glass",
     category: "Modern Living",
   },
 
   {
     id: 5,
     image: gal5,
-    title: "Immersive Exterior Systems",
+    title: "Immersive Interior Systems",
     category: "Luxury Exterior",
   },
 
@@ -59,49 +148,48 @@ const luxuryGlassProjects = [
   },
 
   {
-  id: 7,
-  image: gal7,
-  title: "Elegant Glass Partitions",
-  category: "Contemporary Interiors",
-},
+    id: 7,
+    image: gal7,
+    title: "Elegant Glass Designs",
+    category: "Contemporary Interiors",
+  },
 
-{
-  id: 8,
-  image: gal8,
-  title: "Panoramic Glass Walls",
-  category: "Luxury Architecture",
-},
+  {
+    id: 8,
+    image: gal8,
+    title: "Modern Glass Designs",
+    category: "Urban Architecture",
+  },
 
-{
-  id: 9,
-  image: gal9,
-  title: "Frameless Balcony Glass",
-  category: "Modern Exterior",
-},
+  {
+    id: 9,
+    image: gal9,
+    title: "Frameless Glass Exterior ",
+    category: "Modern Exterior Design",
+  },
 
-{
-  id: 10,
-  image: gal10,
-  title: "Designer Glass Ceilings",
-  category: "Premium Spaces",
-},
+  {
+    id: 10,
+    image: gal10,
+    title: "Mordern Glass Pattern",
+    category: "Luxury Space Planning",
+  },
 
-{
-  id: 11,
-  image: gal11,
-  title: "Smart Reflective Facades",
-  category: "Innovative Architecture",
-},
-{
-  id: 12,
-  image: gal12,
-  title: "Smart Reflective Facades",
-  category: "Innovative Architecture",
-},
+  {
+    id: 11,
+    image: gal11,
+    title: "Pattern Glass Design",
+    category: "Innovative Building Solutions",
+  },
 
+  {
+    id: 12,
+    image: gal12,
+    title: "Elegent Pattern Design",
+    category: "Workspace Elegance",
+  },
 
 ];
-
 function ProjectGallery() {
 
   const luxuryGalleryRef = useRef(null);
@@ -184,7 +272,7 @@ function ProjectGallery() {
 
         <h2>
 
-          ARCHITECTURE GALLERY
+          ARCHITECTURE  <span >GALLERY </span>
 
         </h2>
 
@@ -248,14 +336,14 @@ function ProjectGallery() {
 
                   </h3>
 
-                  <p className="luxury-glass-gallery-description">
+                  {/* <p className="luxury-glass-gallery-description">
 
                     Precision-engineered architectural
                     glass solutions delivering premium
                     aesthetics and futuristic luxury
                     spatial experiences.
 
-                  </p>
+                  </p> */}
 
                   <a
                     href="/contact"

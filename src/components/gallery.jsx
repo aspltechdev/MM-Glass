@@ -7,6 +7,7 @@ import img1 from "../assets/architecturalglass/Ag1.png";
 import img2 from "../assets/architecturalglass/Ag2.png";
 import img3 from "../assets/architecturalglass/Ag3.png";
 import StoryProjectsSection from "./StoryProjectsSection";
+import Projects from "./Projects";
 
 
 
@@ -96,7 +97,7 @@ function Gallery() {
           BANNER SECTION
       ========================= */}
 
-     <StoryProjectsSection/>
+  <Projects/>
 
       {/* =========================
           GALLERY SLIDER SECTION

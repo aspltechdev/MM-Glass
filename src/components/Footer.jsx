@@ -177,7 +177,8 @@ import {
   FaYoutube
 } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import logo from "../assets/mmglass11.png";
+// import logo from "../assets/mmglass11.png";
+import logo from "../assets/gl.jpeg";
 
 function Footer() {
 

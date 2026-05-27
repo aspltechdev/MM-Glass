@@ -264,6 +264,7 @@
   width:190px;
 
   object-fit:contain;
+  border-radius: 24px;
 }
 
 /* TEXT */
