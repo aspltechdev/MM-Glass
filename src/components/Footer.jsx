@@ -1,159 +1,330 @@
+
 // import "./Footer.css";
+// import {
+//   FaInstagram,
+//   FaLinkedinIn,
+//   FaFacebookF,
+//   FaXTwitter,
+//   FaYoutube
+// } from "react-icons/fa6";
 // import { Link } from "react-router-dom";
-// import logo from "../assets/mmlogo.png";
+// // import logo from "../assets/mmglass11.png";
+// import logo from "../assets/gl.jpeg";
 
 // function Footer() {
+
 //   return (
-//     <footer className="footer">
-//       <div className="footer-container">
 
-//         {/* LEFT */}
-//         <div className="footer-left">
+//     <footer className="ft-section">
 
-//           {/* Logo */}
-//           <div className="footer-logo">
-//             <Link to="/">
-//               <img
-//                 src={logo}
-//                 alt="MM Safety Glass"
-//                 className="logo-img"
-//               />
-//             </Link>
-//           </div>
+//       {/* BACKGROUND */}
 
-//           {/* Heading */}
-//           <h2>
-//             Let's build with
-//             <br />
-//             clarity and strength
-//           </h2>
+//       <div className="ft-gradient"></div>
+//       <div className="ft-grid"></div>
+//       <div className="ft-noise"></div>
 
-//           {/* Social Icons */}
-//           <div className="footer-socials">
-//             <a
-//               href="https://facebook.com"
-//               target="_blank"
-//               rel="noopener noreferrer"
-//             >
-//               f
+//       {/* LIGHTS */}
+
+//       <div className="ft-light ft-light1"></div>
+//       <div className="ft-light ft-light2"></div>
+
+//       {/* TOP CTA */}
+
+    
+
+//       {/* MAIN FOOTER */}
+
+//       <div className="ft-container">
+
+//         {/* BRAND */}
+
+//         <div className="ft-brand">
+
+//           {/* LOGO */}
+
+//           <Link to="/" className="ft-logo">
+
+//             <img
+//               src={logo}
+//               alt="MM Glass"
+//             />
+
+//           </Link>
+
+//           {/* DESCRIPTION */}
+
+//           <p>
+
+//             M M Glass House delivers
+//             premium architectural glass
+//             systems engineered for
+//             luxury interiors, commercial
+//             environments, and modern spaces.
+
+//           </p>
+
+//           {/* SOCIALS */}
+
+//           {/* <div className="ft-socials">
+
+//             <a href="#">
+
+//               <span>Instagram</span>
+
+//             </a>
+//              <a href="#">
+
+//               <span>LinkedIn</span>
+
 //             </a>
 
-//             <a
-//               href="https://instagram.com"
-//               target="_blank"
-//               rel="noopener noreferrer"
-//             >
-//               ◎
+//             <a href="#">
+
+//               <span>Facebook</span>
+
 //             </a>
 
-//             <a
-//               href="https://x.com"
-//               target="_blank"
-//               rel="noopener noreferrer"
-//             >
-//               𝕏
-//             </a>
-//           </div>
+//             <a href="#">
 
-//           {/* Button */}
-//           <button className="brochure-btn">
-//             Download Brochure
-//           </button>
+//               <span>X</span>
+
+//             </a>
+
+//           </div> */}
+//           <div className="ft-socials">
+
+//   <a
+//     href="https://www.instagram.com/mm_safety_glass?utm_source=qr"
+//     target="_blank"
+//     rel="noreferrer"
+//     className="ft-social-icon"
+//   >
+
+//     <FaInstagram />
+
+//   </a>
+
+//   <a
+//     href="https://www.linkedin.com/company/mm-safety-glass/"
+//     target="_blank"
+//     rel="noreferrer"
+//     className="ft-social-icon"
+//   >
+
+//     <FaLinkedinIn />
+
+//   </a>
+
+//   <a
+//     href="https://facebook.com"
+//     target="_blank"
+//     rel="noreferrer"
+//     className="ft-social-icon"
+//   >
+
+//     <FaFacebookF />
+
+//   </a>
+
+//   <a
+//     href="https://www.youtube.com/@MMSafetyGlass"
+//     target="_blank"
+//     rel="noreferrer"
+//     className="ft-social-icon"
+//   >
+
+//     <FaYoutube />
+
+//   </a>
+
+// </div>
 
 //         </div>
 
-//         {/* QUICK LINKS */}
-//         <div className="footer-column">
-//           <h3>Quick Links</h3>
+//         {/* LINKS */}
 
-//           <ul>
-//             <li>
-//               <Link to="/">• Home</Link>
-//             </li>
+//         <div className="ft-links">
 
-//             <li>
-//               <Link to="/about">• About Us</Link>
-//             </li>
+//           {/* COLUMN */}
 
-//             <li>
-//               <Link to="/ourstory">• Our Story</Link>
-//             </li>
+//           <div className="ft-column">
 
-//             <li>
-//               <Link to="/product">• Products</Link>
-//             </li>
+//             <h3>
 
-//             <li>
-//               <Link to="/gallery">• Gallery</Link>
-//             </li>
+//               Navigation
 
-//             <li>
-//               <Link to="/Contactus">• Contact US</Link>
-//             </li>
-//           </ul>
-//         </div>
+//             </h3>
 
-//         {/* PRODUCTS */}
-//         <div className="footer-column">
-//           <h3>Our Products</h3>
+//             <ul>
 
-//           <ul>
-//             <li>
-//               <Link to="/product">• All Clear Glasses</Link>
-//             </li>
+//               <li>
+//                 <Link to="/">Home</Link>
+//               </li>
 
-//             <li>
-//               <Link to="/product">• Reflective Glasses</Link>
-//             </li>
+//               <li>
+//                 <Link to="/about">About</Link>
+//               </li>
 
-//             <li>
-//               <Link to="/product">• Regular Mirror</Link>
-//             </li>
+            
 
-//             <li>
-//               <Link to="/product">• V-Groove Glasses</Link>
-//             </li>
+//               <li>
+//                 <Link to="/product">Products</Link>
+//               </li>
 
-//             <li>
-//               <Link to="/product">• Frosted Glass</Link>
-//             </li>
-//           </ul>
-//         </div>
+//               <li>
+//                 <Link to="/gallery">Projects</Link>
+//               </li>
 
-//         {/* CONTACT */}
-//         <div className="footer-column">
-//           <h3>Contact Us</h3>
+//               <li>
+//                 <Link to="/contactus">Contact</Link>
+//               </li>
 
-//           {/* WhatsApp */}
-//           <div className="contact-item">
-//             <span>📞</span>
+//             </ul>
 
-//             <a
-//               href="https://wa.me/919876543210"
-//               target="_blank"
-//               rel="noopener noreferrer"
-//             >
-//               +91 9876543210
-//             </a>
 //           </div>
 
-//           {/* Email */}
-//           <div className="contact-item">
-//             <span>✉</span>
+//           {/* COLUMN */}
 
-//             <a href="mailto:mmglass@gmail.com">
-//               mmglass@gmail.com
-//             </a>
+//           <div className="ft-column">
+
+//             <h3>
+
+//               Glass Systems
+
+//             </h3>
+
+//             <ul>
+
+//               <li>
+//                 <Link to="/product">
+//                   Tempered Glass
+//                 </Link>
+//               </li>
+
+//               <li>
+//                 <Link to="/product">
+//                   Reflective Glass
+//                 </Link>
+//               </li>
+
+//               <li>
+//                 <Link to="/product">
+//                   Frosted Glass
+//                 </Link>
+//               </li>
+
+//               <li>
+//                 <Link to="/product">
+//                   Laminated Glass
+//                 </Link>
+//               </li>
+
+//               <li>
+//                 <Link to="/product">
+//                   Smart Glass
+//                 </Link>
+//               </li>
+
+//             </ul>
+
 //           </div>
 
-//           {/* Location */}
-//           <div className="contact-item">
-//             <span>📍</span>
-//             <p>Bangalore</p>
+//           {/* COLUMN */}
+
+//           <div className="ft-column">
+
+//             <h3>
+
+//               Contact
+
+//             </h3>
+
+//             <div className="ft-contact">
+
+//               <span>Phone</span>
+
+//               <a href="tel:+919606859044">
+
+//                 +91 9606859044 <br>
+//                 </br> 
+//                 +91 7975833653
+
+//               </a>
+//                 {/* <a href="tel:+917975833653">
+
+//                 +91 7975833653
+
+//               </a> */}
+
+//             </div>
+
+//             <div className="ft-contact">
+
+//               <span>Email</span>
+
+//               <a href="mailto:info@mmglass.co.in">
+
+//               info@mmglass.co.in
+
+//               </a>
+
+//             </div>
+
+//             <div className="ft-contact">
+
+//               <span>Location</span>
+
+//               <p>
+
+//                 Bangalore, India
+
+//               </p>
+
+//             </div>
+
 //           </div>
+
 //         </div>
 
 //       </div>
+
+//       {/* BOTTOM */}
+
+//       <div className="ft-bottom">
+
+//         <p>
+
+//           © 2026 M M Glass House.
+//           All Rights Reserved.
+
+//         </p>
+
+//         <div className="ft-bottom-links">
+
+//           <a href="#">
+
+//             Privacy Policy
+
+//           </a>
+
+//           <a href="#">
+
+//             Terms & Conditions
+
+//           </a>
+
+//         </div>
+
+//       </div>
+
+//       {/* HUGE TYPO */}
+
+//       <div className="ft-bg-text">
+
+//         GLASS HOUSE
+
+//       </div>
+
 //     </footer>
 //   );
 // }
@@ -162,11 +333,6 @@
 
 
 
-
-
-
-
-// Footer.jsx
 
 import "./Footer.css";
 import {
@@ -179,6 +345,7 @@ import {
 import { Link } from "react-router-dom";
 // import logo from "../assets/mmglass11.png";
 import logo from "../assets/gl.jpeg";
+import brandImage from "../assets/brand.jpeg"; // Add your brand certification image
 
 function Footer() {
 
@@ -197,10 +364,6 @@ function Footer() {
       <div className="ft-light ft-light1"></div>
       <div className="ft-light ft-light2"></div>
 
-      {/* TOP CTA */}
-
-    
-
       {/* MAIN FOOTER */}
 
       <div className="ft-container">
@@ -209,16 +372,26 @@ function Footer() {
 
         <div className="ft-brand">
 
-          {/* LOGO */}
+          {/* LOGO WITH CERTIFICATION BADGE */}
 
-          <Link to="/" className="ft-logo">
-
-            <img
-              src={logo}
-              alt="MM Glass"
-            />
-
-          </Link>
+          <div className="ft-logo-wrapper">
+            <Link to="/" className="ft-logo">
+              <img
+                src={logo}
+                alt="MM Glass"
+              />
+            </Link>
+            
+            {/* Brand Certification Image near logo */}
+            <div className="ft-brand-cert">
+              <img 
+                src={brandImage} 
+                alt="Saint-Gobain MM Safety Glass Certification"
+                className="ft-brand-cert-image"
+              />
+              <div className="ft-brand-cert-glow"></div>
+            </div>
+          </div>
 
           {/* DESCRIPTION */}
 
@@ -234,79 +407,45 @@ function Footer() {
 
           {/* SOCIALS */}
 
-          {/* <div className="ft-socials">
-
-            <a href="#">
-
-              <span>Instagram</span>
-
-            </a>
-             <a href="#">
-
-              <span>LinkedIn</span>
-
-            </a>
-
-            <a href="#">
-
-              <span>Facebook</span>
-
-            </a>
-
-            <a href="#">
-
-              <span>X</span>
-
-            </a>
-
-          </div> */}
           <div className="ft-socials">
 
-  <a
-    href="https://www.instagram.com/mm_safety_glass?utm_source=qr"
-    target="_blank"
-    rel="noreferrer"
-    className="ft-social-icon"
-  >
+            <a
+              href="https://www.instagram.com/mm_safety_glass?utm_source=qr"
+              target="_blank"
+              rel="noreferrer"
+              className="ft-social-icon"
+            >
+              <FaInstagram />
+            </a>
 
-    <FaInstagram />
+            <a
+              href="https://www.linkedin.com/company/mm-safety-glass/"
+              target="_blank"
+              rel="noreferrer"
+              className="ft-social-icon"
+            >
+              <FaLinkedinIn />
+            </a>
 
-  </a>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noreferrer"
+              className="ft-social-icon"
+            >
+              <FaFacebookF />
+            </a>
 
-  <a
-    href="https://www.linkedin.com/company/mm-safety-glass/"
-    target="_blank"
-    rel="noreferrer"
-    className="ft-social-icon"
-  >
+            <a
+              href="https://www.youtube.com/@MMSafetyGlass"
+              target="_blank"
+              rel="noreferrer"
+              className="ft-social-icon"
+            >
+              <FaYoutube />
+            </a>
 
-    <FaLinkedinIn />
-
-  </a>
-
-  <a
-    href="https://facebook.com"
-    target="_blank"
-    rel="noreferrer"
-    className="ft-social-icon"
-  >
-
-    <FaFacebookF />
-
-  </a>
-
-  <a
-    href="https://www.youtube.com/@MMSafetyGlass"
-    target="_blank"
-    rel="noreferrer"
-    className="ft-social-icon"
-  >
-
-    <FaYoutube />
-
-  </a>
-
-</div>
+          </div>
 
         </div>
 
@@ -333,8 +472,6 @@ function Footer() {
               <li>
                 <Link to="/about">About</Link>
               </li>
-
-            
 
               <li>
                 <Link to="/product">Products</Link>
@@ -414,16 +551,10 @@ function Footer() {
 
               <a href="tel:+919606859044">
 
-                +91 9606859044 <br>
-                </br> 
+                +91 96068590444 <br />
                 +91 7975833653
 
               </a>
-                {/* <a href="tel:+917975833653">
-
-                +91 7975833653
-
-              </a> */}
 
             </div>
 
@@ -433,7 +564,7 @@ function Footer() {
 
               <a href="mailto:info@mmglass.co.in">
 
-              info@mmglass.co.in
+                info@mmglass.co.in
 
               </a>
 

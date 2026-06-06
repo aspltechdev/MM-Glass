@@ -727,7 +727,7 @@
 
   .ft-socials a{
 
-    width:100%;
+    /* width:100%; */
 
     text-align:center;
   }
@@ -744,3 +744,133 @@
     font-size:24vw;
   }
 }
+
+
+
+
+
+
+
+
+
+.ft-logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.ft-logo {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.ft-logo:hover {
+  transform: scale(1.02);
+}
+
+.ft-logo img {
+  height: 190px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Brand Certification Image */
+.ft-brand-cert {
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.ft-brand-cert-image {
+  height: 145px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.15));
+}
+
+/* Hover effect */
+.ft-brand-cert:hover .ft-brand-cert-image {
+  transform: translateY(-2px);
+  filter: drop-shadow(0 4px 12px rgba(100, 181, 246, 0.3));
+}
+
+/* Glow effect on hover */
+.ft-brand-cert-glow {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: radial-gradient(circle, 
+    rgba(100, 181, 246, 0.3), 
+    transparent 70%
+  );
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.ft-brand-cert:hover .ft-brand-cert-glow {
+  opacity: 1;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+   ===================================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .ft-logo-wrapper {
+    gap: 0.8rem;
+  }
+  
+  .ft-logo img {
+    height: 125px;
+  }
+  
+  .ft-brand-cert-image {
+    height: 100px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .ft-logo-wrapper {
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .ft-logo img {
+    height: 85px;
+  }
+  
+  .ft-brand-cert-image {
+    height: 70px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .ft-logo-wrapper {
+    flex-direction: row;
+    gap: 0.8rem;
+  }
+  
+  .ft-logo img {
+    height: 100px;
+  }
+  
+  .ft-brand-cert-image {
+    height: 90px;
+  }
+}
+
+

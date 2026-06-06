@@ -64,7 +64,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   cursor: none;
-  margin-top: 70px;
+
+  /* margin-top: 70px; */
 
 }
 
@@ -448,7 +449,7 @@
   display: flex;
   align-items: center;
   height: 100%;
-  padding: 0 var(--section-padding);
+  padding: 90px;
 }
 
 .hero-inner {
@@ -1154,8 +1155,8 @@
   }
 
   .glass-sculpture {
-    width: 320px;
-    height: 420px;
+    width: 420px;
+    height: 620px;
     margin: 0 auto;
   }
 
@@ -1366,4 +1367,318 @@
 
     opacity:0.45;
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   BRAND IMAGE CARD - Premium Certification Overlay
+   ===================================================== */
+
+.brand-card {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 150px;
+  z-index: 25;
+  cursor: pointer;
+  filter: drop-shadow(0 10px 25px rgba(180, 179, 179, 0.516)  );
+  animation: brandCardFloat 3s ease-in-out infinite;
+  transform-style: preserve-3d;
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes brandCardFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.brand-card-inner {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(210, 232, 255, 0.537);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(100, 181, 246, 0.4);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.brand-card-hover .brand-card-inner {
+  border-color: rgba(100, 181, 246, 0.9);
+  box-shadow: 0 0 25px rgba(100, 181, 246, 0.4);
+  transform: scale(1.02);
+}
+
+.brand-card-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 11px;
+  transition: transform 0.3s ease;
+}
+
+.brand-card-hover .brand-card-image {
+  transform: scale(1.02);
+}
+
+/* Glass reflection sweep */
+.brand-card-reflection {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: left 0.5s ease;
+  pointer-events: none;
+}
+
+.brand-card-hover .brand-card-reflection {
+  left: 150%;
+}
+
+/* Glow effect */
+.brand-card-glow {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: radial-gradient(
+    circle at 30% 20%,
+    rgba(100, 181, 246, 0.25),
+    transparent 70%
+  );
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.brand-card-hover .brand-card-glow {
+  opacity: 1;
+}
+
+/* Holographic shimmer */
+.brand-card-shimmer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    transparent 0%,
+    transparent 40%,
+    rgba(100, 181, 246, 0.2) 45%,
+    rgba(180, 220, 255, 0.25) 50%,
+    rgba(100, 181, 246, 0.2) 55%,
+    transparent 60%,
+    transparent 100%
+  );
+  background-size: 200% 200%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  border-radius: 12px;
+  animation: shimmerSweep 3s ease-in-out infinite;
+}
+
+.brand-card-hover .brand-card-shimmer {
+  opacity: 1;
+}
+
+@keyframes shimmerSweep {
+  0% {
+    background-position: -100% 0%;
+  }
+  100% {
+    background-position: 200% 0%;
+  }
+}
+
+/* Certified badge */
+.brand-card-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(20, 30, 40, 0.9));
+  backdrop-filter: blur(8px);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #90caf9;
+  border: 1px solid rgba(100, 181, 246, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  white-space: nowrap;
+}
+
+.brand-card-badge svg {
+  width: 11px;
+  height: 11px;
+}
+
+/* =====================================================
+   RESPONSIVE - BRAND CARD
+   ===================================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .brand-card {
+    width: 120px;
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .brand-card-badge {
+    font-size: 0.55rem;
+    padding: 3px 8px;
+    top: -8px;
+    right: -8px;
+  }
+  
+  .brand-card-badge svg {
+    width: 9px;
+    height: 9px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .brand-card {
+    width: 100px;
+    bottom: 12px;
+    right: 12px;
+  }
+  
+  .brand-card-badge {
+    font-size: 0.5rem;
+    padding: 3px 7px;
+    top: -7px;
+    right: -7px;
+  }
+  
+  .brand-card-badge svg {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .brand-card {
+    width: 80px;
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .brand-card-badge {
+    font-size: 0.45rem;
+    padding: 2px 6px;
+    top: -6px;
+    right: -6px;
+  }
+  
+  .brand-card-badge span {
+    display: none;
+  }
+  
+  .brand-card-badge svg {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+/* =====================================================
+   ADDITIONAL ENHANCEMENTS
+   ===================================================== */
+
+/* Make sure brand card stays above other elements */
+.glass-sculpture {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure brand card has proper 3D layering */
+.brand-card {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+/* Smooth hover transition for the glass sculpture */
+.glass-sculpture {
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Enhance cursor interaction */
+.brand-card:hover {
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.4));
 }

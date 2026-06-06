@@ -82,6 +82,7 @@
 
 import React from "react";
 import "./FounderStory.css";
+import founder from "../assets/fon.png";
 
 const FounderStory = () => {
 
@@ -138,7 +139,7 @@ const FounderStory = () => {
           <div className="luxury-founder-image-card">
 
             <img
-              src="https://images.pexels.com/photos/26692091/pexels-photo-26692091.jpeg"
+              src={founder}
               alt="Founder Murali"
               className="luxury-founder-image"
             />
